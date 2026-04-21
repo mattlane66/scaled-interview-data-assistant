@@ -11,6 +11,7 @@ This repo packages a qualitative synthesis assistant around A2B, JTBD, and frami
 - `docs/output/example-report-structure.md` — the target report shape
 - `templates/` — interview card and synthesis report templates
 - `knowledge/` — source PDFs used to ground the method
+- `examples/` — worked examples from raw transcript to processed artifact
 
 ## What the assistant does
 
@@ -87,6 +88,18 @@ If someone brings up a feature request in the middle of an interview, redirect b
 - What did you end up doing instead?
 - What made that frustrating or difficult?
 
+## Worked example
+
+See `examples/mattress/` for a concrete single-interview example that starts with a raw transcript and turns it into a processed A2B artifact.
+
+That folder includes:
+
+- `transcript.md` — the raw mattress interview
+- `interview-card.md` — a worked single-interview A2B analysis
+- `walkthrough.md` — a short explanation of how Point A, Path Y, tipping moment, Path X, and Point B were interpreted
+
+It is meant to help humans and LLMs calibrate what a strong single-interview output looks like before moving into multi-interview synthesis.
+
 ## Repo layout
 
 ```text
@@ -104,6 +117,11 @@ If someone brings up a feature request in the middle of an interview, redirect b
 ├── templates/
 │   ├── interview-card.md
 │   └── synthesis-report.md
+├── examples/
+│   └── mattress/
+│       ├── transcript.md
+│       ├── interview-card.md
+│       └── walkthrough.md
 └── knowledge/
     ├── A2B.pdf
     ├── Example Report.pdf
@@ -117,7 +135,7 @@ The repo is intentionally tool-agnostic.
 ### Minimal setup
 
 1. Give the model `prompt/custom-gpt.md` as the main operating instruction.
-2. Add the files in `docs/`, `templates/`, and `knowledge/` as reference context.
+2. Add the files in `docs/`, `templates/`, `knowledge/`, and `examples/` as reference context.
 3. Add your transcripts or notes in a `data/` folder.
 4. Ask the model to work in one of four modes:
    - `GUIDE`
@@ -127,11 +145,11 @@ The repo is intentionally tool-agnostic.
 
 ### Practical mapping by tool
 
-- **ChatGPT / custom GPT / project instructions**: use `prompt/custom-gpt.md` as the main behavior spec and attach the docs/templates as knowledge.
-- **Claude Code**: keep the prompt file in-repo and point Claude to it as the synthesis operating guide; use the templates as output targets.
+- **ChatGPT / custom GPT / project instructions**: use `prompt/custom-gpt.md` as the main behavior spec and attach the docs, templates, and examples as knowledge.
+- **Claude Code**: keep the prompt file in-repo and point Claude to it as the synthesis operating guide; use the templates and examples as output targets and calibration artifacts.
 - **Codex / GPT in repo workflows**: include the prompt file in the working tree and explicitly tell the model to follow it while reading files from `data/` and writing outputs into `outputs/`.
-- **Gemini Code / Gemini app workflows**: paste or attach `prompt/custom-gpt.md`, then attach the method docs and templates so the model has the frame definitions and output structure.
-- **Any other agentic coding tool**: treat this repo as the source of truth for method, prompt, and output shape.
+- **Gemini Code / Gemini app workflows**: paste or attach `prompt/custom-gpt.md`, then attach the method docs, examples, and templates so the model has the frame definitions and output structure.
+- **Any other agentic coding tool**: treat this repo as the source of truth for method, prompt, worked example, and output shape.
 
 ### Suggested working pattern
 
@@ -139,6 +157,7 @@ For 1–3 interviews:
 
 - run `SINGLE` on each interview first
 - produce one interview card per interview
+- compare one result to the mattress example if you want a calibration pass
 - then run a synthesis pass
 
 For larger studies:
