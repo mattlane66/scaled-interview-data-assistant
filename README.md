@@ -36,6 +36,57 @@ Typical outputs:
 5. Capture Push, Pull, Anxiety, and Inertia.
 6. Synthesize across interviews without losing evidence traceability.
 
+## Where framing starts
+
+Before using the six interview questions, start with a demand-side learning goal.
+
+A strong learning goal should not start with what you think people should want. It should start with what people are already doing now, why they are doing it that way, what workarounds or compensating behaviors they use, and what causes them to switch paths.
+
+Good starting questions look like:
+
+- How are people currently doing [x]?
+- How are they currently doing [y]?
+- How are they currently doing [z]?
+- What caused them to recently buy, adopt, or switch to something?
+
+This keeps the work anchored in real past behavior inside a bounded context rather than using interviews to validate an imagined solution.
+
+## The physics of the opportunity
+
+Before imagining solutions, identify where the real energy exists in the system:
+
+- the struggle
+- the moment
+- the motion
+
+That means observing when and why people shift paths. The goal is to uncover the causal structure of demand, not just collect opinions.
+
+## Broad line of inquiry
+
+Use these six questions to uncover Point A, Path Y, Path X, and Point B:
+
+1. **When did you first start using or buying Path X?**
+   - Anchors the moment of adoption.
+2. **When was the first time you thought, “Maybe I need something like Path X”?**
+   - Reveals the earlier trigger and separates the first thought from the eventual action.
+3. **What were you doing in the period before you adopted Path X?**
+   - Surfaces the prior behavior, workaround, or substitute path.
+4. **Why didn’t you just continue doing that? What finally tipped you to adopt Path X?**
+   - Exposes the forces pushing them away from the old way and pulling them toward the new one.
+5. **What was bad or frustrating about that?**
+   - Helps identify the core struggle worth resolving.
+6. **Before using Path X, what were you hoping would be different afterward?**
+   - Clarifies the desired progress or job to be done.
+
+Useful follow-up prompts often help anchor the story in real context: where they were, what had just happened, what the emotional tone was, what the workaround looked like, and what changed on the day they finally acted.
+
+If someone brings up a feature request in the middle of an interview, redirect back to the situation:
+
+- Tell me about the last time you needed that.
+- What were you trying to do?
+- What did you end up doing instead?
+- What made that frustrating or difficult?
+
 ## Repo layout
 
 ```text
