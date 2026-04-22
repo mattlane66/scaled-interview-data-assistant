@@ -1,8 +1,8 @@
 # Scaled Interview Data Assistant
 
-Analyze transcripts into A2B/JTBD synthesis and explain the method and LLM workflow clearly.
+Analyze transcripts into JTBD synthesis and explain the method and LLM workflow clearly.
 
-This repo packages a qualitative synthesis assistant around A2B, JTBD, and framing. It is meant to turn transcripts, notes, and observations into evidence-traceable analysis: per-interview cards, shared codebooks, cross-interview A↔B clusters, forces analysis, fit criteria, and report-ready synthesis.
+This repo packages a qualitative synthesis assistant around JTBD. It is meant to turn interview text transcripts into evidence-traceable analysis: per-interview cards, shared codebooks, cross-interview A↔B clusters, forces analysis, fit criteria, and report-ready synthesis.
 
 ## What is in this repo
 
@@ -62,9 +62,9 @@ Before imagining solutions, identify where the real energy exists in the system:
 
 That means observing when and why people shift paths. The goal is to uncover the causal structure of demand, not just collect opinions.
 
-## Broad line of inquiry
+## Broad line of inquiry we use when interviewing, which the Scaled Interview Data Assistant looks for.
 
-Use these six questions to uncover Point A, Path Y, Path X, and Point B:
+Use these six questions to guide our semi-structured conversations and to uncover Point A, Path Y, Path X, and Point B:
 
 1. **When did you first start using or buying Path X?**
    - Anchors the moment of adoption.
