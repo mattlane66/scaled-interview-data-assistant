@@ -1,4 +1,4 @@
-# Mattress interview
+# Mattress interview (abbreviated)
 
 INTERVIEWER: The best way to think about this is we’re literally filming a documentary. We want all the
 details around when you first started thinking about buying the mattress, when you made the decision,
