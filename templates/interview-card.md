@@ -5,12 +5,26 @@
 - Descriptor:
 - Source:
 - Date:
+- Mode: SINGLE
 - Confidence:
 
 ## Snapshot
 - Point A:
 - Tipping moment:
 - Point B:
+
+## Segment Map
+| Segment | Location | Scene / situation | Notes |
+|---|---|---|---|
+| S01 |  |  |  |
+| S02 |  |  |  |
+
+## Evidence Bank
+| E# | I# | S# | Verbatim excerpt | Tags | Note |
+|---|---|---|---|---|---|
+| E001 |  |  |  |  |  |
+| E002 |  |  |  |  |  |
+| E003 |  |  |  |  |  |
 
 ## Verified timeline
 - Trigger:
@@ -22,6 +36,7 @@
 
 ## Unknowns
 - UNKNOWN:
+- INFERRED:
 - Follow-up 1:
 - Follow-up 2:
 - Follow-up 3:
@@ -39,23 +54,32 @@ I WANT ...
 SO I CAN ...
 
 ## Tech-agnostic requirements
-1.
-2.
-3.
+| Requirement | Linked A/B codes | Supporting evidence |
+|---|---|---|
+| Must be able to... |  |  |
+| Must be able to... |  |  |
+| Must be able to... |  |  |
+
+## E -> Code Mapping
+| Evidence | A-codes | B-codes | Notes |
+|---|---|---|---|
+| E001 |  |  |  |
+| E002 |  |  |  |
+| E003 |  |  |  |
 
 ## Metadata
-- Frame type:
+- Frame type: Empirical / Feeling-based
 - Appetite:
-- Confidence:
+- Confidence: High / Medium / Low
 - What would raise confidence:
-
-## Evidence links
-- E001:
-- E002:
-- E003:
 
 ## Decision Log
 - 
 
 ## Diff Log
-- 
+- Adds:
+- Merges:
+- Renames:
+- Re-codes:
+- Re-clusters:
+- Why:
