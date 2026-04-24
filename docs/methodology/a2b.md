@@ -14,6 +14,15 @@ It aims to uncover **technology-agnostic requirements** by clarifying:
 - **Path X**: the current or adopted approach
 - **Point B**: the desired outcome relative to the baseline
 
+## Terminology guardrail: baseline vs. Point B
+
+In this repo:
+
+- **Baseline result** = what Path X or Path Y currently produces.
+- **Point B** = desired progress compared with that baseline.
+
+Do not collapse baseline and Point B. The baseline is the current result; Point B is the hoped-for improvement. If source material uses "baseline outcome" loosely, preserve the contrast: current result vs. desired progress.
+
 ## What A2B is trying to avoid
 
 A2B is designed to keep the work anchored in:
