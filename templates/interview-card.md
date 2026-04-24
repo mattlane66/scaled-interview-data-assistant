@@ -32,7 +32,13 @@
 - Tipping:
 - Path X:
 - Baseline result:
+- Point B / hoped-for progress:
 - After-effects:
+
+## Baseline vs. Point B guardrail
+- Baseline result = what Path X or Path Y currently produces.
+- Point B = desired progress compared with that baseline.
+- Do not collapse the current result and the hoped-for improvement.
 
 ## Unknowns
 - UNKNOWN:
@@ -66,6 +72,14 @@ SO I CAN ...
 | E001 |  |  |  |
 | E002 |  |  |  |
 | E003 |  |  |  |
+
+## A↔B Links
+| A-code | B-code | Link strength | Supporting evidence | Contradictions / edge cases |
+|---|---|---|---|---|
+| A01 | B01 |  |  |  |
+| A01 | B02 |  |  |  |
+
+Note: Do not force a 1:1 mapping. Preserve multiple possible A↔B links and contradictions before clustering.
 
 ## Metadata
 - Frame type: Empirical / Feeling-based
