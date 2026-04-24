@@ -23,6 +23,25 @@ In this repo:
 
 Do not collapse baseline and Point B. The baseline is the current result; Point B is the hoped-for improvement. If source material uses "baseline outcome" loosely, preserve the contrast: current result vs. desired progress.
 
+When evidence is ambiguous, use this test:
+
+- If the user is describing what happens today, code it as **Baseline result**.
+- If the user is describing what they hoped would be different, code it as **Point B**.
+- If the user is describing the situation or pressure that made the current result unacceptable, code it as **Point A / Push**.
+
+Point B should not be reduced to a feature request. It should describe progress in the user’s situation.
+
+## A↔B mapping guardrail: map, do not match
+
+Do not force a 1:1 mapping between Point A and Point B.
+
+- One struggling moment may contain multiple pushes.
+- One desired outcome may arise from different contexts.
+- Similar Point A contexts can lead to different Point B hopes.
+- Similar Point B hopes can come from different Point A situations.
+
+Before clustering, preserve competing A↔B links and contradictions. Treat them as signal, not mess. The goal is to map the demand structure, not to make every interview fit a neat pattern.
+
 ## What A2B is trying to avoid
 
 A2B is designed to keep the work anchored in:
