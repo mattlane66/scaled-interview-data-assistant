@@ -40,9 +40,26 @@ Use these labels for important claims:
 - **Path Y** = prior/substitute approach, including doing nothing / nonconsumption
 - **Tipping moment** = what changed that made action necessary or possible
 - **Path X** = adopted/current approach
-- **Baseline result** = what Path X produces today
-- **Point B** = desired progress/outcome, not a feature and not the baseline
+- **Baseline result** = what Path X or Path Y currently produces
+- **Point B** = desired progress/outcome compared with that baseline; not a feature and not the baseline
 - **Forces** = Push / Pull / Anxiety / Inertia
+
+## Terminology guardrail
+
+Keep **Baseline result** and **Point B** separate:
+
+- Baseline result = what the current/prior path produces today.
+- Point B = what the person hoped would be different.
+
+If source material uses "baseline outcome" loosely, do not collapse baseline and Point B. Preserve the contrast: current result vs. hoped-for progress.
+
+Use this coding test:
+
+- What happens today? → Baseline result
+- What did they hope would be different? → Point B
+- What made today’s result unacceptable? → Point A / Push
+
+Point B should describe progress in the user’s situation, not a requested feature.
 
 ## Persistent registry
 
@@ -155,6 +172,15 @@ Primary:
 Also:
 - Phi when N ≥ 5; flag negative edges such as phi < -0.20
 - optional cosine similarity of code texts
+
+Do not force a 1:1 mapping between Point A and Point B:
+
+- One struggling moment may contain multiple pushes.
+- One desired outcome may arise from different contexts.
+- Similar Point A contexts can lead to different Point B hopes.
+- Similar Point B hopes can come from different Point A situations.
+
+Before clustering, preserve competing A↔B links and contradictions. Treat them as signal, not mess. The goal is to map the demand structure, not to make every interview fit a neat pattern.
 
 Output top links per cluster, strengths, and 1–2 supporting `E###` each.
 
