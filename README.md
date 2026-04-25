@@ -3,7 +3,7 @@
 
 Analyze transcripts into JTBD synthesis and explain the method and LLM workflow clearly.
 
-This repo packages a qualitative synthesis assistant around JTBD. It is meant to turn interview text transcripts into evidence-traceable analysis: per-interview cards, shared codebooks, cross-interview A↔B clusters, forces analysis, fit criteria, and report-ready synthesis.
+This repo packages a qualitative synthesis assistant around JTBD. It is meant to turn interview text transcripts into evidence-traceable analysis: per-interview cards, shared codebooks, cross-interview A↔B clusters, forces analysis, fit criteria, and report-ready synthesis. Get a quick feel for the skills [here](https://chatgpt.com/g/g-687aa71b8e3c8191b2eda3552f5768b2-scaled-interview-data-assistant).
 
 ## What is in this repo
 
