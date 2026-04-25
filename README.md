@@ -1,4 +1,5 @@
 # Scaled Interview Data Assistant
+<img width="1800" height="1200" alt="GlN65" src="https://github.com/user-attachments/assets/0206f00b-adf6-4df7-9c54-95adce35c2d5" />
 
 Analyze transcripts into JTBD synthesis and explain the method and LLM workflow clearly.
 
