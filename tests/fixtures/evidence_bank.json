@@ -1,0 +1,50 @@
+[
+  {
+    "evidence": "E001",
+    "interview": "I01",
+    "segment": "S01",
+    "verbatim_excerpt": "I was copying quotes into three different docs and losing the thread.",
+    "tags": "workaround, constraint, Push",
+    "note": "Scattered manual synthesis process."
+  },
+  {
+    "evidence": "E002",
+    "interview": "I01",
+    "segment": "S02",
+    "verbatim_excerpt": "I needed a report where every claim pointed back to the actual interview evidence.",
+    "tags": "desired, Pull",
+    "note": "Traceability desired."
+  },
+  {
+    "evidence": "E003",
+    "interview": "I02",
+    "segment": "S01",
+    "verbatim_excerpt": "Once we had more than a few interviews, the synthesis got slow and inconsistent.",
+    "tags": "constraint, Push",
+    "note": "Scale creates consistency pressure."
+  },
+  {
+    "evidence": "E004",
+    "interview": "I02",
+    "segment": "S02",
+    "verbatim_excerpt": "I wanted a shared codebook so the next pass did not start from scratch.",
+    "tags": "desired, Pull",
+    "note": "Reusable synthesis structure desired."
+  },
+  {
+    "evidence": "E005",
+    "interview": "I03",
+    "segment": "S01",
+    "verbatim_excerpt": "The hard part was not summarizing one interview; it was seeing patterns across all of them.",
+    "tags": "constraint, Push",
+    "note": "Cross-interview pattern difficulty."
+  },
+  {
+    "evidence": "E006",
+    "interview": "I03",
+    "segment": "S02",
+    "verbatim_excerpt": "The output had to be reusable by the team, not just understandable to the person who ran the interviews.",
+    "tags": "desired, Pull",
+    "note": "Reusable team-facing output desired."
+  }
+]
