@@ -1,0 +1,38 @@
+[
+  {
+    "evidence": "E001",
+    "interview": "I01",
+    "a_codes": "A01",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E002",
+    "interview": "I01",
+    "a_codes": "",
+    "b_codes": "B01"
+  },
+  {
+    "evidence": "E003",
+    "interview": "I02",
+    "a_codes": "A02",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E004",
+    "interview": "I02",
+    "a_codes": "",
+    "b_codes": "B02"
+  },
+  {
+    "evidence": "E005",
+    "interview": "I03",
+    "a_codes": "A02, A03",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E006",
+    "interview": "I03",
+    "a_codes": "",
+    "b_codes": "B02, B03"
+  }
+]
