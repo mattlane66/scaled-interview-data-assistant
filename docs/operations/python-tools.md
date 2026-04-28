@@ -10,6 +10,25 @@ source .venv/bin/activate
 pip install -e ".[dev]"
 ```
 
+## Smoke test the tooling
+
+The repo includes a tiny fixture dataset under `tests/fixtures/` and an end-to-end pytest that validates the full deterministic workflow without using real research data.
+
+Run:
+
+```bash
+pytest -q
+```
+
+The smoke test covers:
+
+- registry validation
+- incidence matrix generation
+- A<->B link analysis
+- Ward clustering
+- checkpoint export
+- synthesis report audit
+
 ## Expected working files
 
 Put analyst/model-produced tables in `outputs/` as CSV, Excel, JSON, JSONL, YAML, or Markdown tables.
