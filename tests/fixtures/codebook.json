@@ -1,0 +1,26 @@
+[
+  {
+    "code": "A01",
+    "definition": "Manual synthesis is scattered across tools and loses context."
+  },
+  {
+    "code": "A02",
+    "definition": "Synthesis becomes slow or inconsistent as interview count grows."
+  },
+  {
+    "code": "A03",
+    "definition": "Cross-interview patterns are difficult to see from individual summaries."
+  },
+  {
+    "code": "B01",
+    "definition": "Every claim in the report is traceable to verbatim interview evidence."
+  },
+  {
+    "code": "B02",
+    "definition": "A shared codebook makes future synthesis passes reusable and consistent."
+  },
+  {
+    "code": "B03",
+    "definition": "The final output can be reused by a team beyond the original interviewer."
+  }
+]
