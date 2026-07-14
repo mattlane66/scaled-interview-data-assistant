@@ -1,134 +1,107 @@
 # Synthesis Report Template
 
 ## Scope
-- Interviews included:
-- Clustering scope:
+
+- Interviews:
+- Decision episodes:
+- Segments / groups:
+- Exclusions:
 - Date:
-- Mode: SYNTHESIZE
-- Confidence:
+- Review status:
 
 ## Method
-- Clustering method:
-- Tool used:
-- Computed vs. heuristic:
-- Phi used only if N >= 5:
-- Confidence notes:
 
-## Normalize & Code
-| Evidence | Interview | A-codes | B-codes | Notes |
-|---|---|---|---|---|
-| E001 | I01 |  |  |  |
-| E002 | I01 |  |  |  |
+- Analysis unit: Decision episode
+- Clustering method:
+- Computed vs. heuristic:
+- Support / sensitivity limits:
+- Analyst review:
+- Association statement: Jaccard and phi describe co-occurrence; they are not causal.
 
 ## Codebook
-### Point A codes
-| Code | Definition | Example evidence |
-|---|---|---|
-| A01 |  |  |
-| A02 |  |  |
 
-### Point B codes
-| Code | Definition | Example evidence |
-|---|---|---|
-| B01 |  |  |
-| B02 |  |  |
+### Point A Codes
+
+| Code | Definition | Example evidence | Review status |
+|---|---|---|---|
+| A01 |  | E### |  |
+
+### Point B Codes
+
+| Code | Definition | Example evidence | Review status |
+|---|---|---|---|
+| B01 |  | E### |  |
 
 ## Incidence Matrices
-### Interview x A-code
-| Interview | A01 | A02 |
-|---|---:|---:|
-| I01 | 0 | 0 |
-| I02 | 0 | 0 |
 
-### Interview x B-code
-| Interview | B01 | B02 |
-|---|---:|---:|
-| I01 | 0 | 0 |
-| I02 | 0 | 0 |
+Include or link:
 
-### Interview x Cluster Heatmap
-| Interview | C01 | C02 |
-|---|---:|---:|
-| I01 | 0 | 0 |
-| I02 | 0 | 0 |
+- decision episode × A-code;
+- decision episode × B-code;
+- decision episode × combined code;
+- decision episode × cluster.
 
-## A<->B Link Strengths
-| A-code | B-code | Jaccard | Phi | Cosine | Supporting evidence |
-|---|---|---:|---:|---:|---|
-| A01 | B01 |  |  |  |  |
+## A↔B Associations
 
-## High-level patterns
-- 
-- 
-- 
+| A-code | B-code | Units | Co-occurring units | Jaccard | Phi | Low support | Evidence note |
+|---|---|---:|---:|---:|---:|---|---|
+| A01 | B01 |  |  |  |  |  | E### |
 
-## Clusters
-### C01
-- Name:
-- Definition:
-- Shared Point A:
-- Linked Point B:
-- Canonical job story:
-- Variants:
-- Strongest carriers:
-- A<->B link table:
-- Forces:
-  - Push:
-  - Pull:
-  - Anxiety:
-  - Inertia:
-- Fit criteria:
-- Supporting evidence:
-- Contradictions / edge cases:
-- Confidence:
-- What would raise confidence:
+## High-Level Patterns
 
-### C02
-- Name:
-- Definition:
-- Shared Point A:
-- Linked Point B:
-- Canonical job story:
-- Variants:
-- Strongest carriers:
-- A<->B link table:
-- Forces:
-  - Push:
-  - Pull:
-  - Anxiety:
-  - Inertia:
-- Fit criteria:
-- Supporting evidence:
-- Contradictions / edge cases:
-- Confidence:
-- What would raise confidence:
-
-## Takeaways
 ### VERIFIED
-- 
+
+- … E###
 
 ### INFERRED
-- 
+
+- … E### E###
+
+## Adjusted Job Clusters
+
+### C01 — Name
+
+- Definition:
+- Shared Point A:
+- Linked Point B:
+- Canonical job story:
+- Variants:
+- Strongest decision episodes:
+- Competing A↔B links:
+- Push / Pull / Anxiety / Inertia:
+- Technology-agnostic fit criteria:
+- Supporting evidence: E###
+- Disconfirming evidence / edge cases: E###
+- Confidence and stability:
+- What would change the interpretation:
+
+## Implications
+
+### VERIFIED
+
+- … E###
+
+### INFERRED
+
+- … E###
 
 ### SPECULATIVE
-Only include if the user explicitly asks for ideas.
-- More about:
-- Less about:
-- Raw ideas:
 
-## Progressive Disclosure Commands
-- Expand cluster C##
-- Show evidence for A## / B## / A##<->B##
-- Show full matrices
-- Export checkpoint
+Include only when explicitly requested. State what would confirm or disconfirm each idea.
+
+- TBD
 
 ## Decision Log
+
 - 
 
 ## Diff Log
+
 - Adds:
 - Merges:
+- Splits:
 - Renames:
-- Re-codes:
-- Re-clusters:
-- Why:
+- Recodes:
+- Reclusters:
+- Reason:
+- Review status:

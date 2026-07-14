@@ -1,49 +1,38 @@
-# Example Report Structure
+# Synthesis report structure
 
-The example report suggests a three-layer synthesis pattern.
+A report has three layers.
 
-## 1. Per-interview A2B analysis
+## 1. Case fidelity
 
-For each interview:
-- Point A
-- Point B
-- one primary job story
-- forces and constraints
-- relevant path details
+For each decision episode:
 
-## 2. Cross-interview coding + clustering
+- Point A and pre-switch baseline;
+- Path Y, tipping moment, and Path X;
+- Point B and observed Path X result;
+- forces, contradictions, and unknowns;
+- inline evidence references.
 
-Suggested components:
-- shared struggles / Point A codebook
-- shared desired outcomes / Point B codebook
-- interview × code matrices
-- cluster-level heatmap
-- cluster naming and interpretation
+## 2. Cross-episode structure
 
-The sample report uses Ward clustering over a binary code matrix and then organizes
-findings into a smaller number of adjusted job clusters.
+- reviewed A/B codebook;
+- decision episode × code matrices;
+- A↔B association table with support counts;
+- exploratory cluster assignments;
+- calculation status and limitations.
 
-## 3. Cluster-level synthesis
+## 3. Decision-useful synthesis
 
 For each cluster:
-- canonical job story
-- strongest carriers
-- forces
-- fit criteria
-- evidence-based takeaways
 
-## Common cluster pattern from the sample
+- definition and canonical job story;
+- strongest decision episodes;
+- competing A↔B links;
+- forces and technology-agnostic fit criteria;
+- supporting and disconfirming evidence;
+- confidence and what would change it.
 
-The attached example groups work into four cluster families:
+The report ends with evidence-based implications. Product ideas appear only when requested and are
+labelled `SPECULATIVE`.
 
-1. Standards & Pathways
-2. Teacher Capacity & Scale-Up
-3. Data & Vendor Viability
-4. Equity & Experience
-
-## Why this matters
-
-This is useful as a reproducible output target because it separates:
-- interview-level fidelity
-- cross-interview computation
-- decision-useful synthesis
+See the repository’s synthetic multi-interview example for a complete calibration artifact. Do not
+copy its conclusions into another study; copy its evidence discipline and structure.

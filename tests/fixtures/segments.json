@@ -1,0 +1,8 @@
+[
+  {"interview": "I01", "segment": "S01", "location": "turn 1"},
+  {"interview": "I01", "segment": "S02", "location": "turn 2"},
+  {"interview": "I02", "segment": "S01", "location": "turn 1"},
+  {"interview": "I02", "segment": "S02", "location": "turn 2"},
+  {"interview": "I03", "segment": "S01", "location": "turn 1"},
+  {"interview": "I03", "segment": "S02", "location": "turn 2"}
+]

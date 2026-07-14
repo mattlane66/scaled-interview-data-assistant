@@ -1,0 +1,8 @@
+[
+  {"code": "A01", "family": "A", "definition": "Manual synthesis is scattered and loses context."},
+  {"code": "A02", "family": "A", "definition": "Synthesis becomes inconsistent as interview count grows."},
+  {"code": "A03", "family": "A", "definition": "Cross-interview patterns are hidden by individual summaries."},
+  {"code": "B01", "family": "B", "definition": "Report claims remain traceable to verbatim evidence."},
+  {"code": "B02", "family": "B", "definition": "A shared codebook makes later synthesis consistent and reusable."},
+  {"code": "B03", "family": "B", "definition": "The team can reuse the analysis beyond the original interviewer."}
+]

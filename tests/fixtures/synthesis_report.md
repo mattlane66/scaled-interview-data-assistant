@@ -1,9 +1,10 @@
 # Fixture Synthesis Report
 
 ## Method
-- Clustering method: Ward hierarchical clustering on combined A+B incidence.
+- Analysis unit: Decision episode.
+- Clustering method: Average-linkage hierarchical clustering on Jaccard distance.
 - Computed vs. heuristic: Computed by scripts for matrices, links, and clusters.
-- Phi used only if N >= 5: No; N < 5 in this fixture.
+- Association note: Jaccard and phi describe code co-occurrence; this is not causal.
 
 ## Takeaways
 ### VERIFIED
@@ -11,7 +12,7 @@
 - The desired report should make claims traceable to interview evidence. E002
 
 ### INFERRED
-- A02 appears linked to B02 in this fixture because I02 and I03 both carry scale/consistency pressure and reusable-codebook/team-output desires.
+- A02 appears associated with B02 because D02 and D03 carry both scale pressure and reusable-output desires. E003 E004 E005 E006
 
 ## Codes and clusters referenced
 - A01, A02, A03

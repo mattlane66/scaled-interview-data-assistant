@@ -20,6 +20,7 @@ console = Console()
 
 ID_PATTERNS = {
     "interview": re.compile(r"^I\d{2,}$"),
+    "episode": re.compile(r"^D\d{2,}$"),
     "segment": re.compile(r"^S\d{2,}$"),
     "evidence": re.compile(r"^E\d{3,}$"),
     "a_code": re.compile(r"^A\d{2,}$"),
@@ -29,14 +30,14 @@ ID_PATTERNS = {
 
 
 def read_table(path: Path) -> pd.DataFrame:
-    """Read CSV, Excel, JSON, JSONL, YAML, or Markdown table files."""
+    """Read CSV, XLSX, JSON, JSONL, YAML, or a single Markdown table."""
     if not path.exists():
         raise typer.BadParameter(f"File not found: {path}")
 
     suffix = path.suffix.lower()
     if suffix == ".csv":
         return pd.read_csv(path)
-    if suffix in {".xlsx", ".xls"}:
+    if suffix == ".xlsx":
         return pd.read_excel(path)
     if suffix == ".json":
         data = json.loads(path.read_text())
@@ -107,23 +108,30 @@ def normalize_column_names(df: pd.DataFrame) -> pd.DataFrame:
     return df.rename(columns=rename)
 
 
-def split_codes(value: Any, prefix: str | None = None) -> list[str]:
-    """Split cells like 'A01, A02; A03' into code lists."""
+def split_tokens(value: Any) -> list[str]:
+    """Split a delimited table cell into non-empty tokens without filtering."""
     if pd.isna(value):
         return []
     text = str(value).strip()
     if not text:
         return []
     parts = re.split(r"[,;/\n]+", text)
-    codes = []
+    tokens = []
     for part in parts:
         candidate = part.strip()
         if not candidate or candidate in {"-", "—"}:
             continue
-        if prefix and not candidate.startswith(prefix):
-            continue
-        codes.append(candidate)
-    return codes
+        tokens.append(candidate)
+    return tokens
+
+
+def split_codes(value: Any, prefix: str | None = None) -> list[str]:
+    """Split code cells and optionally retain only one validated code family."""
+    tokens = split_tokens(value)
+    if prefix is None:
+        return tokens
+    pattern_key = "a_code" if prefix == "A" else "b_code"
+    return [token for token in tokens if validate_id(token, pattern_key)]
 
 
 def require_columns(df: pd.DataFrame, required: list[str], source: Path | str) -> None:
@@ -141,10 +149,13 @@ def write_table(df: pd.DataFrame, path: Path) -> None:
     suffix = path.suffix.lower()
     if suffix == ".csv":
         df.to_csv(path, index=False)
-    elif suffix in {".xlsx", ".xls"}:
+    elif suffix == ".xlsx":
         df.to_excel(path, index=False)
     elif suffix == ".json":
-        path.write_text(json.dumps(df.to_dict(orient="records"), indent=2))
+        path.write_text(
+            json.dumps(records_without_nan(df), indent=2, ensure_ascii=False, allow_nan=False)
+            + "\n"
+        )
     else:
         raise typer.BadParameter(f"Unsupported output type: {path.suffix}")
 
@@ -153,6 +164,12 @@ def validate_id(value: Any, kind: str) -> bool:
     if pd.isna(value):
         return False
     return bool(ID_PATTERNS[kind].match(str(value).strip()))
+
+
+def records_without_nan(df: pd.DataFrame) -> list[dict[str, Any]]:
+    """Convert a frame into strict-JSON-compatible records."""
+    clean = df.astype(object).where(pd.notna(df), None)
+    return clean.to_dict(orient="records")
 
 
 def fail_if_errors(errors: list[str]) -> None:

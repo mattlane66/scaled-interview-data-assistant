@@ -1,84 +1,60 @@
-# Registry and Checkpoint Protocol
+# Registry and checkpoint protocol
 
-Use this protocol to keep qualitative synthesis work stable, auditable, and resumable across long sessions.
+Stable registries keep long studies auditable and resumable.
 
-## Persistent registries
+## IDs
 
-Maintain stable IDs across turns. Never renumber.
+- Interview: `I01`, `I02`, …
+- Decision episode: `D01`, `D02`, …
+- Segment: `S01`, `S02`, … per interview
+- Evidence: `E001`, `E002`, …
+- Point A code: `A01`, `A02`, …
+- Point B code: `B01`, `B02`, …
+- Cluster: `C01`, `C02`, …
 
-- Interview Index: `I01`, `I02`, ... with a short descriptor
-- Segment Index: `S01`, `S02`, ... per interview, with timestamp or speaker-turn range when available
-- Evidence Bank: `E001`, `E002`, ... atomic, verbatim-only excerpts
-- Codebook A-codes: `A01`, `A02`, ... for Point A contexts, forces, and struggles
-- Codebook B-codes: `B01`, `B02`, ... for Point B progress
-- Clusters: `C01`, `C02`, ...
-- Alias map: records merges as alias -> canonical
+Never renumber an accepted ID. A merge creates an alias to the canonical ID. A split creates new IDs
+and records which earlier artifacts require backcoding.
 
-## Evidence bank rows
+## Evidence provenance
 
-Each evidence row should include:
+Every evidence row includes its interview, decision episode, segment, source file, source location,
+and atomic verbatim excerpt. Stable IDs are not enough if a reviewer cannot locate the original
+passage.
 
-| Field | Description |
-|---|---|
-| E# | Stable evidence ID |
-| I# | Interview ID |
-| S# | Segment ID |
-| Verbatim excerpt | Atomic quote copied exactly from the source |
-| Tags | Push, Pull, Anxiety, Inertia, Path X/Y, baseline, desired, constraint, workaround, trigger |
-| Note | One-line analyst note |
+## Codebook maintenance
 
-## Diff Log
+For each batch:
 
-Every working turn should include a brief Diff Log with:
+1. reuse an existing code only when its definition fits;
+2. add a code when material evidence does not fit;
+3. record merges, splits, renames, and reasons;
+4. backcode earlier episodes after a material codebook change;
+5. periodically review uncoded and contradictory evidence to reduce first-batch anchoring.
 
-- adds
-- merges
-- renames
-- re-codes
-- re-clusters
-- why the change was made
+## Diff log
 
-## Merge handling
+Record additions, merges, splits, renames, recodes, reclusters, the reason, and the analyst who
+approved the change.
 
-When merging IDs, preserve the old identifier in the alias map.
+## Checkpoints
 
-Example:
+Export a checkpoint after each reviewed batch. Version 1 checkpoints include:
 
-```text
-Alias map:
-- A07 -> A03
-- C04 -> C02
+- analysis metadata and timestamp;
+- interview, episode, and segment indexes;
+- evidence bank and codebook;
+- evidence-to-code mappings;
+- cluster assignments and alias map;
+- latest diff log.
+
+On resume, validate the checkpoint-derived tables, preserve every accepted ID, continue numbering
+from the highest ID, and record what was restored. A checkpoint is a state transfer, not proof that
+the underlying interpretations are correct.
+
+```bash
+python scripts/import_checkpoint.py \
+  --checkpoint outputs/CHECKPOINT.json \
+  --output-dir data/restored
 ```
 
-Do not delete the historical ID from prior artifacts. Mark it as an alias so older references remain understandable.
-
-## Checkpoint export
-
-After 4+ interviews, a long transcript batch, or a long chat session, offer a checkpoint that can be pasted back later.
-
-The checkpoint should contain:
-
-- registry
-- interview index
-- segment index
-- evidence bank
-- codebook
-- E -> code mappings
-- clusters
-- alias maps
-- latest Diff Log
-
-## Resume command
-
-Resume from a checkpoint when the user says:
-
-```text
-Resume from checkpoint.
-```
-
-On resume:
-
-1. Reconstruct the registries.
-2. Preserve all existing IDs.
-3. Continue numbering from the highest existing ID.
-4. Include a Diff Log confirming what was restored and what changed.
+Run registry validation on the restored tables before continuing.
