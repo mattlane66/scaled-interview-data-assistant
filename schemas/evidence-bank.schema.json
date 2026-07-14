@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mattlane66/scaled-interview-data-assistant/schemas/evidence-bank.schema.json",
+  "title": "Evidence Bank",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "evidence",
+      "interview",
+      "episode",
+      "segment",
+      "source",
+      "source_location",
+      "verbatim_excerpt"
+    ],
+    "properties": {
+      "evidence": {"type": "string", "pattern": "^E[0-9]{3,}$"},
+      "interview": {"type": "string", "pattern": "^I[0-9]{2,}$"},
+      "episode": {"type": "string", "pattern": "^D[0-9]{2,}$"},
+      "segment": {"type": "string", "pattern": "^S[0-9]{2,}$"},
+      "source": {"type": "string", "minLength": 1},
+      "source_location": {"type": "string", "minLength": 1},
+      "verbatim_excerpt": {"type": "string", "minLength": 1},
+      "tags": {"type": ["string", "array", "null"]},
+      "note": {"type": ["string", "null"]}
+    },
+    "additionalProperties": true
+  }
+}

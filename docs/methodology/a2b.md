@@ -1,84 +1,59 @@
-# A2B Method Notes
+# A2B method
 
-A2B is a framing and investigation tool used to produce a well-framed artifact for shaping.
-It aims to uncover **technology-agnostic requirements** by clarifying:
-- the situation and struggle,
-- the prior/current paths,
-- the current baseline result,
-- and the desired progress.
+A2B is a demand-side framing method for reconstructing a real decision episode: the situation
+someone was in, the paths they considered or used, what caused movement, and the progress they
+wanted.
+
+## Unit of analysis
+
+The default unit is a **decision episode** (`D##`), not a participant or an entire transcript. One
+interview may contain multiple episodes. Keep them separate unless the evidence shows that they are
+part of the same struggle and switch.
 
 ## Core pieces
 
-- **Point A**: the contextual struggling moment
-- **Path Y**: the old way / substitute / workaround / doing nothing
-- **Path X**: the current or adopted approach
-- **Point B**: the desired outcome relative to the baseline
+- **Point A**: the contextual struggling moment and its pressures
+- **Path Y**: the prior approach, substitute, workaround, nonconsumption, or delay
+- **Tipping moment**: what made action necessary or newly possible
+- **Path X**: the adopted or newly attempted approach
+- **Pre-switch baseline**: what Path Y produced before the switch
+- **Point B**: the progress the person hoped Path X would create
+- **Observed Path X result**: what actually happened after adoption, if the interview establishes it
 
-## Terminology guardrail: baseline vs. Point B
+Do not collapse the pre-switch baseline, Point B, and observed result:
 
-In this repo:
+- What was happening before the switch? → **Pre-switch baseline**
+- What did the person hope would become different? → **Point B**
+- What actually happened after the switch? → **Observed Path X result**
 
-- **Baseline result** = what Path X or Path Y currently produces.
-- **Point B** = desired progress compared with that baseline.
+If the interview does not cover post-adoption experience, mark the observed result `UNKNOWN`.
 
-Do not collapse baseline and Point B. The baseline is the current result; Point B is the hoped-for improvement. If source material uses "baseline outcome" loosely, preserve the contrast: current result vs. desired progress.
+## A↔B mapping
 
-When evidence is ambiguous, use this test:
+Map Point A and Point B within the same decision episode. Do not force a one-to-one relationship:
 
-- If the user is describing what happens today, code it as **Baseline result**.
-- If the user is describing what they hoped would be different, code it as **Point B**.
-- If the user is describing the situation or pressure that made the current result unacceptable, code it as **Point A / Push**.
+- one struggle can create several pushes;
+- one desired outcome can arise from different contexts;
+- similar Point A situations can lead to different Point B hopes;
+- similar Point B hopes can arise from different Point A situations.
 
-Point B should not be reduced to a feature request. It should describe progress in the user’s situation.
+Cross-episode co-occurrence is an association signal, not proof that Point A caused Point B.
 
-## A↔B mapping guardrail: map, do not match
+## Evidence discipline
 
-Do not force a 1:1 mapping between Point A and Point B.
+A good A2B artifact distinguishes:
 
-- One struggling moment may contain multiple pushes.
-- One desired outcome may arise from different contexts.
-- Similar Point A contexts can lead to different Point B hopes.
-- Similar Point B hopes can come from different Point A situations.
+- verbatim evidence;
+- interpretation grounded in named evidence IDs;
+- hypotheses that require more evidence;
+- what remains unknown.
 
-Before clustering, preserve competing A↔B links and contradictions. Treat them as signal, not mess. The goal is to map the demand structure, not to make every interview fit a neat pattern.
+Past behavior and bounded context carry more weight than general opinions or hypothetical feature
+preferences. A workaround is usually Path Y, not Point A. A requested feature is usually a proposed
+path, not Point B.
 
-## What A2B is trying to avoid
+## Suitable and unsuitable research
 
-A2B is designed to keep the work anchored in:
-- real past behavior
-- bounded context
-- causal reasoning
-- forces in the decision to switch
-
-It is not meant for validating an imagined solution.
-
-## Key prompts
-
-Use questions like:
-
-1. When did you first start using or buying Path X?
-2. When did you first think you might need something like Path X?
-3. What were you doing in the period before adopting Path X?
-4. Why didn’t you just continue doing that? What tipped you?
-5. What was bad or frustrating about that?
-6. Before using Path X, what were you hoping would be different afterward?
-
-## Practical reading rule
-
-If the user describes a workaround, that may still be **Path Y**, not Point A.
-
-Point A often becomes clearer when the person starts describing scarcity:
-- time
-- energy
-- knowledge
-- money
-
-## Output expectation
-
-A good A2B artifact should make it possible to state:
-
-- the struggling moment,
-- the old/current path,
-- the current result,
-- the desired outcome,
-- and the forces that make a new path worth exploring.
+A2B works best when an interview contains a real struggle, adoption, rejection, purchase, switch, or
+meaningful attempt to make progress. It is not, by itself, a method for usability testing, survey
+analysis, concept preference, brand sentiment, or evaluating a predetermined feature.

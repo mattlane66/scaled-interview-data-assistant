@@ -1,59 +1,51 @@
-# Framing Method Notes
+# Framing method
 
-Framing means defining the real opportunity by locating:
-- a specific moment of struggle,
-- what the person was trying to do,
-- how their current approach failed,
-- and what “better” would actually look like.
+Framing locates the real opportunity before a team commits to a solution. It connects a specific
+struggling moment to an insufficient current path and desired progress.
 
-## Core frame structure
+## Frame structure
 
-A framing snapshot typically follows:
+> WHEN [specific situation and pressures],
+>
+> AND [why the current path is insufficient or constrained],
+>
+> I WANT [progress, not a feature],
+>
+> SO I CAN [downstream progress].
 
-> WHEN I’m in a specific situation with real pressures,  
-> AND my current way isn’t working well enough,  
-> I WANT a better result,  
-> SO I CAN make the progress I was originally aiming for.
+Every frame should name its decision episode and cite the evidence supporting each important claim.
 
-## Key parts of a frame
+## Interviewing line of inquiry
 
-1. **Context**: the real moment in someone’s life
-2. **Current approach + baseline result**: what they tried and how it worked/failed
-3. **Desired outcome**: the progress they wanted, not a feature
+1. When did you first use, buy, reject, or seriously consider Path X?
+2. When did you first think something needed to change?
+3. What were you doing before that?
+4. Why did you not continue? What finally tipped you?
+5. What was difficult about the prior result?
+6. What did you hope would become different?
+7. What actually happened after adoption, if enough time has passed?
 
-## Forces model
+Useful follow-ups reconstruct location, timing, sequence, constraints, workarounds, other people
+involved, and what changed on the day action became possible.
 
-Framing should surface:
-- Push
-- Pull
-- Anxiety
-- Inertia
+## Forces
 
-## Broad line of inquiry
+- **Push**: pressure away from the prior path
+- **Pull**: attraction toward the hoped-for progress or new path
+- **Anxiety**: concern about switching or the new path
+- **Inertia**: forces preserving the status quo
 
-Useful interview prompts include:
-1. When did you first start using/buying Path X?
-2. When did you first think you might need something like Path X?
-3. What were you doing before you adopted Path X?
-4. Why didn’t you continue doing that? What finally tipped you?
-5. What was bad or frustrating about that?
-6. Before using Path X, what were you hoping would be different afterward?
+## Metadata rules
 
-## Important discipline
+- **Frame type**: `Empirical` only when the frame is anchored in a specific past episode;
+  otherwise `Feeling-based`.
+- **Confidence**: explain what is supported, missing, contradictory, or based on only one case. Do
+  not infer confidence from fluent language.
+- **Appetite**: a team-supplied delivery constraint, such as two weeks or six weeks. Never infer it
+  from an interview.
 
-- Lead with context, not outcomes.
-- Separate jobs from solutions.
-- Use real-user grounding, not fictional personas.
-- Cluster “when” contexts and “so I can” outcomes across interviews.
-- Do not assume one moment maps to one motive.
+## Human review gates
 
-## Input into shaping
-
-A framed artifact should usually include:
-- a narrow job story snapshot
-- the struggling moment
-- current approach
-- current result
-- desired outcome
-- appetite
-- frame type (empirical vs feeling-based)
+An analyst should approve the evidence bank before coding, approve codebook additions or merges
+before computation, and review every cluster against its strongest evidence and contradictions
+before using it to make product decisions.

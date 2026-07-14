@@ -1,99 +1,109 @@
-# Interview Card Template
+# Decision-Episode Card Template
 
-## Interview
-- ID:
+## Identity
+
+- Interview: I##
+- Decision episode: D##
 - Descriptor:
 - Source:
-- Date:
+- Review status: PROVISIONAL / EVIDENCE REVIEWED / CODEBOOK REVIEWED
 - Mode: SINGLE
-- Confidence:
 
 ## Snapshot
-- Point A:
-- Tipping moment:
-- Point B:
+
+- Point A: **VERIFIED / INFERRED** … E###
+- Tipping moment: **VERIFIED / INFERRED** … E###
+- Point B: **VERIFIED / INFERRED** … E###
 
 ## Segment Map
-| Segment | Location | Scene / situation | Notes |
-|---|---|---|---|
-| S01 |  |  |  |
-| S02 |  |  |  |
+
+| Segment | Source location | Scene / situation | Decision episode | Notes |
+|---|---|---|---|---|
+| S01 |  |  | D## |  |
 
 ## Evidence Bank
-| E# | I# | S# | Verbatim excerpt | Tags | Note |
-|---|---|---|---|---|---|
-| E001 |  |  |  |  |  |
-| E002 |  |  |  |  |  |
-| E003 |  |  |  |  |  |
 
-## Verified timeline
-- Trigger:
-- Path Y:
-- Tipping:
-- Path X:
-- Baseline result:
-- Point B / hoped-for progress:
-- After-effects:
+| Evidence | Interview | Episode | Segment | Source | Source location | Verbatim excerpt | Tags | Note |
+|---|---|---|---|---|---|---|---|---|
+| E001 | I## | D## | S01 |  |  |  |  |  |
 
-## Baseline vs. Point B guardrail
-- Baseline result = what Path X or Path Y currently produces.
-- Point B = desired progress compared with that baseline.
-- Do not collapse the current result and the hoped-for improvement.
+## Verified Timeline
 
-## Unknowns
+- Trigger: … E###
+- Path Y: … E###
+- Pre-switch baseline: … E###
+- Tipping moment: … E###
+- Path X: … E###
+- Observed Path X result: … E### / UNKNOWN
+
+## Unknowns and Follow-ups
+
 - UNKNOWN:
-- INFERRED:
+- Alternative interpretation:
 - Follow-up 1:
 - Follow-up 2:
 - Follow-up 3:
 
 ## Forces
-- Push:
-- Pull:
-- Anxiety:
-- Inertia:
 
-## Job story
-WHEN ...
-AND ...
-I WANT ...
-SO I CAN ...
+- Push: … E###
+- Pull: … E###
+- Anxiety: … E###
+- Inertia: … E###
 
-## Tech-agnostic requirements
-| Requirement | Linked A/B codes | Supporting evidence |
-|---|---|---|
-| Must be able to... |  |  |
-| Must be able to... |  |  |
-| Must be able to... |  |  |
+## Job Story
 
-## E -> Code Mapping
-| Evidence | A-codes | B-codes | Notes |
+WHEN …
+
+AND …
+
+I WANT …
+
+SO I CAN …
+
+## Technology-Agnostic Fit Criteria
+
+| Criterion | Linked A/B codes | Supporting evidence | Status |
 |---|---|---|---|
-| E001 |  |  |  |
-| E002 |  |  |  |
-| E003 |  |  |  |
+| Must be able to… | A##, B## | E### | VERIFIED / INFERRED |
 
-## A↔B Links
-| A-code | B-code | Link strength | Supporting evidence | Contradictions / edge cases |
-|---|---|---|---|---|
-| A01 | B01 |  |  |  |
-| A01 | B02 |  |  |  |
+## Evidence-to-Code Mapping
 
-Note: Do not force a 1:1 mapping. Preserve multiple possible A↔B links and contradictions before clustering.
+| Evidence | Interview | Episode | A-codes | B-codes | Notes |
+|---|---|---|---|---|---|
+| E001 | I## | D## |  |  |  |
+
+## A↔B Associations
+
+| A-code | B-code | Unit | Support | Status | Evidence | Contradictions |
+|---|---|---|---:|---|---|---|
+| A## | B## | D## | 1 | WITHIN-EPISODE | E### |  |
+
+Associations do not establish causation. Do not force a one-to-one A↔B mapping.
 
 ## Metadata
+
 - Frame type: Empirical / Feeling-based
-- Appetite:
-- Confidence: High / Medium / Low
-- What would raise confidence:
+- Appetite: NOT PROVIDED / team-supplied constraint
+- Confidence:
+- Confidence basis:
+- What would raise or lower confidence:
+
+## Contradictions and Edge Cases
+
+- TBD
 
 ## Decision Log
+
 - 
 
 ## Diff Log
+
 - Adds:
 - Merges:
+- Splits:
 - Renames:
-- Re-codes:
-- Re-clusters:
-- Why:
+- Recodes:
+- Reclusters:
+- Reason:
+- Review status:

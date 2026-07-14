@@ -1,104 +1,59 @@
-# Computation Protocol
+# Computation protocol
 
-Use this protocol to separate qualitative interpretation from deterministic computation.
+Computation supports qualitative judgment; it does not replace it. The assistant proposes
+interpretations. The scripts validate structure and calculate reproducible descriptive signals.
 
-## Principle
+## Analysis unit
 
-The assistant can propose interpretations, but numerical claims should be computed or clearly labeled as heuristic.
-
-## Good generative interpretation tasks
-
-LLMs are useful for:
-
-- segmenting transcripts into scenes
-- extracting verbatim evidence
-- proposing Point A and Point B codes
-- summarizing per-interview timelines
-- drafting job stories
-- naming clusters
-- identifying possible contradictions and edge cases
-
-These outputs still need evidence references and analyst review.
-
-## Structured computation tasks
-
-Validate these with tools whenever available:
-
-- counts
-- interview x code incidence matrices
-- interview x cluster heatmaps
-- Jaccard co-occurrence
-- phi coefficients
-- cosine similarity of code text
-- hierarchical clustering
-
-Do not do this math mentally when tools are available.
+Use decision episode (`D##`) by default. Interview-level analysis is appropriate only when every
+interview contains exactly one bounded decision episode. Otherwise, interview-level co-presence can
+create false A↔B associations.
 
 ## Incidence matrices
 
-Represent whether an interview contains a code or cluster.
+The pipeline builds binary unit × code matrices:
 
-Use binary values:
+- decision episode × A-code;
+- decision episode × B-code;
+- decision episode × combined A+B code;
+- decision episode × cluster.
 
-- `1` = present
-- `0` = absent
+`1` means the reviewed evidence for that unit contains the code; `0` means it does not. A zero does
+not prove the participant lacked the need—it may reflect interview coverage.
 
-Recommended matrices:
+## A↔B association
 
-- interview x A-code
-- interview x B-code
-- interview x combined A+B code
-- interview x cluster
+The primary descriptive signal is Jaccard co-occurrence across decision episodes. The output also
+includes support counts and phi where mathematically defined. Low-support results are flagged.
 
-## A<->B linking
-
-Primary link strength:
-
-- Jaccard co-occurrence across interviews
-
-Secondary link checks:
-
-- Phi coefficient when `N >= 5`
-- Flag negative edges such as `phi < -0.20`
-- Optional cosine similarity of code definitions or code text
+These values describe association, not causation, importance, market size, or prevalence in a wider
+population. Semantic cosine between code definitions is only a discovery aid; it is not behavioral
+evidence.
 
 ## Clustering
 
-Preferred method when tools exist:
+The default implementation uses average-linkage hierarchical clustering over Jaccard distance on
+binary A+B incidence. This is exploratory grouping, not a discovered ground truth.
 
-- Ward hierarchical clustering on combined A+B incidence
+- The analyst chooses and records the target cluster count.
+- The pipeline reports an exploratory silhouette score when defined.
+- Previous assignments can be supplied to preserve stable `C##` IDs by membership overlap.
+- Every cluster must be reviewed against its evidence, competing links, and edge cases.
 
-If tools are unavailable:
+Run sensitivity checks with nearby cluster counts when the grouping affects an important decision.
+If the interpretation changes materially, report that instability.
 
-- label clustering as `HEURISTIC`
-- merge by highest Jaccard overlap
-- stop at 3-5 clusters or when the best merge is below `0.30`
+## Reporting requirements
 
-## Reporting computation status
+Every report must state:
 
-Every synthesis report should state:
+- analysis unit;
+- clustering or grouping method;
+- computed versus heuristic steps;
+- support counts and low-support limitations;
+- that code association is not causal;
+- analyst review status;
+- contradictions and evidence gaps.
 
-- clustering method used
-- whether tools were used
-- which calculations were computed vs. heuristic
-- confidence limits
-- what would raise confidence
-
-Example:
-
-```text
-Method: Ward hierarchical clustering on combined A+B incidence.
-Computation status: VERIFIED with tool-generated matrices.
-Phi used: No; N=4, below the N>=5 threshold.
-Confidence: Medium. Would rise with 3-5 additional interviews from the same segment.
-```
-
-## Heuristic label
-
-Use `HEURISTIC` when the result is analyst/model judgment rather than tool-validated calculation.
-
-Example:
-
-```text
-HEURISTIC: C02 groups A03, A06, and B04 because the evidence repeatedly links time pressure, workaround fatigue, and desire for lower-friction coordination. This should be validated with incidence counts when more interviews are available.
-```
+Frequency is not importance. A rare episode can still reveal a severe constraint or strategically
+important job.

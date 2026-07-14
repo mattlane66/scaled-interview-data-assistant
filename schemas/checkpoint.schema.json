@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mattlane66/scaled-interview-data-assistant/schemas/checkpoint.schema.json",
+  "title": "Synthesis Checkpoint v1",
+  "type": "object",
+  "required": [
+    "checkpoint_version",
+    "generated_at",
+    "analysis_unit",
+    "computation",
+    "interview_index",
+    "episode_index",
+    "segment_index",
+    "evidence_bank",
+    "codebook",
+    "evidence_to_code_mappings",
+    "clusters",
+    "alias_map"
+  ],
+  "properties": {
+    "checkpoint_version": {"type": "string", "pattern": "^1\\."},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "analysis_unit": {"enum": ["episode", "interview"]},
+    "computation": {"type": "object"},
+    "metadata": {"type": "object"},
+    "interview_index": {"type": "array"},
+    "episode_index": {"type": "array"},
+    "segment_index": {"type": "array"},
+    "evidence_bank": {"type": "array"},
+    "codebook": {"type": "array"},
+    "evidence_to_code_mappings": {"type": "array"},
+    "clusters": {"type": "array"},
+    "alias_map": {"type": "array"},
+    "latest_diff_log": {"type": "string"}
+  },
+  "additionalProperties": false
+}

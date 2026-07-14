@@ -1,117 +1,73 @@
-# Python Tooling
+# Deterministic Python tooling
 
-This repo is primarily a method and prompt package. The Python scripts are a thin deterministic layer for the parts of qualitative synthesis that should not be done mentally by an LLM.
+The Python layer validates and computes over analyst-reviewed artifacts. It does not call an LLM or
+decide what interview evidence means.
 
 ## Install
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install -e ".[dev]"
+python -m pip install -e ".[dev]"
 ```
 
-## Smoke test the tooling
-
-The repo includes a tiny fixture dataset under `tests/fixtures/` and an end-to-end pytest that validates the full deterministic workflow without using real research data.
-
-Run:
+## Run the included checks
 
 ```bash
-pytest -q
+python -m ruff check .
+python -m pytest -q
 ```
 
-The smoke test covers:
+CI runs both commands on Python 3.10 and 3.12.
 
-- registry validation
-- incidence matrix generation
-- A<->B link analysis
-- Ward clustering
-- checkpoint export
-- synthesis report audit
+## One-command deterministic workflow
 
-## Expected working files
-
-Put analyst/model-produced tables in `outputs/` as CSV, Excel, JSON, JSONL, YAML, or Markdown tables.
-
-Recommended files:
-
-```text
-outputs/evidence_bank.csv
-outputs/codebook.csv
-outputs/evidence_mappings.csv
-outputs/clusters.csv
-outputs/alias_map.csv
-outputs/synthesis_report.md
-```
-
-## Validate registry integrity
+After an analyst has reviewed the registries, evidence bank, codebook, and mappings:
 
 ```bash
-python scripts/validate_registry.py \
-  --evidence outputs/evidence_bank.csv \
-  --codebook outputs/codebook.csv \
-  --mappings outputs/evidence_mappings.csv \
-  --aliases outputs/alias_map.csv
+python scripts/run_pipeline.py \
+  --interviews data/interviews.json \
+  --episodes data/episodes.json \
+  --segments data/segments.json \
+  --source-root data \
+  --evidence data/evidence_bank.json \
+  --codebook data/codebook.json \
+  --mappings data/evidence_mappings.json \
+  --report data/synthesis_report.md \
+  --clusters 3 \
+  --output-dir outputs
 ```
 
-## Build incidence matrices
+The pipeline:
+
+1. verifies excerpts against local sources and validates registries, provenance, mappings, and code
+   families;
+2. builds decision-episode incidence matrices without dropping zero-code episodes;
+3. calculates descriptive A↔B associations and support counts;
+4. clusters decision episodes using Jaccard distance;
+5. exports a versioned checkpoint;
+6. audits the report when one is supplied.
+
+## Individual commands
 
 ```bash
-python scripts/build_matrices.py \
-  --mappings outputs/evidence_mappings.csv \
-  --output-dir outputs/matrices
+python scripts/validate_registry.py --help
+python scripts/build_matrices.py --help
+python scripts/analyze_links.py --help
+python scripts/cluster_interviews.py --help
+python scripts/export_checkpoint.py --help
+python scripts/import_checkpoint.py --help
+python scripts/audit_report.py --help
 ```
 
-Writes:
+The historical `cluster_interviews.py` filename remains for compatibility. It clusters `episode` by
+default. Use `--unit-column interview` only when every interview contains exactly one bounded
+decision episode.
 
-```text
-outputs/matrices/interview_x_a_code.csv
-outputs/matrices/interview_x_b_code.csv
-outputs/matrices/interview_x_combined_code.csv
-```
+Supply `--previous-assignments` during reclustering to preserve accepted `C##` IDs by membership
+overlap. Always review the result; stable IDs do not make a cluster interpretation correct.
 
-## Compute A<->B link strengths
+## Input formats
 
-```bash
-python scripts/analyze_links.py \
-  --mappings outputs/evidence_mappings.csv \
-  --codebook outputs/codebook.csv \
-  --output outputs/matrices/a_to_b_link_strengths.csv
-```
-
-This computes Jaccard co-occurrence across interviews, phi when `N >= 5`, and optional TF-IDF cosine similarity between code definitions.
-
-## Cluster interviews
-
-```bash
-python scripts/cluster_interviews.py \
-  --matrix outputs/matrices/interview_x_combined_code.csv \
-  --clusters 3
-```
-
-Uses Ward hierarchical clustering on combined A+B incidence.
-
-## Export a checkpoint
-
-```bash
-python scripts/export_checkpoint.py \
-  --evidence outputs/evidence_bank.csv \
-  --codebook outputs/codebook.csv \
-  --mappings outputs/evidence_mappings.csv \
-  --clusters outputs/clusters.csv \
-  --aliases outputs/alias_map.csv \
-  --output CHECKPOINT.json
-```
-
-## Audit a synthesis report
-
-```bash
-python scripts/audit_report.py \
-  --report outputs/synthesis_report.md \
-  --evidence outputs/evidence_bank.csv \
-  --codebook outputs/codebook.csv \
-  --clusters outputs/clusters.csv \
-  --n-interviews 5
-```
-
-The audit checks that referenced evidence IDs exist, `VERIFIED` claims cite evidence IDs, code/cluster references are known when supplied, and reports declare computation status.
+See [data contracts](data-contracts.md). JSON and CSV are recommended. A Markdown input may contain
+only one table; multi-table report templates are not machine-readable inputs.
