@@ -10,8 +10,10 @@
 
 - Analysis unit: Decision episode.
 - Clustering method: Average-linkage hierarchical clustering on Jaccard distance.
+- Actual cluster count: 2.
 - Computed vs. heuristic: Matrices, associations, and clusters computed; interpretations reviewed.
-- Association note: Jaccard and phi describe code co-occurrence; this is not causal.
+- Association note: Reviewed within-episode links are primary. Jaccard and phi describe secondary
+  code co-occurrence; computed association does not establish causation.
 - Support limit: Three synthetic episodes are useful for demonstration, not generalization.
 
 ## High-Level Patterns
@@ -46,11 +48,9 @@
 
 ## Implications
 
-### VERIFIED
-
-- Any workflow represented by this synthetic study must preserve source traceability. E002
-
 ### INFERRED
 
+- Any workflow represented by this synthetic study must preserve source traceability because D01's
+  stated desired progress depends on returning to the original quote. E002
 - A useful system would need both stable shared structure and room for evidence that does not fit the
   existing codebook. E003 E004
