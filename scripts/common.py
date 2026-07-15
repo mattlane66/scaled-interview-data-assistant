@@ -19,12 +19,14 @@ from rich.console import Console
 console = Console()
 
 ID_PATTERNS = {
+    "source": re.compile(r"^SRC\d{2,}$"),
     "interview": re.compile(r"^I\d{2,}$"),
     "episode": re.compile(r"^D\d{2,}$"),
     "segment": re.compile(r"^S\d{2,}$"),
     "evidence": re.compile(r"^E\d{3,}$"),
     "a_code": re.compile(r"^A\d{2,}$"),
     "b_code": re.compile(r"^B\d{2,}$"),
+    "link": re.compile(r"^L\d{3,}$"),
     "cluster": re.compile(r"^C\d{2,}$"),
 }
 
