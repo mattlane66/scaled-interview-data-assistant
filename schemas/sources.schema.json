@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mattlane66/scaled-interview-data-assistant/schemas/sources.schema.json",
+  "title": "Source Coverage Registry",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["source_id", "source", "coverage"],
+    "properties": {
+      "source_id": {"type": "string", "pattern": "^SRC[0-9]{2,}$"},
+      "source": {"type": "string", "minLength": 1},
+      "coverage": {"enum": ["FULL", "PARTIAL", "UNREADABLE", "UNKNOWN"]},
+      "accessible_range": {"type": ["string", "null"]},
+      "notes": {"type": ["string", "null"]}
+    },
+    "additionalProperties": true
+  }
+}
+
