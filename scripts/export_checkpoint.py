@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any
 
 import typer
+from checkpoint_validation import CheckpointValidationError, validate_checkpoint_document
 from common import console, ensure_parent, normalize_column_names, read_table, records_without_nan
 
 app = typer.Typer(add_completion=False)
@@ -31,14 +32,17 @@ def load_metadata(path: Path | None) -> dict[str, Any]:
 @app.command()
 def main(
     evidence: Path = typer.Option(..., "--evidence", "-e"),
-    interviews: Path | None = typer.Option(None, "--interviews"),
-    episodes: Path | None = typer.Option(None, "--episodes"),
-    segments: Path | None = typer.Option(None, "--segments"),
-    codebook: Path | None = typer.Option(None, "--codebook", "-c"),
-    mappings: Path | None = typer.Option(None, "--mappings", "-m"),
+    sources: Path = typer.Option(..., "--sources"),
+    interviews: Path = typer.Option(..., "--interviews"),
+    episodes: Path = typer.Option(..., "--episodes"),
+    segments: Path = typer.Option(..., "--segments"),
+    codebook: Path = typer.Option(..., "--codebook", "-c"),
+    mappings: Path = typer.Option(..., "--mappings", "-m"),
+    links: Path | None = typer.Option(None, "--links"),
     clusters: Path | None = typer.Option(None, "--clusters"),
     aliases: Path | None = typer.Option(None, "--aliases", "-a"),
     diff_log: Path | None = typer.Option(None, "--diff-log"),
+    decision_log: Path | None = typer.Option(None, "--decision-log"),
     metadata: Path | None = typer.Option(None, "--metadata"),
     analysis_unit: str = typer.Option("episode", "--analysis-unit"),
     clustering_method: str = typer.Option(
@@ -51,28 +55,42 @@ def main(
     if analysis_unit not in {"episode", "interview"}:
         raise typer.BadParameter("--analysis-unit must be episode or interview")
     cluster_records = table_records(clusters)
-    if cluster_count is None and cluster_records:
-        cluster_count = len({row.get("cluster") for row in cluster_records})
+    actual_cluster_count = len({row.get("cluster") for row in cluster_records})
+    if cluster_count is not None and cluster_count != actual_cluster_count:
+        raise typer.BadParameter(
+            "--cluster-count must match the distinct cluster assignments "
+            f"({actual_cluster_count})"
+        )
     checkpoint = {
-        "checkpoint_version": "1.0.0",
+        "checkpoint_version": "1.1.0",
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "analysis_unit": analysis_unit,
         "computation": {
-            "a_to_b_association": "Jaccard and descriptive phi with support counts",
+            "a_to_b_association": (
+                "reviewed links primary; Jaccard and descriptive phi secondary"
+            ),
             "clustering_method": clustering_method,
-            "cluster_count": cluster_count,
+            "cluster_count": actual_cluster_count,
         },
         "metadata": load_metadata(metadata),
+        "source_index": table_records(sources),
         "interview_index": table_records(interviews),
         "episode_index": table_records(episodes),
         "segment_index": table_records(segments),
         "evidence_bank": table_records(evidence),
         "codebook": table_records(codebook),
         "evidence_to_code_mappings": table_records(mappings),
+        "a_to_b_links": table_records(links),
         "clusters": cluster_records,
         "alias_map": table_records(aliases),
+        "decision_log": decision_log.read_text() if decision_log else "",
         "latest_diff_log": diff_log.read_text() if diff_log else "",
     }
+
+    try:
+        checkpoint = validate_checkpoint_document(checkpoint)
+    except CheckpointValidationError as error:
+        raise typer.BadParameter(f"Checkpoint validation failed:\n{error}") from error
 
     ensure_parent(output)
     output.write_text(json.dumps(checkpoint, indent=2, ensure_ascii=False, allow_nan=False) + "\n")
