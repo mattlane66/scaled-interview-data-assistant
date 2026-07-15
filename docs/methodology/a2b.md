@@ -37,7 +37,9 @@ Map Point A and Point B within the same decision episode. Do not force a one-to-
 - similar Point A situations can lead to different Point B hopes;
 - similar Point B hopes can arise from different Point A situations.
 
-Cross-episode co-occurrence is an association signal, not proof that Point A caused Point B.
+Record each accepted relationship as a stable `L###` link with an `EXPLICIT` or `INFERRED` basis,
+supporting evidence IDs, and a rationale. Cross-episode co-occurrence is a secondary association
+signal, not a substitute for reviewed links or proof that Point A caused Point B.
 
 ## Evidence discipline
 
