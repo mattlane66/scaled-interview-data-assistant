@@ -5,7 +5,8 @@
 - Interview: I##
 - Decision episode: D##
 - Descriptor:
-- Source:
+- Source ID / source:
+- Source coverage: FULL / PARTIAL / UNREADABLE
 - Review status: PROVISIONAL / EVIDENCE REVIEWED / CODEBOOK REVIEWED
 - Mode: SINGLE
 
@@ -23,9 +24,9 @@
 
 ## Evidence Bank
 
-| Evidence | Interview | Episode | Segment | Source | Source location | Verbatim excerpt | Tags | Note |
-|---|---|---|---|---|---|---|---|---|
-| E001 | I## | D## | S01 |  |  |  |  |  |
+| Evidence | Source ID | Interview | Episode | Segment | Source | Location | Speaker | Evidence type | Verbatim excerpt | Tags | Note |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| E001 | SRC## | I## | D## | S01 |  |  |  |  |  |  |  |
 
 ## Verified Timeline
 
@@ -75,11 +76,12 @@ SO I CAN …
 
 ## A↔B Associations
 
-| A-code | B-code | Unit | Support | Status | Evidence | Contradictions |
-|---|---|---|---:|---|---|---|
-| A## | B## | D## | 1 | WITHIN-EPISODE | E### |  |
+| Link | Episode | A-code | B-code | Basis | Evidence | Rationale | Contradictions |
+|---|---|---|---|---|---|---|---|
+| L### | D## | A## | B## | EXPLICIT / INFERRED | E### |  |  |
 
-Associations do not establish causation. Do not force a one-to-one A↔B mapping.
+Reviewed within-episode links are primary. Computed co-occurrence is a secondary review aid and does
+not establish causation. Do not force a one-to-one A↔B mapping.
 
 ## Metadata
 
