@@ -7,6 +7,11 @@ and should not be used as pipeline input.
 Draft 2020-12 JSON schemas for the core artifacts live in [`schemas/`](../../schemas/). The registry
 validator adds cross-file rules that JSON Schema alone cannot express.
 
+## Source coverage registry
+
+Required fields: `source_id`, `source`, `coverage`. Coverage is `FULL`, `PARTIAL`, `UNREADABLE`, or
+`UNKNOWN` for migrated legacy data. Evidence rows must reference the matching source ID and path.
+
 ## Interview registry
 
 Required fields: `interview`, `descriptor`.
@@ -30,11 +35,14 @@ Required fields:
 | Field | Meaning |
 |---|---|
 | `evidence` | Stable `E###` ID |
+| `source_id` | Owning `SRC##` |
 | `interview` | Owning `I##` |
 | `episode` | Owning `D##` |
 | `segment` | Source `S##` |
 | `source` | Source filename or immutable source identifier |
 | `source_location` | Timestamp, line, page, or speaker-turn range |
+| `speaker` | Participant, interviewer, or observer label |
+| `evidence_type` | Event/behavior, state, observation, interpretation, aspiration, generalization, hypothetical, interviewer statement, or unknown |
 | `verbatim_excerpt` | Atomic passage copied without substantive rewriting |
 | `tags` | Optional descriptive tags |
 | `note` | Optional analyst interpretation |
@@ -58,10 +66,17 @@ Required fields: `evidence`, `interview`, `episode`, `a_codes`, `b_codes`.
 Use comma-separated code IDs in table cells. The validator rejects malformed codes, wrong-family
 codes, duplicate evidence rows, missing codes, and ownership mismatches.
 
+## Reviewed A↔B link registry
+
+Required fields: `link`, `episode`, `a_code`, `b_code`, `basis`, `evidence`, and `rationale`.
+`basis` is `EXPLICIT` or `INFERRED`. Supporting evidence must belong to the same episode. One row
+represents one reviewed episode/A/B relationship; computed co-presence does not create this record.
+
 ## Cluster assignments
 
 Required fields: `episode` and `cluster` when decision episode is the analysis unit. Cluster IDs are
-registry identifiers, not ordinal rankings.
+registry identifiers, not ordinal rankings. Every included unit must appear once; unknown and
+duplicate units fail validation.
 
 ## Alias map
 
