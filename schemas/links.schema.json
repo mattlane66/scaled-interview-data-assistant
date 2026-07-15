@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mattlane66/scaled-interview-data-assistant/schemas/links.schema.json",
+  "title": "Reviewed A-to-B Link Registry",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["link", "episode", "a_code", "b_code", "basis", "evidence", "rationale"],
+    "properties": {
+      "link": {"type": "string", "pattern": "^L[0-9]{3,}$"},
+      "episode": {"type": "string", "pattern": "^D[0-9]{2,}$"},
+      "a_code": {"type": "string", "pattern": "^A[0-9]{2,}$"},
+      "b_code": {"type": "string", "pattern": "^B[0-9]{2,}$"},
+      "basis": {"enum": ["EXPLICIT", "INFERRED"]},
+      "evidence": {
+        "oneOf": [
+          {"type": "string", "minLength": 1},
+          {
+            "type": "array",
+            "minItems": 1,
+            "items": {"type": "string", "pattern": "^E[0-9]{3,}$"}
+          }
+        ]
+      },
+      "rationale": {"type": "string", "minLength": 1},
+      "contradictions": {"type": ["string", "null"]}
+    },
+    "additionalProperties": true
+  }
+}
