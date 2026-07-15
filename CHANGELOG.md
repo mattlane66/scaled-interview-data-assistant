@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.1.0 — 2026-07-15
+
+- Added source-coverage and reviewed A↔B link registries with stable `SRC##` and `L###` IDs.
+- Added speaker and evidence-type provenance to every evidence row.
+- Made reviewed within-episode links primary and co-occurrence metrics secondary; added full 2×2
+  counts and support-aware phi reporting.
+- Added automatic, one-cluster, and no-clustering modes and record the actual assignment count.
+- Added typed checkpoint schemas, deep referential validation, and additive version 1 migration.
+- Validated cluster assignment ownership and completeness.
+- Kept the Custom GPT operating prompt below the 8,000-character instruction limit.
+
 ## 1.0.0 — 2026-07-14
 
 - Made decision episode the default analysis unit.
