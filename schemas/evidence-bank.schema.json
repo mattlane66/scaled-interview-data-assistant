@@ -7,20 +7,38 @@
     "type": "object",
     "required": [
       "evidence",
+      "source_id",
       "interview",
       "episode",
       "segment",
       "source",
       "source_location",
+      "speaker",
+      "evidence_type",
       "verbatim_excerpt"
     ],
     "properties": {
       "evidence": {"type": "string", "pattern": "^E[0-9]{3,}$"},
+      "source_id": {"type": "string", "pattern": "^SRC[0-9]{2,}$"},
       "interview": {"type": "string", "pattern": "^I[0-9]{2,}$"},
       "episode": {"type": "string", "pattern": "^D[0-9]{2,}$"},
       "segment": {"type": "string", "pattern": "^S[0-9]{2,}$"},
       "source": {"type": "string", "minLength": 1},
       "source_location": {"type": "string", "minLength": 1},
+      "speaker": {"type": "string", "minLength": 1},
+      "evidence_type": {
+        "enum": [
+          "concrete_event_or_behavior",
+          "current_state",
+          "observation",
+          "interpretation",
+          "aspiration",
+          "generalization",
+          "hypothetical",
+          "interviewer_statement",
+          "unknown"
+        ]
+      },
       "verbatim_excerpt": {"type": "string", "minLength": 1},
       "tags": {"type": ["string", "array", "null"]},
       "note": {"type": ["string", "null"]}
@@ -28,3 +46,4 @@
     "additionalProperties": true
   }
 }
+
