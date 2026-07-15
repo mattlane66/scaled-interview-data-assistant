@@ -1,0 +1,21 @@
+[
+  {
+    "source_id": "SRC01",
+    "source": "synthetic-interview-I01.md",
+    "coverage": "FULL",
+    "accessible_range": "turns 1–2"
+  },
+  {
+    "source_id": "SRC02",
+    "source": "synthetic-interview-I02.md",
+    "coverage": "FULL",
+    "accessible_range": "turns 1–2"
+  },
+  {
+    "source_id": "SRC03",
+    "source": "synthetic-interview-I03.md",
+    "coverage": "FULL",
+    "accessible_range": "turns 1–2"
+  }
+]
+
