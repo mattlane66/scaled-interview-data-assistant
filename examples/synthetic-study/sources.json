@@ -1,0 +1,21 @@
+[
+  {
+    "source_id": "SRC01",
+    "source": "transcripts/I01.md",
+    "coverage": "FULL",
+    "accessible_range": "complete file"
+  },
+  {
+    "source_id": "SRC02",
+    "source": "transcripts/I02.md",
+    "coverage": "FULL",
+    "accessible_range": "complete file"
+  },
+  {
+    "source_id": "SRC03",
+    "source": "transcripts/I03.md",
+    "coverage": "FULL",
+    "accessible_range": "complete file"
+  }
+]
+
