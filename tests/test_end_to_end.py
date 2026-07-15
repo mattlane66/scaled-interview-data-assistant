@@ -25,6 +25,8 @@ def test_end_to_end_fixture_workflow(tmp_path: Path) -> None:
     evidence = FIXTURES / "evidence_bank.json"
     codebook = FIXTURES / "codebook.json"
     mappings = FIXTURES / "evidence_mappings.json"
+    sources = FIXTURES / "sources.json"
+    links_registry = FIXTURES / "links.json"
     interviews = FIXTURES / "interviews.json"
     episodes = FIXTURES / "episodes.json"
     segments = FIXTURES / "segments.json"
@@ -40,6 +42,10 @@ def test_end_to_end_fixture_workflow(tmp_path: Path) -> None:
         str(codebook),
         "--mappings",
         str(mappings),
+        "--sources",
+        str(sources),
+        "--links",
+        str(links_registry),
         "--interviews",
         str(interviews),
         "--episodes",
@@ -66,6 +72,8 @@ def test_end_to_end_fixture_workflow(tmp_path: Path) -> None:
         str(mappings),
         "--codebook",
         str(codebook),
+        "--links",
+        str(links_registry),
         "--output",
         str(links_path),
     )
@@ -77,8 +85,12 @@ def test_end_to_end_fixture_workflow(tmp_path: Path) -> None:
         "phi",
         "definition_cosine",
         "cooccurring_units",
+        "linked_units",
+        "n11",
+        "n00",
     }.issubset(links.columns)
     assert len(links) == 9
+    assert links["linked_units"].sum() == 3
 
     run_script(
         "cluster_interviews.py",
@@ -100,6 +112,8 @@ def test_end_to_end_fixture_workflow(tmp_path: Path) -> None:
         "export_checkpoint.py",
         "--evidence",
         str(evidence),
+        "--sources",
+        str(sources),
         "--codebook",
         str(codebook),
         "--interviews",
@@ -110,6 +124,8 @@ def test_end_to_end_fixture_workflow(tmp_path: Path) -> None:
         str(segments),
         "--mappings",
         str(mappings),
+        "--links",
+        str(links_registry),
         "--clusters",
         str(clusters),
         "--output",
@@ -119,6 +135,8 @@ def test_end_to_end_fixture_workflow(tmp_path: Path) -> None:
     assert len(checkpoint_data["evidence_bank"]) == 6
     assert len(checkpoint_data["codebook"]) == 6
     assert len(checkpoint_data["episode_index"]) == 3
+    assert len(checkpoint_data["source_index"]) == 3
+    assert len(checkpoint_data["a_to_b_links"]) == 3
     assert checkpoint_data["analysis_unit"] == "episode"
     assert checkpoint_data["computation"]["cluster_count"] == 2
 
@@ -135,6 +153,7 @@ def test_end_to_end_fixture_workflow(tmp_path: Path) -> None:
         == checkpoint_data["evidence_bank"]
     )
     assert json.loads((restored / "episodes.json").read_text()) == checkpoint_data["episode_index"]
+    assert json.loads((restored / "links.json").read_text()) == checkpoint_data["a_to_b_links"]
 
     run_script(
         "audit_report.py",
@@ -159,6 +178,10 @@ def test_pipeline_command(tmp_path: Path) -> None:
         str(FIXTURES / "codebook.json"),
         "--mappings",
         str(FIXTURES / "evidence_mappings.json"),
+        "--sources",
+        str(FIXTURES / "sources.json"),
+        "--links",
+        str(FIXTURES / "links.json"),
         "--interviews",
         str(FIXTURES / "interviews.json"),
         "--episodes",

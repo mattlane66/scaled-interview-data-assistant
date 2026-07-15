@@ -1,0 +1,33 @@
+[
+  {
+    "link": "L001",
+    "episode": "D01",
+    "a_code": "A01",
+    "b_code": "B01",
+    "basis": "INFERRED",
+    "evidence": "E001, E002",
+    "rationale": "The desired traceable report responds to the loss of context in the same episode.",
+    "contradictions": ""
+  },
+  {
+    "link": "L002",
+    "episode": "D02",
+    "a_code": "A02",
+    "b_code": "B02",
+    "basis": "INFERRED",
+    "evidence": "E003, E004",
+    "rationale": "The shared codebook responds to inconsistent synthesis at higher interview volume.",
+    "contradictions": ""
+  },
+  {
+    "link": "L003",
+    "episode": "D03",
+    "a_code": "A03",
+    "b_code": "B03",
+    "basis": "INFERRED",
+    "evidence": "E005, E006",
+    "rationale": "Reusable team output responds to the difficulty of seeing and sharing cross-interview patterns.",
+    "contradictions": ""
+  }
+]
+

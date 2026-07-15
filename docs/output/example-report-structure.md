@@ -16,8 +16,8 @@ For each decision episode:
 
 - reviewed A/B codebook;
 - decision episode × code matrices;
-- A↔B association table with support counts;
-- exploratory cluster assignments;
+- reviewed within-episode A↔B links plus secondary co-occurrence counts;
+- exploratory cluster assignments when a useful partition is supported;
 - calculation status and limitations.
 
 ## 3. Decision-useful synthesis
@@ -26,7 +26,7 @@ For each cluster:
 
 - definition and canonical job story;
 - strongest decision episodes;
-- competing A↔B links;
+- primary and competing A↔B links;
 - forces and technology-agnostic fit criteria;
 - supporting and disconfirming evidence;
 - confidence and what would change it.

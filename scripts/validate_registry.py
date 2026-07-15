@@ -20,6 +20,18 @@ from common import (
 
 app = typer.Typer(add_completion=False)
 
+EVIDENCE_TYPES = {
+    "concrete_event_or_behavior",
+    "current_state",
+    "observation",
+    "interpretation",
+    "aspiration",
+    "generalization",
+    "hypothetical",
+    "interviewer_statement",
+    "unknown",
+}
+
 
 def _first_present(df: pd.DataFrame, candidates: list[str]) -> str | None:
     return next((column for column in candidates if column in df.columns), None)
@@ -63,6 +75,8 @@ def main(
     evidence: Path = typer.Option(..., "--evidence", "-e", help="Evidence bank."),
     codebook: Path = typer.Option(..., "--codebook", "-c", help="A/B codebook."),
     mappings: Path = typer.Option(..., "--mappings", "-m", help="Evidence-to-code map."),
+    sources: Path | None = typer.Option(None, "--sources", help="Source coverage registry."),
+    links: Path | None = typer.Option(None, "--links", help="Explicit A-to-B link registry."),
     source_root: Path | None = typer.Option(
         None,
         "--source-root",
@@ -72,6 +86,9 @@ def main(
     episodes: Path | None = typer.Option(None, "--episodes", help="Decision-episode registry."),
     segments: Path | None = typer.Option(None, "--segments", help="Segment registry."),
     clusters: Path | None = typer.Option(None, "--clusters", help="Cluster assignments."),
+    unit_column: str = typer.Option(
+        "episode", "--unit-column", help="Cluster assignment unit: episode or interview."
+    ),
     aliases: Path | None = typer.Option(None, "--aliases", "-a", help="Alias map."),
     allow_unmapped: bool = typer.Option(
         False,
@@ -81,6 +98,31 @@ def main(
 ) -> None:
     """Fail when IDs, references, code families, or required provenance are inconsistent."""
     errors: list[str] = []
+
+    if unit_column not in {"episode", "interview"}:
+        raise typer.BadParameter("--unit-column must be episode or interview")
+
+    source_ids: set[str] = set()
+    source_paths: dict[str, str] = {}
+    if sources:
+        source_df = normalize_column_names(read_table(sources))
+        require_columns(source_df, ["source_id", "source", "coverage"], sources)
+        source_ids = _validate_registry_ids(
+            source_df, "source_id", "source", sources, errors
+        )
+        seen_paths: set[str] = set()
+        for _, row in source_df.iterrows():
+            source_id = str(row["source_id"]).strip()
+            source = str(row["source"]).strip()
+            coverage = str(row["coverage"]).strip().upper()
+            if not source:
+                errors.append(f"{source_id} has an empty source")
+            if source in seen_paths:
+                errors.append(f"Duplicate source path in {sources}: {source}")
+            seen_paths.add(source)
+            if coverage not in {"FULL", "PARTIAL", "UNREADABLE", "UNKNOWN"}:
+                errors.append(f"Bad coverage for {source_id}: {coverage}")
+            source_paths[source_id] = source
 
     interview_ids: set[str] = set()
     if interviews:
@@ -123,11 +165,14 @@ def main(
     evidence_df = normalize_column_names(read_table(evidence))
     evidence_columns = [
         "evidence",
+        "source_id",
         "interview",
         "episode",
         "segment",
         "source",
         "source_location",
+        "speaker",
+        "evidence_type",
         "verbatim_excerpt",
     ]
     require_columns(evidence_df, evidence_columns, evidence)
@@ -136,6 +181,7 @@ def main(
     evidence_owner: dict[str, tuple[str, str]] = {}
     for _, row in evidence_df.iterrows():
         evidence_id = str(row["evidence"]).strip()
+        source_id = str(row["source_id"]).strip()
         interview = str(row["interview"]).strip()
         episode = str(row["episode"]).strip()
         segment = str(row["segment"]).strip()
@@ -145,6 +191,13 @@ def main(
         if evidence_id in evidence_ids:
             errors.append(f"Duplicate evidence ID in {evidence}: {evidence_id}")
         evidence_ids.add(evidence_id)
+
+        if not validate_id(source_id, "source"):
+            errors.append(f"Bad source ID for {evidence_id}: {source_id}")
+        if source_ids and source_id not in source_ids:
+            errors.append(f"{evidence_id} references unknown source: {source_id}")
+        if source_paths and source_paths.get(source_id) != str(row["source"]).strip():
+            errors.append(f"{evidence_id} source path does not match {source_id}")
 
         if not validate_id(interview, "interview"):
             errors.append(f"Bad interview ID for {evidence_id}: {interview}")
@@ -160,9 +213,12 @@ def main(
             errors.append(f"{evidence_id} episode {episode} belongs to another interview")
         if segment_keys and (interview, segment) not in segment_keys:
             errors.append(f"{evidence_id} references unknown segment: {interview}/{segment}")
-        for column in ("source", "source_location", "verbatim_excerpt"):
+        for column in ("source", "source_location", "speaker", "verbatim_excerpt"):
             if not _nonempty(row[column]):
                 errors.append(f"{evidence_id} has an empty {column}")
+        evidence_type = str(row["evidence_type"]).strip().lower()
+        if evidence_type not in EVIDENCE_TYPES:
+            errors.append(f"{evidence_id} has an invalid evidence_type: {evidence_type}")
         if source_root and _nonempty(row["source"]) and _nonempty(row["verbatim_excerpt"]):
             root = source_root.resolve()
             source_path = (root / str(row["source"])).resolve()
@@ -235,6 +291,49 @@ def main(
         for evidence_id in sorted(evidence_ids - mapped_evidence):
             errors.append(f"Evidence has no mapping row: {evidence_id}")
 
+    if links:
+        link_df = normalize_column_names(read_table(links))
+        require_columns(
+            link_df,
+            ["link", "episode", "a_code", "b_code", "basis", "evidence", "rationale"],
+            links,
+        )
+        link_ids: set[str] = set()
+        link_pairs: set[tuple[str, str, str]] = set()
+        for _, row in link_df.iterrows():
+            link_id = str(row["link"]).strip()
+            episode = str(row["episode"]).strip()
+            a_code = str(row["a_code"]).strip()
+            b_code = str(row["b_code"]).strip()
+            basis = str(row["basis"]).strip().upper()
+            if not validate_id(link_id, "link"):
+                errors.append(f"Bad link ID in {links}: {link_id}")
+            if link_id in link_ids:
+                errors.append(f"Duplicate link ID in {links}: {link_id}")
+            link_ids.add(link_id)
+            if not validate_id(episode, "episode") or (episode_ids and episode not in episode_ids):
+                errors.append(f"{link_id} references unknown episode: {episode}")
+            if not validate_id(a_code, "a_code") or a_code not in code_ids:
+                errors.append(f"{link_id} references unknown A-code: {a_code}")
+            if not validate_id(b_code, "b_code") or b_code not in code_ids:
+                errors.append(f"{link_id} references unknown B-code: {b_code}")
+            if basis not in {"EXPLICIT", "INFERRED"}:
+                errors.append(f"{link_id} has invalid basis: {basis}")
+            pair = (episode, a_code, b_code)
+            if pair in link_pairs:
+                errors.append(
+                    f"Duplicate episode A-to-B link in {links}: "
+                    f"{episode}/{a_code}/{b_code}"
+                )
+            link_pairs.add(pair)
+            if not _nonempty(row["rationale"]):
+                errors.append(f"{link_id} has an empty rationale")
+            for evidence_id in split_tokens(row["evidence"]):
+                if evidence_id not in evidence_ids:
+                    errors.append(f"{link_id} references missing evidence: {evidence_id}")
+                elif evidence_owner[evidence_id][1] != episode:
+                    errors.append(f"{link_id} evidence {evidence_id} belongs to another episode")
+
     cluster_ids: set[str] = set()
     if clusters:
         cluster_df = normalize_column_names(read_table(clusters))
@@ -242,6 +341,29 @@ def main(
         if cluster_column is None:
             errors.append(f"{clusters} is missing cluster column")
         else:
+            if unit_column not in cluster_df.columns:
+                errors.append(f"{clusters} is missing {unit_column} column")
+            else:
+                units = cluster_df[unit_column].astype(str).str.strip()
+                expected_units = episode_ids if unit_column == "episode" else interview_ids
+                expected_kind = unit_column
+                duplicates = units[units.duplicated()].unique()
+                errors.extend(
+                    f"Duplicate {unit_column} cluster assignment: {value}"
+                    for value in duplicates
+                )
+                for unit in units:
+                    if not validate_id(unit, expected_kind):
+                        errors.append(f"Bad {unit_column} ID in {clusters}: {unit}")
+                    elif expected_units and unit not in expected_units:
+                        errors.append(
+                            f"Cluster assignment references unknown {unit_column}: {unit}"
+                        )
+                if expected_units:
+                    missing = sorted(expected_units - set(units))
+                    errors.extend(
+                        f"Missing cluster assignment for {unit_column}: {unit}" for unit in missing
+                    )
             for cluster in cluster_df[cluster_column].astype(str).str.strip():
                 if not validate_id(cluster, "cluster"):
                     errors.append(f"Bad cluster ID in {clusters}: {cluster}")

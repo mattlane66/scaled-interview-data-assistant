@@ -74,11 +74,14 @@ def test_validator_checks_excerpt_against_local_source(tmp_path: Path) -> None:
         [
             {
                 "evidence": "E001",
+                "source_id": "SRC01",
                 "interview": "I01",
                 "episode": "D01",
                 "segment": "S01",
                 "source": "source.md",
                 "source_location": "line 1",
+                "speaker": "PARTICIPANT",
+                "evidence_type": "current_state",
                 "verbatim_excerpt": "The participant said automation solved everything.",
             }
         ],
@@ -219,6 +222,136 @@ def test_cluster_ids_are_preserved_from_previous_assignments(tmp_path: Path) -> 
     assert result.returncode == 0, result.stdout + result.stderr
     assignments = pd.read_csv(output)
     assert set(assignments["cluster"]) == {"C07", "C09"}
+
+
+def test_validator_rejects_cluster_assignments_without_units(tmp_path: Path) -> None:
+    clusters = tmp_path / "clusters.json"
+    write_json(clusters, [{"cluster": "C01"}])
+    result = run_script(
+        "validate_registry.py",
+        "--evidence",
+        str(FIXTURES / "evidence_bank.json"),
+        "--codebook",
+        str(FIXTURES / "codebook.json"),
+        "--mappings",
+        str(FIXTURES / "evidence_mappings.json"),
+        "--sources",
+        str(FIXTURES / "sources.json"),
+        "--links",
+        str(FIXTURES / "links.json"),
+        "--interviews",
+        str(FIXTURES / "interviews.json"),
+        "--episodes",
+        str(FIXTURES / "episodes.json"),
+        "--segments",
+        str(FIXTURES / "segments.json"),
+        "--clusters",
+        str(clusters),
+    )
+    assert result.returncode == 1
+    assert "missing episode column" in result.stdout
+
+
+def test_identical_profiles_produce_one_actual_cluster(tmp_path: Path) -> None:
+    matrix = pd.DataFrame(
+        [
+            {"episode": "D01", "A01": 1, "B01": 1},
+            {"episode": "D02", "A01": 1, "B01": 1},
+            {"episode": "D03", "A01": 1, "B01": 1},
+        ]
+    )
+    matrix_path = tmp_path / "matrix.csv"
+    assignments_path = tmp_path / "assignments.csv"
+    matrix.to_csv(matrix_path, index=False)
+    result = run_script(
+        "cluster_interviews.py",
+        "--matrix",
+        str(matrix_path),
+        "--clusters",
+        "3",
+        "--assignments-output",
+        str(assignments_path),
+        "--heatmap-output",
+        str(tmp_path / "heatmap.csv"),
+    )
+    assert result.returncode == 0, result.stdout + result.stderr
+    assert pd.read_csv(assignments_path)["cluster"].nunique() == 1
+
+
+def test_checkpoint_rejects_requested_count_that_differs_from_assignments(
+    tmp_path: Path,
+) -> None:
+    result = run_script(
+        "export_checkpoint.py",
+        "--evidence",
+        str(FIXTURES / "evidence_bank.json"),
+        "--sources",
+        str(FIXTURES / "sources.json"),
+        "--codebook",
+        str(FIXTURES / "codebook.json"),
+        "--interviews",
+        str(FIXTURES / "interviews.json"),
+        "--episodes",
+        str(FIXTURES / "episodes.json"),
+        "--segments",
+        str(FIXTURES / "segments.json"),
+        "--mappings",
+        str(FIXTURES / "evidence_mappings.json"),
+        "--links",
+        str(FIXTURES / "links.json"),
+        "--clusters",
+        str(FIXTURES / "clusters.json"),
+        "--cluster-count",
+        "3",
+        "--output",
+        str(tmp_path / "CHECKPOINT.json"),
+    )
+    assert result.returncode == 2
+    assert "distinct cluster assignments" in result.stderr
+    assert "(2)" in result.stderr
+
+
+def test_invalid_checkpoint_is_rejected_before_restore(tmp_path: Path) -> None:
+    checkpoint = tmp_path / "checkpoint.json"
+    bad = {
+        "checkpoint_version": "1.1.0",
+        "generated_at": "2026-07-15T00:00:00+00:00",
+        "analysis_unit": "episode",
+        "computation": {},
+        "metadata": {},
+        "source_index": [],
+        "interview_index": [],
+        "episode_index": [],
+        "segment_index": [],
+        "evidence_bank": [],
+        "codebook": [],
+        "evidence_to_code_mappings": [],
+        "a_to_b_links": [
+            {
+                "link": "L001",
+                "episode": "D99",
+                "a_code": "A99",
+                "b_code": "B99",
+                "basis": "INFERRED",
+                "evidence": "E999",
+                "rationale": "Broken references.",
+            }
+        ],
+        "clusters": [],
+        "alias_map": [],
+        "decision_log": "",
+        "latest_diff_log": "",
+    }
+    write_json(checkpoint, bad)
+    result = run_script(
+        "import_checkpoint.py",
+        "--checkpoint",
+        str(checkpoint),
+        "--output-dir",
+        str(tmp_path / "restored"),
+    )
+    assert result.returncode == 2
+    assert "unknown episode D99" in result.stderr
 
 
 def test_report_audit_rejects_unsupported_verified_claim(tmp_path: Path) -> None:

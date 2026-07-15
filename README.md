@@ -72,12 +72,14 @@ an LLM.
 ```text
 data/
 ├── transcripts/
+├── sources.json
 ├── interviews.json
 ├── episodes.json
 ├── segments.json
 ├── evidence_bank.json
 ├── codebook.json
-└── evidence_mappings.json
+├── evidence_mappings.json
+└── links.json
 ```
 
 ### 3. Run the interpretive workflow
@@ -98,8 +100,8 @@ Stop for evidence review before final coding.
 The required review gates are:
 
 1. evidence bank;
-2. codebook and evidence mappings;
-3. cluster interpretation.
+2. codebook, evidence mappings, and within-episode A↔B links;
+3. cluster interpretation, when clustering is used.
 
 Skipping a gate makes downstream output `PROVISIONAL`.
 
@@ -109,6 +111,7 @@ After review:
 
 ```bash
 python scripts/run_pipeline.py \
+  --sources data/sources.json \
   --interviews data/interviews.json \
   --episodes data/episodes.json \
   --segments data/segments.json \
@@ -116,14 +119,15 @@ python scripts/run_pipeline.py \
   --evidence data/evidence_bank.json \
   --codebook data/codebook.json \
   --mappings data/evidence_mappings.json \
+  --links data/links.json \
   --report data/synthesis_report.md \
-  --clusters 3 \
   --output-dir outputs
 ```
 
-The command verifies excerpts against local sources, validates ownership and provenance, preserves
-zero-code episodes, computes descriptive associations, clusters episodes using Jaccard distance,
-exports a versioned checkpoint, and audits the report’s evidence references and method declarations.
+The command verifies excerpts, validates ownership and reviewed links, preserves zero-code episodes,
+computes secondary association diagnostics, chooses an exploratory Jaccard grouping when supported,
+exports a validated checkpoint, and audits report references and method declarations. Use
+`--clusters none`, `--clusters auto` (default), or an explicit positive integer.
 
 ## Evidence contract
 
@@ -131,8 +135,8 @@ exports a versioned checkpoint, and audits the report’s evidence references an
 - `INFERRED` claims cite evidence and explain the interpretation.
 - `SPECULATIVE` ideas state what could confirm or disconfirm them.
 - Every evidence row names its source and exact source location.
-- A/B association means co-occurrence within the chosen analysis unit; it does not establish
-  causation, importance, prevalence, or market size.
+- Reviewed within-episode A↔B links are primary. Computed co-occurrence is secondary and does not
+  establish linkage, causation, importance, prevalence, or market size.
 - Frequency is not importance.
 
 See the full [data contracts](docs/operations/data-contracts.md).
@@ -172,6 +176,7 @@ Synthetic examples demonstrate the workflow; they are not market evidence.
 │   ├── build_matrices.py
 │   ├── analyze_links.py
 │   ├── cluster_interviews.py
+│   ├── checkpoint_validation.py
 │   ├── export_checkpoint.py
 │   ├── import_checkpoint.py
 │   └── audit_report.py
@@ -184,7 +189,8 @@ Synthetic examples demonstrate the workflow; they are not market evidence.
 - Persist machine-facing artifacts as JSON or CSV rather than relying on chat history.
 - Review codebook changes in batches and backcode earlier episodes after material changes.
 - Supply prior cluster assignments when reclustering to preserve accepted `C##` IDs.
-- Test nearby cluster counts when the grouping affects an important decision.
+- Permit one cluster or no clustering when the evidence does not support a useful partition.
+- Test nearby cluster counts when grouping affects an important decision.
 - Preserve contradictory and uncoded evidence; do not optimize solely for a neat cluster story.
 
 Restore a version 1 checkpoint with:
