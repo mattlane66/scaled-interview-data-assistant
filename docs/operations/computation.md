@@ -23,8 +23,15 @@ not prove the participant lacked the need—it may reflect interview coverage.
 
 ## A↔B association
 
-The primary descriptive signal is Jaccard co-occurrence across decision episodes. The output also
-includes support counts and phi where mathematically defined. Low-support results are flagged.
+The primary A↔B artifact is the reviewed `L###` link registry. Each record says that a named
+A-code and B-code are explicitly or inferentially linked within one decision episode, cites the
+supporting evidence, and records the analyst's rationale.
+
+Computed co-occurrence is secondary. The association output includes the full 2×2 counts (`n11`,
+`n10`, `n01`, `n00`), Jaccard, and descriptive phi. Phi is suppressed when there are fewer than ten
+units or fewer than the configured number of co-occurring units. Negative-edge flags are disabled
+unless the analyst explicitly confirms that zeros represent assessed nonoccurrence rather than
+missing interview coverage.
 
 These values describe association, not causation, importance, market size, or prevalence in a wider
 population. Semantic cosine between code definitions is only a discovery aid; it is not behavioral
@@ -35,13 +42,17 @@ evidence.
 The default implementation uses average-linkage hierarchical clustering over Jaccard distance on
 binary A+B incidence. This is exploratory grouping, not a discovered ground truth.
 
-- The analyst chooses and records the target cluster count.
+- `--clusters auto` evaluates supported candidate counts and records the actual result.
+- `--clusters 1` preserves one coherent group; `--clusters none` skips grouping.
+- An explicit positive integer requests a candidate count, but identical profiles can still yield
+  one actual cluster. The checkpoint records the distinct assignments, never the request.
 - The pipeline reports an exploratory silhouette score when defined.
 - Previous assignments can be supplied to preserve stable `C##` IDs by membership overlap.
 - Every cluster must be reviewed against its evidence, competing links, and edge cases.
 
-Run sensitivity checks with nearby cluster counts when the grouping affects an important decision.
-If the interpretation changes materially, report that instability.
+Do not force a partition when no useful separation is supported. Run sensitivity checks with nearby
+cluster counts when the grouping affects an important decision. If the interpretation changes
+materially, report that instability.
 
 ## Reporting requirements
 
