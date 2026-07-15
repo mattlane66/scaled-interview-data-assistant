@@ -13,10 +13,12 @@
 
 - Analysis unit: Decision episode
 - Clustering method:
+- Actual cluster count: 0 / 1 / n
 - Computed vs. heuristic:
 - Support / sensitivity limits:
 - Analyst review:
-- Association statement: Jaccard and phi describe co-occurrence; they are not causal.
+- Association statement: Reviewed within-episode links are primary; computed Jaccard and phi are
+  secondary co-occurrence diagnostics and are not causal.
 
 ## Codebook
 
@@ -43,9 +45,12 @@ Include or link:
 
 ## A↔B Associations
 
-| A-code | B-code | Units | Co-occurring units | Jaccard | Phi | Low support | Evidence note |
-|---|---|---:|---:|---:|---:|---|---|
+| A-code | B-code | Explicit links | Inferred links | n11/n10/n01/n00 | Jaccard | Phi | Evidence note |
+|---|---|---:|---:|---|---:|---:|---|
 | A01 | B01 |  |  |  |  |  | E### |
+
+Suppress sparse phi. Report negative edges only when zeros represent assessed nonoccurrence rather
+than missing coverage.
 
 ## High-Level Patterns
 
@@ -58,6 +63,9 @@ Include or link:
 - … E### E###
 
 ## Adjusted Job Clusters
+
+Omit this section, or state that clustering was not performed, when the evidence does not support a
+useful partition.
 
 ### C01 — Name
 
