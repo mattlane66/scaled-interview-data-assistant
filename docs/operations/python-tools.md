@@ -26,6 +26,7 @@ After an analyst has reviewed the registries, evidence bank, codebook, and mappi
 
 ```bash
 python scripts/run_pipeline.py \
+  --sources data/sources.json \
   --interviews data/interviews.json \
   --episodes data/episodes.json \
   --segments data/segments.json \
@@ -33,19 +34,19 @@ python scripts/run_pipeline.py \
   --evidence data/evidence_bank.json \
   --codebook data/codebook.json \
   --mappings data/evidence_mappings.json \
+  --links data/links.json \
   --report data/synthesis_report.md \
-  --clusters 3 \
   --output-dir outputs
 ```
 
 The pipeline:
 
-1. verifies excerpts against local sources and validates registries, provenance, mappings, and code
-   families;
+1. verifies excerpts against local sources and validates source coverage, registries, provenance,
+   mappings, reviewed A↔B links, and code families;
 2. builds decision-episode incidence matrices without dropping zero-code episodes;
-3. calculates descriptive A↔B associations and support counts;
-4. clusters decision episodes using Jaccard distance;
-5. exports a versioned checkpoint;
+3. aggregates reviewed A↔B links and calculates secondary co-occurrence diagnostics;
+4. selects an exploratory Jaccard grouping when supported;
+5. exports and deeply validates a versioned checkpoint;
 6. audits the report when one is supplied.
 
 ## Individual commands
@@ -66,6 +67,14 @@ decision episode.
 
 Supply `--previous-assignments` during reclustering to preserve accepted `C##` IDs by membership
 overlap. Always review the result; stable IDs do not make a cluster interpretation correct.
+
+Clustering defaults to `--clusters auto`. Use `--clusters none` to skip it, `--clusters 1` to retain
+one group, or another positive integer to request a candidate count. The output and checkpoint use
+the actual number of distinct assignments, which can be lower than the request.
+
+Checkpoint export and restore apply the JSON Schema plus cross-registry ownership and completeness
+checks. Version 1.0 checkpoints are migrated additively; unknown source coverage and evidence types
+remain explicitly `UNKNOWN`/`unknown`.
 
 ## Input formats
 
