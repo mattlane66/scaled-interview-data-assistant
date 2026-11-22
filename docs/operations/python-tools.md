@@ -89,3 +89,13 @@ none edits interview registries or invokes an LLM.
 
 See [evidence-grounded simulation](simulation.md) before exposing confidential
 human interview excerpts or interpreting synthetic response distributions.
+
+## Optional cross-episode Behavioral Mechanism Map
+
+`python scripts/mechanism_map_cli.py --help` offers `init`, `inventory`,
+and `compile`. Inputs are reviewed checkpoint evidence plus explicit human-coded
+mechanism hypotheses. Exports include a map, Markdown research report, and a
+**proposed** Planning Skills x/y/M handoff. There are no model calls, automatic
+causal claims, or changes to source interview registries.
+
+See [the full mechanism-map workflow](mechanism-map.md).

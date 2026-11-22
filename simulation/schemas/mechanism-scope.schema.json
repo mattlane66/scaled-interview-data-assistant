@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Behavioral mechanism study scope v1",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "cluster_id"
+      ],
+      "properties": {
+        "kind": {
+          "const": "CLUSTER"
+        },
+        "cluster_id": {
+          "type": "string",
+          "pattern": "^C[0-9]{2,}$"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "episode_ids"
+      ],
+      "properties": {
+        "kind": {
+          "const": "EPISODES"
+        },
+        "episode_ids": {
+          "type": "array",
+          "minItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^D[0-9]{2,}$"
+          }
+        }
+      }
+    }
+  ]
+}

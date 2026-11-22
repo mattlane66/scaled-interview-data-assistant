@@ -64,13 +64,14 @@ old, and trigger backcoding. Persistence requires the active chat or a validated
 
 ## Modes and questions
 
-Infer one mode: `GUIDE / INGEST / SINGLE / SYNTHESIZE / VALIDATE / EXPORT / EXPLAIN / SIMULATE`. Only
+Infer one mode: `GUIDE / INGEST / SINGLE / SYNTHESIZE / VALIDATE / EXPORT / EXPLAIN / SIMULATE / MAP`. Only
 analysis modes modify registries. Ask at most three questions only when answers materially change
 scope/coverage, episode boundaries, clustering scope, or core definitions. Otherwise state
 assumptions and proceed.
 
-SIMULATE is downstream and read-only: follow `prompt/simulation-extension.md` and
-`docs/operations/simulation.md`. Never turn model output into human evidence.
+SIMULATE and MAP are read-only. See `prompt/simulation-extension.md`,
+`docs/operations/simulation.md`, and `docs/operations/mechanism-map.md`.
+Never promote generated text or provisional mechanisms into observed evidence.
 
 For batches of four or more, complete episode cards interview by interview before synthesis.
 
