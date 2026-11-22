@@ -65,7 +65,7 @@ def test_remote_mcp_configuration_requires_real_https_and_auth(tmp_path):
         "https://example.com/mcp",
         "https://example.invalid/mcp",
         "https://host.example/mcp",
-        "https://username:pass@research.org/mcp",
+        "https://u:p@example.org/mcp",
         "https://research.org/mcp?secret=1",
         "https://research.org/other",
     ):
