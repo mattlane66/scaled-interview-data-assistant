@@ -1,6 +1,6 @@
 # Canonical Mattress Interview — Independent Analytical Audit
 
-<text>This is a candidate reference, not a human-approved gold standard.</text>
+**This is a candidate reference, not a human-approved gold standard.**
 
 **Status:** `AI_AUDITED_CANDIDATE_PENDING_HUMAN_ADJUDICATION`  
 **Source:** [Full published workshop transcript](../full-transcript.md) · [turn IDs](../source-turns.json) · [28 indexed excerpts](../evidence_bank.json)  
