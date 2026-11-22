@@ -73,6 +73,7 @@ def render(
     lines += ["## Quantitative measurement", ""]
     if measurement:
         lines += [
+            f"Predeclared question: {scenario['measurement']['question']}",
             f"Construct: {measurement['construct']}; externally supplied embeddings: "
             f"{measurement['embedding_model']}; anchors: {measurement['anchor_version']}.",
             "",
