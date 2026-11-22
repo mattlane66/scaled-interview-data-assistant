@@ -63,6 +63,13 @@ def measure(run: dict[str, Any], vectors: dict[str, Any]) -> dict[str, Any]:
     schema_check(vectors, "ssr-input.schema.json")
     if vectors["run_id"] != run.get("run_id"):
         raise SimulationError("SSR vectors do not reference this simulation run")
+    declared = run.get("measurement")
+    if not isinstance(declared, dict) or not declared.get("question"):
+        raise SimulationError("SSR requires a predeclared fixed ordinal question")
+    if (declared["construct"] != vectors["construct"]
+            or declared["anchor_version"] != vectors["anchor_version"]
+            or declared["scale"] != "FIVE_POINT_LIKERT"):
+        raise SimulationError("SSR construct, anchors or scale differ from approved scenario")
     responses = run.get("responses", [])
     supplied = vectors["response_embeddings"]
     if len(supplied) != len(responses):
