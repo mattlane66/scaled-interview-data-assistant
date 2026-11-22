@@ -232,3 +232,47 @@ def test_real_stdio_mcp_client_initializes_and_calls_read_only_tool():
                 )
 
     asyncio.run(asyncio.wait_for(probe(), timeout=20))
+
+
+
+def test_private_http_mcp_transport_initializes_with_auth_and_rejects_anonymous():
+    """Exercise the actual Streamable HTTP app, not only a dummy ASGI handler."""
+    pytest.importorskip("mcp")
+    from httpx import ASGITransport, AsyncClient
+    from plugin_runtime.server import BearerGuard, mcp
+
+    async def check():
+        token = "x" * 40
+        app = BearerGuard(mcp.streamable_http_app(), token)
+        body = {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "method": "initialize",
+            "params": {
+                "protocolVersion": "2025-03-26",
+                "capabilities": {},
+                "clientInfo": {"name": "repository-audit", "version": "1.0"},
+            },
+        }
+        headers = {
+            "Accept": "application/json, text/event-stream",
+            "Content-Type": "application/json",
+        }
+        async with mcp.session_manager.run():
+            async with AsyncClient(
+                transport=ASGITransport(app=app),
+                base_url="http://localhost",
+            ) as client:
+                denied = await client.post("/mcp", json=body, headers=headers)
+                assert denied.status_code == 401
+                authorized = await client.post(
+                    "/mcp",
+                    json=body,
+                    headers={**headers, "Authorization": "Bearer " + token},
+                )
+                assert authorized.status_code == 200
+                parsed = authorized.json()
+                assert parsed["result"]["serverInfo"]["name"]
+                assert "capabilities" in parsed["result"]
+
+    asyncio.run(asyncio.wait_for(check(), timeout=20))
