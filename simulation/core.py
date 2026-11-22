@@ -90,6 +90,14 @@ def inspect_scenario(
         raise SimulationError("Named human reviewer required")
     if scenario["mode"] not in {"PLAUSIBILITY_SPACE", "INDIVIDUAL_PROXY"}:
         raise SimulationError("Only plausibility and individual-proxy runs are supported in v1")
+    intervention = scenario["intervention"]
+    if intervention["from"].strip() == intervention["to"].strip():
+        raise SimulationError("Intervention must change a condition")
+    if intervention["variable"] in scenario["held_constant"]:
+        raise SimulationError("A changed condition cannot also be held constant")
+    for field in ("decision", "decision_owner", "consequence_if_wrong"):
+        if scenario[field].strip().upper().startswith("REPLACE"):
+            raise SimulationError(f"Complete scenario field: {field}")
     episodes = {r["episode"]: r for r in checkpoint["episode_index"]}
     evidence = {r["evidence"]: r for r in checkpoint["evidence_bank"]}
     chosen_episodes = set(scenario["episode_refs"])
@@ -206,7 +214,9 @@ def record(
     checkpoint: dict[str, Any], digest: str, scenario: dict[str, Any],
     model_output: dict[str, Any], run_id: str = "R001",
 ) -> dict[str, Any]:
-    inspect_scenario(checkpoint, digest, scenario)
+    info = inspect_scenario(checkpoint, digest, scenario)
+    if not scenario["review"]["processing_permitted"]:
+        raise SimulationError("Model processing is not approved for this grounded simulation")
     schema_check(model_output, "model-output.schema.json")
     if not RUN_ID.fullmatch(run_id):
         raise SimulationError("Malformed run ID")
@@ -219,6 +229,11 @@ def record(
         "scenario_id": scenario["scenario_id"],
         "source_checkpoint_sha256": digest,
         "scenario_sha256": sha256_text(json.dumps(scenario, sort_keys=True)),
+        "prepared_packet_sha256": sha256_text(json.dumps(
+            prepare(checkpoint, digest, scenario, include_verbatim=True), sort_keys=True
+        )),
+        "source_coverage": info["coverage"],
+        "coverage_limited": any(c != "FULL" for c in info["coverage"]),
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "evidence_type": "SIMULATED_ESTIMATE",
         "mode": scenario["mode"], "grade": scenario["target_grade"],
