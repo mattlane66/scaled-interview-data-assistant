@@ -140,6 +140,16 @@ def test_compiled_map_records_variation_and_planning_handoff(source):
     assert handoff["M_operating_model"]["conditions_and_hypotheses"][0][
         "source_evidence_refs"
     ] == ["SID:BMST001:E003", "SID:BMST001:E004", "SID:BMST001:E005"]
+    cases = handoff["M_operating_model"]["conditions_and_hypotheses"][0]["case_evidence"]
+    assert [(row["episode_ref"], row["stance"]) for row in cases] == [
+        ("SID:BMST001:D02", "ALIGNS"),
+        ("SID:BMST001:D03", "AMBIGUOUS"),
+    ]
+    assert cases[0]["a_to_b_link_refs"] == ["SID:BMST001:L002"]
+    assert cases[0]["source_type_indicates_reported_behavior"] is False
+    assert handoff["M_operating_model"]["conditions_and_hypotheses"][0][
+        "discriminating_human_test"
+    ].startswith("Observe decisions")
     assert "selected_shape" not in json.dumps(handoff)
     assert "accepted_requirement" not in json.dumps(handoff)
 
