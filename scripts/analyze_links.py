@@ -211,7 +211,7 @@ def main(
                 "inferred_linked_units": len(inferred_units),
                 "linked_units": len(linked_units),
                 "supporting_evidence": ", ".join(sorted(link_evidence.get(pair, set()))),
-                "link_registry_status": "REVIEWED" if links else "NOT_PROVIDED",
+                "link_registry_status": "PROVIDED_UNATTESTED" if links else "NOT_PROVIDED",
                 "low_support_flag": low_support,
                 "negative_edge_flag": bool(
                     nonoccurrence_assessable
