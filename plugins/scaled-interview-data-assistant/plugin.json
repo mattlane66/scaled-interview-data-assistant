@@ -1,0 +1,45 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "scaled-interview-data-assistant",
+  "version": "1.7.0",
+  "description": "Reconstruct real customer switching decisions from interviews with source-located evidence, reviewed A-to-B relationships, rival behavioral explanations, and provisional product-decision handoffs. Separate reported behavior from hypotheses and simulations.",
+  "author": {
+    "name": "Matt Lane",
+    "url": "https://mattlane66.github.io"
+  },
+  "homepage": "https://github.com/mattlane66/scaled-interview-data-assistant",
+  "repository": "https://github.com/mattlane66/scaled-interview-data-assistant",
+  "license": "MIT",
+  "keywords": [
+    "jobs-to-be-done",
+    "customer-research",
+    "qualitative-research",
+    "decision-episodes",
+    "product-discovery"
+  ],
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/get-started/SKILL.md",
+      "interface": {
+        "displayName": "Interview Data Assistant",
+        "shortDescription": "Turn switching interviews into auditable product research",
+        "longDescription": "Reconstruct customer decisions, build source-located evidence, compare rival behavioral explanations, and hand provisional research findings to shaping. Keep human review, simulations, and observed outcomes distinct.",
+        "developerName": "Matt Lane",
+        "category": "Productivity",
+        "capabilities": [
+          "Evidence coding",
+          "Interview synthesis",
+          "Research review",
+          "Mechanism mapping"
+        ],
+        "websiteURL": "https://mattlane66.github.io",
+        "supportURL": "https://github.com/mattlane66/scaled-interview-data-assistant/issues",
+        "defaultPrompt": [
+          "Analyze this customer switching interview and cite every material finding.",
+          "Audit this JTBD synthesis against its original transcript.",
+          "Explore rival behavioral explanations without choosing a product yet."
+        ]
+      }
+    }
+  }
+}
