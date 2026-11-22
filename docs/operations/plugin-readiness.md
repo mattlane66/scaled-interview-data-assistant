@@ -9,12 +9,12 @@ Do not publish a public MCP plugin or claim a successful ChatGPT MCP connection 
 
 ## Source of truth
 
-- Plugin root: \`plugins/scaled-interview-data-assistant/plugin.json\`
-- Four skills: \`skills/get-started\`, \`analyze-interview\`, \`compare-mechanisms\`, \`research-to-planning\`
-- Optional runtime: \`plugin_runtime/operations.py\` and \`server.py\`
-- Package builder: \`scripts/build_plugin.py\`
-- Canonical real-world test: \`examples/canonical-mattress/\` (includes the licensed full published transcript, not independent outcome validation)
-- Tests: \`tests/test_plugin_distribution.py\`
+- Plugin root: `plugins/scaled-interview-data-assistant/plugin.json`
+- Four skills: `skills/get-started`, `analyze-interview`, `compare-mechanisms`, `research-to-planning`
+- Optional runtime: `plugin_runtime/operations.py` and `server.py`
+- Package builder: `scripts/build_plugin.py`
+- Canonical real-world test: `examples/canonical-mattress/` (includes the licensed full published transcript, not independent outcome validation)
+- Tests: `tests/test_plugin_distribution.py`
 
 The older imported GPT instructions may remain separately available in users' ChatGPT accounts. Updating this repository does **not** silently update that legacy GPT or make a new public listing.
 
@@ -29,7 +29,7 @@ python -m pytest -q
 python scripts/build_plugin.py
 ~~~
 
-This creates \`dist/scaled-interview-data-assistant-1.7.0.zip\`, containing exactly **one** portable plugin root with \`plugin.json\` and four \`SKILL.md\` files. The archive does **not** bundle source transcripts, checkpoints, live user data, secrets or an \`mcp.json\` with a nonexistent server.
+This creates `dist/scaled-interview-data-assistant-1.7.0.zip`, containing exactly **one** portable plugin root with `plugin.json` and four `SKILL.md` files. The archive does **not** bundle source transcripts, checkpoints, live user data, secrets or an `mcp.json` with a nonexistent server.
 
 For private testing, import the ZIP as a private plugin in ChatGPT/Codex through a supported creator or plugin-import surface. Try:
 - "I have a recorded switch interview. Reconstruct the decision episode and flag missing evidence."
@@ -46,25 +46,25 @@ python -m pip install -e ".[plugin]"
 python -m plugin_runtime.server
 ~~~
 
-Default \`SIDA_MCP_MODE=stdio\` is a local standard-input MCP server for development, not a ChatGPT-web hosted connection. Connect an MCP Inspector or a capable local MCP client and test these read-only tools:
+Default `SIDA_MCP_MODE=stdio` is a local standard-input MCP server for development, not a ChatGPT-web hosted connection. Connect an MCP Inspector or a capable local MCP client and test these read-only tools:
 
 | Tool | Behavior |
 |---|---|
-| \`get_research_capabilities\` | Accurate limits and data flow, with no private data |
-| \`check_study\` | Validate source-located registries, verify supplied transcript excerpts, run the original deterministic CLI and return summary/counts; optionally return checkpoint JSON |
-| \`check_checkpoint\` | Validate exact supplied checkpoint JSON, return digest and counts |
-| \`draft_mechanism_map\` | Create unreviewed, SHA-bound study (no approval) |
-| \`preview_mechanism_evidence\` | Inspect episode coverage and original E/L IDs |
-| \`compile_reviewed_mechanism_map\` | Compile a genuinely human-reviewed study and PROPOSED planning handoff |
-| \`make_counterfactual_brief\` | Require source- and review-matched scenario; no synthetic run needed |
+| `get_research_capabilities` | Accurate limits and data flow, with no private data |
+| `check_study` | Validate source-located registries, verify supplied transcript excerpts, run the original deterministic CLI and return summary/counts; optionally return checkpoint JSON |
+| `check_checkpoint` | Validate exact supplied checkpoint JSON, return digest and counts |
+| `draft_mechanism_map` | Create unreviewed, SHA-bound study (no approval) |
+| `preview_mechanism_evidence` | Inspect episode coverage and original E/L IDs |
+| `compile_reviewed_mechanism_map` | Compile a genuinely human-reviewed study and PROPOSED planning handoff |
+| `make_counterfactual_brief` | Require source- and review-matched scenario; no synthetic run needed |
 
 Never feed the server a model-generated "reviewer" name or invented approved flags. Source and review states must come from the research process. A reviewer *attestation* is validated structurally, not independently verified.
 
 ### Input and safety contract
 
-- Requests are at most 2 MB, with at most 20 inline source text files and at most 350 KB per text file. Names must be safe \`.txt\`/\`.md\` basenames; URLs and filesystem traversal are rejected. No server-side file fetching.
-- The \`check_study\` tool requires explicit JSON arrays: \`sources\`, \`interviews\`, \`episodes\`, \`segments\`, \`evidence_bank\`, \`codebook\`, \`evidence_mappings\`, \`links\`, plus \`source_files: {"file.md": "complete source text"}\`. The source entries must name these files. \`report\` is optional. \`clusters\` defaults to \`none\` to avoid pretending a one-interview cluster has meaning.
-- The server uses \`TemporaryDirectory\` and deletes input/output at the end of each call. No uploaded research data is persisted by the service. This does **not** control retention in ChatGPT/client layers, cloud request logging, proxies, or future hosting.
+- Requests are at most 2 MB, with at most 20 inline source text files and at most 350 KB per text file. Names must be safe `.txt`/`.md` basenames; URLs and filesystem traversal are rejected. No server-side file fetching.
+- The `check_study` tool requires explicit JSON arrays: `sources`, `interviews`, `episodes`, `segments`, `evidence_bank`, `codebook`, `evidence_mappings`, `links`, plus `source_files: {"file.md": "complete source text"}`. The source entries must name these files. `report` is optional. `clusters` defaults to `none` to avoid pretending a one-interview cluster has meaning.
+- The server uses `TemporaryDirectory` and deletes input/output at the end of each call. No uploaded research data is persisted by the service. This does **not** control retention in ChatGPT/client layers, cloud request logging, proxies, or future hosting.
 - On source validation failure, the server returns a generic error **without emitting raw subprocess logs or transcript excerpts**. Local engineers can run the CLI directly to see full diagnostics.
 - The MCP process never makes model API requests, never scores SSR on its own, does not imply population estimates, and does not authorize product goals or product shapes.
 
@@ -79,7 +79,7 @@ export SIDA_MCP_BEARER_TOKEN="<independently generated high-entropy secret>"
 python -m plugin_runtime.server
 ~~~
 
-The guard responds \`401\` without a valid bearer header. Do **not** publish this private-test variant as a public multi-user MCP plugin. Fixed tokens neither identify users nor enforce tenant permissions. A public deployment needs verified OAuth 2.1, access-token audience/scopes, per-request authorization, user isolation, rate limits, abuse prevention, HTTPS, reliable operations, safe error and proxy logging, and incident/deletion procedures.
+The guard responds `401` without a valid bearer header. Do **not** publish this private-test variant as a public multi-user MCP plugin. Fixed tokens neither identify users nor enforce tenant permissions. A public deployment needs verified OAuth 2.1, access-token audience/scopes, per-request authorization, user isolation, rate limits, abuse prevention, HTTPS, reliable operations, safe error and proxy logging, and incident/deletion procedures.
 
 Only once a **real HTTPS /mcp** endpoint exists and is independently validated, a private combined package can be generated with:
 
@@ -89,7 +89,7 @@ python scripts/build_plugin.py \
   --auth-mode api_key
 ~~~
 
-\`api_key\` above is **for private testing**. The package contains an authentication *descriptor*, not a token. The \`--auth-mode oauth\` generator option only declares OAuth metadata; it **does not implement OAuth**. Never use that flag to claim the current server accepts OAuth.
+`api_key` above is **for private testing**. The package contains an authentication *descriptor*, not a token. The `--auth-mode oauth` generator option only declares OAuth metadata; it **does not implement OAuth**. Never use that flag to claim the current server accepts OAuth.
 
 OpenAI's directory submission tooling currently requires real remote HTTPS MCP endpoints and compatible authentication. Static API-key configuration is not supported by the public portal's connection flow.
 
