@@ -42,9 +42,9 @@ python scripts/run_pipeline.py \
 The pipeline:
 
 1. verifies excerpts against local sources and validates source coverage, registries, provenance,
-   mappings, reviewed A↔B links, and code families;
+   mappings, supplied A↔B link references, and code families (not reviewer identity);
 2. builds decision-episode incidence matrices without dropping zero-code episodes;
-3. aggregates reviewed A↔B links and calculates secondary co-occurrence diagnostics;
+3. aggregates supplied A↔B links and calculates secondary co-occurrence diagnostics; human review is a separate gate;
 4. selects an exploratory Jaccard grouping when supported;
 5. exports and deeply validates a versioned checkpoint;
 6. audits the report when one is supplied.
