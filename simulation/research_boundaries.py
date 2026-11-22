@@ -11,6 +11,7 @@ from typing import Any
 from simulation.core import SimulationError
 
 STAGES = ("adoption", "use", "progress")
+BEHAVIOR_SOURCE_TYPES = {"concrete_event_or_behavior", "current_state", "observation"}
 UNKNOWN_ASSESSMENT = {
     "status": "UNKNOWN",
     "evidence_refs": [],
@@ -56,6 +57,12 @@ def assess_outcomes(index: dict[str, Any], study: dict[str, Any]) -> list[dict[s
                 if not refs or not assessment["interpretation"].strip():
                     raise SimulationError(
                         f"Outcome {stage} assessed status requires evidence and interpretation"
+                    )
+                types = episodes[episode]["evidence_types"]
+                if not any(types[ref]["type"] in BEHAVIOR_SOURCE_TYPES for ref in refs):
+                    raise SimulationError(
+                        f"Outcome {stage} requires event, state, or observation evidence; "
+                        "aspirations and hypotheticals do not establish actual outcomes"
                     )
         supplied[episode] = case
     if any_assessed and not study["review"].get("outcomes_reviewed", False):
