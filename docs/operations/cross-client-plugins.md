@@ -1,6 +1,6 @@
 # Install in Codex and Claude Code
 
-The **same five research skills** ship in one portable, skills-only plugin. There is no duplicated methodology or separate fork for each model. This is a private/developer distribution, **not** an approved public directory listing.
+The **same six research skills** ship in one portable, skills-only plugin. There is no duplicated methodology or separate fork for each model. This is a private/developer distribution, **not** an approved public directory listing.
 
 ## Which files each host reads
 
@@ -9,7 +9,7 @@ The **same five research skills** ship in one portable, skills-only plugin. Ther
 | Codex / ChatGPT | `.agents/plugins/marketplace.json` in the repository, or a portable ZIP | `plugins/scaled-interview-data-assistant/plugin.json` |
 | Claude Code | `.claude-plugin/marketplace.json` in the repository, or a local ZIP | `plugins/scaled-interview-data-assistant/.claude-plugin/plugin.json` |
 
-Both hosts load the **same** `plugins/scaled-interview-data-assistant/skills/*/SKILL.md` files. All five skills are instruction-only by default. A skills-only installation **cannot** run local Python validators or call the MCP research tools by itself.
+Both hosts load the **same** `plugins/scaled-interview-data-assistant/skills/*/SKILL.md` files. All six skills are instruction-only by default. A skills-only installation **cannot** run local Python validators or call the MCP research tools by itself.
 
 ## Claude Code — install from GitHub
 
@@ -20,7 +20,7 @@ claude plugin marketplace add mattlane66/scaled-interview-data-assistant
 claude plugin install scaled-interview-data-assistant@scaled-interview-research
 ```
 
-Then start a new Claude Code session and invoke `/scaled-interview-data-assistant:get-started` or `/scaled-interview-data-assistant:analyze-interview`.
+Then start a new Claude Code session and invoke `/scaled-interview-data-assistant:get-started` or `/scaled-interview-data-assistant:research-router`.
 
 For a one-session checkout test rather than installation:
 
@@ -47,7 +47,7 @@ To build a portable ZIP for manual private import in ChatGPT/Codex or local Clau
 python scripts/build_plugin.py
 ```
 
-It creates `dist/scaled-interview-data-assistant-1.8.0.zip` containing one plugin root: a portable `plugin.json`, a Claude `.claude-plugin/plugin.json`, and the five skills.
+It creates `dist/scaled-interview-data-assistant-1.9.0.zip` containing one plugin root: a portable `plugin.json`, a Claude `.claude-plugin/plugin.json`, and the six skills.
 
 ## Optional local deterministic MCP tools
 
