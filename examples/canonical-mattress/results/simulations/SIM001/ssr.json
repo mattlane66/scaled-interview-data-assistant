@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "run_id": "R001",
+  "run_sha256": "sha256:996ef704aae8f969d3fab44fe390f89257f80add81c276ca3c42d693cb0defe5",
+  "evidence_type": "SIMULATED_ESTIMATE",
+  "construct": "hypothetical_stated_purchase_intent",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "anchor_version": "mattress-intent-anchors-v1",
+  "anchor_set_count": 6,
+  "epsilon": 0,
+  "temperature": 1,
+  "per_response": [
+    {
+      "response_index": 0,
+      "rating_probabilities": [
+        0.12042406245670335,
+        0.10307601829782952,
+        0.21437342525332173,
+        0.29614357168378974,
+        0.2659829223083557
+      ],
+      "max_anchor_set_tvd": 0.4351627348026422
+    },
+    {
+      "response_index": 1,
+      "rating_probabilities": [
+        0.09844681552660241,
+        0.24642951139960287,
+        0.40903213256252724,
+        0.1303431768915273,
+        0.11574836361974017
+      ],
+      "max_anchor_set_tvd": 0.23886516171582858
+    }
+  ],
+  "aggregate": [
+    0.10943543899165288,
+    0.17475276484871619,
+    0.31170277890792447,
+    0.21324337428765852,
+    0.19086564296404793
+  ],
+  "note": "SSR measures generated textual attitudes, not actual switching probabilities; external embedding provenance is self-reported."
+}

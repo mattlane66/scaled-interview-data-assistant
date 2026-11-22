@@ -1,0 +1,58 @@
+{
+  "schema_version": "0.1.0",
+  "entries": [
+    {
+      "id": "R001",
+      "ran_at": "2026-11-22T11:51:44.748595+00:00",
+      "mode": "PLAUSIBILITY_SPACE",
+      "model": "GPT-6",
+      "model_version": "GPT-6 authored text, not an independent API run",
+      "configuration": "{\"independent_sampling\": false, \"origin\": \"AI-authored illustrative responses\", \"prompt_contract\": \"free text response to predeclared five-point question\"}",
+      "seed": null,
+      "sample_size": 2,
+      "evidence_ids": [
+        "E014",
+        "E019",
+        "E020",
+        "E027"
+      ],
+      "estimate": {
+        "evidence_type": "SIMULATED_ESTIMATE",
+        "responses": [
+          {
+            "text": "I would probably buy if someone reliably picked up the mattress and refunded me if it did not work, but I would still check with my wife.",
+            "mechanism": "Reduced anticipated loss or disposal burden",
+            "evidence_refs": [
+              "E014",
+              "E019",
+              "E020",
+              "E027"
+            ],
+            "objections": [
+              "Seller credibility",
+              "Spouse's agreement"
+            ],
+            "next_test": "Offer an actual pickup-backed trial and observe paid attempts"
+          },
+          {
+            "text": "I might consider it, but I am still unsure whether I trust an unknown seller to honor the collection promise.",
+            "mechanism": "Trust in the promise may matter as much as logistics",
+            "evidence_refs": [
+              "E014",
+              "E020",
+              "E027"
+            ],
+            "objections": [
+              "Unfamiliar company",
+              "Potential noncompliance"
+            ],
+            "next_test": "Hold pickup fixed and compare verified seller familiarity"
+          }
+        ],
+        "scenario_id": "SIM001",
+        "source_checkpoint_sha256": "sha256:bd083ebce7b46b66a07f30b061da2256fc5fd078f7488742d566ecb43d7f83ad"
+      },
+      "notes": "Source: Scaled Interview Data Assistant; grade: L0_ROLEPLAY; source coverage: ['FULL']. Not human observation or a calibrated population estimate."
+    }
+  ]
+}

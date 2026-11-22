@@ -1,0 +1,10 @@
+{
+  "observed_participant_source_turns": 106,
+  "excerpt_count": 28,
+  "selected_source_turns": 24,
+  "decision_episodes": 1,
+  "distinct_people": 1,
+  "review_status": "AI_CURATED_NOT_HUMAN_APPROVED",
+  "no_cluster_justification": "One participant cannot establish cross-person job clusters",
+  "model_generation": "NOT_YET_RUN"
+}

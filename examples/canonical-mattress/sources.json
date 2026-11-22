@@ -1,0 +1,9 @@
+[
+  {
+    "source_id": "SRC01",
+    "source": "full-transcript.md",
+    "coverage": "FULL",
+    "accessible_range": "T0001–T0305",
+    "notes": "Full published web transcript only; NOT verified against audio. https://jobstobedone.org/radio/the-mattress-interview-part-one/"
+  }
+]

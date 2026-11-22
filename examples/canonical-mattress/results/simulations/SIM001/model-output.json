@@ -1,0 +1,40 @@
+{
+  "model": "GPT-6",
+  "model_version": "GPT-6 authored text, not an independent API run",
+  "configuration": {
+    "origin": "AI-authored illustrative responses",
+    "independent_sampling": false,
+    "prompt_contract": "free text response to predeclared five-point question"
+  },
+  "responses": [
+    {
+      "text": "I would probably buy if someone reliably picked up the mattress and refunded me if it did not work, but I would still check with my wife.",
+      "mechanism": "Reduced anticipated loss or disposal burden",
+      "evidence_refs": [
+        "E014",
+        "E019",
+        "E020",
+        "E027"
+      ],
+      "objections": [
+        "Seller credibility",
+        "Spouse's agreement"
+      ],
+      "next_test": "Offer an actual pickup-backed trial and observe paid attempts"
+    },
+    {
+      "text": "I might consider it, but I am still unsure whether I trust an unknown seller to honor the collection promise.",
+      "mechanism": "Trust in the promise may matter as much as logistics",
+      "evidence_refs": [
+        "E014",
+        "E020",
+        "E027"
+      ],
+      "objections": [
+        "Unfamiliar company",
+        "Potential noncompliance"
+      ],
+      "next_test": "Hold pickup fixed and compare verified seller familiarity"
+    }
+  ]
+}

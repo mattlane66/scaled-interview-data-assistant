@@ -1,0 +1,198 @@
+[
+  {
+    "evidence": "E001",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A02",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E002",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A01",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E003",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A01",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E004",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A01",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E005",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A01",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E006",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A01",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E007",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A01",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E008",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A03",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E009",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A03",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E010",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A02",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E011",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A02",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E012",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A02",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E013",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A04",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E014",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A02",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E015",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "",
+    "b_codes": "B01"
+  },
+  {
+    "evidence": "E016",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E017",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "",
+    "b_codes": "B03"
+  },
+  {
+    "evidence": "E018",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A02",
+    "b_codes": "B03"
+  },
+  {
+    "evidence": "E019",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "",
+    "b_codes": "B03"
+  },
+  {
+    "evidence": "E020",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A02",
+    "b_codes": "B02"
+  },
+  {
+    "evidence": "E021",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A04",
+    "b_codes": "B04"
+  },
+  {
+    "evidence": "E022",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "",
+    "b_codes": "B04"
+  },
+  {
+    "evidence": "E023",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A05",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E024",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A05",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E025",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A04",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E026",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "A04",
+    "b_codes": ""
+  },
+  {
+    "evidence": "E027",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "",
+    "b_codes": "B02"
+  },
+  {
+    "evidence": "E028",
+    "interview": "I01",
+    "episode": "D01",
+    "a_codes": "",
+    "b_codes": ""
+  }
+]
