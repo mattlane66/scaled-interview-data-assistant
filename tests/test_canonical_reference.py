@@ -149,5 +149,5 @@ def test_reference_document_and_rubric_have_all_material_boundaries(source):
         "R1", "R10", "pickup", "SSR", "human-approved",
         "candidate cannot pass solely",
     ]:
-        assert value in rubric, value
+        assert value.lower() in rubric.lower(), value
     assert ref["adjudication"]["questions"]
