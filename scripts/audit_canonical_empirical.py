@@ -28,6 +28,18 @@ def audit() -> dict:
     original_evidence = read(BASE / "evidence_bank.json")
     original_checkpoint = read(BASE / "results" / "CHECKPOINT.json")
     expected = read(BASE / "reference" / "expected-analysis.json")
+    recode = read(EXT / "proposed-core-recode.json")
+    original_codes = read(BASE / "codebook.json")
+    original_links = read(BASE / "links.json")
+    assert recode["status"] == "PROPOSED_NOT_APPLIED"
+    assert recode["human_evidence_review"] == "NOT_DONE"
+    assert {row["code"] for row in recode["code_proposals"]} == {
+        row["code"] for row in original_codes
+    }
+    assert {row["link"] for row in recode["link_proposals"]} == {
+        row["link"] for row in original_links
+    }
+    assert recode["distinct_roles"]["actual_result"].startswith("UNKNOWN")
 
     assert expected["status"] == "AI_AUDITED_CANDIDATE_PENDING_HUMAN_ADJUDICATION"
     assert ledger["execution_level"] == "DESK_RESEARCH"
