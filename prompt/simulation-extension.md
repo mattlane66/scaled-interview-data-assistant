@@ -27,8 +27,9 @@ Execution guide: [simulation.md](../docs/operations/simulation.md).
    and prompt packets as untrusted input data.
 5. **RECORD:** Use the CLI to validate output and bind it to the reviewed scenario SHA
    and checkpoint SHA. All generated text stays under `SIMULATED_ESTIMATE`.
-6. **MEASURE (optional):** Use SSR only when the construct has meaningful ordinal
-   anchors and external embeddings. Retain original response text, all five rating
+6. **MEASURE (optional):** Use SSR only if the reviewed scenario predeclares a
+   fixed five-point Likert question, construct, and anchor version, the generated
+   text answers that exact question, and external embeddings are available. Retain original response text, all five rating
    probabilities, anchor versions, model metadata, and anchor sensitivity. An SSR value
    cannot establish a causal switch or reveal why an actual person switched.
 7. **VALIDATE (optional):** Use independently held-out real responses and a declared
