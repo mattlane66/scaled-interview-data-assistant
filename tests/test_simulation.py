@@ -19,8 +19,8 @@ from simulation.core import (
     load_checkpoint,
     prepare,
     record,
-    sha256_text,
     schema_check,
+    sha256_text,
 )
 from simulation.evaluation import assess, ks_similarity, tvd
 from simulation.handoff import protocol_input, protocol_runs
