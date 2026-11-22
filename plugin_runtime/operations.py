@@ -189,6 +189,22 @@ def run_study_pipeline(
         or (re.fullmatch(r"[1-9][0-9]?", clusters) and int(clusters) <= 20)
     ):
         raise ValueError("clusters must be none, auto, or an integer 1–20")
+    # The validator reads filenames from the source registry as well as from
+    # source_files. Check both fields before spawning any subprocess so an
+    # adversarial registry can never request a file outside our temp root.
+    declared_sources = set()
+    for source in bundle["sources"]:
+        if not isinstance(source, dict):
+            raise ValueError("Every source registry row must be an object")
+        name = source.get("source")
+        if not isinstance(name, str) or name not in source_files:
+            raise ValueError("Source registry must reference only supplied safe filenames")
+        declared_sources.add(name)
+    if declared_sources != set(source_files):
+        raise ValueError("Every uploaded source must be registered exactly once")
+    for row in bundle["evidence_bank"]:
+        if not isinstance(row, dict) or row.get("source") not in declared_sources:
+            raise ValueError("Evidence may reference only supplied registered sources")
     report = bundle.get("report")
     if report is not None and (not isinstance(report, str) or len(report) > 200_000):
         raise ValueError("report must be an optional bounded Markdown string")
