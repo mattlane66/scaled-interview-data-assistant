@@ -1,7 +1,7 @@
 # The Mattress Interview — full dialogue and teaching context
 
 Original page: https://jobstobedone.org/radio/the-mattress-interview-part-one/
-Source HTML SHA-256: 9846f882cca3b91eb1e49c2a12d941327f9e00d3da3c7892a258aadbc557cf2a
+Source HTML SHA-256: 8c7d0e4c0c1b34d4619d31d2a7ec503cc5fde8b9b79ed3876b14b27c8d5bf4dc
 
 This is a source snapshot, not an analyst reconstruction.
 Facilitator and audience commentary is preserved but is not participant evidence.
@@ -406,99 +406,93 @@ Why did you wait so long to get a mattress?
 
 **Interviewee [T0154, PARTICIPANT]:** See, you don’t get this in focus groups. “See, you don’t get this in focus groups.” Mattress Interviewee
 
-**Audience Member [T0155, AUDIENCE]:** I might give it away, but the trigger [inaudible 26:23] aisle, going to check-out at Costco, you have the history of stress and that trigger of stress checking out. At that point it seemed like you were looking for piece of mind, or piece and tranquility at that moment. You saw the mattress as maybe a solution to that.
+**Interviewee [T0155, PARTICIPANT]:** Bless her, she was probably more content in keeping my kids from hitting each other. There was some franticness. There was some, ‘Are you sure you want it?’ Then I pulled down the little 12 inch by 12 inch sample of the foam. ‘Here touch it, feel it.’ ‘Oh, that’s actually not bad. If you want it, get it. It’s a lot of money, I know you’re not sleeping, get it.’ That’s when I went out and got the flatbed.
 
-**Interviewee [T0156, PARTICIPANT]:** Bless her, she was probably more content in keeping my kids from hitting each other. There was some franticness. There was some, ‘Are you sure you want it?’ Then I pulled down the little 12 inch by 12 inch sample of the foam. ‘Here touch it, feel it.’ ‘Oh, that’s actually not bad. If you want it, get it. It’s a lot of money, I know you’re not sleeping, get it.’ That’s when I went out and got the flatbed.
+**Interviewee [T0156, PARTICIPANT]:** It’s funny that you ask about the packaging, because they had their four or five, and as someone that part of my life is marketing too, it’s funny to see the four or five people at point, and of course the couple that’s getting a great night’s sleep on some mattress. That really didn’t get me. What got me was the ability to at least touch and feel it a little bit. Again, also knowing that whatever mattress I had been having and still have wasn’t cutting the deal, I wanted to try something radically different. To me going with foam was radically different. I don’t know what it is about, and I’m sure everyone’s experienced this at some point or other, there’s also something about a Costco that just fuels that occasional impulse, where it just pulls you over . . .
 
-**Interviewee [T0157, PARTICIPANT]:** It’s funny that you ask about the packaging, because they had their four or five, and as someone that part of my life is marketing too, it’s funny to see the four or five people at point, and of course the couple that’s getting a great night’s sleep on some mattress. That really didn’t get me. What got me was the ability to at least touch and feel it a little bit. Again, also knowing that whatever mattress I had been having and still have wasn’t cutting the deal, I wanted to try something radically different. To me going with foam was radically different. I don’t know what it is about, and I’m sure everyone’s experienced this at some point or other, there’s also something about a Costco that just fuels that occasional impulse, where it just pulls you over . . .
+**Interviewee [T0157, PARTICIPANT]:** I think that’s a great question.
 
-**Audience Member [T0158, AUDIENCE]:** Let me ask you, if it was Walgreens or any other store, would that be the case?
+**Interviewee [T0158, PARTICIPANT]:** I will tell you this. Walgreens specifically I wouldn’t purchase it there. I would’ve only purchased at a store where I know I’ve had a great brand and customer experience, and if I ever have had a problem with any product . . . I know a couple of people have mentioned Zappos earlier. One of the things everyone loves about them is their experience. People feel more confident there. I’ve always historically had good experiences in a Costco. If I’ve had an issue it’s been very [inaudible 33:56] Espoused behavior vs. real behavior
 
-**Interviewee [T0159, PARTICIPANT]:** I think that’s a great question.
+**Audience Member [T0159, AUDIENCE]:** You’re delighted [inaudible 20:48] $2,000 on it.
 
-**Audience Member [T0160, AUDIENCE]:** Like if you didn’t happen to be at Costco, just at Walgreens that day . . .
+**Interviewee [T0160, PARTICIPANT]:** What was that?
 
-**Interviewee [T0161, PARTICIPANT]:** I will tell you this. Walgreens specifically I wouldn’t purchase it there. I would’ve only purchased at a store where I know I’ve had a great brand and customer experience, and if I ever have had a problem with any product . . . I know a couple of people have mentioned Zappos earlier. One of the things everyone loves about them is their experience. People feel more confident there. I’ve always historically had good experiences in a Costco. If I’ve had an issue it’s been very [inaudible 33:56] Espoused behavior vs. real behavior
+**Audience Member [T0161, AUDIENCE]:** You put $2,000 on the mattress, and if we do it again, did you want, ‘I’ve got to get my use out of the $2,000.’
 
-**Audience Member [T0162, AUDIENCE]:** You’re delighted [inaudible 20:48] $2,000 on it.
+**Chris [T0162, FACILITATOR]:** Right, he wants to extend the life of it, right?
 
-**Interviewee [T0163, PARTICIPANT]:** What was that?
+**Audience Member [T0163, AUDIENCE]:** Even though he’s uncomfortable, he doesn’t want to make that commitment.
 
-**Audience Member [T0164, AUDIENCE]:** You put $2,000 on the mattress, and if we do it again, did you want, ‘I’ve got to get my use out of the $2,000.’
+**Audience Member [T0164, AUDIENCE]:** I just wonder with the $2,000 mattress purchase, did you ever go back to the manufacturer, the company, and say, ‘Hey, I’m having this trouble.’ There should be some sort of guarantee timeline where you can . . .
 
-**Chris [T0165, FACILITATOR]:** Right, he wants to extend the life of it, right?
+**Interviewee [T0165, PARTICIPANT]:** Are we game on or off?
 
-**Audience Member [T0166, AUDIENCE]:** Even though he’s uncomfortable, he doesn’t want to make that commitment.
+**Chris [T0166, FACILITATOR]:** Game on, go ahead and answer that question.
 
-**Audience Member [T0167, AUDIENCE]:** I just wonder with the $2,000 mattress purchase, did you ever go back to the manufacturer, the company, and say, ‘Hey, I’m having this trouble.’ There should be some sort of guarantee timeline where you can . . .
+**Interviewee [T0167, PARTICIPANT]:** Well, no, I just didn’t know if that was something [inaudible 21:26].
 
-**Interviewee [T0168, PARTICIPANT]:** Are we game on or off?
+**Chris [T0168, FACILITATOR]:** No, it’s a good question.
 
-**Chris [T0169, FACILITATOR]:** Game on, go ahead and answer that question.
+**Interviewee [T0169, PARTICIPANT]:** Yeah, well, the other caveat that makes this interesting that you might have heard me say really subtly when everyone was talking was, it was sold to me by my uncle.
 
-**Interviewee [T0170, PARTICIPANT]:** Well, no, I just didn’t know if that was something [inaudible 21:26].
+**Audience [T0170, AUDIENCE]:** Oh.
 
-**Chris [T0171, FACILITATOR]:** No, it’s a good question.
+**Interviewee [T0171, PARTICIPANT]:** No, no, but to answer your question, yes. It was Macy’s Home Store, and I had done, when we purchased the original mattress.
 
-**Interviewee [T0172, PARTICIPANT]:** Yeah, well, the other caveat that makes this interesting that you might have heard me say really subtly when everyone was talking was, it was sold to me by my uncle.
+**Chris [T0172, FACILITATOR]:** The research, you knew exactly [inaudible 21:55].
 
-**Audience [T0173, AUDIENCE]:** Oh.
+**Interviewee [T0173, PARTICIPANT]:** Did a lot of research on it. Was hoping that my uncle would actually give me a deal, which I found out at check out he wasn’t going to. It’s not like he was pushing this, but. I went back to Macy’s Home Store and asked some questions, ‘Well, you’ve got to rotate your mattress. Well, you’ve got to try this. Well, is it maybe how you’re sleeping? Well, our warranty is good for this, but it covers sinkage, and what you have to do is lay a yard stick across the sink of the mattress.’
 
-**Interviewee [T0174, PARTICIPANT]:** No, no, but to answer your question, yes. It was Macy’s Home Store, and I had done, when we purchased the original mattress.
+**Chris [T0174, FACILITATOR]:** Did you do that?
 
-**Chris [T0175, FACILITATOR]:** The research, you knew exactly [inaudible 21:55].
+**Interviewee [T0175, PARTICIPANT]:** I did not do that, because they said it had to be at least an inch and a half. Then I thought in my head, and other people suggested, ‘Why don’t you get some giant [inaudible 22:42], and set it in where the sinkholes are already, and have the guy come out.
 
-**Interviewee [T0176, PARTICIPANT]:** Did a lot of research on it. Was hoping that my uncle would actually give me a deal, which I found out at check out he wasn’t going to. It’s not like he was pushing this, but. I went back to Macy’s Home Store and asked some questions, ‘Well, you’ve got to rotate your mattress. Well, you’ve got to try this. Well, is it maybe how you’re sleeping? Well, our warranty is good for this, but it covers sinkage, and what you have to do is lay a yard stick across the sink of the mattress.’
+**Chris [T0176, FACILITATOR]:** And measure it?
 
-**Chris [T0177, FACILITATOR]:** Did you do that?
+**Interviewee [T0177, PARTICIPANT]:** And measure it to make sure you’ve hit that magic number, because if it didn’t hit that magic number, nothing about the warranty mattered. It was not an issue of, ‘oh, you found it uncomfortable? You can return it and we’ll get you something else.’
 
-**Interviewee [T0178, PARTICIPANT]:** I did not do that, because they said it had to be at least an inch and a half. Then I thought in my head, and other people suggested, ‘Why don’t you get some giant [inaudible 22:42], and set it in where the sinkholes are already, and have the guy come out.
+**Audience Member [T0178, AUDIENCE]:** Was it your uncle or your wife’s?
 
-**Chris [T0179, FACILITATOR]:** And measure it?
+**Interviewee [T0179, PARTICIPANT]:** My uncle.
 
-**Interviewee [T0180, PARTICIPANT]:** And measure it to make sure you’ve hit that magic number, because if it didn’t hit that magic number, nothing about the warranty mattered. It was not an issue of, ‘oh, you found it uncomfortable? You can return it and we’ll get you something else.’
+**Bob [T0180, FACILITATOR]:** Who suggested the cement bags?
 
-**Audience Member [T0181, AUDIENCE]:** Was it your uncle or your wife’s?
+**Interviewee [T0181, PARTICIPANT]:** My brother-in-law.
 
-**Interviewee [T0182, PARTICIPANT]:** My uncle.
+**Chris [T0182, FACILITATOR]:** Not related to your uncle though?
 
-**Bob [T0183, FACILITATOR]:** Who suggested the cement bags?
+**Interviewee [T0183, PARTICIPANT]:** No.
 
-**Interviewee [T0184, PARTICIPANT]:** My brother-in-law.
+**Bob [T0184, FACILITATOR]:** How did he even know that this was happening?
 
-**Chris [T0185, FACILITATOR]:** Not related to your uncle though?
+**Interviewee [T0185, PARTICIPANT]:** Good question, because then once I went through, which we’re not even talking about yet, actually the experience on the memory foam mattress, there was a lot of discussion around that, and they asked the same question about, ‘Well, did Macy’s do anything to work with you or help you on your existing mattress experience?’ That was a topic of conversation.
 
-**Interviewee [T0186, PARTICIPANT]:** No.
+**Bob [T0186, FACILITATOR]:** After you bought the new mattress?
 
-**Bob [T0187, FACILITATOR]:** How did he even know that this was happening?
+**Interviewee [T0187, PARTICIPANT]:** Yes.
 
-**Interviewee [T0188, PARTICIPANT]:** Good question, because then once I went through, which we’re not even talking about yet, actually the experience on the memory foam mattress, there was a lot of discussion around that, and they asked the same question about, ‘Well, did Macy’s do anything to work with you or help you on your existing mattress experience?’ That was a topic of conversation.
+**Bob [T0188, FACILITATOR]:** The cement thing happened, the suggestion for the cement bags happened before or after you bought the foam mattress?
 
-**Bob [T0189, FACILITATOR]:** After you bought the new mattress?
+**Interviewee [T0189, PARTICIPANT]:** That was after the foam mattress, because I had said earlier on that although there’s these little sink areas on each side of the bed, it didn’t get an inch and a half. The warranty didn’t matter, so I wasn’t going to get any recourse there.
 
-**Interviewee [T0190, PARTICIPANT]:** Yes.
-
-**Bob [T0191, FACILITATOR]:** The cement thing happened, the suggestion for the cement bags happened before or after you bought the foam mattress?
-
-**Interviewee [T0192, PARTICIPANT]:** That was after the foam mattress, because I had said earlier on that although there’s these little sink areas on each side of the bed, it didn’t get an inch and a half. The warranty didn’t matter, so I wasn’t going to get any recourse there.
-
-**Bob [T0193, FACILITATOR]:** Game off. This is really interesting to me that you’re still talking about this old mattress that you hated, after you even bought the new one, and you’re talking about it with a family member, and then the cement bags come up. Why are you still so attached?
+**Bob [T0190, FACILITATOR]:** Game off. This is really interesting to me that you’re still talking about this old mattress that you hated, after you even bought the new one, and you’re talking about it with a family member, and then the cement bags come up. Why are you still so attached?
 
 Maybe this should be game on, but I find it interesting that you’re still talking about this mattress, even after you bought the new one.
 
-**Interviewee [T0194, PARTICIPANT]:** I actually slept on the old mattress last night.
+**Interviewee [T0191, PARTICIPANT]:** I actually slept on the old mattress last night.
 
-**Chris [T0195, FACILITATOR]:** Wait, you didn’t throw it out?
+**Chris [T0192, FACILITATOR]:** Wait, you didn’t throw it out?
 
-**Interviewee [T0196, PARTICIPANT]:** I have not thrown it out yet.
+**Interviewee [T0193, PARTICIPANT]:** I have not thrown it out yet.
 
 I once had, you know dueling piano bars? I had two king sized beds in my bedroom.
 
-**Chris [T0197, FACILITATOR]:** Game off for a second.
+**Chris [T0194, FACILITATOR]:** Game off for a second.
 
-**Interviewee [T0198, PARTICIPANT]:** See, you don’t get this in focus groups.
+**Interviewee [T0195, PARTICIPANT]:** See, you don’t get this in focus groups.
 
-**Chris [T0199, FACILITATOR]:** No you don’t. The point though is think of all the emotional energy that he’s gone through. In a focus group, yeah, he’s an impulse buyer at a Costco, that he happened to be cutting through the aisle to pick up the mattress. I say, bulls***. The fact is, he’s been looking for a year and figuring out ways to see how he can return the old mattress, and then just happened to run by . . .
+**Chris [T0196, FACILITATOR]:** No you don’t. The point though is think of all the emotional energy that he’s gone through. In a focus group, yeah, he’s an impulse buyer at a Costco, that he happened to be cutting through the aisle to pick up the mattress. I say, bulls***. The fact is, he’s been looking for a year and figuring out ways to see how he can return the old mattress, and then just happened to run by . . .
 
 See the thing is, he’s been thinking about it, and there was something about the moment that said, ‘Now.’ Right? We’re going to dig back to the moment of now. We only have scheduled an hour, but the key is to see, we need to find the emotional energy. We need to find out what’s driving him. We need to understand how he’s choosing.
 
@@ -506,9 +500,9 @@ The thing is literally, there’s so much emotion tied up in all this. Is he wor
 
 The thing is, what we want to get to is how did he choose that one, and how many times has he actually walked by it before and never saw it? You have a question up here.
 
-**Audience Member [T0200, AUDIENCE]:** I might give it away, but the trigger [inaudible 26:23] aisle, going to check-out at Costco, you have the history of stress and that trigger of stress checking out. At that point it seemed like you were looking for piece of mind, or piece and tranquility at that moment. You saw the mattress as maybe a solution to that.
+**Audience Member [T0197, AUDIENCE]:** I might give it away, but the trigger [inaudible 26:23] aisle, going to check-out at Costco, you have the history of stress and that trigger of stress checking out. At that point it seemed like you were looking for piece of mind, or piece and tranquility at that moment. You saw the mattress as maybe a solution to that.
 
-**Chris [T0201, FACILITATOR]:** Game off for a second. The thing is that what you want to be able to do is, as he formed a theory about how that happened, what you want to do is ease into the theory.
+**Chris [T0198, FACILITATOR]:** Game off for a second. The thing is that what you want to be able to do is, as he formed a theory about how that happened, what you want to do is ease into the theory.
 
 Nobody wants to be told what happened. There’s a technique we call ‘dumbing up.’ I’m a little confused here for a second, so let me just play it.
 
@@ -519,7 +513,7 @@ What made you think you had the time today to get that? Because you had to go al
 
 ## Passive looking, active looking, and the decision
 
-**Interviewee [T0202, PARTICIPANT]:** As we talked about, this is mid-September. Now let’s rewind about three months. Within that three month window, I started doing research, saying, ‘The old mattress has to be replaced.’ The idea of going into a mattress store or furniture store just gave me the skeeves.
+**Interviewee [T0199, PARTICIPANT]:** As we talked about, this is mid-September. Now let’s rewind about three months. Within that three month window, I started doing research, saying, ‘The old mattress has to be replaced.’ The idea of going into a mattress store or furniture store just gave me the skeeves.
 
 I did a lot of online research, and I thought, ‘You know what? I’m going to make a commitment to a memory foam mattress of some kind.’
 
@@ -541,128 +535,126 @@ I had to go back for the flatbed because I’m like, I pull it down and realize,
 
 **[EDITORIAL/UNASSIGNED — not participant evidence]:** Map first thought, passive and active looking →
 
-**Chris [T0203, FACILITATOR]:** What was your wife doing at the time? Was your wife going, ‘Good idea,’ was she going, ‘Oh come on’?
+**Chris [T0200, FACILITATOR]:** What was your wife doing at the time? Was your wife going, ‘Good idea,’ was she going, ‘Oh come on’?
 
-**Interviewee [T0204, PARTICIPANT]:** She was a little skeptic.
+**Interviewee [T0201, PARTICIPANT]:** She was a little skeptic.
 
-**Chris [T0205, FACILITATOR]:** What did you say? Here’s the scene, I think we should get this. What’d she look like? Hands on the hip, what’s the scene?
+**Chris [T0202, FACILITATOR]:** What did you say? Here’s the scene, I think we should get this. What’d she look like? Hands on the hip, what’s the scene?
 
-**Interviewee [T0206, PARTICIPANT]:** Well, she’s beautiful, so I’m setting the stage.
+**Interviewee [T0203, PARTICIPANT]:** Well, she’s beautiful, so I’m setting the stage.
 
-**Chris [T0207, FACILITATOR]:** Of course. That’s on tape and on video, we’re all settled there.
+**Chris [T0204, FACILITATOR]:** Of course. That’s on tape and on video, we’re all settled there.
 
-**Interviewee [T0208, PARTICIPANT]:** Bless her, she was probably more content in keeping my kids from hitting each other. There was some franticness. There was some, ‘Are you sure you want it?’ Then I pulled down the little 12 inch by 12 inch sample of the foam. ‘Here touch it, feel it.’
+**Interviewee [T0205, PARTICIPANT]:** Bless her, she was probably more content in keeping my kids from hitting each other. There was some franticness. There was some, ‘Are you sure you want it?’ Then I pulled down the little 12 inch by 12 inch sample of the foam. ‘Here touch it, feel it.’
 
 ‘Oh, that’s actually not bad. If you want it, get it. It’s a lot of money, I know you’re not sleeping, get it.’ That’s when I went out and got the flatbed.
 
-**Chris [T0209, FACILITATOR]:** Had she done it, if you did the Groupon one, she hadn’t touched or felt it before, right?
+**Chris [T0206, FACILITATOR]:** Had she done it, if you did the Groupon one, she hadn’t touched or felt it before, right?
 
-**Interviewee [T0210, PARTICIPANT]:** No.
+**Interviewee [T0207, PARTICIPANT]:** No.
 
-**Bob [T0211, FACILITATOR]:** How much was it? Do you remember what you paid?
+**Bob [T0208, FACILITATOR]:** How much was it? Do you remember what you paid?
 
-**Interviewee [T0212, PARTICIPANT]:** Yeah, it was $699. It’s funny, because the Groupon happens to be available, and the one on Groupon was less, but again I felt very concerned about if I have a bad experience about this, do I want to go the Groupon, online route versus getting it at the Costco that’s five minutes from my house?
+**Interviewee [T0209, PARTICIPANT]:** Yeah, it was $699. It’s funny, because the Groupon happens to be available, and the one on Groupon was less, but again I felt very concerned about if I have a bad experience about this, do I want to go the Groupon, online route versus getting it at the Costco that’s five minutes from my house?
 
-**Bob [T0213, FACILITATOR]:** What was the variety?
+**Bob [T0210, FACILITATOR]:** What was the variety?
 
-**Chris [T0214, FACILITATOR]:** Go ahead guys, go ahead.
+**Chris [T0211, FACILITATOR]:** Go ahead guys, go ahead.
 
-**Bob [T0215, FACILITATOR]:** Was there one kind of mattress or was there a huge assortment?
+**Bob [T0212, FACILITATOR]:** Was there one kind of mattress or was there a huge assortment?
 
-**Interviewee [T0216, PARTICIPANT]:** Not a huge assortment, but there was two or three different kinds, and then they had them by your different bed sizes.
+**Interviewee [T0213, PARTICIPANT]:** Not a huge assortment, but there was two or three different kinds, and then they had them by your different bed sizes.
 
-**Chris [T0217, FACILITATOR]:** Got it. Were there different samples or just one sample? You don’t do it to me all the time.
+**Chris [T0214, FACILITATOR]:** Got it. Were there different samples or just one sample? You don’t do it to me all the time.
 
-**Bob [T0218, FACILITATOR]:** I know.
+**Bob [T0215, FACILITATOR]:** I know.
 
-**Bob [T0219, FACILITATOR]:** OK.
+**Bob [T0216, FACILITATOR]:** OK.
 
-**Interviewee [T0220, PARTICIPANT]:** Yeah.
+**Interviewee [T0217, PARTICIPANT]:** Yeah.
 
-**Bob [T0221, FACILITATOR]:** Did you squeeze all of them, or?
+**Bob [T0218, FACILITATOR]:** Did you squeeze all of them, or?
 
-**Interviewee [T0222, PARTICIPANT]:** There was two that we were specifically looking at, and one was a lot higher and seemed a lot softer. That was the one that we went with.
+**Interviewee [T0219, PARTICIPANT]:** There was two that we were specifically looking at, and one was a lot higher and seemed a lot softer. That was the one that we went with.
 
-**Chris [T0223, FACILITATOR]:** Was it the most expensive one?
+**Chris [T0220, FACILITATOR]:** Was it the most expensive one?
 
-**Interviewee [T0224, PARTICIPANT]:** It was.
+**Interviewee [T0221, PARTICIPANT]:** It was.
 
-**Audience Member [T0225, AUDIENCE]:** Can I ask a question?
+**Audience Member [T0222, AUDIENCE]:** Can I ask a question?
 
-**Chris [T0226, FACILITATOR]:** Game on, go ahead.
+**Chris [T0223, FACILITATOR]:** Game on, go ahead.
 
-**Audience Member [T0227, AUDIENCE]:** Take a step back. When you were in that alley [sic], and you saw the mattress, could you tell us what was the spark or the attraction or the appetite that you said, ‘Oh, this one.’ Because it seems like there was a couple of them, and was it price, was it something on the package, a statement or somebody sleeping, looking comfortable? Was there anything that you remember?
+**Audience Member [T0224, AUDIENCE]:** Take a step back. When you were in that alley [sic], and you saw the mattress, could you tell us what was the spark or the attraction or the appetite that you said, ‘Oh, this one.’ Because it seems like there was a couple of them, and was it price, was it something on the package, a statement or somebody sleeping, looking comfortable? Was there anything that you remember?
 
-**Interviewee [T0228, PARTICIPANT]:** It’s funny that you ask about the packaging, because they had their four or five, and as someone that part of my life is marketing too, it’s funny to see the four or five people at point, and of course the couple that’s getting a great night’s sleep on some mattress.
+**Interviewee [T0225, PARTICIPANT]:** It’s funny that you ask about the packaging, because they had their four or five, and as someone that part of my life is marketing too, it’s funny to see the four or five people at point, and of course the couple that’s getting a great night’s sleep on some mattress.
 
 That really didn’t get me. What got me was the ability to at least touch and feel it a little bit. Again, also knowing that whatever mattress I had been having and still have wasn’t cutting the deal, I wanted to try something radically different. To me going with foam was radically different.
 
 I don’t know what it is about, and I’m sure everyone’s experienced this at some point or other, there’s also something about a Costco that just fuels that occasional impulse, where it just pulls you over . . .
 
-**Audience Member [T0229, AUDIENCE]:** Let me ask you, if it was Walgreens or any other store, would that be the case?
+**Audience Member [T0226, AUDIENCE]:** Let me ask you, if it was Walgreens or any other store, would that be the case?
 
-**Interviewee [T0230, PARTICIPANT]:** I think that’s a great question.
+**Interviewee [T0227, PARTICIPANT]:** I think that’s a great question.
 
-**Audience Member [T0231, AUDIENCE]:** Like if you didn’t happen to be at Costco, just at Walgreens that day . . .
+**Audience Member [T0228, AUDIENCE]:** Like if you didn’t happen to be at Costco, just at Walgreens that day . . .
 
-**Interviewee [T0232, PARTICIPANT]:** I will tell you this. Walgreens specifically I wouldn’t purchase it there. I would’ve only purchased at a store where I know I’ve had a great brand and customer experience, and if I ever have had a problem with any product . . .
+**Interviewee [T0229, PARTICIPANT]:** I will tell you this. Walgreens specifically I wouldn’t purchase it there. I would’ve only purchased at a store where I know I’ve had a great brand and customer experience, and if I ever have had a problem with any product . . .
 
 I know a couple of people have mentioned Zappos earlier. One of the things everyone loves about them is their experience. People feel more confident there. I’ve always historically had good experiences in a Costco. If I’ve had an issue it’s been very [inaudible 33:56] Espoused behavior vs. real behavior
 
-**Interviewee [T0233, PARTICIPANT]:** I honestly can’t think of it now.
+**Interviewee [T0230, PARTICIPANT]:** I honestly can’t think of it now.
 
-**Audience Member [T0234, AUDIENCE]:** There’s a gap in the story I’m trying to understand. I’ve got a sense, I’m trying to see the timeline in my head. There was a period of a year where you said, over the last year, I’m really unhappy with the mattress. Then there’s a period, going back from the day that you bought it, three months where you said you were doing some research, looking around online. Do you remember a time when you were researching online?
+**Audience Member [T0231, AUDIENCE]:** There’s a gap in the story I’m trying to understand. I’ve got a sense, I’m trying to see the timeline in my head. There was a period of a year where you said, over the last year, I’m really unhappy with the mattress. Then there’s a period, going back from the day that you bought it, three months where you said you were doing some research, looking around online. Do you remember a time when you were researching online?
 
-**Chris [T0235, FACILITATOR]:** Specifically.
+**Chris [T0232, FACILITATOR]:** Specifically.
 
-**Audience Member [T0236, AUDIENCE]:** Specific time.
+**Audience Member [T0233, AUDIENCE]:** Specific time.
 
-**Chris [T0237, FACILITATOR]:** You laugh, but that’s the point. Do you know how many people have this story? They’re thinking, again, he bought the most expensive mattress. He had an opportunity to buy it cheaper on Groupon, from somebody he didn’t know. The four forces: anxiety, habit, and the moment of truth
+**Chris [T0234, FACILITATOR]:** You laugh, but that’s the point. Do you know how many people have this story? They’re thinking, again, he bought the most expensive mattress. He had an opportunity to buy it cheaper on Groupon, from somebody he didn’t know. The four forces: anxiety, habit, and the moment of truth
 
-**Chris [T0238, FACILITATOR]:** The other thing to realize is there’s a subtle action that was in the middle of this, which is his wife was with him, she has to sleep on the bed. It’s going to be impossible to make a purchase like that, because in a lot of cases the anxiety of saying, ‘You bought this crappy mattress and I wasn’t part of it,’ the dynamic you have between those kinds of decisions are really, really difficult. The notion of both being in the same place, her being able to touch it, and her acknowledging that you can, OK, ‘I know you’re not sleeping well, you can’ is like . . . I’ll go. That’s the dynamic.
+**Chris [T0235, FACILITATOR]:** The other thing to realize is there’s a subtle action that was in the middle of this, which is his wife was with him, she has to sleep on the bed. It’s going to be impossible to make a purchase like that, because in a lot of cases the anxiety of saying, ‘You bought this crappy mattress and I wasn’t part of it,’ the dynamic you have between those kinds of decisions are really, really difficult. The notion of both being in the same place, her being able to touch it, and her acknowledging that you can, OK, ‘I know you’re not sleeping well, you can’ is like . . . I’ll go. That’s the dynamic.
 
-**Bob [T0239, FACILITATOR]:** The other thing we need to dive into is you made the comment that going into a mattress store gave you the heebie-jeebies, something like that. When’s the last time you were in a mattress store, do you remember? You went to Macy’s, so that counts. Was there any other mattress stores in between?
+**Bob [T0236, FACILITATOR]:** The other thing we need to dive into is you made the comment that going into a mattress store gave you the heebie-jeebies, something like that. When’s the last time you were in a mattress store, do you remember? You went to Macy’s, so that counts. Was there any other mattress stores in between?
 
-**Interviewee [T0240, PARTICIPANT]:** Well, Macy’s was more of a furniture store with a mattress department, but been a long time. I walk by them. I just walked by one the other day, and since this mattress issue still hasn’t actually been resolved, I was like, ‘I can’t go in.’
+**Bob [T0237, FACILITATOR]:** What happens in a mattress store?
 
-**Bob [T0241, FACILITATOR]:** What happens in a mattress store?
+**Interviewee [T0238, PARTICIPANT]:** First of all, I’m a germaphobe. I see all these beds lined up everywhere and it’s creepy. Secondly I generally see someone that is working in the mattress store that I think can have no concept of, has asked anywhere near the level of questions that you’ve asked me. It’s usually a, ‘What size bed do you have? How much are you looking to spend?’ I think there’s a lot of people at that mattress world from my previous experiences in them that is the same as the bad notion of the car salesman. I’m not saying they’re all that way, it’s just that’s how some of my experiences have been.
 
-**Interviewee [T0242, PARTICIPANT]:** First of all, I’m a germaphobe. I see all these beds lined up everywhere and it’s creepy. Secondly I generally see someone that is working in the mattress store that I think can have no concept of, has asked anywhere near the level of questions that you’ve asked me. It’s usually a, ‘What size bed do you have? How much are you looking to spend?’ I think there’s a lot of people at that mattress world from my previous experiences in them that is the same as the bad notion of the car salesman. I’m not saying they’re all that way, it’s just that’s how some of my experiences have been.
+**Bob [T0239, FACILITATOR]:** Game off.
 
-**Bob [T0243, FACILITATOR]:** Game off.
+**Chris [T0240, FACILITATOR]:** Game off. Sorry, I’ve got to stand up.
 
-**Chris [T0244, FACILITATOR]:** Game off. Sorry, I’ve got to stand up.
+**Chris [T0241, FACILITATOR]:** Part of it you could say this is a sample of one. My thing is when you start to interview, you start to see patterns. Holy crap, 38% of these people all touch it before they buy it, and they both touch it at the same time. How can I sell a mattress online if I don’t have samples? It might be that we need to say, we need to cut samples, order a sample here and return it to us with a self-addressed envelope that allows us to come to the house, that allows them to say, ‘Yeah, we’re going to order this,’ and you order it. The thing is if you know that that’s a critical point, you need to know how to do it. It has nothing to do with the features and benefits of the mattress.
 
-**Chris [T0245, FACILITATOR]:** Part of it you could say this is a sample of one. My thing is when you start to interview, you start to see patterns. Holy crap, 38% of these people all touch it before they buy it, and they both touch it at the same time. How can I sell a mattress online if I don’t have samples? It might be that we need to say, we need to cut samples, order a sample here and return it to us with a self-addressed envelope that allows us to come to the house, that allows them to say, ‘Yeah, we’re going to order this,’ and you order it. The thing is if you know that that’s a critical point, you need to know how to do it. It has nothing to do with the features and benefits of the mattress.
+**Bob [T0242, FACILITATOR]:** The other . . . oh, sorry.
 
-**Bob [T0246, FACILITATOR]:** The other . . . oh, sorry.
+**Interviewee [T0243, PARTICIPANT]:** That would’ve been five years ago, and I remember the moment only though because my wife was pregnant, and we wanted to get this new bed before the baby came, and I just remember being more concerned as to whether she was comfortable than I was comfortable. Along my OCD journey, it’s gotten worse the last couple years. I’m on my way to becoming Jack Nicholson in ‘As Good As It Gets,’ but I’m not there yet.
 
-**Interviewee [T0247, PARTICIPANT]:** That would’ve been five years ago, and I remember the moment only though because my wife was pregnant, and we wanted to get this new bed before the baby came, and I just remember being more concerned as to whether she was comfortable than I was comfortable. Along my OCD journey, it’s gotten worse the last couple years. I’m on my way to becoming Jack Nicholson in ‘As Good As It Gets,’ but I’m not there yet.
+**Audience Member [T0244, AUDIENCE]:** It just sounds like, I’m focusing on the moment of truth, right? It seems like his wife was calling him a nag or a complainer, right? The moment of truth is when she finally resigned, there’s the nagging, kids are in the cart, everything, chaos is going all over the place. He’s stressed out, he’s not sleeping. It all built to that one moment. She finally slumped her shoulders and said, ‘Yeah, just go ahead and get it.’ It seems like the moment of truth, where the shoulders just relaxed.
 
-**Audience Member [T0248, AUDIENCE]:** It just sounds like, I’m focusing on the moment of truth, right? It seems like his wife was calling him a nag or a complainer, right? The moment of truth is when she finally resigned, there’s the nagging, kids are in the cart, everything, chaos is going all over the place. He’s stressed out, he’s not sleeping. It all built to that one moment. She finally slumped her shoulders and said, ‘Yeah, just go ahead and get it.’ It seems like the moment of truth, where the shoulders just relaxed.
+**Bob [T0245, FACILITATOR]:** That’s right. “It all built to that one moment. She finally slumped her shoulders and said, ‘Yeah, just go ahead and get it.'” A Switch Workshop audience member, recapping the interview Inside the method: lowering anxiety and finding the job
 
-**Bob [T0249, FACILITATOR]:** That’s right. “It all built to that one moment. She finally slumped her shoulders and said, ‘Yeah, just go ahead and get it.'” A Switch Workshop audience member, recapping the interview Inside the method: lowering anxiety and finding the job
+**Chris [T0246, FACILITATOR]:** Let me go really quick. There’s a couple things. What you just experienced is the normal interview outcome. It defies all logic. You never laid on the mattress, I can’t believe it. This is what comes out of these things. When you look at the forces there’s all this, we’ll describe how we use this, but there’s all this push around I haven’t slept in a year and a half. There’s the reduction in anxiety because my wife, I’ve got her buy-in. If this thing stinks, first of all, you were in that with me. You can’t blame me completely for it. Plus, have you returned anything at Costco ever? Have you brought anything back?
 
-**Chris [T0250, FACILITATOR]:** Let me go really quick. There’s a couple things. What you just experienced is the normal interview outcome. It defies all logic. You never laid on the mattress, I can’t believe it. This is what comes out of these things. When you look at the forces there’s all this, we’ll describe how we use this, but there’s all this push around I haven’t slept in a year and a half. There’s the reduction in anxiety because my wife, I’ve got her buy-in. If this thing stinks, first of all, you were in that with me. You can’t blame me completely for it. Plus, have you returned anything at Costco ever? Have you brought anything back?
+**Interviewee [T0247, PARTICIPANT]:** Other than the mattress?
 
-**Interviewee [T0251, PARTICIPANT]:** Other than the mattress?
+**Chris [T0248, FACILITATOR]:** Yeah.
 
-**Chris [T0252, FACILITATOR]:** Yeah.
+**Interviewee [T0249, PARTICIPANT]:** Oh yeah. Not a lot, but a couple things.
 
-**Interviewee [T0253, PARTICIPANT]:** Oh yeah. Not a lot, but a couple things.
+**Chris [T0250, FACILITATOR]:** He’s done the return process, so it’s possible to take this back. I’m lowering the anxiety around that. As awkward as it seems, it’s easier for him to take that leap, never having laid on it, than it is to walk into the mattress store and lay down. It’s one of those things where we just want to hear it a couple times, and we could say, ‘That’s real.’ There is a catalog of actual interviews along with analysis available here .
 
-**Chris [T0254, FACILITATOR]:** He’s done the return process, so it’s possible to take this back. I’m lowering the anxiety around that. As awkward as it seems, it’s easier for him to take that leap, never having laid on it, than it is to walk into the mattress store and lay down. It’s one of those things where we just want to hear it a couple times, and we could say, ‘That’s real.’ There is a catalog of actual interviews along with analysis available here .
+**Audience Member [T0251, AUDIENCE]:** I’m fascinated by this, because I bought one at Costco, and I’m not a germophobe, and I was going to get a Tempurpedic. I went into the mattress store, which I also find skeevy. Laid on it, did everything else. Mine came far more into, ‘Wait a minute, is it really worth . . .’ Tempurpedic is like $3,500 or whatever it was. ‘Is it really worth this?’ When I really looked into it, people were saying, ‘No, it’s insane.’ To me Costco was the huge thing because of the return policy. They have lifetime, if you don’t like it, I literally said to my wife, she’d laid on the Tempurpedic, ‘We’ll buy it, it’s $800,’ or whatever it is. ‘If we don’t like it . . .’
 
-**Audience Member [T0255, AUDIENCE]:** I’m fascinated by this, because I bought one at Costco, and I’m not a germophobe, and I was going to get a Tempurpedic. I went into the mattress store, which I also find skeevy. Laid on it, did everything else. Mine came far more into, ‘Wait a minute, is it really worth . . .’ Tempurpedic is like $3,500 or whatever it was. ‘Is it really worth this?’ When I really looked into it, people were saying, ‘No, it’s insane.’ To me Costco was the huge thing because of the return policy. They have lifetime, if you don’t like it, I literally said to my wife, she’d laid on the Tempurpedic, ‘We’ll buy it, it’s $800,’ or whatever it is. ‘If we don’t like it . . .’
+**Chris [T0252, FACILITATOR]:** Let me throw something out here. [inaudible 44:52] interview like Bob was saying. Let’s say this return policy ends up being one of the key things. You can’t just think about return policy, because returning something like a mattress is hard. What if the store’s return policy is, ‘We’ll pick the mattress up at your house.’ That’s one of the things that will reduce the anxiety.
 
-**Chris [T0256, FACILITATOR]:** Let me throw something out here. [inaudible 44:52] interview like Bob was saying. Let’s say this return policy ends up being one of the key things. You can’t just think about return policy, because returning something like a mattress is hard. What if the store’s return policy is, ‘We’ll pick the mattress up at your house.’ That’s one of the things that will reduce the anxiety.
-
-**Bob [T0257, FACILITATOR]:** I bet you the mattress industry is obsessed with the laying on the mattress part. That’s all they can think about. That’s how you buy mattresses, because you’re going to sleep on it so you’ve got to lay on it. Again, this is one interview, but it might turn out that that’s not the case at all. But they can’t see that.
+**Bob [T0253, FACILITATOR]:** I bet you the mattress industry is obsessed with the laying on the mattress part. That’s all they can think about. That’s how you buy mattresses, because you’re going to sleep on it so you’ve got to lay on it. Again, this is one interview, but it might turn out that that’s not the case at all. But they can’t see that.
 
 
 ## Espoused behavior vs. real behavior
 
-**Chris [T0258, FACILITATOR]:** Game off for a second. OK? You need to strike all of that from the record. Every last thing from ‘where else would you buy it? Why?’ It’s espoused behavior. We end up locking onto it and saying, ‘If we did this and this and this, we could sell mattresses too.’
+**Chris [T0254, FACILITATOR]:** Game off for a second. OK? You need to strike all of that from the record. Every last thing from ‘where else would you buy it? Why?’ It’s espoused behavior. We end up locking onto it and saying, ‘If we did this and this and this, we could sell mattresses too.’
 
 The thing is that as much as he’s talking about it, it’s not the real behavior that he experienced. It’s very, very risky to actually take what he just said and turn it into an opportunity for Walgreens or whatever.
 
@@ -670,9 +662,9 @@ The notion is you want to get the stories of what it was, and we’ll show you a
 
 The best part about it is he had a Groupon, right? What was the store you were going to buy that from? You’re not buying it from Groupon, Groupon’s offering the promotion. Who was the company that was selling the mattress?
 
-**Interviewee [T0259, PARTICIPANT]:** I honestly can’t think of it now.
+**Interviewee [T0255, PARTICIPANT]:** I honestly can’t think of it now.
 
-**Chris [T0260, FACILITATOR]:** Did you hear that? Can’t even figure out who it was. The thing is he’s substituting retail with Groupon at this point. There’s two other big points. One is price. Is he a knowledgeable shopper? He literally has been researching it for at least three months prior to . . .
+**Chris [T0256, FACILITATOR]:** Did you hear that? Can’t even figure out who it was. The thing is he’s substituting retail with Groupon at this point. There’s two other big points. One is price. Is he a knowledgeable shopper? He literally has been researching it for at least three months prior to . . .
 
 Now wait, he had a move. The thing is that the move, I had to get through the move, I had to get out of my condo, I had to get into my house, I’ve got two young kids, I’m getting the house settled.
 
@@ -680,58 +672,58 @@ OK. I’m still getting a s***ty night’s sleep every night. This now bubbles t
 
 He’s got all these barriers holding him up, but it was time. OK, go ahead. Ryan?
 
-**Audience Member [T0261, AUDIENCE]:** There’s a gap in the story I’m trying to understand. I’ve got a sense, I’m trying to see the timeline in my head. There was a period of a year where you said, over the last year, I’m really unhappy with the mattress.
+**Audience Member [T0257, AUDIENCE]:** There’s a gap in the story I’m trying to understand. I’ve got a sense, I’m trying to see the timeline in my head. There was a period of a year where you said, over the last year, I’m really unhappy with the mattress.
 
 Then there’s a period, going back from the day that you bought it, three months where you said you were doing some research, looking around online. Do you remember a time when you were researching online?
 
-**Chris [T0262, FACILITATOR]:** Specifically.
+**Chris [T0258, FACILITATOR]:** Specifically.
 
-**Audience Member [T0263, AUDIENCE]:** Specific time.
+**Audience Member [T0259, AUDIENCE]:** Specific time.
 
-**Chris [T0264, FACILITATOR]:** When were you like, ‘I’m looking for mattresses, man’?
+**Chris [T0260, FACILITATOR]:** When were you like, ‘I’m looking for mattresses, man’?
 
-**Interviewee [T0265, PARTICIPANT]:** A couple times in the middle of the night when I couldn’t sleep.
+**Interviewee [T0261, PARTICIPANT]:** A couple times in the middle of the night when I couldn’t sleep.
 
-**Chris [T0266, FACILITATOR]:** Key point. Where were you? In the bedroom, or did you get up and get out?
+**Chris [T0262, FACILITATOR]:** Key point. Where were you? In the bedroom, or did you get up and get out?
 
-**Interviewee [T0267, PARTICIPANT]:** No, I was downstairs.
+**Interviewee [T0263, PARTICIPANT]:** No, I was downstairs.
 
-**Chris [T0268, FACILITATOR]:** Literally, it’s ‘I can’t sleep, I’m going to get up. I can’t sleep because of this damn mattress.’ You went down to the kitchen table?
+**Chris [T0264, FACILITATOR]:** Literally, it’s ‘I can’t sleep, I’m going to get up. I can’t sleep because of this damn mattress.’ You went down to the kitchen table?
 
-**Interviewee [T0269, PARTICIPANT]:** There or the island a couple times.
+**Interviewee [T0265, PARTICIPANT]:** There or the island a couple times.
 
-**Jason [T0270, FACILITATOR]:** Can I throw something out really quick?
+**Jason [T0266, FACILITATOR]:** Can I throw something out really quick?
 
-**Chris [T0271, FACILITATOR]:** Go ahead.
+**Chris [T0267, FACILITATOR]:** Go ahead.
 
-**Jason [T0272, FACILITATOR]:** This is just, so much popped in my head if I’m a mattress manufacturer. I’m offering discounts between midnight and 3:00 a.m. now. Buy now between midnight and 3:00 for 10% off.
+**Jason [T0268, FACILITATOR]:** This is just, so much popped in my head if I’m a mattress manufacturer. I’m offering discounts between midnight and 3:00 a.m. now. Buy now between midnight and 3:00 for 10% off.
 
-**Chris [T0273, FACILITATOR]:** You laugh, but that’s the point. Do you know how many people have this story? They’re thinking, again, he bought the most expensive mattress. He had an opportunity to buy it cheaper on Groupon, from somebody he didn’t know.
+**Chris [T0269, FACILITATOR]:** You laugh, but that’s the point. Do you know how many people have this story? They’re thinking, again, he bought the most expensive mattress. He had an opportunity to buy it cheaper on Groupon, from somebody he didn’t know.
 
 
 ## The four forces: anxiety, habit, and the moment of truth
 
-**Chris [T0274, FACILITATOR]:** The other thing to realize is there’s a subtle action that was in the middle of this, which is his wife was with him, she has to sleep on the bed. It’s going to be impossible to make a purchase like that, because in a lot of cases the anxiety of saying, ‘You bought this crappy mattress and I wasn’t part of it,’ the dynamic you have between those kinds of decisions are really, really difficult.
+**Chris [T0270, FACILITATOR]:** The other thing to realize is there’s a subtle action that was in the middle of this, which is his wife was with him, she has to sleep on the bed. It’s going to be impossible to make a purchase like that, because in a lot of cases the anxiety of saying, ‘You bought this crappy mattress and I wasn’t part of it,’ the dynamic you have between those kinds of decisions are really, really difficult.
 
 The notion of both being in the same place, her being able to touch it, and her acknowledging that you can, OK, ‘I know you’re not sleeping well, you can’ is like . . . I’ll go. That’s the dynamic.
 
-**Bob [T0275, FACILITATOR]:** The other thing we need to dive into is you made the comment that going into a mattress store gave you the heebie-jeebies, something like that. When’s the last time you were in a mattress store, do you remember?
+**Bob [T0271, FACILITATOR]:** The other thing we need to dive into is you made the comment that going into a mattress store gave you the heebie-jeebies, something like that. When’s the last time you were in a mattress store, do you remember?
 
 You went to Macy’s, so that counts. Was there any other mattress stores in between?
 
-**Interviewee [T0276, PARTICIPANT]:** Well, Macy’s was more of a furniture store with a mattress department, but been a long time. I walk by them. I just walked by one the other day, and since this mattress issue still hasn’t actually been resolved, I was like, ‘I can’t go in.’
+**Interviewee [T0272, PARTICIPANT]:** Well, Macy’s was more of a furniture store with a mattress department, but been a long time. I walk by them. I just walked by one the other day, and since this mattress issue still hasn’t actually been resolved, I was like, ‘I can’t go in.’
 
-**Bob [T0277, FACILITATOR]:** What happens in a mattress store?
+**Bob [T0273, FACILITATOR]:** What happens in a mattress store?
 
-**Interviewee [T0278, PARTICIPANT]:** First of all, I’m a germaphobe. I see all these beds lined up everywhere and it’s creepy. Secondly I generally see someone that is working in the mattress store that I think can have no concept of, has asked anywhere near the level of questions that you’ve asked me. It’s usually a, ‘What size bed do you have? How much are you looking to spend?’
+**Interviewee [T0274, PARTICIPANT]:** First of all, I’m a germaphobe. I see all these beds lined up everywhere and it’s creepy. Secondly I generally see someone that is working in the mattress store that I think can have no concept of, has asked anywhere near the level of questions that you’ve asked me. It’s usually a, ‘What size bed do you have? How much are you looking to spend?’
 
 I think there’s a lot of people at that mattress world from my previous experiences in them that is the same as the bad notion of the car salesman. I’m not saying they’re all that way, it’s just that’s how some of my experiences have been.
 
-**Bob [T0279, FACILITATOR]:** Game off.
+**Bob [T0275, FACILITATOR]:** Game off.
 
-**Chris [T0280, FACILITATOR]:** Game off. Sorry, I’ve got to stand up.
+**Chris [T0276, FACILITATOR]:** Game off. Sorry, I’ve got to stand up.
 
-**Bob [T0281, FACILITATOR]:** The interesting thing is shopping on the island downstairs, he doesn’t buy until he can feel the mattress, right? You give it to your wife, that experience of being able to touch and feel the product, we can’t replicate online.
+**Bob [T0277, FACILITATOR]:** The interesting thing is shopping on the island downstairs, he doesn’t buy until he can feel the mattress, right? You give it to your wife, that experience of being able to touch and feel the product, we can’t replicate online.
 
 The normal purchase process is impossible for you. You can’t walk into a mattress store and even feel it, because there’s this anxiety around, you’re going to get approached by this salesperson.
 
@@ -743,90 +735,90 @@ The normal purchase process is impossible for you. You can’t walk into a mattr
 
 **[EDITORIAL/UNASSIGNED — not participant evidence]:** See the Four Forces of Progress explained →
 
-**Chris [T0282, FACILITATOR]:** Part of it you could say this is a sample of one. My thing is when you start to interview, you start to see patterns. Holy crap, 38% of these people all touch it before they buy it, and they both touch it at the same time.
+**Chris [T0278, FACILITATOR]:** Part of it you could say this is a sample of one. My thing is when you start to interview, you start to see patterns. Holy crap, 38% of these people all touch it before they buy it, and they both touch it at the same time.
 
 How can I sell a mattress online if I don’t have samples? It might be that we need to say, we need to cut samples, order a sample here and return it to us with a self-addressed envelope that allows us to come to the house, that allows them to say, ‘Yeah, we’re going to order this,’ and you order it.
 
 The thing is if you know that that’s a critical point, you need to know how to do it. It has nothing to do with the features and benefits of the mattress.
 
-**Bob [T0283, FACILITATOR]:** The other . . . oh, sorry.
+**Bob [T0279, FACILITATOR]:** The other . . . oh, sorry.
 
-**Chris [T0284, FACILITATOR]:** She can barely contain herself over here.
+**Chris [T0280, FACILITATOR]:** She can barely contain herself over here.
 
-**Audience Member [T0285, AUDIENCE]:** I’m like [inaudible 40:37], did you lay on the mattress at Macy’s? If you’re a germophobe.
+**Audience Member [T0281, AUDIENCE]:** I’m like [inaudible 40:37], did you lay on the mattress at Macy’s? If you’re a germophobe.
 
-**Interviewee [T0286, PARTICIPANT]:** I did.
+**Interviewee [T0282, PARTICIPANT]:** I did.
 
-**Audience Member [T0287, AUDIENCE]:** OK, because the fact that you would buy a mattress just by touching it with your hand, I have to lay on it, I’m rolling around, I’m spooning my husband.
+**Audience Member [T0283, AUDIENCE]:** OK, because the fact that you would buy a mattress just by touching it with your hand, I have to lay on it, I’m rolling around, I’m spooning my husband.
 
-**Chris [T0288, FACILITATOR]:** Oh you’re the one. There’s a YouTube video about you.
+**Chris [T0284, FACILITATOR]:** Oh you’re the one. There’s a YouTube video about you.
 
-**Audience Member [T0289, AUDIENCE]:** Even the thought, I guess sleeping, if you’re taking away oh, for an online mattress company to cut away samples, his problem isn’t solved. So maybe that’s not . . .
+**Audience Member [T0285, AUDIENCE]:** Even the thought, I guess sleeping, if you’re taking away oh, for an online mattress company to cut away samples, his problem isn’t solved. So maybe that’s not . . .
 
-**Chris [T0290, FACILITATOR]:** Right. You have to do enough interviews to understand how they actually chose, but the thing is, how did you feel when you had to lay on that bed in Macy’s? Were you like, ‘oh my God,’ or were you like, ‘eh.’ Can you remember the moment?
+**Chris [T0286, FACILITATOR]:** Right. You have to do enough interviews to understand how they actually chose, but the thing is, how did you feel when you had to lay on that bed in Macy’s? Were you like, ‘oh my God,’ or were you like, ‘eh.’ Can you remember the moment?
 
-**Interviewee [T0291, PARTICIPANT]:** I can, only because . . .
+**Interviewee [T0287, PARTICIPANT]:** I can, only because . . .
 
-**Chris [T0292, FACILITATOR]:** How long ago was it? Four years?
+**Chris [T0288, FACILITATOR]:** How long ago was it? Four years?
 
-**Interviewee [T0293, PARTICIPANT]:** That would’ve been five years ago, and I remember the moment only though because my wife was pregnant, and we wanted to get this new bed before the baby came, and I just remember being more concerned as to whether she was comfortable than I was comfortable.
+**Interviewee [T0289, PARTICIPANT]:** That would’ve been five years ago, and I remember the moment only though because my wife was pregnant, and we wanted to get this new bed before the baby came, and I just remember being more concerned as to whether she was comfortable than I was comfortable.
 
 Along my OCD journey, it’s gotten worse the last couple years. I’m on my way to becoming Jack Nicholson in ‘As Good As It Gets,’ but I’m not there yet.
 
-**Chris [T0294, FACILITATOR]:** That’s the other thing. I’m not sure we’re going to talk about it but the whole thing is he’ll say, ‘Yeah, I’m a germophobe,’ that’s something you need to probe deep. Because the thing is, in some cases there are people who are like rubber gloves in their house, and ‘I’m a germophobe, I use wipes.’
+**Chris [T0290, FACILITATOR]:** That’s the other thing. I’m not sure we’re going to talk about it but the whole thing is he’ll say, ‘Yeah, I’m a germophobe,’ that’s something you need to probe deep. Because the thing is, in some cases there are people who are like rubber gloves in their house, and ‘I’m a germophobe, I use wipes.’
 
-**Bob [T0295, FACILITATOR]:** He’s a germophobe, but he touched a public mattress sample. It was probably dirty.
+**Bob [T0291, FACILITATOR]:** He’s a germophobe, but he touched a public mattress sample. It was probably dirty.
 
-**Interviewee [T0296, PARTICIPANT]:** That may have been why I got sick.
+**Interviewee [T0292, PARTICIPANT]:** That may have been why I got sick.
 
-**Bob [T0297, FACILITATOR]:** All right, go, go.
+**Bob [T0293, FACILITATOR]:** All right, go, go.
 
-**Audience Member [T0298, AUDIENCE]:** It just sounds like, I’m focusing on the moment of truth, right? It seems like his wife was calling him a nag or a complainer, right? The moment of truth is when she finally resigned, there’s the nagging, kids are in the cart, everything, chaos is going all over the place. He’s stressed out, he’s not sleeping.
+**Audience Member [T0294, AUDIENCE]:** It just sounds like, I’m focusing on the moment of truth, right? It seems like his wife was calling him a nag or a complainer, right? The moment of truth is when she finally resigned, there’s the nagging, kids are in the cart, everything, chaos is going all over the place. He’s stressed out, he’s not sleeping.
 
 It all built to that one moment. She finally slumped her shoulders and said, ‘Yeah, just go ahead and get it.’ It seems like the moment of truth, where the shoulders just relaxed.
 
-**Bob [T0299, FACILITATOR]:** That’s right.
+**Bob [T0295, FACILITATOR]:** That’s right.
 
 
 ## Inside the method: lowering anxiety and finding the job
 
-**Chris [T0300, FACILITATOR]:** Let me go really quick. There’s a couple things. What you just experienced is the normal interview outcome. It defies all logic. You never laid on the mattress, I can’t believe it. This is what comes out of these things.
+**Chris [T0296, FACILITATOR]:** Let me go really quick. There’s a couple things. What you just experienced is the normal interview outcome. It defies all logic. You never laid on the mattress, I can’t believe it. This is what comes out of these things.
 
 When you look at the forces there’s all this, we’ll describe how we use this, but there’s all this push around I haven’t slept in a year and a half. There’s the reduction in anxiety because my wife, I’ve got her buy-in. If this thing stinks, first of all, you were in that with me. You can’t blame me completely for it.
 
 Plus, have you returned anything at Costco ever? Have you brought anything back?
 
-**Interviewee [T0301, PARTICIPANT]:** Other than the mattress?
+**Interviewee [T0297, PARTICIPANT]:** Other than the mattress?
 
-**Chris [T0302, FACILITATOR]:** Yeah.
+**Chris [T0298, FACILITATOR]:** Yeah.
 
-**Interviewee [T0303, PARTICIPANT]:** Oh yeah. Not a lot, but a couple things.
+**Interviewee [T0299, PARTICIPANT]:** Oh yeah. Not a lot, but a couple things.
 
-**Chris [T0304, FACILITATOR]:** He’s done the return process, so it’s possible to take this back. I’m lowering the anxiety around that. As awkward as it seems, it’s easier for him to take that leap, never having laid on it, than it is to walk into the mattress store and lay down.
+**Chris [T0300, FACILITATOR]:** He’s done the return process, so it’s possible to take this back. I’m lowering the anxiety around that. As awkward as it seems, it’s easier for him to take that leap, never having laid on it, than it is to walk into the mattress store and lay down.
 
 It’s one of those things where we just want to hear it a couple times, and we could say, ‘That’s real.’
 
 There is a catalog of actual interviews along with analysis available here .
 
-**Audience Member [T0305, AUDIENCE]:** I’m fascinated by this, because I bought one at Costco, and I’m not a germophobe, and I was going to get a Tempurpedic. I went into the mattress store, which I also find skeevy. Laid on it, did everything else.
+**Audience Member [T0301, AUDIENCE]:** I’m fascinated by this, because I bought one at Costco, and I’m not a germophobe, and I was going to get a Tempurpedic. I went into the mattress store, which I also find skeevy. Laid on it, did everything else.
 
 Mine came far more into, ‘Wait a minute, is it really worth . . .’ Tempurpedic is like $3,500 or whatever it was. ‘Is it really worth this?’ When I really looked into it, people were saying, ‘No, it’s insane.’ To me Costco was the huge thing because of the return policy. They have lifetime, if you don’t like it, I literally said to my wife, she’d laid on the Tempurpedic, ‘We’ll buy it, it’s $800,’ or whatever it is. ‘If we don’t like it . . .’
 
-**Chris [T0306, FACILITATOR]:** Let me throw something out here. [inaudible 44:52] interview like Bob was saying. Let’s say this return policy ends up being one of the key things. You can’t just think about return policy, because returning something like a mattress is hard.
+**Chris [T0302, FACILITATOR]:** Let me throw something out here. [inaudible 44:52] interview like Bob was saying. Let’s say this return policy ends up being one of the key things. You can’t just think about return policy, because returning something like a mattress is hard.
 
 What if the store’s return policy is, ‘We’ll pick the mattress up at your house.’ That’s one of the things that will reduce the anxiety.
 
-**Audience Member [T0307, AUDIENCE]:** For me Costco said that they would.
+**Audience Member [T0303, AUDIENCE]:** For me Costco said that they would.
 
-**Chris [T0308, FACILITATOR]:** OK, that was it? It’s not just we’ll accept the return, it’s ‘we’ll pick it up for you.’
+**Chris [T0304, FACILITATOR]:** OK, that was it? It’s not just we’ll accept the return, it’s ‘we’ll pick it up for you.’
 
-**Interviewee [T0309, PARTICIPANT]:** They did that?
+**Interviewee [T0305, PARTICIPANT]:** They did that?
 
-**Audience Member [T0310, AUDIENCE]:** I ordered it and I never even touched it.
+**Audience Member [T0306, AUDIENCE]:** I ordered it and I never even touched it.
 
-**Interviewee [T0311, PARTICIPANT]:** I wish I knew that.
+**Interviewee [T0307, PARTICIPANT]:** I wish I knew that.
 
-**Chris [T0312, FACILITATOR]:** The notion of this is that they’re willing to pay more for it. As much as they say ‘I’m not going to pay more for it,’ it’s the thing holding you back from buying. This is one of the frameworks which we’re going to go through, but the thing is, this is . . .
+**Chris [T0308, FACILITATOR]:** The notion of this is that they’re willing to pay more for it. As much as they say ‘I’m not going to pay more for it,’ it’s the thing holding you back from buying. This is one of the frameworks which we’re going to go through, but the thing is, this is . . .
 
 From the first thought to basically all the way through what we call passive looking. I’m not going to invest time, but if I’m looking through the paper and there’s a circular, I’m going to start to look at it.
 
@@ -836,11 +828,11 @@ Then there’s basically purchase and consumption. What happens is most of the t
 
 Everything they’re going to say looking at it this way, you get bulls***.
 
-**Bob [T0313, FACILITATOR]:** I bet you the mattress industry is obsessed with the laying on the mattress part. That’s all they can think about. That’s how you buy mattresses, because you’re going to sleep on it so you’ve got to lay on it.
+**Bob [T0309, FACILITATOR]:** I bet you the mattress industry is obsessed with the laying on the mattress part. That’s all they can think about. That’s how you buy mattresses, because you’re going to sleep on it so you’ve got to lay on it.
 
 Again, this is one interview, but it might turn out that that’s not the case at all. But they can’t see that.
 
-**Chris [T0314, FACILITATOR]:** The second part is the interview is most people will say, ‘Tell me about the experience of buying the mattress.’ A customer satisfaction thing, you’re looking back. We’re not listening to that either.
+**Chris [T0310, FACILITATOR]:** The second part is the interview is most people will say, ‘Tell me about the experience of buying the mattress.’ A customer satisfaction thing, you’re looking back. We’re not listening to that either.
 
 Most of the time when you get people and they’re talking, they want to say, ‘Oh, I love the mattress,’ or ‘I hate it,’ and they’ll tell you all the stuff about the consumption. To be honest with you, don’t care. Whatever the product is, we need to be able to understand this story, all the way to the decide.
 

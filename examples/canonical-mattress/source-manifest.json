@@ -1,12 +1,12 @@
 {
   "source_url": "https://jobstobedone.org/radio/the-mattress-interview-part-one/",
-  "source_html_sha256": "9846f882cca3b91eb1e49c2a12d941327f9e00d3da3c7892a258aadbc557cf2a",
-  "fetched_at": "2026-11-22T11:39:03.338348+00:00",
-  "speaker_turns": 314,
-  "duplicate_html_speaker_turns_removed": 147,
-  "participant_turns": 111,
+  "source_html_sha256": "8c7d0e4c0c1b34d4619d31d2a7ec503cc5fde8b9b79ed3876b14b27c8d5bf4dc",
+  "fetched_at": "2026-11-22T11:39:54.069170+00:00",
+  "speaker_turns": 310,
+  "duplicate_html_speaker_turns_removed": 151,
+  "participant_turns": 110,
   "facilitator_turns": 173,
-  "audience_turns": 30,
+  "audience_turns": 27,
   "editorial_blocks": 21,
   "coverage": "FULL_PUBLISHED_PAGE_NOT_ORIGINAL_AUDIO",
   "limitations": [
