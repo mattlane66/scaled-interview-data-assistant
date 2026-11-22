@@ -1,0 +1,213 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence-grounded simulation scenario v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "source_checkpoint_sha256",
+    "decision",
+    "decision_owner",
+    "consequence_if_wrong",
+    "target",
+    "mode",
+    "target_grade",
+    "episode_refs",
+    "evidence_refs",
+    "baseline",
+    "intervention",
+    "held_constant",
+    "outcome_space",
+    "time_context",
+    "counterfactual_distance",
+    "assumptions",
+    "review"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "scenario_id": {
+      "type": "string",
+      "pattern": "^SIM[0-9]{3,}$"
+    },
+    "source_checkpoint_sha256": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "decision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision_owner": {
+      "type": "string",
+      "minLength": 1
+    },
+    "consequence_if_wrong": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mode": {
+      "enum": [
+        "PLAUSIBILITY_SPACE",
+        "INDIVIDUAL_PROXY"
+      ]
+    },
+    "target_grade": {
+      "enum": [
+        "L0_ROLEPLAY",
+        "L1_PERSON_GROUNDED"
+      ]
+    },
+    "episode_refs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^D[0-9]{2,}$"
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^E[0-9]{3,}$"
+      }
+    },
+    "baseline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path_y",
+        "observed_result",
+        "evidence_refs"
+      ],
+      "properties": {
+        "path_y": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observed_result": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^E[0-9]{3,}$"
+          }
+        }
+      }
+    },
+    "intervention": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "variable",
+        "from",
+        "to"
+      ],
+      "properties": {
+        "variable": {
+          "type": "string",
+          "minLength": 1
+        },
+        "from": {
+          "type": "string",
+          "minLength": 1
+        },
+        "to": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "held_constant": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "outcome_space": {
+      "type": "array",
+      "minItems": 2,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "time_context": {
+      "type": "string",
+      "minLength": 1
+    },
+    "counterfactual_distance": {
+      "enum": [
+        "IN_DISTRIBUTION",
+        "NEAR_OOD",
+        "FAR_OOD",
+        "UNKNOWN"
+      ]
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reviewer",
+        "approved_at",
+        "approved_checkpoint_sha256",
+        "evidence_reviewed",
+        "codebook_links_reviewed",
+        "clusters_reviewed",
+        "person_grounding_reviewed",
+        "processing_permitted"
+      ],
+      "properties": {
+        "reviewer": {
+          "type": "string"
+        },
+        "approved_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "approved_checkpoint_sha256": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "evidence_reviewed": {
+          "type": "boolean"
+        },
+        "codebook_links_reviewed": {
+          "type": "boolean"
+        },
+        "clusters_reviewed": {
+          "type": "boolean"
+        },
+        "person_grounding_reviewed": {
+          "type": "boolean"
+        },
+        "processing_permitted": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}
