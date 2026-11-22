@@ -57,6 +57,8 @@ Default `SIDA_MCP_MODE=stdio` is a local standard-input MCP server for developme
 | `preview_mechanism_evidence` | Inspect episode coverage and original E/L IDs |
 | `compile_reviewed_mechanism_map` | Compile a genuinely human-reviewed study and PROPOSED planning handoff |
 | `make_counterfactual_brief` | Require source- and review-matched scenario; no synthetic run needed |
+| `triage_context_uncertainty` | Propose trace/current/Lead User research route for a source-bound consequential x gap |
+| `import_lead_user_context_evidence` | Validate upstream source/LU1/LU2 lineage and keep the x extension PROPOSED |
 
 Never feed the server a model-generated "reviewer" name or invented approved flags. Source and review states must come from the research process. A reviewer *attestation* is validated structurally, not independently verified.
 
