@@ -4,6 +4,17 @@ Use reviewed human JTBD interviews to identify **which product-design assumption
 testing next**. This optional workflow follows the original A→B interview synthesis and does
 not depend on a model run, SSR, or a population forecast.
 
+## If the job cluster contains different behavioral mechanisms
+
+Before shaping a particular intervention, use the
+[Behavioral Mechanism Map](mechanism-map.md) to compare conditional hypotheses,
+rival explanations, and contradictory or unassessed cases across episodes.
+Its proposed operating model `M` can inform the current situation and design
+boundaries, but is **not** an accepted product requirement.
+
+This counterfactual workflow remains focused on a specific design move and
+the observation that could disprove it. Neither tool selects a solution shape.
+
 ## Principle
 
 **Observe what happened → understand the struggle and hoped-for progress → change a design
