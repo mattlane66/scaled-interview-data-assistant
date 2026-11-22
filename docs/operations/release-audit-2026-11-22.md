@@ -1,6 +1,7 @@
 # Repository release audit — 2026-11-22
 
-**Audited release:** 1.7.1 (pending merge and final CI verification)  
+**Audited release:** 1.7.1 — merged as [PR #15](https://github.com/mattlane66/scaled-interview-data-assistant/pull/15), commit `0ad83aa9e97f0cd75b8af174e5e292de7c36a697`  
+**Verified gate:** 71 tests passed on each of Python 3.10 and 3.12; wheel install and checkpoint smoke, MCP stdio/HTTP, non-root Docker, Ruff and privacy guard passed on the audit branch and on `main` ([post-merge CI](https://github.com/mattlane66/scaled-interview-data-assistant/actions/runs/45028032665)).  
 **Repository:** `mattlane66/scaled-interview-data-assistant`  
 **Scope:** Whole tracked source tree and documented workflows, including source/registries, decision-episode A→B synthesis, association and clustering code, source/checkpoint schemas, canonical real and synthetic examples, mechanism map, counterfactuals and SSR, skills and packaging, MCP stdio/HTTP, container runtime, privacy boundaries and GitHub Actions.
 
