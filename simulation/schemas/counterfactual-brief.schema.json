@@ -365,6 +365,42 @@
         "NOT_RUN",
         "RECORDED"
       ]
+    },
+    "candidate_effect_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim_type",
+        "prediction_status",
+        "adoption",
+        "use",
+        "realized_progress",
+        "causal_attribution",
+        "relation_to_M"
+      ],
+      "properties": {
+        "claim_type": {
+          "const": "CANDIDATE_SPECIFIC_EFFECT_HYPOTHESIS"
+        },
+        "prediction_status": {
+          "const": "UNTESTED"
+        },
+        "adoption": {
+          "const": "NOT_OBSERVED_FOR_THIS_INTERVENTION"
+        },
+        "use": {
+          "const": "NOT_OBSERVED_FOR_THIS_INTERVENTION"
+        },
+        "realized_progress": {
+          "const": "NOT_OBSERVED_FOR_THIS_INTERVENTION"
+        },
+        "causal_attribution": {
+          "const": "NOT_ESTABLISHED"
+        },
+        "relation_to_M": {
+          "const": "DOES_NOT_ESTABLISH_OPERATING_MODEL"
+        }
+      }
     }
   }
 }
