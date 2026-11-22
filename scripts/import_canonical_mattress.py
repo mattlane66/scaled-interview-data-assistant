@@ -120,7 +120,7 @@ def extract(html: str) -> tuple[list[dict], list[dict], int]:
     # the later, correctly positioned segment. Do not dedupe individual
     # "yes"/"no" utterances: the customer may genuinely repeat them.
     normalized = [
-        row["speaker"] + " " + re.sub(r"\\s+", " ", row["text"]).strip()
+        row["speaker"] + " " + re.sub(r"\s+", " ", row["text"]).strip()
         for row in turns
     ]
     duplicates: set[int] = set()
