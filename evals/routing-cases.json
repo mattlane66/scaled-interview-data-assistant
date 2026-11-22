@@ -594,6 +594,88 @@
           "DISCOVER_TRENDS_AND_CANDIDATES"
         ]
       ]
+    },
+    {
+      "id": "explicit-reviewed-within-person",
+      "source_kind": "SYNTHETIC_METADATA_NOT_HUMAN_DATA",
+      "request": {
+        "research_question": "What should we study?",
+        "decision": "Choose a credible next research move.",
+        "evidence": {
+          "transcript_coverage": "FULL",
+          "decision_episodes": 2,
+          "distinct_people": 1,
+          "source_locators_available": true,
+          "human_review_completed": true,
+          "reviewed_links_present": true,
+          "human_holdout_available": false
+        },
+        "counterfactual": {
+          "baseline_defined": false,
+          "intervention_defined": false,
+          "population_defined": false
+        },
+        "future_facing": {
+          "trend_candidate": false,
+          "advanced_user_signal": false,
+          "high_expected_benefit_signal": false
+        },
+        "goals": [
+          {
+            "type": "CONDITIONAL_MECHANISM",
+            "question": "What can this evidence establish?",
+            "material_to_decision": true,
+            "comparison_scope": "WITHIN_PERSON"
+          }
+        ]
+      },
+      "expected": [
+        [
+          "BEHAVIORAL_MECHANISM_MAP",
+          "ELIGIBLE_FOR_WITHIN_PERSON_MAP"
+        ]
+      ]
+    },
+    {
+      "id": "explicit-unreviewed-within-person",
+      "source_kind": "SYNTHETIC_METADATA_NOT_HUMAN_DATA",
+      "request": {
+        "research_question": "What should we study?",
+        "decision": "Choose a credible next research move.",
+        "evidence": {
+          "transcript_coverage": "FULL",
+          "decision_episodes": 2,
+          "distinct_people": 1,
+          "source_locators_available": true,
+          "human_review_completed": false,
+          "reviewed_links_present": false,
+          "human_holdout_available": false
+        },
+        "counterfactual": {
+          "baseline_defined": false,
+          "intervention_defined": false,
+          "population_defined": false
+        },
+        "future_facing": {
+          "trend_candidate": false,
+          "advanced_user_signal": false,
+          "high_expected_benefit_signal": false
+        },
+        "goals": [
+          {
+            "type": "CONDITIONAL_MECHANISM",
+            "question": "What can this evidence establish?",
+            "material_to_decision": true,
+            "comparison_scope": "WITHIN_PERSON"
+          }
+        ]
+      },
+      "expected": [
+        [
+          "BEHAVIORAL_MECHANISM_MAP",
+          "PROVISIONAL_MECHANISMS_ONLY"
+        ]
+      ]
     }
   ]
 }
