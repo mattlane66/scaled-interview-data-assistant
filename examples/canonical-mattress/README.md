@@ -4,6 +4,8 @@
 
 **Authorized source use:** The repository owner has confirmed a license to reproduce the complete published interview here. This example retains the entire published transcript, including the teaching explanations and audience exchanges. It is not a freshly transcribed audio recording.
 
+**Pinned source snapshot:** 279 speaker turns (99 participant, 157 facilitator, 23 audience), plus 21 marked editorial blocks. The website contained 182 duplicate speaker turns due to nested/repeated HTML, which the importer collapsed. [The source manifest](source-manifest.json) records the exact published-page hash and import date.
+
 ## The evidence boundary
 
 The complete source is in [full-transcript.md](full-transcript.md), indexed in [source-turns.json](source-turns.json), with source-page hash and completeness notes in [source-manifest.json](source-manifest.json). The published webpage contained repeated HTML dialogue blocks; the importer removes identifiable duplicates while preserving the final original wording. The HTML is fetched again only when the source importer workflow is explicitly triggered.
