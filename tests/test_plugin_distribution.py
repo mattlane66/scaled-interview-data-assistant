@@ -53,7 +53,7 @@ def test_build_private_plugin_has_only_public_methods_and_no_mcp_endpoint(tmp_pa
     assert result["public_submission_ready"] is False
     with zipfile.ZipFile(dest) as z:
         files = z.namelist()
-        assert len(files) == 5
+        assert len(files) == 6
         assert all(x.startswith("scaled-interview-data-assistant/") for x in files)
         assert not any("mcp.json" in x for x in files)
         assert not any("full-transcript" in x for x in files)
