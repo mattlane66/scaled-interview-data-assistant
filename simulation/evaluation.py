@@ -21,14 +21,14 @@ def _normalize(values: list[float]) -> list[float]:
 
 def tvd(a: list[float], b: list[float]) -> float:
     p, q = _normalize(a), _normalize(b)
-    return 0.5 * math.fsum(abs(x - y) for x, y in zip(p, q))
+    return 0.5 * math.fsum(abs(x - y) for x, y in zip(p, q, strict=True))
 
 
 def ks_similarity(a: list[float], b: list[float]) -> float:
     p, q = _normalize(a), _normalize(b)
     ap = bp = 0.0
     dist = 0.0
-    for x, y in zip(p, q):
+    for x, y in zip(p, q, strict=True):
         ap += x
         bp += y
         dist = max(dist, abs(ap - bp))
