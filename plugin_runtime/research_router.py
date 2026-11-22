@@ -121,7 +121,7 @@ def route_research(
                 step = "Draft rivals and falsifiers, then obtain required reviews."
             elif people < 2:
                 readiness = "ELIGIBLE_FOR_WITHIN_PERSON_MAP"
-                step = "Compare this person\u0027s episodes; no cross-person inference."
+                step = "Compare one person\u0027s episodes; do not generalize across people."
             else:
                 readiness = "ELIGIBLE_FOR_REVIEW_GATED_MAP"
                 step = "Compare cases with ALIGNS/COUNTEREXAMPLE/AMBIGUOUS/UNASSESSED."
