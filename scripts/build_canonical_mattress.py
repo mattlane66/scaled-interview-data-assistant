@@ -39,7 +39,7 @@ EVIDENCE = [
      "but I didn’t have those problems.", "current_state", "A01", "",
      "Reported contrast with hotel sleep; not proof of mattress causality."),
     ("Yeah, I flipped it, I rotated it, I turned it upside down",
-     "I took it off the box springs.", "concrete_event_or_behavior", "A01", "",
+     "took it off the box springs.", "concrete_event_or_behavior", "A01", "",
      "Repeated attempts to preserve old bed."),
     ("she started, I would say the last six months, to realize too",
      "‘I’m starting to have problems too. It’s uncomfortable,’",
