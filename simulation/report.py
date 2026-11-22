@@ -19,6 +19,8 @@ def render(
         raise SimulationError("The approved scenario has changed since this run")
     if run.get("evidence_type") != "SIMULATED_ESTIMATE":
         raise SimulationError("Run does not declare generated estimate evidence type")
+    if run.get("mode") != scenario["mode"] or run.get("grade") != scenario["target_grade"]:
+        raise SimulationError("Report cannot promote or alter simulation mode or evidence grade")
     if measurement and measurement.get("run_sha256") != sha256_text(
         json.dumps(run, sort_keys=True)
     ):
