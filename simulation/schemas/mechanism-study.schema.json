@@ -85,12 +85,18 @@
       ],
       "properties": {
         "reviewer": {
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "reviewed_at": {
-          "type": "string",
-          "format": "date-time"
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "approved_checkpoint_sha256": {
           "type": "string",
