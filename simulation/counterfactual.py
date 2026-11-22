@@ -127,17 +127,21 @@ def render_brief(brief: dict[str, Any]) -> str:
         f"**Status:** {brief['decision_status']} — {brief['validation_status']}",
         f"**Evidence grade:** {brief['evidence_grade']}", "",
         "## 1. What the human research supports", "",
-        f"Evidence checkpoint: \\u0060{brief['source_checkpoint_sha256']}\\u0060",
+        f"Evidence checkpoint: {brief['source_checkpoint_sha256']}",
         f"Episodes: {', '.join(row['episode'] for row in brief['episodes'])}",
         f"Coverage: {', '.join(brief['coverage'])}", "",
         "| Observed struggle (A) | Hoped-for progress (B) | Support |",
         "|---|---|---|",
     ]
     for link in brief["reviewed_a_to_b_links"]:
+        support = (
+            link["link"] + " / " + link["interpretation_basis"]
+            + " / " + ", ".join(link["evidence_refs"])
+        )
         lines.append(
             f"| {_inline(link['a_code'] + ': ' + link['a_definition'])} | "
             f"{_inline(link['b_code'] + ': ' + link['b_definition'])} | "
-            f"{_inline(link['link'] + ' / ' + link['interpretation_basis'] + ' / ' + ', '.join(link['evidence_refs']))} |"
+            f"{_inline(support)} |"
         )
     lines += [
         "",
@@ -222,10 +226,13 @@ def compare_briefs(briefs: list[dict[str, Any]]) -> str:
     for brief in briefs:
         design = brief["design_hypothesis"]
         intervention = brief["intervention"]
+        change = (
+            intervention["variable"] + ": "
+            + intervention["from"] + " → " + intervention["to"]
+        )
         lines.append(
             f"| {_inline(brief['scenario_id'] + ': ' + design['product_change'])} | "
-            f"{_inline(intervention['variable'] + ': ' + intervention['from'] + ' → ' + intervention['to'])} | "
-            f"{_inline(design['critical_assumption'])} | "
+            f"{_inline(change)} | {_inline(design['critical_assumption'])} | "
             f"{_inline(design['disconfirming_observation'])} |"
         )
     constants = [brief["held_constant"] for brief in briefs]
