@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import math
+import re
 from pathlib import Path
 
 import pytest
@@ -25,6 +26,14 @@ def test_complete_source_has_distinct_roles_and_verbatim_participant_evidence():
     bank = _read("evidence_bank.json")
     assert manifest["coverage"] == "FULL_PUBLISHED_PAGE_NOT_ORIGINAL_AUDIO"
     assert len(turns) == manifest["speaker_turns"]
+    assert len(manifest["source_html_sha256"]) == 64
+    assert manifest["duplicate_html_speaker_turns_removed"] > 0
+    substantial_turns = [
+        x["speaker"] + " " + re.sub(r"\s+", " ", x["text"]).strip()
+        for x in turns
+        if len(x["text"]) >= 40
+    ]
+    assert len(substantial_turns) == len(set(substantial_turns))
     assert sum(x["role"] == "PARTICIPANT" for x in turns) >= 75
     assert len(bank) == 28
     assert all(x["speaker"] == "PARTICIPANT" for x in bank)
