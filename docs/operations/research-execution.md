@@ -6,7 +6,13 @@
 
 Input: the user's question and decision, a permitted transcript or trace, source locations, and any previously accepted research records. The agent reads the actual transcript in its client context, classifies the decision question, and declares only grounded metadata to the advisory router.
 
-Use **research-router** in the portable plugin. With a connected local MCP research server, call **route_research_request** with a [research-request JSON](../../simulation/schemas/research-request.schema.json) and an optional existing exact checkpoint string. The router returns eligibility/gaps, not source interpretation or an executed method.
+Use **research-router** in the portable plugin. With a connected local MCP research server, call **route_research_request** with a [research-request JSON](../../simulation/schemas/research-request.schema.json) and an optional existing exact checkpoint string. The router returns eligibility/gaps, not source interpretation or an executed method. For a local checkout, run the same source-checked code directly:
+
+~~~bash
+python scripts/route_research.py --request examples/canonical-mattress/empirical-extension/research-request.json --checkpoint examples/canonical-mattress/results/CHECKPOINT.json
+~~~
+
+This bundled request is based on the **real canonical interview metadata**, not a new human research study. Use the research question to select a method, then open the source and actually perform it.
 
 The evidence summary is **agent-declared** unless a checkpoint is provided. A checkpoint enables schema/reference-count validation, **not** proof of human review, participant independence, model access, or source truth. The tool never fetches source URLs, makes model calls or stores transcripts. Keep raw transcript text out of the routing request.
 
