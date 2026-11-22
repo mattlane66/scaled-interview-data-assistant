@@ -108,10 +108,10 @@ def inspect_scenario(
     if scenario["mode"] == "INDIVIDUAL_PROXY":
         owners = {episodes[d]["interview"] for d in chosen_episodes}
         if len(owners) != 1 or not scenario["review"]["person_grounding_reviewed"]:
-            raise SimulationError("Individual proxy requires one interview and reviewed person grounding")
+            raise SimulationError(\n                "Individual proxy requires one interview and reviewed person grounding"\n            )
     permitted = "L1_PERSON_GROUNDED" if scenario["mode"] == "INDIVIDUAL_PROXY" else "L0_ROLEPLAY"
     if scenario["target_grade"] != permitted:
-        raise SimulationError(f"v1 mode permits only grade {permitted}; no automatic L2-L4 promotion")
+        raise SimulationError(\n            f"v1 mode permits only grade {permitted}; no automatic L2-L4 promotion"\n        )
     source_index = {s["source_id"]: s for s in checkpoint["source_index"]}
     coverage = sorted({
         str(source_index[evidence[e]["source_id"]]["coverage"]) for e in chosen_evidence
@@ -222,7 +222,7 @@ def record(
         "configuration": model_output["configuration"],
         "responses": model_output["responses"],
         "limitations": [
-            "Synthetic statements are not observed events, human interviews, or population estimates.",
+            "Synthetic statements are not observed events, human interviews, "\n            "or population estimates.",
             "Counterfactual effects are hypotheses unless intervention outcomes are validated.",
         ],
     }
