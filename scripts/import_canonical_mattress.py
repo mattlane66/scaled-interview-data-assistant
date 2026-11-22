@@ -19,11 +19,15 @@ from bs4 import BeautifulSoup, Tag
 
 SOURCE_URL = "https://jobstobedone.org/radio/the-mattress-interview-part-one/"
 ROLES = {"Chris": "FACILITATOR", "Bob": "FACILITATOR",
+         "Jason": "FACILITATOR", "Ryan": "AUDIENCE",
          "Interviewee": "PARTICIPANT", "Audience Member": "AUDIENCE",
          "Audience": "AUDIENCE"}
-SPEAKER = re.compile(r"^(Chris|Bob|Interviewee|Audience Member|Audience):\s*", re.I)
+SPEAKER = re.compile(
+    r"^(Audience Member|Interviewee|Chris|Bob|Jason|Ryan|Audience):\s*", re.I
+)
 INLINE_SPEAKER = re.compile(
-    r"(?:^|\n)(?=(?:Chris|Bob|Interviewee|Audience Member|Audience):\s*)"
+    r"(?=(?<![A-Za-z])(?:Audience Member|Interviewee|Chris|Bob|Jason|Ryan|Audience):\s*)",
+    re.I,
 )
 START_HEADING = "Why we are sharing a live JTBD interview"
 STOP_HEADING = "Listen to the interview debrief and Q&A"
@@ -72,12 +76,7 @@ def extract(html: str) -> tuple[list[dict], list[dict]]:
 
         # A few paragraph elements contain multiple labeled turns separated by
         # HTML line-breaks. Split only at a new *speaker* label, not at punctuation.
-        parts = [
-            p.strip() for p in re.split(
-                r"(?=(?:^|\n)(?:Chris|Bob|Interviewee|Audience Member|Audience):\s*)",
-                value,
-            ) if p.strip()
-        ]
+        parts = [p.strip() for p in INLINE_SPEAKER.split(value) if p.strip()]
         # BeautifulSoup may flatten <br> tags into whitespace. As a conservative
         # fallback, preserve a whole paragraph instead of inventing speaker turns.
         if len(parts) == 0:
