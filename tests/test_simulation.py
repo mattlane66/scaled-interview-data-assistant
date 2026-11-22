@@ -204,6 +204,12 @@ def test_generated_content_cannot_forge_evidence(source):
     edited["assumptions"].append("Changed after generation")
     with pytest.raises(SimulationError, match="does not match"):
         ensure_run_matches(run, edited, digest)
+    forged = copy.deepcopy(run)
+    forged["grade"] = "L4_DECISION_CALIBRATED"
+    with pytest.raises(SimulationError, match="does not match"):
+        ensure_run_matches(forged, scenario, digest)
+    with pytest.raises(SimulationError, match="cannot promote"):
+        render(scenario, forged)
 
 
 def test_privacy_defaults_are_closed(source):
