@@ -262,7 +262,7 @@ def test_private_http_mcp_transport_initializes_with_auth_and_rejects_anonymous(
         async with mcp.session_manager.run():
             async with AsyncClient(
                 transport=ASGITransport(app=app),
-                base_url="http://localhost",
+                base_url="http://127.0.0.1:8000",
             ) as client:
                 denied = await client.post("/mcp", json=body, headers=headers)
                 assert denied.status_code == 401
