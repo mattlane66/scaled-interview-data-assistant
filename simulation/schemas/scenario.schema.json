@@ -235,6 +235,39 @@
           "minLength": 1
         }
       }
+    },
+    "design_hypothesis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "product_change",
+        "critical_assumption",
+        "predicted_behavior",
+        "disconfirming_observation",
+        "if_disconfirmed"
+      ],
+      "properties": {
+        "product_change": {
+          "type": "string",
+          "minLength": 1
+        },
+        "critical_assumption": {
+          "type": "string",
+          "minLength": 1
+        },
+        "predicted_behavior": {
+          "type": "string",
+          "minLength": 1
+        },
+        "disconfirming_observation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "if_disconfirmed": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
     }
   }
 }
