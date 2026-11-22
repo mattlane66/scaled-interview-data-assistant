@@ -218,6 +218,8 @@ def test_real_stdio_mcp_client_initializes_and_calls_read_only_tool():
                     "preview_mechanism_evidence",
                     "compile_reviewed_mechanism_map",
                     "make_counterfactual_brief",
+                    "triage_context_uncertainty",
+                    "import_lead_user_context_evidence",
                 } <= names
                 for tool in tools.tools:
                     assert tool.annotations is not None
