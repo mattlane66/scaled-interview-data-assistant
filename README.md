@@ -163,7 +163,7 @@ python scripts/run_pipeline.py \
   --output-dir outputs
 ```
 
-The command verifies excerpts, validates ownership and reviewed links, preserves zero-code episodes,
+The command verifies excerpts, validates ownership and supplied link references (not human review), preserves zero-code episodes,
 computes secondary association diagnostics, chooses an exploratory Jaccard grouping when supported,
 exports a validated checkpoint, and audits report references and method declarations. Use
 `--clusters none`, `--clusters auto` (default), or an explicit positive integer.
@@ -303,33 +303,22 @@ Synthetic examples demonstrate the workflow; they are not market evidence.
 
 ```text
 .
-├── .github/workflows/ci.yml
-├── README.md
-├── CHANGELOG.md
-├── LICENSE
-├── pyproject.toml
-├── prompt/
-│   └── custom-gpt.md
-├── docs/
-│   ├── methodology/
-│   ├── operations/
-│   └── output/
-├── templates/
-├── schemas/
+├── prompt/                      # GPT guidance and simulation extension
+├── docs/methodology/            # Research model
+├── docs/operations/             # Data contracts, privacy, release operations
+├── templates/                   # Human-reviewed synthesis formats
+├── schemas/                     # Source and checkpoint validation
+├── scripts/                     # Deterministic CLI and plugin ZIP builder
+├── simulation/                  # Mechanisms, counterfactuals, SSR and handoffs
+├── plugin_runtime/              # Optional stateless Python MCP service
+├── plugins/scaled-interview-data-assistant/
+│   ├── plugin.json
+│   └── skills/                  # Portable private-plugin skills
 ├── examples/
-│   ├── mattress/
-│   └── synthetic-study/
-├── scripts/
-│   ├── run_pipeline.py
-│   ├── validate_registry.py
-│   ├── build_matrices.py
-│   ├── analyze_links.py
-│   ├── cluster_interviews.py
-│   ├── checkpoint_validation.py
-│   ├── export_checkpoint.py
-│   ├── import_checkpoint.py
-│   └── audit_report.py
-└── tests/
+│   ├── canonical-mattress/      # Licensed source and unapproved reference
+│   ├── mattress/                # Synthetic one-interview tutorial
+│   └── synthetic-study/         # Synthetic cross-episode fixture
+└── tests/                       # Research, security and release regression tests
 ```
 
 ## Working at scale
