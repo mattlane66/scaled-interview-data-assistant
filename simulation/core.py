@@ -188,7 +188,7 @@ def prepare(
         excerpts.append(row)
     return {
         "schema_version": "1.0",
-        "scenario": scenario,
+        "scenario": {key: value for key, value in scenario.items() if key != "review"},
         "evidence": excerpts,
         "grounded_interviews": info["grounded_interviews"],
         "source_coverage": info["coverage"],
