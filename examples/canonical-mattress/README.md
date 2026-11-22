@@ -6,6 +6,15 @@
 
 **Pinned source snapshot:** 279 speaker turns (99 participant, 157 facilitator, 23 audience), plus 21 marked editorial blocks. The website contained 182 duplicate speaker turns due to nested/repeated HTML, which the importer collapsed. [The source manifest](source-manifest.json) records the exact published-page hash and import date.
 
+## Empirical multi-method extension — desk SCOUT, not approved research
+
+A new [source-traceable empirical extension](empirical-extension/README.md) rechecks the
+**core A→B analysis** and opens the mechanism-map, simulation validation and Lead User
+workstreams using **real published human accounts**. It is a bounded public-source
+desk SCOUT with no recruited participants, no independent human approval, no
+qualified Lead Users and no simulation holdout. The original transcript, evidence
+bank, checkpoint, L0 examples and reviewer gates remain unchanged.
+
 ## Independent analytical reference and product decision
 
 The [independent full-transcript audit](reference/independent-audit.md)
