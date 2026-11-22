@@ -37,7 +37,7 @@ def render(
         "",
         "## Observed grounding and assumptions",
         "",
-        f"- Read-only checkpoint: \`{scenario['source_checkpoint_sha256']}\`",
+        f"- Read-only checkpoint: `{scenario['source_checkpoint_sha256']}`",
         f"- Human episode references: {', '.join(scenario['episode_refs'])}",
         f"- Source evidence IDs: {', '.join(scenario['evidence_refs'])}",
         f"- Baseline Path Y: {scenario['baseline']['path_y']}",
