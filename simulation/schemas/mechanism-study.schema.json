@@ -113,6 +113,9 @@
         },
         "contrasting_cases_reviewed": {
           "type": "boolean"
+        },
+        "outcomes_reviewed": {
+          "type": "boolean"
         }
       }
     },
@@ -211,6 +214,114 @@
                   "type": "string",
                   "minLength": 1
                 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "outcome_assessments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "episode",
+          "adoption",
+          "use",
+          "progress"
+        ],
+        "properties": {
+          "episode": {
+            "type": "string",
+            "pattern": "^D[0-9]{2,}$"
+          },
+          "adoption": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "evidence_refs",
+              "interpretation"
+            ],
+            "properties": {
+              "status": {
+                "enum": [
+                  "REPORTED_ADOPTION",
+                  "REPORTED_NONADOPTION",
+                  "UNKNOWN"
+                ]
+              },
+              "evidence_refs": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "pattern": "^E[0-9]{3,}$"
+                }
+              },
+              "interpretation": {
+                "type": "string"
+              }
+            }
+          },
+          "use": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "evidence_refs",
+              "interpretation"
+            ],
+            "properties": {
+              "status": {
+                "enum": [
+                  "REPORTED_USE",
+                  "REPORTED_NONUSE",
+                  "MIXED",
+                  "UNKNOWN"
+                ]
+              },
+              "evidence_refs": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "pattern": "^E[0-9]{3,}$"
+                }
+              },
+              "interpretation": {
+                "type": "string"
+              }
+            }
+          },
+          "progress": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "evidence_refs",
+              "interpretation"
+            ],
+            "properties": {
+              "status": {
+                "enum": [
+                  "REPORTED_IMPROVEMENT",
+                  "REPORTED_NO_IMPROVEMENT",
+                  "MIXED",
+                  "UNKNOWN"
+                ]
+              },
+              "evidence_refs": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "pattern": "^E[0-9]{3,}$"
+                }
+              },
+              "interpretation": {
+                "type": "string"
               }
             }
           }
