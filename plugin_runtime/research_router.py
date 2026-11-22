@@ -7,12 +7,11 @@ by the research agent; only checkpoint counts/references can be checked here.
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from typing import Any
 
-from jsonschema import Draft202012Validator
-
-import json
+from jsonschema import Draft202012Validator, ValidationError
 
 SCHEMA = (
     Path(__file__).resolve().parents[1]
@@ -52,7 +51,10 @@ def route_research(
 ) -> dict[str, Any]:
     """Decide the smallest valid research move without executing research."""
     schema = json.loads(SCHEMA.read_text(encoding="utf-8"))
-    Draft202012Validator(schema).validate(request)
+    try:
+        Draft202012Validator(schema).validate(request)
+    except ValidationError:
+        raise ValueError("Invalid research routing request schema") from None
 
     evidence = request.get("evidence") or {}
     counterfactual = request.get("counterfactual") or {}
