@@ -107,6 +107,6 @@ def test_canonical_link_registry_is_not_falsely_human_approved():
 def test_operation_guides_render_inline_code_and_require_patched_mcp():
     for path in (ROOT / "docs" / "operations").glob("*.md"):
         content = path.read_text(encoding="utf-8")
-        assert "\\\`" not in content, f"Escaped Markdown code delimiter: {path}"
+        assert chr(92) + chr(96) not in content, f"Escaped Markdown code delimiter: {path}"
     requirements = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
     assert '"mcp>=1.30.0,<2"' in requirements
