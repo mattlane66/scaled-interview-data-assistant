@@ -18,6 +18,7 @@ Use when the user provides a transcript and research question, or requests sever
 
 - ADVISORY_NOT_EXECUTED is not method execution, human evidence review or approval.
 - Missing mention is UNASSESSED, not a counterexample.
+- A reviewed mechanism map requires episodes with a defended shared job scope; two distinct products or people alone are not comparability evidence. Explicit analogies stay provisional.
 - Simulated respondents or SSR scores never become observed human evidence.
 - Lead User qualification requires a supported important trend plus both LU1 and LU2 per episode.
 - Do not accept organizational y, requirements or a solution shape.
