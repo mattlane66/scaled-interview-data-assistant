@@ -76,7 +76,10 @@ def remote_config(url: str, auth: str) -> bytes:
             or parsed.username or parsed.password
             or parsed.query or parsed.fragment or parsed.path != "/mcp"):
         raise ValueError("MCP URL must be a real HTTPS /mcp endpoint without credentials")
-    if parsed.hostname.endswith((".example", ".invalid", ".test", ".localhost")):
+    if (
+        parsed.hostname in {"localhost", "example.com", "example.org", "example.net"}
+        or parsed.hostname.endswith((".example", ".invalid", ".test", ".localhost"))
+    ):
         raise ValueError("Do not ship a placeholder MCP endpoint")
     if auth not in {"api_key", "oauth"}:
         raise ValueError("Explicit auth mode required for a remote MCP endpoint")
