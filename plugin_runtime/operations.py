@@ -15,7 +15,7 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
-from simulation.core import SimulationError, load_checkpoint
+from simulation.core import load_checkpoint
 from simulation.counterfactual import build_brief
 from simulation.mechanism_map import (
     compile_map,
