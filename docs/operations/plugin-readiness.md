@@ -1,4 +1,4 @@
-# Plugin development and publication readiness (v1.7.1)
+# Plugin development and publication readiness (v1.8.0)
 
 This project has **two distinct deliverables**:
 
