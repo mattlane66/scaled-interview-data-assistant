@@ -104,6 +104,15 @@ def build_brief(
         "outcome_space": scenario["outcome_space"],
         "counterfactual_distance": scenario["counterfactual_distance"],
         "design_hypothesis": scenario["design_hypothesis"],
+        "candidate_effect_evidence": {
+            "claim_type": "CANDIDATE_SPECIFIC_EFFECT_HYPOTHESIS",
+            "prediction_status": "UNTESTED",
+            "adoption": "NOT_OBSERVED_FOR_THIS_INTERVENTION",
+            "use": "NOT_OBSERVED_FOR_THIS_INTERVENTION",
+            "realized_progress": "NOT_OBSERVED_FOR_THIS_INTERVENTION",
+            "causal_attribution": "NOT_ESTABLISHED",
+            "relation_to_M": "DOES_NOT_ESTABLISH_OPERATING_MODEL",
+        },
         "analyst_assumptions": scenario["assumptions"],
         "simulated_hypotheses": hypotheses,
         "decision_status": "TEST_BEFORE_BUILD",
@@ -177,6 +186,10 @@ def render_brief(brief: dict[str, Any]) -> str:
         f"**Disconfirming observation:** {design['disconfirming_observation']}",
         f"**If disconfirmed, change direction to:** {design['if_disconfirmed']}",
         "",
+        "**Effect evidence:** No adoption, subsequent use, or realized progress has been "
+        "observed for this proposed intervention. Causal attribution is NOT ESTABLISHED.",
+        "**Boundary:** A candidate's expected success must not be installed as a "
+        "premise of the general operating model M.", "",
         "## 4. Rival explanations suggested by simulation", "",
     ]
     if not brief["simulated_hypotheses"]:

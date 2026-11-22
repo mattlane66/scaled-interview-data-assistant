@@ -396,6 +396,13 @@ def test_counterfactual_brief_grounds_a_to_b_and_separates_claims(source):
     assert brief["validation_status"] == "NOT_VALIDATED"
     assert brief["decision_status"] == "TEST_BEFORE_BUILD"
     assert brief["evidence_grade"] == "L0_ROLEPLAY"
+    effect = brief["candidate_effect_evidence"]
+    assert effect["claim_type"] == "CANDIDATE_SPECIFIC_EFFECT_HYPOTHESIS"
+    assert effect["adoption"] == "NOT_OBSERVED_FOR_THIS_INTERVENTION"
+    assert effect["use"] == "NOT_OBSERVED_FOR_THIS_INTERVENTION"
+    assert effect["realized_progress"] == "NOT_OBSERVED_FOR_THIS_INTERVENTION"
+    assert effect["causal_attribution"] == "NOT_ESTABLISHED"
+    assert effect["relation_to_M"] == "DOES_NOT_ESTABLISH_OPERATING_MODEL"
     assert brief["reviewed_a_to_b_links"][0]["link"] == "L001"
     assert brief["reviewed_a_to_b_links"][0]["a_definition"].startswith(
         "Manual synthesis"
@@ -409,6 +416,7 @@ def test_counterfactual_brief_grounds_a_to_b_and_separates_claims(source):
     assert "TEST BEFORE BUILD" in text
     assert "SIMULATED, NOT OBSERVED" in text
     assert "Disconfirming observation" in text
+    assert "Causal attribution is NOT ESTABLISHED" in text
     assert checkpoint.read_bytes() == original
 
 
@@ -505,6 +513,7 @@ def test_evidence_first_counterfactual_needs_no_model_run(source, tmp_path):
     assert brief["simulation_status"] == "NOT_RUN"
     assert brief["evidence_grade"] == "NOT_APPLICABLE"
     assert brief["simulated_hypotheses"] == []
+    assert brief["candidate_effect_evidence"]["prediction_status"] == "UNTESTED"
     assert "NOT RUN" in render_brief(brief)
     assert checkpoint.read_bytes() == before
 

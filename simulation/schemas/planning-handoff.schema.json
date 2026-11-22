@@ -1,0 +1,425 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Research-to-Planning handoff with explicit intent and effect boundaries v1.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "handoff_type",
+    "status",
+    "acceptance_gate",
+    "source_checkpoint_sha256",
+    "source_study",
+    "source_map_sha256",
+    "frame_boundaries",
+    "outcome_evidence",
+    "candidate_research_probes",
+    "x_current_struggles_candidates",
+    "y_desired_progress_candidates",
+    "f_solution_variable",
+    "M_operating_model",
+    "uncertainties",
+    "next_move_after_acceptance"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1"
+    },
+    "handoff_type": {
+      "const": "RESEARCH_TO_PLANNING_PROPOSAL"
+    },
+    "status": {
+      "const": "PROPOSED"
+    },
+    "acceptance_gate": {
+      "const": "HUMAN_ACCEPTANCE_REQUIRED"
+    },
+    "source_checkpoint_sha256": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "source_study": {
+      "type": "string",
+      "pattern": "^BMST[0-9]{3,}$"
+    },
+    "source_map_sha256": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "frame_boundaries": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "x_current_situation",
+        "human_intent",
+        "y_selected_outcome"
+      ],
+      "properties": {
+        "x_current_situation": {
+          "type": "object",
+          "required": [
+            "authority",
+            "representations",
+            "source",
+            "not_direct_world_verification"
+          ],
+          "properties": {
+            "authority": {
+              "const": "PROPOSED"
+            },
+            "representations": {
+              "type": "array"
+            },
+            "source": {
+              "type": "string",
+              "minLength": 1
+            },
+            "not_direct_world_verification": {
+              "const": true
+            }
+          }
+        },
+        "human_intent": {
+          "type": "object",
+          "required": [
+            "whose_account",
+            "interview_refs",
+            "progress_candidates",
+            "competing_party_priorities",
+            "not_a_product_team_priority_decision"
+          ],
+          "properties": {
+            "whose_account": {
+              "const": "INTERVIEWED_PEOPLE"
+            },
+            "interview_refs": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "pattern": "^SID:BMST[0-9]{3,}:(?:E[0-9]{3,}|D[0-9]{2,}|L[0-9]{3,}|I[0-9]{2,})$"
+              }
+            },
+            "progress_candidates": {
+              "type": "array"
+            },
+            "competing_party_priorities": {
+              "type": "string",
+              "minLength": 1
+            },
+            "not_a_product_team_priority_decision": {
+              "const": true
+            }
+          }
+        },
+        "y_selected_outcome": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "authority",
+            "decision_owner",
+            "priority_tradeoffs",
+            "selection_requires"
+          ],
+          "properties": {
+            "status": {
+              "const": "NOT_SELECTED"
+            },
+            "authority": {
+              "const": "NOT_GRANTED_BY_RESEARCH"
+            },
+            "decision_owner": {
+              "type": "null"
+            },
+            "priority_tradeoffs": {
+              "const": "NOT_DECIDED"
+            },
+            "selection_requires": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "outcome_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "episode_ref",
+          "interview_ref",
+          "adoption",
+          "use",
+          "progress",
+          "attribution"
+        ],
+        "properties": {
+          "episode_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "interview_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "adoption": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "interpretation",
+              "source_evidence_refs"
+            ],
+            "properties": {
+              "status": {
+                "enum": [
+                  "REPORTED_ADOPTION",
+                  "REPORTED_NONADOPTION",
+                  "UNKNOWN"
+                ]
+              },
+              "interpretation": {
+                "type": "string"
+              },
+              "source_evidence_refs": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "pattern": "^SID:BMST[0-9]{3,}:(?:E[0-9]{3,}|D[0-9]{2,}|L[0-9]{3,}|I[0-9]{2,})$"
+                }
+              }
+            }
+          },
+          "use": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "interpretation",
+              "source_evidence_refs"
+            ],
+            "properties": {
+              "status": {
+                "enum": [
+                  "REPORTED_USE",
+                  "REPORTED_NONUSE",
+                  "MIXED",
+                  "UNKNOWN"
+                ]
+              },
+              "interpretation": {
+                "type": "string"
+              },
+              "source_evidence_refs": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "pattern": "^SID:BMST[0-9]{3,}:(?:E[0-9]{3,}|D[0-9]{2,}|L[0-9]{3,}|I[0-9]{2,})$"
+                }
+              }
+            }
+          },
+          "progress": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "interpretation",
+              "source_evidence_refs"
+            ],
+            "properties": {
+              "status": {
+                "enum": [
+                  "REPORTED_IMPROVEMENT",
+                  "REPORTED_NO_IMPROVEMENT",
+                  "MIXED",
+                  "UNKNOWN"
+                ]
+              },
+              "interpretation": {
+                "type": "string"
+              },
+              "source_evidence_refs": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "pattern": "^SID:BMST[0-9]{3,}:(?:E[0-9]{3,}|D[0-9]{2,}|L[0-9]{3,}|I[0-9]{2,})$"
+                }
+              }
+            }
+          },
+          "attribution": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "basis"
+            ],
+            "properties": {
+              "status": {
+                "const": "NOT_ESTABLISHED"
+              },
+              "basis": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "candidate_research_probes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "research_ref",
+          "status",
+          "counterfactual_condition_change",
+          "discriminating_human_test",
+          "disconfirming_observation",
+          "not_part_of_M"
+        ],
+        "properties": {
+          "research_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "const": "UNTESTED_RESEARCH_PROBE"
+          },
+          "counterfactual_condition_change": {
+            "type": "string",
+            "minLength": 1
+          },
+          "discriminating_human_test": {
+            "type": "string",
+            "minLength": 1
+          },
+          "disconfirming_observation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "not_part_of_M": {
+            "const": true
+          }
+        }
+      }
+    },
+    "x_current_struggles_candidates": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "y_desired_progress_candidates": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "f_solution_variable": {
+      "const": "UNSPECIFIED"
+    },
+    "M_operating_model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "authority",
+        "conditions_and_hypotheses"
+      ],
+      "properties": {
+        "authority": {
+          "const": "PROPOSED"
+        },
+        "conditions_and_hypotheses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "research_ref",
+              "authority",
+              "claim_type",
+              "condition",
+              "hypothesis",
+              "rival",
+              "source_evidence_refs",
+              "case_evidence",
+              "evidence_assessment",
+              "disconfirming_observation",
+              "revisit_when"
+            ],
+            "properties": {
+              "research_ref": {
+                "type": "string",
+                "minLength": 1
+              },
+              "authority": {
+                "const": "PROPOSED"
+              },
+              "claim_type": {
+                "const": "HYPOTHESIZED_OPERATING_RELATIONSHIP"
+              },
+              "condition": {
+                "type": "string",
+                "minLength": 1
+              },
+              "hypothesis": {
+                "type": "string",
+                "minLength": 1
+              },
+              "rival": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_evidence_refs": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "pattern": "^SID:BMST[0-9]{3,}:(?:E[0-9]{3,}|D[0-9]{2,}|L[0-9]{3,}|I[0-9]{2,})$"
+                }
+              },
+              "case_evidence": {
+                "type": "array"
+              },
+              "evidence_assessment": {
+                "type": "string",
+                "minLength": 1
+              },
+              "disconfirming_observation": {
+                "type": "string",
+                "minLength": 1
+              },
+              "revisit_when": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "uncertainties": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "next_move_after_acceptance": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

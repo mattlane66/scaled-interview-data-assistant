@@ -52,6 +52,19 @@ Computation makes the analysis reproducible. It does not make an interpretation 
 7. Keep the **observed Path X result** separate. Mark it `UNKNOWN` when the interview does not
    establish what happened after adoption.
 
+## Before interviewing: gather evidence worth analyzing
+
+Start with an actual decision, struggle, workaround, non-adoption, or attempt to make progress.
+Ask what happened **before, during, and after** a specific occasion. Investigate the prior path,
+alternatives considered, competing commitments, who participated, and what really followed.
+Treat remembered explanations as reported accounts, not established causes. Record missing
+follow-up and contradictory cases rather than completing the story for the interviewee.
+
+The research method is [Uncovering the Causes of Demand](https://mattlane66.github.io/articles/uncovering-the-causes-of-demand/).
+It gives six core questions, follow-up probes, and guidance for studying people who continued
+as before or did nothing. This repository begins where those **source-grounded accounts**
+become analyzable evidence; it cannot reconstruct questions that were never asked.
+
 ## Quick start
 
 ### 1. Install the deterministic tools
@@ -186,6 +199,25 @@ evidence and baseline**. An external model run is optional; no causal ranking is
 
 This prioritizes making existing human research more useful for product shaping.
 The synthetic extension remains useful for generating rival hypotheses to test.
+
+## From research evidence to design judgment
+
+[Design as Functions](https://mattlane66.github.io/articles/design-as-functions/)
+explains the distinctions the handoff now preserves:
+
+- **x:** source-grounded representations of the current situation, with interview interpretations
+  identified as such
+- **Human intent:** participant-reported or inferred progress, distinct from a product team's
+  selected **y**, whose priority and decision authority must be explicitly established
+- **M:** provisional operating conditions and rival mechanisms, independent of a particular
+  candidate's claimed success
+- **Outcome evidence:** reported adoption, subsequent use, realized progress, and causal
+  attribution evaluated separately; absent follow-up stays `UNKNOWN`
+
+The [v1.1 research-to-planning contract](docs/operations/research-to-design-boundaries.md)
+exports these distinctions to Planning Skills. It keeps candidate tests outside `M`,
+leaves `f()` unspecified, and cannot accept `y`, requirements, or a selected shape.
+**Fit Check and solution selection stay in Planning Skills.**
 
 ## Evidence contract
 

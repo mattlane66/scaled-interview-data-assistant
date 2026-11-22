@@ -154,16 +154,25 @@ analyst hypotheses, expose divergent cases and evidence limitations, and remain
 \`PROVISIONAL\`. Compilation fails for invalid/misaligned IDs, unreadable sources,
 missing human reviews, duplicate mechanism IDs, or absent hypotheses.
 
-The planning handoff is always \`status=PROPOSED\` with
+The [research-to-design boundary](research-to-design-boundaries.md) distinguishes
+interview-derived current conditions `x`, participant progress claims, organizational
+outcome `y` (not selected by research), conditional operating model `M`,
+proposed research probes, and source-checked evidence of adoption/use/progress.
+
+The versioned v1.1 planning handoff is always \`status=PROPOSED\` with
 \`HUMAN_ACCEPTANCE_REQUIRED\`. It supplies:
 
-- **x candidates:** evidenced struggling conditions from A-code definitions
-- **y candidates:** hoped-for progress from B-code definitions
-- **f():** \`UNSPECIFIED\` — no solution shape is selected
-- **M candidates:** provisional conditions, rival hypotheses, disconfirming tests,
-  revisit conditions, and case-by-case evidence **with ALIGNS, COUNTEREXAMPLE,
-  AMBIGUOUS, and UNASSESSED statuses preserved**. No combined citation list
-  may be interpreted as uniformly supporting the hypothesis.
+- **x representations:** interpreted struggling conditions from A-code definitions,
+  source-located by evidence, link and episode; external truth is not independently verified
+- **Human intent:** hoped-for progress from B-code definitions, including whose interview
+  accounts and whether an A→B relation was EXPLICIT or INFERRED
+- **y:** `NOT_SELECTED` — research cannot choose whose outcomes count or authorize goals
+- **f():** `UNSPECIFIED` — no solution shape is selected
+- **M candidates:** general conditional relationships with rival hypotheses, review
+  limitations and case-by-case ALIGNS/COUNTEREXAMPLE/AMBIGUOUS/UNASSESSED evidence
+- **Research probes:** candidate intervention tests are `UNTESTED` and remain outside M
+- **Outcome evidence:** separately cited reports of adoption, use and realized progress,
+  with `UNKNOWN` for missing information and causal attribution `NOT_ESTABLISHED`
 
 Evidence IDs are namespaced \`SID:BMST001:E###\` in the handoff to avoid colliding
 with requirements and other research workspaces.
