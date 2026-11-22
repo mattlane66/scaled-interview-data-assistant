@@ -70,6 +70,8 @@ def measure(run: dict[str, Any], vectors: dict[str, Any]) -> dict[str, Any]:
     if len({e["index"] for e in supplied}) != len(responses):
         raise SimulationError("Duplicate response embedding indices")
     anchors = vectors["anchor_sets"]
+    if len({row["id"] for row in anchors}) != len(anchors):
+        raise SimulationError("Anchor-set IDs must be unique")
     epsilon, temperature = vectors["epsilon"], vectors["temperature"]
     by_index = {entry["index"]: entry for entry in supplied}
     individual = []
