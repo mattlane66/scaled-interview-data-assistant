@@ -152,7 +152,11 @@ def import_lead_user_context(
         for key in ("lu1_evidence_refs", "lu2_evidence_refs"):
             if not ep[key] or not set(ep[key]) <= evidence.keys():
                 raise SimulationError(f"Upstream {key} must resolve to source-located evidence")
+            if any(evidence[ref]["lead_user_episode_ref"] != ep["ref"] for ref in ep[key]):
+                raise SimulationError("Qualification evidence belongs to another Lead User episode")
         lead_episodes[ep["ref"]] = ep
+    if any(row["lead_user_episode_ref"] not in lead_episodes for row in evidence.values()):
+        raise SimulationError("Upstream evidence belongs to an unknown Lead User episode")
     by_id = set()
     emerging, hypothesized = [], []
     for item in source_handoff["x_candidates"]:
@@ -163,6 +167,11 @@ def import_lead_user_context(
             raise SimulationError("x candidate cites missing upstream source evidence")
         if not set(item["source_lu_refs"]) <= lead_episodes.keys():
             raise SimulationError("x candidate cites missing Lead User episode")
+        if any(
+            evidence[ref]["lead_user_episode_ref"] not in item["source_lu_refs"]
+            for ref in item["source_evidence_refs"]
+        ):
+            raise SimulationError("x evidence does not belong to the cited Lead User episodes")
         if any(
             lead_episodes[ref]["qualification_status"] != "QUALIFIED_IN_SOURCE"
             for ref in item["source_lu_refs"]
