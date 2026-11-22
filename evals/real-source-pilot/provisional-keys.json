@@ -1,0 +1,65 @@
+{
+  "kind": "SELF_AUTHORED_NOT_INDEPENDENT_HUMAN_GOLD",
+  "references": [
+    {
+      "case_id": "IPHONE-PURCHASE-2013",
+      "reference_status": "SELF_BUILT_PROVISIONAL_NOT_INDEPENDENT_GOLD",
+      "original_source": "https://jobstobedone.org/radio/iphone-jobs-to-be-done-interview/",
+      "expected_methods": [
+        "A2B"
+      ],
+      "allowed_source_refs": [
+        "IP001",
+        "IP002",
+        "IP003",
+        "IP004",
+        "IP005",
+        "IP006",
+        "IP007",
+        "IP008",
+        "IP009"
+      ],
+      "required_unknowns": [
+        "long_term_social_progress",
+        "independent_purchase_records",
+        "complete_transcript_adjudication"
+      ],
+      "human_review_authorized": false,
+      "qualified_lead_users_authorized": false,
+      "validated_prediction_authorized": false,
+      "independent_human_gold_standard": false
+    },
+    {
+      "case_id": "CAMERA-PURCHASE-2017",
+      "reference_status": "SELF_BUILT_PROVISIONAL_NOT_INDEPENDENT_GOLD",
+      "original_source": "https://jobstobedone.org/news/jobs-to-be-done-camera-interview/",
+      "expected_methods": [
+        "A2B"
+      ],
+      "allowed_source_refs": [
+        "CM001",
+        "CM002",
+        "CM003",
+        "CM004",
+        "CM005",
+        "CM006",
+        "CM007",
+        "CM008",
+        "CM009",
+        "CM010",
+        "CM011",
+        "CM012"
+      ],
+      "required_unknowns": [
+        "sister_meeting_causal_role",
+        "sustained_video_storytelling_result",
+        "independent_purchase_records",
+        "complete_transcript_adjudication"
+      ],
+      "human_review_authorized": false,
+      "qualified_lead_users_authorized": false,
+      "validated_prediction_authorized": false,
+      "independent_human_gold_standard": false
+    }
+  ]
+}

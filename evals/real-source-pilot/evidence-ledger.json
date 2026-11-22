@@ -1,0 +1,278 @@
+{
+  "status": "PROVISIONAL_ANALYST_PARAPHRASES",
+  "evidence": [
+    {
+      "id": "IP001",
+      "source_id": "SRC-IPHONE",
+      "locator": {
+        "section": "What she was switching from / The first thought",
+        "web_render_line_start": 128,
+        "web_render_line_end": 156,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "The participant had an aging Samsung slider mainly for calling and texting; it served immediate functional needs.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "IP002",
+      "source_id": "SRC-IPHONE",
+      "locator": {
+        "section": "The night out / first thought",
+        "web_render_line_start": 171,
+        "web_render_line_end": 240,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "The participant described March social teasing about the old phone as the moment change became salient.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "IP003",
+      "source_id": "SRC-IPHONE",
+      "locator": {
+        "section": "Cost anxiety",
+        "web_render_line_start": 243,
+        "web_render_line_end": 273,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "Her low-cost prepaid service competed with reluctance to accept a longer and more expensive contract; the prepaid account had also become difficult to renew.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "IP004",
+      "source_id": "SRC-IPHONE",
+      "locator": {
+        "section": "Anxiety and habit: phone store",
+        "web_render_line_start": 64,
+        "web_render_line_end": 95,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "The participant avoided in-store sales pressure partly because of a prior observed hard sell involving another buyer.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "IP005",
+      "source_id": "SRC-IPHONE",
+      "locator": {
+        "section": "The boyfriend’s iPhone and the pull of simplicity",
+        "web_render_line_start": 309,
+        "web_render_line_end": 335,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "Many acquaintances owned iPhones and could potentially help the participant learn; she also preferred a small device and familiar simplicity.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "IP006",
+      "source_id": "SRC-IPHONE",
+      "locator": {
+        "section": "Free morning on couch / drive to do it herself",
+        "web_render_line_start": 336,
+        "web_render_line_end": 377,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "A free Saturday morning enabled independent plan research; she wanted to choose without being told what to buy.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "IP007",
+      "source_id": "SRC-IPHONE",
+      "locator": {
+        "section": "Carrier comparison / the close",
+        "web_render_line_start": 440,
+        "web_render_line_end": 477,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "After comparing carriers, an existing-carrier representative offered to waive an approximately £150 upfront phone cost, making the proposal easier to accept.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "IP008",
+      "source_id": "SRC-IPHONE",
+      "locator": {
+        "section": "The callback and commitment",
+        "web_render_line_start": 479,
+        "web_render_line_end": 508,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "Despite relief at the offer, she retained doubts and requested time before accepting on the later phone call.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "IP009",
+      "source_id": "SRC-IPHONE",
+      "locator": {
+        "section": "The first thought / retrospective use",
+        "web_render_line_start": 149,
+        "web_render_line_end": 160,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "She reported later writing a blog and using smartphone social features more, while expressing uncertainty about whether that motivated the original switch.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "CM001",
+      "source_id": "SRC-CAMERA",
+      "locator": {
+        "section": "Opening purchase / prior approach",
+        "web_render_line_start": 72,
+        "web_render_line_end": 127,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "The participant reported buying a Sony A6500 online around late December, after relying chiefly on a phone for photographs.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "CM002",
+      "source_id": "SRC-CAMERA",
+      "locator": {
+        "section": "Work shoot in September",
+        "web_render_line_start": 127,
+        "web_render_line_end": 152,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "She was allowed to use a colleague's professional camera during a video shoot, discovering personal interest in taking photographs and footage.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "CM003",
+      "source_id": "SRC-CAMERA",
+      "locator": {
+        "section": "Travel light and equipment anxiety",
+        "web_render_line_start": 249,
+        "web_render_line_end": 257,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "She had avoided serious photography because of bulky gear and carry-on-only travel; using a professional camera changed her assessment of what was possible.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "CM004",
+      "source_id": "SRC-CAMERA",
+      "locator": {
+        "section": "Early browsing / waiting",
+        "web_render_line_start": 299,
+        "web_render_line_end": 321,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "She researched mirrorless models, rejected more expensive options and deliberately waited for the smaller, cheaper newer model.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "CM005",
+      "source_id": "SRC-CAMERA",
+      "locator": {
+        "section": "Intended travel filming",
+        "web_render_line_start": 341,
+        "web_render_line_end": 351,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "She wanted more capable video storytelling about people and places she traveled to, not merely better still photos.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "CM006",
+      "source_id": "SRC-CAMERA",
+      "locator": {
+        "section": "Phone and GoPro prior uses",
+        "web_render_line_start": 425,
+        "web_render_line_end": 476,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "The participant already owned a GoPro but considered its look and usage contexts poorly suited to the everyday stories she wanted to tell.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "CM007",
+      "source_id": "SRC-CAMERA",
+      "locator": {
+        "section": "Post-trip urgency and explanatory goal",
+        "web_render_line_start": 502,
+        "web_render_line_end": 523,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "After travel, she reported repeatedly describing a place and wished she could share a more compelling visual account.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "CM008",
+      "source_id": "SRC-CAMERA",
+      "locator": {
+        "section": "Post-trip advice / capacity constraint",
+        "web_render_line_start": 600,
+        "web_render_line_end": 638,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "She sought a director's advice and specified a strict backpack-space limit before ordering her kit.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "CM009",
+      "source_id": "SRC-CAMERA",
+      "locator": {
+        "section": "Planned subsequent event",
+        "web_render_line_start": 647,
+        "web_render_line_end": 673,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "An upcoming January trip gave her a prospective filming use, but it did not independently establish a later realized outcome.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "CM010",
+      "source_id": "SRC-CAMERA",
+      "locator": {
+        "section": "Seller stock and purchase",
+        "web_render_line_start": 734,
+        "web_render_line_end": 827,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "She reported multiple unsuccessful Best Buy online attempts and ultimately purchased from a different seller at the same price.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "CM011",
+      "source_id": "SRC-CAMERA",
+      "locator": {
+        "section": "Late clarification about sister",
+        "web_render_line_start": 889,
+        "web_render_line_end": 899,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "When questioned later, she expressed uncertainty that the meeting with her sister actually caused the buying decision.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "id": "CM012",
+      "source_id": "SRC-CAMERA",
+      "locator": {
+        "section": "January planned filming and reported filming",
+        "web_render_line_start": 649,
+        "web_render_line_end": 667,
+        "stability": "WEB_RENDER_LINE_NUMBERS_MAY_SHIFT; PREFER_SECTION_AND_NEARBY_SPEAKER"
+      },
+      "evidence_basis": "REPORTED_HUMAN_STATEMENT",
+      "participant_paraphrase": "She described wanting to film a specific January event and spoke as though it had been filmed, but did not establish sustained long-term job success.",
+      "source_authentication": "PUBLISHED_SOURCE_EXISTENCE_CHECKED; EVENT_NOT_INDEPENDENTLY_VERIFIED"
+    }
+  ]
+}

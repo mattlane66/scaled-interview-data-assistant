@@ -1,0 +1,127 @@
+{
+  "kind": "CURRENT_ASSISTANT_SELF_RUN_NOT_NATIVE_CLI",
+  "outputs": [
+    {
+      "case_id": "IPHONE-PURCHASE-2013",
+      "origin": "GPT6_SELF_PERFORMED_SOURCE_READ_NOT_NATIVE_CLI_OR_BLIND_EVAL",
+      "selected_methods": [
+        "A2B"
+      ],
+      "claims": [
+        {
+          "statement": "The old phone handled calls and texts but was increasingly socially uncomfortable.",
+          "kind": "REPORTED",
+          "evidence_refs": [
+            "IP001",
+            "IP002"
+          ]
+        },
+        {
+          "statement": "The participant was concerned about long contracts, additional spend and store pressure.",
+          "kind": "REPORTED",
+          "evidence_refs": [
+            "IP003",
+            "IP004"
+          ]
+        },
+        {
+          "statement": "A free morning for independent research and accessible advice from acquaintances helped make a decision possible.",
+          "kind": "INFERRED",
+          "evidence_refs": [
+            "IP005",
+            "IP006"
+          ]
+        },
+        {
+          "statement": "A waived upfront handset cost reduced anxiety, and the participant accepted after a later callback.",
+          "kind": "INFERRED",
+          "evidence_refs": [
+            "IP007",
+            "IP008"
+          ]
+        },
+        {
+          "statement": "Later social/blogging use cannot be assumed to be the original purpose of switching.",
+          "kind": "INFERRED",
+          "evidence_refs": [
+            "IP009"
+          ]
+        }
+      ],
+      "unknowns": [
+        "long_term_social_progress",
+        "independent_purchase_records",
+        "complete_transcript_adjudication"
+      ],
+      "human_review_claimed": false,
+      "qualified_lead_users_claimed": false,
+      "validated_prediction_claimed": false,
+      "next_research_move": "Obtain later use/retention evidence and review the entire transcript with an independent researcher."
+    },
+    {
+      "case_id": "CAMERA-PURCHASE-2017",
+      "origin": "GPT6_SELF_PERFORMED_SOURCE_READ_NOT_NATIVE_CLI_OR_BLIND_EVAL",
+      "selected_methods": [
+        "A2B"
+      ],
+      "claims": [
+        {
+          "statement": "The participant had relied mainly on a phone and action camera while avoiding equipment-heavy photography.",
+          "kind": "REPORTED",
+          "evidence_refs": [
+            "CM001",
+            "CM003",
+            "CM006"
+          ]
+        },
+        {
+          "statement": "A professional camera trial and post-trip desire for more compelling visual storytelling preceded the purchase.",
+          "kind": "REPORTED",
+          "evidence_refs": [
+            "CM002",
+            "CM007"
+          ]
+        },
+        {
+          "statement": "Small form factor and expert consultation featured in choosing the camera.",
+          "kind": "REPORTED",
+          "evidence_refs": [
+            "CM003",
+            "CM008"
+          ]
+        },
+        {
+          "statement": "Stock failures with the preferred retailer preceded ordering from another supplier.",
+          "kind": "REPORTED",
+          "evidence_refs": [
+            "CM010"
+          ]
+        },
+        {
+          "statement": "The participant challenged the interviewer's implied sister-meeting trigger.",
+          "kind": "REPORTED",
+          "evidence_refs": [
+            "CM011"
+          ]
+        },
+        {
+          "statement": "Realized ongoing storytelling progress cannot be inferred from the purchase and limited later filming reference.",
+          "kind": "INFERRED",
+          "evidence_refs": [
+            "CM012"
+          ]
+        }
+      ],
+      "unknowns": [
+        "sister_meeting_causal_role",
+        "sustained_video_storytelling_result",
+        "independent_purchase_records",
+        "complete_transcript_adjudication"
+      ],
+      "human_review_claimed": false,
+      "qualified_lead_users_claimed": false,
+      "validated_prediction_claimed": false,
+      "next_research_move": "Get longitudinal video production/use evidence, audit original timeline and seek other comparable travel-storyteller decisions."
+    }
+  ]
+}

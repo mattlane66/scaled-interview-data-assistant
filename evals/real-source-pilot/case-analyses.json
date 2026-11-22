@@ -1,0 +1,139 @@
+{
+  "review": "NOT_INDEPENDENT",
+  "cases": [
+    {
+      "id": "IPHONE-PURCHASE-2013",
+      "source": "SRC-IPHONE",
+      "method": "A2B",
+      "status": "PROVISIONAL_PARTIAL_SOURCE_REVIEW",
+      "a": "A low-cost old feature-phone was satisfactory for basic calls/texts but was increasingly embarrassing in social settings, and prepaid renewal became burdensome.",
+      "path_y": "Retain inexpensive pay-as-you-go Samsung; defer contract and avoid pressured phone stores.",
+      "baseline": "Low monthly spend and familiar calling/texting, but social discomfort and account frictions.",
+      "tipping": "A late-March night out called attention to the phone, followed by a free morning to research independently.",
+      "path_x": "Selected iPhone through existing carrier after comparing alternatives and negotiating away upfront handset cost.",
+      "desired_b": "Use a socially acceptable, easy-to-learn phone while retaining agency over the choice; later social/blogging use may be a consequence rather than prior motivation.",
+      "reported_result": "Purchase and some later social-feature use were reported; realized social acceptance and longer-term satisfaction not independently established.",
+      "forces": {
+        "push": {
+          "summary": "Social teasing and prepaid-account problems",
+          "evidence_refs": [
+            "IP002",
+            "IP003"
+          ]
+        },
+        "pull": {
+          "summary": "Accessible network of iPhone users and perceived ease",
+          "evidence_refs": [
+            "IP005"
+          ]
+        },
+        "anxiety": {
+          "summary": "Long contract, spending, sales pressure and fear of choosing badly",
+          "evidence_refs": [
+            "IP003",
+            "IP004",
+            "IP008"
+          ]
+        },
+        "inertia": {
+          "summary": "The old phone already did necessary calls and texts at low cost",
+          "evidence_refs": [
+            "IP001"
+          ]
+        }
+      },
+      "contradictions": [
+        "The old phone was functionally sufficient, so a purely functional-improvement story is inadequate.",
+        "The participant reported later increased smartphone use but could not establish that this caused the original switch.",
+        "Facilitators' generalizations about 'causality' are not independent evidence of her internal motives."
+      ],
+      "evidence_refs": [
+        "IP001",
+        "IP002",
+        "IP003",
+        "IP004",
+        "IP005",
+        "IP006",
+        "IP007",
+        "IP008",
+        "IP009"
+      ],
+      "unknowns": [
+        "long_term_social_progress",
+        "independent_purchase_records",
+        "complete_transcript_adjudication"
+      ]
+    },
+    {
+      "id": "CAMERA-PURCHASE-2017",
+      "source": "SRC-CAMERA",
+      "method": "A2B",
+      "status": "PROVISIONAL_PARTIAL_SOURCE_REVIEW",
+      "a": "Travel storytelling felt constrained by phone and action-camera affordances, while serious photography seemed bulky and costly.",
+      "path_y": "Use mobile phone and GoPro selectively, retell travel stories orally, and avoid a full photo kit.",
+      "baseline": "Some photos and specialized rugged footage, but limited ability to show compelling everyday travel stories.",
+      "tipping": "Professional camera practice at a work shoot, travel disappointment and a later concrete occasion to film; exact causal contribution of seeing her sister is uncertain.",
+      "path_x": "Researched and selected a compact mirrorless Sony, sought expert advice, tried a retailer repeatedly and bought from another retailer when stock failures persisted.",
+      "desired_b": "Capture compelling, shareable travel and personal stories with professional-looking video without violating travel space limits.",
+      "reported_result": "The camera purchase is reported, and a later filming activity is discussed, but sustained long-term storytelling progress is not independently established.",
+      "forces": {
+        "push": {
+          "summary": "Previously missed recording opportunities and limitations of phone/GoPro",
+          "evidence_refs": [
+            "CM001",
+            "CM006",
+            "CM007"
+          ]
+        },
+        "pull": {
+          "summary": "Hands-on camera experience and smaller mirrorless body with expert reassurance",
+          "evidence_refs": [
+            "CM002",
+            "CM003",
+            "CM008"
+          ]
+        },
+        "anxiety": {
+          "summary": "Gear volume, price and choosing the wrong model",
+          "evidence_refs": [
+            "CM003",
+            "CM004",
+            "CM008"
+          ]
+        },
+        "inertia": {
+          "summary": "Already owned phone/GoPro; learning and equipment burden delayed change",
+          "evidence_refs": [
+            "CM003",
+            "CM006"
+          ]
+        }
+      },
+      "contradictions": [
+        "The participant later doubted that seeing her sister was a decisive trigger; treating it as causal would be source overreach.",
+        "Multiple failed retailer purchases are a separate availability/fulfillment episode, not proof of product dissatisfaction.",
+        "Early post-purchase activity should not be silently counted as long-term Point B achievement."
+      ],
+      "evidence_refs": [
+        "CM001",
+        "CM002",
+        "CM003",
+        "CM004",
+        "CM005",
+        "CM006",
+        "CM007",
+        "CM008",
+        "CM009",
+        "CM010",
+        "CM011",
+        "CM012"
+      ],
+      "unknowns": [
+        "sister_meeting_causal_role",
+        "sustained_video_storytelling_result",
+        "independent_purchase_records",
+        "complete_transcript_adjudication"
+      ]
+    }
+  ]
+}

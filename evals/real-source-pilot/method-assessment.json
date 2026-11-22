@@ -1,0 +1,29 @@
+{
+  "status": "NOT_ALL_METHODS_EXECUTED",
+  "methods": [
+    {
+      "method": "A2B",
+      "status": "PROVISIONAL_APPLIED_TO_TWO_REAL_SOURCE_ACCOUNTS",
+      "support": "Source-located chronology, old path, tipping, new path, hoped-for end, post-purchase uncertainty",
+      "boundary": "Partial source review and no independent reviewer"
+    },
+    {
+      "method": "BEHAVIORAL_MECHANISM_MAP",
+      "status": "NOT_ELIGIBLE_AS_REVIEWED_SAME_JOB_MAP",
+      "support": "Two distinct purchase accounts suggest contrasting demand narratives",
+      "boundary": "Different jobs; no reviewed A/B links, comparable target cluster or independently assessed conditions"
+    },
+    {
+      "method": "BEHAVIORAL_SIMULATION",
+      "status": "NOT_EXECUTED",
+      "support": "Candidate future scenarios could be framed with explicit baseline, person/population and behavior space",
+      "boundary": "No matched human holdout; no external agent simulation run"
+    },
+    {
+      "method": "LEAD_USER_RESEARCH",
+      "status": "NOT_EXECUTED",
+      "support": "Accounts can be discovery seeds only",
+      "boundary": "No independently important trend, LU1+LU2 qualification, pyramiding or primary fieldwork"
+    }
+  ]
+}
