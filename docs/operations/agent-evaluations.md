@@ -1,6 +1,6 @@
 # Evaluating research agents on unfamiliar transcripts
 
-**Scope:** An evaluation system for whether agents *actually perform* the four methods appropriately. The existing [14 routing scenarios](../../evals/routing-cases.json) exercise software decisions only; they are **not** blind human-judged agent runs or a scientific validation of the research methodologies.
+**Scope:** An evaluation system for whether agents *actually perform* the four methods appropriately. The existing [16 routing scenarios](../../evals/routing-cases.json) exercise software decisions only; they are **not** blind human-judged agent runs or a scientific validation of the research methodologies.
 
 ## 1. Assemble a permissioned, genuinely held-out real corpus
 
