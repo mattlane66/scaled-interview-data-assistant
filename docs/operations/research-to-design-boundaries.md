@@ -120,6 +120,15 @@ Importantly, the claim “perceived recovery difficulty may inhibit switching”
 candidate operating hypothesis **M**. The claim “guaranteed pickup will increase conversion”
 is an untested **candidate f() theory**. It cannot justify itself by being put in M.
 
+## Optional upstream context extension
+
+When a consequential uncertainty about x is unresolved, consult
+[Context Evidence Extension](context-evidence-extension.md) before assuming that
+a new solution is needed. The bridge can refer a genuinely future-facing
+question to the independently maintained Lead User Research method. Returned
+evidence is kept in a separate, source-located proposed sidecar; it does not
+automatically change the present x, select y, prove M, or define f().
+
 ## When to move into Planning Skills
 
 - Research reviewers validate sources and episode interpretations.
