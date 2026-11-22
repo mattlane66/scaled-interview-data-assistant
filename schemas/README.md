@@ -17,5 +17,8 @@ and alias rules.
 CSV, XLSX, JSONL, YAML, and single-table Markdown inputs are normalized into the same logical fields
 by the Python tooling.
 
-Optional simulation has separate versioned schemas in `simulation/schemas/`.
-These artifacts cannot be inserted into the core checkpoint's human evidence registries.
+Optional simulation and cross-episode Behavioral Mechanism Map studies have separate
+versioned schemas in `simulation/schemas/`. Mechanism studies are analyst-authored,
+checkpoint-bound, and review-gated. Their proposed Planning Skills handoffs never
+change the authority of a project requirement. None of these artifacts can be
+inserted into the core checkpoint's human evidence registries.
