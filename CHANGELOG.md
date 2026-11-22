@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.3.0 — 2026-11-22
+
+- Added evidence-first counterfactual product decision briefs using reviewed human A→B
+  links, source references, proposed design changes, falsifiers and fallback designs.
+- Added optional simulation-augmented briefs with synthetic hypotheses distinctly labeled.
+- Added comparisons of alternative product interventions against a common evidence
+  baseline, with no causal estimates or automatic ranking.
+- Added `init --counterfactual`, `counterfactual`, and `compare` commands, JSON
+  schemas, human-research safeguards, tests, and an end-to-end operating guide.
+- Preserved original interview synthesis, simulation, SSR and holdout behavior.
+
 ## 1.2.1 — 2026-11-22
 
 - Audited and strengthened links between an approved scenario, generated run,
