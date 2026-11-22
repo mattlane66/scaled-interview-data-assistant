@@ -96,16 +96,15 @@ def test_checkpoint_summary_does_not_echo_transcript_content():
     assert "verbatim_excerpt" not in json.dumps(summary)
 
 
-def test_draft_never_approves_review_or_creates_population_claims():
-    result = draft_mechanism_study(_checkpoint(), {
-        "kind": "EPISODES", "episode_ids": ["D01"],
-    })
-    assert result["status"] == "UNREVIEWED_DRAFT"
-    draft = result["study"]
-    assert draft["source_checkpoint_sha256"].startswith("sha256:")
-    assert draft["review"]["evidence_reviewed"] is False
-    assert draft["review"]["outcomes_reviewed"] is False
-    assert draft["mechanisms"] == []
+def test_draft_refuses_to_invent_a_second_interview_for_single_case():
+    with pytest.raises(ValueError, match="not valid|too short|oneOf|valid"):
+        draft_mechanism_study(_checkpoint(), {
+            "kind": "EPISODES", "episode_ids": ["D01"],
+        })
+    with pytest.raises(ValueError, match="unknown|scope"):
+        draft_mechanism_study(_checkpoint(), {
+            "kind": "EPISODES", "episode_ids": ["D01", "D02"],
+        })
 
 
 def test_pipeline_runs_real_canonical_source_without_persisting_it():
