@@ -40,6 +40,17 @@ Execution guide: [simulation.md](../docs/operations/simulation.md).
    disconfirming observations, and one high-value empirical next test. When validation
    is absent, say `NOT VALIDATED`, not `90% accurate`.
 
+## Counterfactual decisions (evidence-first)
+
+Before inviting a model to generate hypotheses, offer a read-only
+`scripts/simulation_cli.py init --counterfactual` scenario and the
+`counterfactual` decision brief. Use real reviewed A→B links to describe the
+struggle and hoped-for progress. Require an explicit product change, critical
+assumption, expected behavioral difference, disconfirming observation, and
+alternative design if disproved. If two product moves compete, use `compare`
+over identical human evidence and baseline. No model generation is necessary.
+See `docs/operations/counterfactual-decisions.md` for the actual contracts.
+
 ## Hard rules
 
 - Never write a synthetic response to the interview evidence bank, source registry,
