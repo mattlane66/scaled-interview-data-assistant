@@ -1,4 +1,4 @@
-# Plugin development and publication readiness (v1.8.0; Codex and Claude)
+# Plugin development and publication readiness (v1.9.0; Codex and Claude)
 
 This project has **two distinct deliverables**:
 
@@ -32,7 +32,7 @@ python -m pytest -q
 python scripts/build_plugin.py
 ~~~
 
-This creates `dist/scaled-interview-data-assistant-1.8.0.zip`, containing exactly **one** portable plugin root with portable `plugin.json`, Claude `.claude-plugin/plugin.json`, and five identical `SKILL.md` files. The archive does **not** bundle source transcripts, checkpoints, live user data, secrets or an `mcp.json` with a nonexistent server.
+This creates `dist/scaled-interview-data-assistant-1.9.0.zip`, containing exactly **one** portable plugin root with portable `plugin.json`, Claude `.claude-plugin/plugin.json`, and six identical `SKILL.md` files. The archive does **not** bundle source transcripts, checkpoints, live user data, secrets or an `mcp.json` with a nonexistent server.
 
 For private testing, import the ZIP as a private plugin in ChatGPT/Codex through a supported creator or plugin-import surface, or load the ZIP with Claude Code's `--plugin-dir` option. Both GitHub marketplace paths use the same skill source. See [client installation](cross-client-plugins.md). Try:
 - "I have a recorded switch interview. Reconstruct the decision episode and flag missing evidence."
