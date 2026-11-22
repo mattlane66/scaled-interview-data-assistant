@@ -1,5 +1,26 @@
 # Changelog
 
+## 1.7.1 — 2026-11-22
+
+- Corrected A→B link matrix metadata: a supplied link registry is `PROVIDED_UNATTESTED`,
+  not proof of independent human review; updated the canonical mattress CSV.
+- Closed a source-verification flaw where an uploaded source named
+  `synthesis_report.md` could be replaced by the generated report.
+- Packaged the actual Python runtime, CLI scripts, source/checkpoint schemas
+  and simulation schemas in distributable wheels; verified a clean installation
+  from outside the Git checkout.
+- Restricted the MCP SDK dependency to patched `mcp>=1.30.0,<2` and added
+  exact-host DNS allowlisting for private reverse-proxy HTTP tests.
+- Added tests for schema integrity, cross-document links, identity/manifest
+  consistency, authentic stdio and authenticated HTTP MCP handshakes,
+  private source isolation and container non-root runtime.
+- Repaired Markdown rendering in three operation guides and refreshed the
+  repository layout and review-claim language.
+- Recorded audit limitations: human adjudication, SSR calibration,
+  real OAuth, per-user isolation, production load/privacy testing and
+  public directory review remain separate work.
+
+
 ## 1.7.0 — 2026-11-22
 
 - Created a portable private-test ChatGPT plugin package with four

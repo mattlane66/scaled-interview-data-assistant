@@ -205,6 +205,11 @@ def run_study_pipeline(
     for row in bundle["evidence_bank"]:
         if not isinstance(row, dict) or row.get("source") not in declared_sources:
             raise ValueError("Evidence may reference only supplied registered sources")
+    if "synthesis_report.md" in declared_sources:
+        raise ValueError(
+            "Reserved source filename synthesis_report.md could be overwritten "
+            "by a generated report; rename the transcript"
+        )
     report = bundle.get("report")
     if report is not None and (not isinstance(report, str) or len(report) > 200_000):
         raise ValueError("report must be an optional bounded Markdown string")

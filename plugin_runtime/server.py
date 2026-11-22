@@ -8,18 +8,46 @@ and is not itself a public-store-ready authentication solution.
 from __future__ import annotations
 
 import os
+import re
 import secrets
 from typing import Any
 
 from mcp.server.fastmcp import FastMCP
+from mcp.server.transport_security import TransportSecuritySettings
 from mcp.types import ToolAnnotations
 
 from plugin_runtime import operations
+
+
+def private_trusted_host(hostname: str | None) -> TransportSecuritySettings | None:
+    """Allow a single, exact, DNS hostname for a private TLS reverse proxy.
+
+    The SDK's safe localhost protection remains active when no host is configured.
+    This setting does NOT provide TLS or OAuth, and must not be treated as either.
+    """
+    if not hostname:
+        return None
+    if (
+        len(hostname) > 253
+        or not re.fullmatch(
+            r"(?=.{1,253}$)(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}"
+            r"[A-Za-z0-9])?\.)+[A-Za-z]{2,63}",
+            hostname,
+        )
+    ):
+        raise ValueError("SIDA_MCP_TRUSTED_HOST must be one exact DNS hostname")
+    return TransportSecuritySettings(
+        enable_dns_rebinding_protection=True,
+        allowed_hosts=[hostname, hostname + ":*"],
+        allowed_origins=[],
+    )
+
 
 mcp = FastMCP(
     "Scaled Interview Data Assistant",
     stateless_http=True,
     json_response=True,
+    transport_security=private_trusted_host(os.getenv("SIDA_MCP_TRUSTED_HOST")),
 )
 READ_ONLY = ToolAnnotations(
     readOnlyHint=True, destructiveHint=False, openWorldHint=False

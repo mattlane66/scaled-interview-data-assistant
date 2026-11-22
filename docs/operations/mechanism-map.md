@@ -14,17 +14,17 @@ a *proposed* operating-model input to
 
 ## What the tool does
 
-- Resolves an existing **reviewed cluster** (\`C##\`) at episode or interview grain,
+- Resolves an existing **reviewed cluster** (`C##`) at episode or interview grain,
   or an explicitly selected **set of episodes** when clustering was not used.
-- Indexes original \`D##\` episodes, \`I##\` interview owners, evidence \`E###\`,
-  source type/coverage/locator, and primary reviewed \`L###\` A→B relationships.
-- Preserves code definitions and the \`EXPLICIT/INFERRED\` status of those links.
+- Indexes original `D##` episodes, `I##` interview owners, evidence `E###`,
+  source type/coverage/locator, and primary reviewed `L###` A→B relationships.
+- Preserves code definitions and the `EXPLICIT/INFERRED` status of those links.
 - Requires an analyst to specify the condition, proposed relationship, **rival
   explanation**, counterfactual condition change, disconfirming observation,
   and smallest discriminating **human** test.
-- Requires episode-level annotations with \`ALIGNS\`, \`COUNTEREXAMPLE\`,
-  \`AMBIGUOUS\`, or \`UNASSESSED\`. Assessed cases must cite existing evidence from
-  that episode. Missing observations remain \`UNASSESSED\`, never negative cases.
+- Requires episode-level annotations with `ALIGNS`, `COUNTEREXAMPLE`,
+  `AMBIGUOUS`, or `UNASSESSED`. Assessed cases must cite existing evidence from
+  that episode. Missing observations remain `UNASSESSED`, never negative cases.
 - Describes which distinct **interviews** supplied evidence for each stance, and
   flags contradictions within the same participant. These are descriptive case
   indexes, **not prevalence percentages or causal-effect estimates**.
@@ -38,7 +38,7 @@ No model call, vector embedding, survey measurement, or SSR is required.
 ## 1. Start with a validated source checkpoint
 
 After the existing evidence, codebook/links, and cluster interpretation reviews,
-produce \`outputs/CHECKPOINT.json\` using the standard pipeline.
+produce `outputs/CHECKPOINT.json` using the standard pipeline.
 
 For an existing cluster:
 
@@ -71,14 +71,14 @@ python scripts/mechanism_map_cli.py inventory \
   --output outputs/mechanism-inventory.json
 ~~~
 
-Inspect the supporting \`E###\` citations at their original transcript locations.
+Inspect the supporting `E###` citations at their original transcript locations.
 Study the strongest cases and **seek contrasting and missing cases**, not only
 evidence favorable to the proposed explanation.
 
 ## 2. Code provisional mechanisms, not solution shapes
 
-Enter a real \`research_question\` and add one or more mechanism hypotheses to
-\`mechanisms\`. One illustrative mechanism object (not a real research finding):
+Enter a real `research_question` and add one or more mechanism hypotheses to
+`mechanisms`. One illustrative mechanism object (not a real research finding):
 
 ~~~json
 {
@@ -105,33 +105,33 @@ Enter a real \`research_question\` and add one or more mechanism hypotheses to
 **These example values are fictional placeholders.** Never use the example IDs or
 claims as findings without checking the actual source checkpoint.
 
-For each episode, an analyst may mark \`ALIGNS\`, \`COUNTEREXAMPLE\`, or
-\`AMBIGUOUS\` only with at least one source-located \`E###\` that actually belongs
-to that episode. \`link_refs\` must also belong to the same episode. Every
+For each episode, an analyst may mark `ALIGNS`, `COUNTEREXAMPLE`, or
+`AMBIGUOUS` only with at least one source-located `E###` that actually belongs
+to that episode. `link_refs` must also belong to the same episode. Every
 annotation needs an explanation; passing a referential-integrity test does not
 prove that explanation is correct.
 
-\`UNASSESSED\` must have **no** evidence or link references, and omitted episodes
-are automatically classified \`UNASSESSED\`. A participant who did not mention a
+`UNASSESSED` must have **no** evidence or link references, and omitted episodes
+are automatically classified `UNASSESSED`. A participant who did not mention a
 condition has **not** necessarily demonstrated that the condition was absent.
 
 The tool shows whether an annotation's evidence includes a
-\`concrete_event_or_behavior\`, \`current_state\`, or \`observation\` source
+`concrete_event_or_behavior`, `current_state`, or `observation` source
 type. Generalizations, aspirations, and interpretations can matter, but should
 not silently be called directly observed behavior.
 
 ## 3. Approve the research interpretation
 
 Only after actually reviewing the data and contradictory cases, fill the
-\`review\` object with the human reviewer's name, actual \`reviewed_at\` date/time,
+`review` object with the human reviewer's name, actual `reviewed_at` date/time,
 and applicable approval flags:
 
-- \`evidence_reviewed\`
-- \`a_to_b_links_reviewed\`
-- \`cluster_interpretation_reviewed\` (required for cluster scope)
-- \`contrasting_cases_reviewed\`
+- `evidence_reviewed`
+- `a_to_b_links_reviewed`
+- `cluster_interpretation_reviewed` (required for cluster scope)
+- `contrasting_cases_reviewed`
 
-Keep \`approved_checkpoint_sha256\` unchanged. If source or coding changes,
+Keep `approved_checkpoint_sha256` unchanged. If source or coding changes,
 create/review a new study against the updated checkpoint, rather than reusing an
 approval bound to old source bytes.
 
@@ -151,7 +151,7 @@ python scripts/mechanism_map_cli.py compile \
 
 The JSON map and Markdown report keep human-source relationships separate from
 analyst hypotheses, expose divergent cases and evidence limitations, and remain
-\`PROVISIONAL\`. Compilation fails for invalid/misaligned IDs, unreadable sources,
+`PROVISIONAL`. Compilation fails for invalid/misaligned IDs, unreadable sources,
 missing human reviews, duplicate mechanism IDs, or absent hypotheses.
 
 The [research-to-design boundary](research-to-design-boundaries.md) distinguishes
@@ -159,8 +159,8 @@ interview-derived current conditions `x`, participant progress claims, organizat
 outcome `y` (not selected by research), conditional operating model `M`,
 proposed research probes, and source-checked evidence of adoption/use/progress.
 
-The versioned v1.1 planning handoff is always \`status=PROPOSED\` with
-\`HUMAN_ACCEPTANCE_REQUIRED\`. It supplies:
+The versioned v1.1 planning handoff is always `status=PROPOSED` with
+`HUMAN_ACCEPTANCE_REQUIRED`. It supplies:
 
 - **x representations:** interpreted struggling conditions from A-code definitions,
   source-located by evidence, link and episode; external truth is not independently verified
@@ -174,14 +174,14 @@ The versioned v1.1 planning handoff is always \`status=PROPOSED\` with
 - **Outcome evidence:** separately cited reports of adoption, use and realized progress,
   with `UNKNOWN` for missing information and causal attribution `NOT_ESTABLISHED`
 
-Evidence IDs are namespaced \`SID:BMST001:E###\` in the handoff to avoid colliding
+Evidence IDs are namespaced `SID:BMST001:E###` in the handoff to avoid colliding
 with requirements and other research workspaces.
 
 **Planning Skills owns promotion.** After explicit human acceptance, its
-\`framing-doc\` or collaborative \`shaping\` skill may import these as Working
+`framing-doc` or collaborative `shaping` skill may import these as Working
 x/y/M inputs. The handoff cannot turn a mechanism into an accepted requirement,
 a candidate-specific success claim, an approved Fit Check, or a selected design.
-When \`M\` changes materially, re-evaluate affected Fit Checks under the new frame.
+When `M` changes materially, re-evaluate affected Fit Checks under the new frame.
 
 ## Boundaries
 
@@ -200,6 +200,6 @@ product-design alternatives. Use [Behavioral Simulation](simulation.md) only as
 an optional **synthetic** hypothesis-expansion or risk exploration step. Neither
 path may backfill simulated answers into the human evidence bank.
 
-Keep research artifacts in ignored local \`data/\` and \`outputs/\` directories,
+Keep research artifacts in ignored local `data/` and `outputs/` directories,
 or an approved access-controlled research workspace. Do not publish real
 participant descriptors, source IDs, or evidence selections without authorization.
