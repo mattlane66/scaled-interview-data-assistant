@@ -252,5 +252,7 @@ def ensure_run_matches(run: dict[str, Any], scenario: dict[str, Any], digest: st
     if (run.get("scenario_id") != scenario["scenario_id"]
             or run.get("source_checkpoint_sha256") != digest
             or run.get("scenario_sha256") != sha256_text(json.dumps(scenario, sort_keys=True))
-            or run.get("evidence_type") != "SIMULATED_ESTIMATE"):
+            or run.get("evidence_type") != "SIMULATED_ESTIMATE"
+            or run.get("mode") != scenario["mode"]
+            or run.get("grade") != scenario["target_grade"]):
         raise SimulationError("Run does not match this approved scenario and checkpoint")
