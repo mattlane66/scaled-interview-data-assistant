@@ -32,7 +32,8 @@
     "simulated_hypotheses",
     "decision_status",
     "validation_status",
-    "boundaries"
+    "boundaries",
+    "simulation_status"
   ],
   "properties": {
     "schema_version": {
@@ -46,8 +47,15 @@
       "pattern": "^SIM[0-9]{3,}$"
     },
     "run_id": {
-      "type": "string",
-      "pattern": "^R[0-9]{3,}$"
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^R[0-9]{3,}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "source_checkpoint_sha256": {
       "type": "string",
@@ -58,14 +66,25 @@
       "pattern": "^sha256:[0-9a-f]{64}$"
     },
     "run_sha256": {
-      "type": "string",
-      "pattern": "^sha256:[0-9a-f]{64}$"
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "evidence_type": {
-      "const": "ANALYST_HYPOTHESIS_AND_SIMULATED_ESTIMATE"
+      "enum": [
+        "ANALYST_HYPOTHESIS",
+        "ANALYST_HYPOTHESIS_AND_SIMULATED_ESTIMATE"
+      ]
     },
     "evidence_grade": {
       "enum": [
+        "NOT_APPLICABLE",
         "L0_ROLEPLAY",
         "L1_PERSON_GROUNDED"
       ]
@@ -284,7 +303,7 @@
     },
     "simulated_hypotheses": {
       "type": "array",
-      "minItems": 1,
+      "minItems": 0,
       "items": {
         "type": "object",
         "additionalProperties": false,
@@ -340,6 +359,12 @@
       "items": {
         "type": "string"
       }
+    },
+    "simulation_status": {
+      "enum": [
+        "NOT_RUN",
+        "RECORDED"
+      ]
     }
   }
 }
