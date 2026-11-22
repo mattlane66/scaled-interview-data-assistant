@@ -20,8 +20,10 @@ from simulation.core import (
     prepare,
     record,
     sha256_text,
+    schema_check,
 )
 from simulation.evaluation import assess, ks_similarity, tvd
+from simulation.handoff import protocol_input, protocol_runs
 from simulation.report import render
 from simulation.ssr import distribution, measure
 
@@ -266,6 +268,19 @@ def test_report_is_explicitly_synthetic(source):
     assert "not automatically authorize L3" in report
 
 
+
+def test_companion_behavioral_simulation_handoff_matches_pinned_contract(source):
+    _, _, _, scenario = source
+    run = generated(source)
+    upstream_input = protocol_input(scenario)
+    upstream_runs = protocol_runs(run, scenario)
+    schema_check(upstream_input, "behavioral-input-v0.1.0.schema.json")
+    schema_check(upstream_runs, "behavioral-runs-v0.1.0.schema.json")
+    assert upstream_input["mode"] == "PLAUSIBILITY_SPACE"
+    assert upstream_runs["entries"][0]["estimate"]["evidence_type"] == "SIMULATED_ESTIMATE"
+    assert upstream_runs["entries"][0]["evidence_ids"] == ["E001"]
+
+
 def test_cli_prepares_records_and_reports(source, tmp_path):
     checkpoint, _, _, scenario = source
     scenario_path = tmp_path / "scenario.json"
@@ -286,3 +301,10 @@ def test_cli_prepares_records_and_reports(source, tmp_path):
         "--run", str(output_path), "--output", str(report_path),
     ], check=True, capture_output=True)
     assert "NOT VALIDATED" in report_path.read_text()
+    handoff = tmp_path / "upstream"
+    subprocess.run(cli + [
+        "handoff", "--checkpoint", str(checkpoint), "--scenario", str(scenario_path),
+        "--run", str(output_path), "--output-dir", str(handoff),
+    ], check=True, capture_output=True)
+    assert (handoff / "input.json").exists()
+    assert (handoff / "runs.json").exists()
