@@ -45,7 +45,7 @@ def _registries() -> dict:
 def test_build_private_plugin_has_only_public_methods_and_no_mcp_endpoint(tmp_path):
     manifest, payloads = validated_package()
     assert manifest["name"] == "scaled-interview-data-assistant"
-    assert len(payloads) == 5
+    assert len(payloads) == 6
     assert all("SECRET" not in body.decode() for body in payloads.values())
     dest = tmp_path / "private.zip"
     result = build_archive(dest)
