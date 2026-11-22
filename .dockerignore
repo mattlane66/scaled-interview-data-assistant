@@ -1,0 +1,19 @@
+# Never place raw study data or secrets in a server image or build context
+.git/
+.github/
+data/
+outputs/
+dist/
+examples/
+tests/
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
