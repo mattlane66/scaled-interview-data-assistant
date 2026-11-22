@@ -216,6 +216,7 @@ def test_privacy_defaults_are_closed(source):
     _, data, digest, scenario = source
     packet = prepare(data, digest, scenario)
     assert all("verbatim_excerpt" not in item for item in packet["evidence"])
+    assert "review" not in packet["scenario"]
     scenario["review"]["processing_permitted"] = False
     with pytest.raises(SimulationError, match="not approved"):
         prepare(data, digest, scenario, include_verbatim=True)
