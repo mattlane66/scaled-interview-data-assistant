@@ -32,7 +32,6 @@ jobs:
           import zipfile
           from pathlib import Path
 
-          wheels = glob.glob("/tmp/placeholder")  # replaced using runner temp below
           wheels = glob.glob(str(Path(__import__("os").environ["RUNNER_TEMP"]) / "wheels" / "*.whl"))
           assert len(wheels) == 1, wheels
           with zipfile.ZipFile(wheels[0]) as archive:
@@ -48,5 +47,28 @@ jobs:
           }
           missing = sorted(required - contents)
           assert not missing, f"Wheel is missing production runtime files: {missing}"
+          PY
+          python -m pip install --no-deps --target "$RUNNER_TEMP/installed" "$RUNNER_TEMP"/wheels/*.whl
+          python - <<'PY'
+          import os
+          import sys
+          from pathlib import Path
+
+          installed = Path(os.environ["RUNNER_TEMP"]) / "installed"
+          workspace = Path(os.environ["GITHUB_WORKSPACE"])
+          os.chdir(os.environ["RUNNER_TEMP"])
+          sys.path.insert(0, str(installed))
+          import plugin_runtime.operations as operations
+          import simulation.core as core
+          import scripts.checkpoint_validation as checker
+
+          for module in (operations, core, checker):
+              assert Path(module.__file__).is_relative_to(installed), module.__file__
+          payload = (workspace / "examples/canonical-mattress/results/CHECKPOINT.json").read_text()
+          result = operations.checkpoint_summary(payload)
+          assert result["valid"] and result["evidence_rows"] == 28
+          assert (installed / "simulation/schemas/planning-handoff.schema.json").is_file()
+          assert (installed / "schemas/checkpoint.schema.json").is_file()
+          print("Standalone wheel validated from outside checkout")
           PY
 
