@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "scenario_id": "SIM001",
-  "source_checkpoint_sha256": "sha256:bd083ebce7b46b66a07f30b061da2256fc5fd078f7488742d566ecb43d7f83ad",
+  "source_checkpoint_sha256": "sha256:091ace88ddd55f95e1cb15dc16a4d443fb4b58431f576de4f230584eb42f09d3",
   "decision": "Would guaranteed home return pickup help overcome switching anxiety?",
   "decision_owner": "Educational case; no product owner has reviewed the study",
   "consequence_if_wrong": "Team could optimize the wrong switching condition",
@@ -58,8 +58,8 @@
   ],
   "review": {
     "reviewer": "",
-    "approved_at": "2026-11-22T11:51:44.748122+00:00",
-    "approved_checkpoint_sha256": "sha256:bd083ebce7b46b66a07f30b061da2256fc5fd078f7488742d566ecb43d7f83ad",
+    "approved_at": "2026-11-22T11:53:58.730301+00:00",
+    "approved_checkpoint_sha256": "sha256:091ace88ddd55f95e1cb15dc16a4d443fb4b58431f576de4f230584eb42f09d3",
     "evidence_reviewed": false,
     "codebook_links_reviewed": false,
     "clusters_reviewed": false,

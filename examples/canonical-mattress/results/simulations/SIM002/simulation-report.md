@@ -12,7 +12,7 @@ These are synthetic GPT-6-authored statements, not simulated independent populat
 
 ## Observed grounding and assumptions
 
-- Read-only checkpoint: `sha256:bd083ebce7b46b66a07f30b061da2256fc5fd078f7488742d566ecb43d7f83ad`
+- Read-only checkpoint: `sha256:091ace88ddd55f95e1cb15dc16a4d443fb4b58431f576de4f230584eb42f09d3`
 - Human episode references: D01
 - Source evidence IDs: E002, E006, E008, E014, E015, E018, E019, E020, E021, E023, E024, E025, E027
 - Coverage: FULL
@@ -51,7 +51,7 @@ These are synthetic GPT-6-authored statements, not simulated independent populat
 Predeclared question: Under the proposed conditions, how likely are you to attempt a mattress purchase?
 Construct: hypothetical_stated_purchase_intent; externally supplied embeddings: BAAI/bge-small-en-v1.5; anchors: mattress-intent-anchors-v1.
 
-Generated-response ordinal rating distribution (1–5): 0.1087, 0.2599, 0.3119, 0.1816, 0.1379
+Generated-response ordinal rating distribution (1–5): 0.1087, 0.2599, 0.3119, 0.1816, 0.1378
 
 **Not** a calibrated population adoption or switching probability.
 

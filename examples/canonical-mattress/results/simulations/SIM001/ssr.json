@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "run_id": "R001",
-  "run_sha256": "sha256:996ef704aae8f969d3fab44fe390f89257f80add81c276ca3c42d693cb0defe5",
+  "run_sha256": "sha256:b78791710ea31c252212122eef2f30e88a831fcb661f0136f47220dfaa3d1cf7",
   "evidence_type": "SIMULATED_ESTIMATE",
   "construct": "hypothetical_stated_purchase_intent",
   "embedding_model": "BAAI/bge-small-en-v1.5",
@@ -13,32 +13,32 @@
     {
       "response_index": 0,
       "rating_probabilities": [
-        0.12042406245670335,
-        0.10307601829782952,
-        0.21437342525332173,
-        0.29614357168378974,
-        0.2659829223083557
+        0.12041048810000736,
+        0.10304219950324679,
+        0.21433573687034926,
+        0.2961809349695091,
+        0.2660306405568875
       ],
-      "max_anchor_set_tvd": 0.4351627348026422
+      "max_anchor_set_tvd": 0.4350305567612297
     },
     {
       "response_index": 1,
       "rating_probabilities": [
-        0.09844681552660241,
-        0.24642951139960287,
-        0.40903213256252724,
-        0.1303431768915273,
-        0.11574836361974017
+        0.09847499683290019,
+        0.2464664038810224,
+        0.40902442348237517,
+        0.13032093501000971,
+        0.11571324079369256
       ],
-      "max_anchor_set_tvd": 0.23886516171582858
+      "max_anchor_set_tvd": 0.23889797530583634
     }
   ],
   "aggregate": [
-    0.10943543899165288,
-    0.17475276484871619,
-    0.31170277890792447,
-    0.21324337428765852,
-    0.19086564296404793
+    0.10944274246645377,
+    0.1747543016921346,
+    0.31168008017636223,
+    0.2132509349897594,
+    0.19087194067529004
   ],
   "note": "SSR measures generated textual attitudes, not actual switching probabilities; external embedding provenance is self-reported."
 }
