@@ -208,6 +208,33 @@
           "type": "boolean"
         }
       }
+    },
+    "measurement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "construct",
+        "question",
+        "scale",
+        "anchor_version"
+      ],
+      "properties": {
+        "construct": {
+          "type": "string",
+          "minLength": 1
+        },
+        "question": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scale": {
+          "const": "FIVE_POINT_LIKERT"
+        },
+        "anchor_version": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
     }
   }
 }
