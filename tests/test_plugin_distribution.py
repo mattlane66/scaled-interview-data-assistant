@@ -56,7 +56,7 @@ def test_build_private_plugin_has_only_public_methods_and_no_mcp_endpoint(tmp_pa
         assert all(x.startswith("scaled-interview-data-assistant/") for x in files)
         assert not any("mcp.json" in x for x in files)
         assert not any("full-transcript" in x for x in files)
-        assert "skills/get-started/SKILL.md" in files[1]
+        assert any(path.endswith("skills/get-started/SKILL.md") for path in files)
 
 
 def test_remote_mcp_configuration_requires_real_https_and_auth(tmp_path):
