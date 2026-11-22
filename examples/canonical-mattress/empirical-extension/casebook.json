@@ -1,0 +1,741 @@
+{
+  "schema_version": "1.0",
+  "created_on": "2026-11-22",
+  "research_mode": "REAL_PUBLIC_SOURCE_DESK_ANALYSIS",
+  "review_status": "NOT_HUMAN_REVIEWED",
+  "decision": "What matters to people struggling to replace or adapt an unsatisfactory mattress, and which unresolved mechanism merits the next real test?",
+  "grain": "8 bounded illustrative account histories (one licensed workshop participant + seven separate public authors); neither identity independence nor respondent representativeness established",
+  "methods": {
+    "core": {
+      "status": "SOURCE_LOCATED_AI_RECONSTRUCTION_UNADJUDICATED",
+      "source_case": "CD01",
+      "external_cases_support": "CONTRAST_NOT_EVIDENCE_FOR_ORIGINAL_MOTIVES"
+    },
+    "mechanism_map": {
+      "status": "SUBSTANTIVE_UNREVIEWED_CROSS_CASE_COMPARISON",
+      "reviewed_compiler_run": false,
+      "case_count": 8,
+      "population_prevalence_estimated": false
+    },
+    "simulation_ssr": {
+      "status": "SOURCE_GROUNDED_L0_HYPOTHETICALS_ONLY",
+      "human_holdout_present": false,
+      "actual_outcome_validation": false,
+      "quantitative_comparison_use": "DESCRIBE_GENERATED_TEXT_ONLY"
+    },
+    "lead_user": {
+      "status": "DESK_SCOUT_CANDIDATE_SCREENING",
+      "qualified_episodes": 0,
+      "completed_field_interviews": 0,
+      "evidence_freeze": "NOT_PERFORMED",
+      "concept_generation_gate": "NOT_PASSED"
+    }
+  },
+  "episodes": [
+    {
+      "id": "CD01",
+      "account_id": "CORE",
+      "source_id": "P01",
+      "account_grain": "PUBLISHED_SWITCH_INTERVIEW",
+      "stage_of_decision": "PURCHASE_ATTEMPT",
+      "path_y": "Existing deteriorating mattress, posture/bed adjustments, online search and delayed replacement",
+      "tipping_context": "Unplanned Costco encounter following months of research; spouse reportedly touched sample",
+      "path_x": "Bought foam mattress at Costco rather than previously considered Groupon alternative",
+      "desired_progress": "Wake restored for work and family",
+      "reported_outcome": "Purchase reported; older mattress still used/retained; achieved rest unknown",
+      "evidence_refs": [
+        "E002",
+        "E004",
+        "E005",
+        "E008",
+        "E009",
+        "E014",
+        "E015",
+        "E017",
+        "E018",
+        "E019",
+        "E023",
+        "E024",
+        "E026"
+      ],
+      "unresolved": [
+        "Actual later sleep quality",
+        "Was new mattress returned?",
+        "Which of sample/trust/convenience was decisive?"
+      ],
+      "analyst_status": "PROVISIONAL_INTERPRETATION"
+    },
+    {
+      "id": "CD02",
+      "account_id": "R01",
+      "source_id": "P05",
+      "account_grain": "PUBLIC_FIRST_PERSON_ACCOUNT",
+      "stage_of_decision": "ITERATIVE_ADAPTATION",
+      "path_y": "Prior foam mattress reportedly becoming too soft; showroom tests insufficient for overnight comfort",
+      "tipping_context": "Sleep discomfort and heat sensitivities prompted material experimentation",
+      "path_x": "Changed foam/latex layers for approximately two months, keeping dated notes and requesting samples",
+      "desired_progress": "Comfortable, cooler support for two sleepers",
+      "reported_outcome": "Reported a few nights on latest configuration; durability not established",
+      "evidence_refs": [
+        "RE01",
+        "RE02",
+        "RE03"
+      ],
+      "unresolved": [
+        "Long-term comfort",
+        "Verified number/cost of iterations",
+        "What modifications generalize?"
+      ],
+      "analyst_status": "PROVISIONAL_INTERPRETATION"
+    },
+    {
+      "id": "CD03",
+      "account_id": "R02",
+      "source_id": "P06",
+      "account_grain": "PUBLIC_FIRST_PERSON_ACCOUNT",
+      "stage_of_decision": "MODULAR_REPLACEMENT_AND_MAINTENANCE",
+      "path_y": "Commercial replacement versus experimental layer builds",
+      "tipping_context": "Pair sought supportive comfort while avoiding full replacement expense",
+      "path_x": "Reported testing multiple components together, settling on layered DIY bed and planning to replace one worn component",
+      "desired_progress": "Maintain support, comfort and controllable maintenance cost",
+      "reported_outcome": "Reports three years of comfort, base wear and anticipated component replacement; not independent objective verification",
+      "evidence_refs": [
+        "RE04",
+        "RE05",
+        "RE06"
+      ],
+      "unresolved": [
+        "Whether planned replacement actually occurred",
+        "Total economic comparison",
+        "Measured durability"
+      ],
+      "analyst_status": "PROVISIONAL_INTERPRETATION"
+    },
+    {
+      "id": "CD04",
+      "account_id": "R03",
+      "source_id": "P07",
+      "account_grain": "PUBLIC_FIRST_PERSON_ACCOUNT",
+      "stage_of_decision": "LONG_TERM_FAILED_ADAPTATION",
+      "path_y": "Multiple latex-based mattresses and repeated changes over years",
+      "tipping_context": "Recurring subjective loss of support at familiar sleeping positions",
+      "path_x": "Replaced and rearranged latex elements repeatedly",
+      "desired_progress": "Retain support without repeated costly replacement",
+      "reported_outcome": "Reports recurrent softening despite changes, not established mechanical degradation",
+      "evidence_refs": [
+        "RE07",
+        "RE08"
+      ],
+      "unresolved": [
+        "Physical material measurements",
+        "Alternative sleep causes",
+        "True effect of attempted changes"
+      ],
+      "analyst_status": "PROVISIONAL_INTERPRETATION"
+    },
+    {
+      "id": "CD05",
+      "account_id": "R04",
+      "source_id": "P08",
+      "account_grain": "PUBLIC_FIRST_PERSON_ACCOUNT",
+      "stage_of_decision": "COMPLETED_RETURN_AND_REPLACEMENT",
+      "path_y": "Online hybrid mattress trial with disliked softness",
+      "tipping_context": "Discomfort persisted after approximately six weeks",
+      "path_x": "Requested scheduled pickup/refund and bought a different adjustable air bed",
+      "desired_progress": "Comfortable sleep with workable reversal if trial failed",
+      "reported_outcome": "Reports completed return/refund and improved results with costlier replacement",
+      "evidence_refs": [
+        "RE09",
+        "RE10",
+        "RE11"
+      ],
+      "unresolved": [
+        "Whether known return terms caused initial purchase",
+        "Long-term benefit",
+        "Cross-retailer repeatability"
+      ],
+      "analyst_status": "PROVISIONAL_INTERPRETATION"
+    },
+    {
+      "id": "CD06",
+      "account_id": "R05",
+      "source_id": "P09",
+      "account_grain": "PUBLIC_FIRST_PERSON_ACCOUNT",
+      "stage_of_decision": "REPEATED_ATTEMPTS_AND_DISPOSAL",
+      "path_y": "Multiple online purchases and failed/abandoned replacement attempts",
+      "tipping_context": "Difficult return recovery after many mattress trials",
+      "path_x": "Reported refund after failed courier/donation, reused foam, planned DIY switch",
+      "desired_progress": "Sleep comfort without unwanted large-item waste",
+      "reported_outcome": "Refund and disposal workaround described; next DIY outcome unknown",
+      "evidence_refs": [
+        "RE12",
+        "RE13",
+        "RE14"
+      ],
+      "unresolved": [
+        "Distinct decisions within history",
+        "Actual verified logistics",
+        "Next DIY outcome"
+      ],
+      "analyst_status": "PROVISIONAL_INTERPRETATION"
+    },
+    {
+      "id": "CD07",
+      "account_id": "R06",
+      "source_id": "P10",
+      "account_grain": "PUBLIC_FIRST_PERSON_ACCOUNT",
+      "stage_of_decision": "EXPIRED_TRIAL_AND_RETAINED_PROBLEM",
+      "path_y": "Bought expensive mattress with specified home trial",
+      "tipping_context": "Brief perceived relief during atypical schedule, then recurrence beyond trial deadline",
+      "path_x": "Reported retaining bed after noticing 128 days had passed against 120-day limit",
+      "desired_progress": "Sustained comfort and option to correct mismatch",
+      "reported_outcome": "Continued discomfort reported and trial cutoff passed; final retailer action unknown",
+      "evidence_refs": [
+        "RE15",
+        "RE16"
+      ],
+      "unresolved": [
+        "Subsequent policy exception",
+        "Actual remedy",
+        "Confound of changed activity/sleep"
+      ],
+      "analyst_status": "PROVISIONAL_INTERPRETATION"
+    },
+    {
+      "id": "CD08",
+      "account_id": "R07",
+      "source_id": "P11",
+      "account_grain": "PUBLIC_FIRST_PERSON_ACCOUNT",
+      "stage_of_decision": "RETURN_TO_LOCAL_CUSTOM_FIT",
+      "path_y": "Online mattress and topper changes despite feeling comfortable lying down",
+      "tipping_context": "Recurrence of morning stiffness, contrasted with travel sleeping",
+      "path_x": "Completed home-trial return and purchased locally configured bed",
+      "desired_progress": "Nighttime support and restored mornings",
+      "reported_outcome": "Refund reported; outcome of new local custom bed unknown at writing",
+      "evidence_refs": [
+        "RE17",
+        "RE18",
+        "RE19"
+      ],
+      "unresolved": [
+        "Cause of stiffness",
+        "Custom bed outcome",
+        "Applicability to other sleepers"
+      ],
+      "analyst_status": "PROVISIONAL_INTERPRETATION"
+    }
+  ],
+  "mechanisms": [
+    {
+      "id": "H01",
+      "title": "Perceived ability to recover from a failed mattress purchase conditions action",
+      "claim": "When failure feels hard to reverse, buyers may delay, redirect or abandon a mattress purchase even while discomfort persists.",
+      "rival": "Retailer reputation, price, product differences, and readiness may matter more than return logistics.",
+      "case_assessments": [
+        {
+          "episode_id": "CD01",
+          "relationship": "ALIGNS",
+          "reason": "Original purchaser account only; causal effects unobserved",
+          "evidence_refs": [
+            "E002",
+            "E004",
+            "E005"
+          ]
+        },
+        {
+          "episode_id": "CD02",
+          "relationship": "AMBIGUOUS",
+          "reason": "Short experiments and personal fit create alternative explanations",
+          "evidence_refs": [
+            "RE01",
+            "RE02",
+            "RE03"
+          ]
+        },
+        {
+          "episode_id": "CD03",
+          "relationship": "AMBIGUOUS",
+          "reason": "Three-year reported use versus planned repairs; self-report",
+          "evidence_refs": [
+            "RE04",
+            "RE05",
+            "RE06"
+          ]
+        },
+        {
+          "episode_id": "CD04",
+          "relationship": "UNASSESSED",
+          "reason": "Repeated changes reportedly failed to sustain support",
+          "evidence_refs": [
+            "RE07",
+            "RE08"
+          ]
+        },
+        {
+          "episode_id": "CD05",
+          "relationship": "AMBIGUOUS",
+          "reason": "A completed return occurred; initial reason for choosing seller unknown",
+          "evidence_refs": [
+            "RE09",
+            "RE10",
+            "RE11"
+          ]
+        },
+        {
+          "episode_id": "CD06",
+          "relationship": "ALIGNS",
+          "reason": "Observed by poster as repeated attempts; disposal and logistics remain confounded",
+          "evidence_refs": [
+            "RE12",
+            "RE13",
+            "RE14"
+          ]
+        },
+        {
+          "episode_id": "CD07",
+          "relationship": "ALIGNS",
+          "reason": "Trial limit was missed; later exception unobserved",
+          "evidence_refs": [
+            "RE15",
+            "RE16"
+          ]
+        },
+        {
+          "episode_id": "CD08",
+          "relationship": "AMBIGUOUS",
+          "reason": "Return completed; tactile comfort did not imply overnight comfort",
+          "evidence_refs": [
+            "RE17",
+            "RE18",
+            "RE19"
+          ]
+        }
+      ],
+      "falsifier": "Comparable active shoppers demonstrate no difference in real purchase attempts under genuinely different, otherwise-identical pickup/refund conditions.",
+      "minimal_test": "Randomize verified pickup/refund guarantee within one retailer and mattress, separately measuring paid attempts and completed returns.",
+      "status": "PROVISIONAL_NOT_CAUSAL"
+    },
+    {
+      "id": "H02",
+      "title": "Short contact and perceived comfort are imperfect proxies for overnight fit",
+      "claim": "A brief sample or initial comfort judgment can fail to predict sustained comfort, motivating actual-use trials.",
+      "rival": "Pain may depend on stress, pillow configuration, activities or other health factors rather than the mattress.",
+      "case_assessments": [
+        {
+          "episode_id": "CD01",
+          "relationship": "UNASSESSED",
+          "reason": "Original purchaser account only; causal effects unobserved",
+          "evidence_refs": [
+            "E002",
+            "E004",
+            "E005"
+          ]
+        },
+        {
+          "episode_id": "CD02",
+          "relationship": "ALIGNS",
+          "reason": "Short experiments and personal fit create alternative explanations",
+          "evidence_refs": [
+            "RE01",
+            "RE02",
+            "RE03"
+          ]
+        },
+        {
+          "episode_id": "CD03",
+          "relationship": "AMBIGUOUS",
+          "reason": "Three-year reported use versus planned repairs; self-report",
+          "evidence_refs": [
+            "RE04",
+            "RE05",
+            "RE06"
+          ]
+        },
+        {
+          "episode_id": "CD04",
+          "relationship": "AMBIGUOUS",
+          "reason": "Repeated changes reportedly failed to sustain support",
+          "evidence_refs": [
+            "RE07",
+            "RE08"
+          ]
+        },
+        {
+          "episode_id": "CD05",
+          "relationship": "UNASSESSED",
+          "reason": "A completed return occurred; initial reason for choosing seller unknown",
+          "evidence_refs": [
+            "RE09",
+            "RE10",
+            "RE11"
+          ]
+        },
+        {
+          "episode_id": "CD06",
+          "relationship": "UNASSESSED",
+          "reason": "Observed by poster as repeated attempts; disposal and logistics remain confounded",
+          "evidence_refs": [
+            "RE12",
+            "RE13",
+            "RE14"
+          ]
+        },
+        {
+          "episode_id": "CD07",
+          "relationship": "ALIGNS",
+          "reason": "Trial limit was missed; later exception unobserved",
+          "evidence_refs": [
+            "RE15",
+            "RE16"
+          ]
+        },
+        {
+          "episode_id": "CD08",
+          "relationship": "ALIGNS",
+          "reason": "Return completed; tactile comfort did not imply overnight comfort",
+          "evidence_refs": [
+            "RE17",
+            "RE18",
+            "RE19"
+          ]
+        }
+      ],
+      "falsifier": "Prospective participants' brief evaluations reliably predict their repeated overnight comfort after adjusting for daily circumstances.",
+      "minimal_test": "Compare showroom/sample judgments with repeated overnight diaries and actual returns, recording confounding factors.",
+      "status": "PROVISIONAL_NOT_CAUSAL"
+    },
+    {
+      "id": "H03",
+      "title": "Selective component adjustment can sometimes extend usable comfort",
+      "claim": "For some users, tuning or replacing a component may sustain progress without replacing an entire mattress.",
+      "rival": "Extra experimentation, moving components, new-material novelty and high knowledge/time costs could make DIY less effective or economical.",
+      "case_assessments": [
+        {
+          "episode_id": "CD01",
+          "relationship": "UNASSESSED",
+          "reason": "Original purchaser account only; causal effects unobserved",
+          "evidence_refs": [
+            "E002",
+            "E004",
+            "E005"
+          ]
+        },
+        {
+          "episode_id": "CD02",
+          "relationship": "AMBIGUOUS",
+          "reason": "Short experiments and personal fit create alternative explanations",
+          "evidence_refs": [
+            "RE01",
+            "RE02",
+            "RE03"
+          ]
+        },
+        {
+          "episode_id": "CD03",
+          "relationship": "ALIGNS",
+          "reason": "Three-year reported use versus planned repairs; self-report",
+          "evidence_refs": [
+            "RE04",
+            "RE05",
+            "RE06"
+          ]
+        },
+        {
+          "episode_id": "CD04",
+          "relationship": "COUNTEREXAMPLE",
+          "reason": "Repeated changes reportedly failed to sustain support",
+          "evidence_refs": [
+            "RE07",
+            "RE08"
+          ]
+        },
+        {
+          "episode_id": "CD05",
+          "relationship": "AMBIGUOUS",
+          "reason": "A completed return occurred; initial reason for choosing seller unknown",
+          "evidence_refs": [
+            "RE09",
+            "RE10",
+            "RE11"
+          ]
+        },
+        {
+          "episode_id": "CD06",
+          "relationship": "AMBIGUOUS",
+          "reason": "Observed by poster as repeated attempts; disposal and logistics remain confounded",
+          "evidence_refs": [
+            "RE12",
+            "RE13",
+            "RE14"
+          ]
+        },
+        {
+          "episode_id": "CD07",
+          "relationship": "UNASSESSED",
+          "reason": "Trial limit was missed; later exception unobserved",
+          "evidence_refs": [
+            "RE15",
+            "RE16"
+          ]
+        },
+        {
+          "episode_id": "CD08",
+          "relationship": "AMBIGUOUS",
+          "reason": "Return completed; tactile comfort did not imply overnight comfort",
+          "evidence_refs": [
+            "RE17",
+            "RE18",
+            "RE19"
+          ]
+        }
+      ],
+      "falsifier": "Verified repeated trials demonstrate no improvement in retained sleep outcomes or life-cycle cost versus otherwise matched conventional replacement.",
+      "minimal_test": "Prospectively track component changes, total costs, comfort and retention among consenting DIY and conventional buyers over repeated intervals.",
+      "status": "PROVISIONAL_NOT_CAUSAL"
+    },
+    {
+      "id": "H04",
+      "title": "Purchase does not imply achieved restorative sleep",
+      "claim": "The intended progress and realized use may diverge well after a purchase, regardless of a seemingly confident decision.",
+      "rival": "An uncomfortable period may be temporary or due to external context, not persistent product failure.",
+      "case_assessments": [
+        {
+          "episode_id": "CD01",
+          "relationship": "ALIGNS",
+          "reason": "Original purchaser account only; causal effects unobserved",
+          "evidence_refs": [
+            "E002",
+            "E004",
+            "E005"
+          ]
+        },
+        {
+          "episode_id": "CD02",
+          "relationship": "AMBIGUOUS",
+          "reason": "Short experiments and personal fit create alternative explanations",
+          "evidence_refs": [
+            "RE01",
+            "RE02",
+            "RE03"
+          ]
+        },
+        {
+          "episode_id": "CD03",
+          "relationship": "COUNTEREXAMPLE",
+          "reason": "Three-year reported use versus planned repairs; self-report",
+          "evidence_refs": [
+            "RE04",
+            "RE05",
+            "RE06"
+          ]
+        },
+        {
+          "episode_id": "CD04",
+          "relationship": "ALIGNS",
+          "reason": "Repeated changes reportedly failed to sustain support",
+          "evidence_refs": [
+            "RE07",
+            "RE08"
+          ]
+        },
+        {
+          "episode_id": "CD05",
+          "relationship": "ALIGNS",
+          "reason": "A completed return occurred; initial reason for choosing seller unknown",
+          "evidence_refs": [
+            "RE09",
+            "RE10",
+            "RE11"
+          ]
+        },
+        {
+          "episode_id": "CD06",
+          "relationship": "ALIGNS",
+          "reason": "Observed by poster as repeated attempts; disposal and logistics remain confounded",
+          "evidence_refs": [
+            "RE12",
+            "RE13",
+            "RE14"
+          ]
+        },
+        {
+          "episode_id": "CD07",
+          "relationship": "ALIGNS",
+          "reason": "Trial limit was missed; later exception unobserved",
+          "evidence_refs": [
+            "RE15",
+            "RE16"
+          ]
+        },
+        {
+          "episode_id": "CD08",
+          "relationship": "ALIGNS",
+          "reason": "Return completed; tactile comfort did not imply overnight comfort",
+          "evidence_refs": [
+            "RE17",
+            "RE18",
+            "RE19"
+          ]
+        }
+      ],
+      "falsifier": "Longitudinal measures of retained use and waking function consistently converge with purchase alone, including initially dissatisfied participants.",
+      "minimal_test": "Track actual use, attempted modifications, refunds and repeated waking function after purchase rather than using checkout as success.",
+      "status": "PROVISIONAL_DESCRIPTIVE_NOT_CAUSAL"
+    }
+  ],
+  "model_challenge": {
+    "baseline_episode": "CD01",
+    "counterfactuals": [
+      {
+        "id": "SIM001",
+        "scenario": "A guaranteed no-cost mattress pickup if the trial fails",
+        "ssr_path": "../results/simulations/SIM001/ssr.json",
+        "text_origin": "TWO_AUTHORED_L0_RESPONSES",
+        "human_challenges": [
+          {
+            "episode_id": "CD05",
+            "finding": "A later buyer reports an easy real pickup/refund; that does not reveal whether the pickup guarantee caused purchase."
+          },
+          {
+            "episode_id": "CD06",
+            "finding": "Another buyer reports failed courier visits and a leftover mattress after refund, challenging universal frictionless recovery."
+          },
+          {
+            "episode_id": "CD07",
+            "finding": "Another buyer reports missing a trial cutoff, emphasizing that a stated promise is bounded by time and conditions."
+          }
+        ]
+      },
+      {
+        "id": "SIM002",
+        "scenario": "A physical sample available to a household before purchase",
+        "ssr_path": "../results/simulations/SIM002/ssr.json",
+        "text_origin": "TWO_AUTHORED_L0_RESPONSES",
+        "human_challenges": [
+          {
+            "episode_id": "CD01",
+            "finding": "Spouse reportedly touched foam before purchase, but there is no isolation of its effect from seller or timing."
+          },
+          {
+            "episode_id": "CD02",
+            "finding": "DIY builder reports sample packs would have reduced material returns, but this is a different decision and intervention."
+          },
+          {
+            "episode_id": "CD08",
+            "finding": "One buyer reports comfort on lying down despite repeated morning stiffness, limiting short-contact inference."
+          }
+        ]
+      }
+    ],
+    "validation_design": {
+      "predeclared_question": "How likely are you to buy this mattress under the exact offer?",
+      "actual_holdout_observations": 0,
+      "observed_purchase_attempts": 0,
+      "matching_exposure_conditions": false,
+      "validation_status": "NOT_VALIDATED",
+      "required_next_test": "Prespecify identical scenarios and questions, independent recruited human responses (intent), and separate observed purchasing outcomes for behavioral claims."
+    },
+    "warnings": [
+      "Author-constructed generated responses are not independent respondent samples.",
+      "The two SSR means are not intervention effects, market probabilities or rankings.",
+      "Reported countercases are qualitative plausibility challenges, not matched human validation.",
+      "The original interview has not received human evidence/coding approval."
+    ]
+  },
+  "lead_user_scout": {
+    "decision": "Is adaptive, repairable mattress comfort a meaningful emerging need beyond conventional mattress return guarantees?",
+    "trend_candidates": [
+      {
+        "id": "TR01",
+        "statement": "Increasing acceptability of mattress purchasing online",
+        "source_ids": [
+          "P03",
+          "P04",
+          "P12"
+        ],
+        "status": "REPORTED_CONTEXT_SUPPORTED",
+        "relevance": "Shows evaluation/return may shift away from store, not a proven modular repair trend.",
+        "caveats": "Different surveys, years, regions and survey questions; not causal."
+      },
+      {
+        "id": "TR02",
+        "statement": "Households may increasingly assemble and replace their own comfort layers",
+        "source_ids": [
+          "P05",
+          "P06",
+          "P07",
+          "P09"
+        ],
+        "status": "NOT_ESTABLISHED_AS_IMPORTANT_TREND",
+        "relevance": "First-person examples are discovery seeds, not population adoption or trend direction.",
+        "caveats": "Public DIY enthusiasts are highly selected; no longitudinal representative demand data."
+      }
+    ],
+    "candidates": [
+      {
+        "account_id": "R01",
+        "episode_id": "CD02",
+        "lu1": "INSUFFICIENT_TREND_EVIDENCE",
+        "lu2": "PLAUSIBLE_BURDEN_FROM_REPEATED_TRIALS",
+        "status": "UNQUALIFIED",
+        "reason": "Detailed iterations and notes show advanced activity, but no independently supported important trend or quantified expected benefit."
+      },
+      {
+        "account_id": "R02",
+        "episode_id": "CD03",
+        "lu1": "INSUFFICIENT_TREND_EVIDENCE",
+        "lu2": "PLAUSIBLE_REPLACEMENT_SAVINGS",
+        "status": "UNQUALIFIED",
+        "reason": "Three-year repairable arrangement reportedly worked, but intended base replacement is not actual verified cost savings."
+      },
+      {
+        "account_id": "R03",
+        "episode_id": "CD04",
+        "lu1": "INSUFFICIENT_TREND_EVIDENCE",
+        "lu2": "PLAUSIBLE_RECURRING_COST",
+        "status": "UNQUALIFIED",
+        "reason": "Repeated support changes signal burden; material degradation and benefit of an alternative remain unverified."
+      },
+      {
+        "account_id": "R05",
+        "episode_id": "CD06",
+        "lu1": "INSUFFICIENT_TREND_EVIDENCE",
+        "lu2": "PLAUSIBLE_REPEATED_FAILURE_BURDEN",
+        "status": "UNQUALIFIED",
+        "reason": "Many purchases and disposal workarounds alone do not establish advancement ahead of an important trend."
+      }
+    ],
+    "contradictions": [
+      "R02 reports long-term benefit from modular elements; R03 reports repeated deterioration after latex changes.",
+      "R01 reports many trials but only a few nights with a recent configuration, so durability remains unknown.",
+      "R07 chose a local custom manufacturer instead of DIY, suggesting advanced DIY practice may not transfer to ordinary shoppers."
+    ],
+    "pyramiding_status": "NOT_STARTED; source links are discovery seeds, not referrals or interviews",
+    "evidence_freeze": "NOT_PERFORMED",
+    "transfer_hypotheses": [
+      {
+        "id": "LX001",
+        "statement": "Some buyers might benefit from changing support locally after purchase rather than reversing the entire purchase.",
+        "status": "PLAUSIBLE_UNTESTED",
+        "source_evidence_ids": [
+          "RE01",
+          "RE04",
+          "RE05",
+          "RE07",
+          "RE08"
+        ],
+        "population_transfer": "UNKNOWN",
+        "limit": "No qualified LU episode and no comparative effect; this is an exploratory research question, not an imported context-return finding."
+      }
+    ],
+    "decision_status": "INVESTIGATE_WITH_SOURCE_GAPS_NOT_READY_FOR_CONCEPT_SHAPING"
+  },
+  "integrated_research_decision": {
+    "observed_original": "CD01 establishes a historical purchase attempt, not successful Point B.",
+    "contrastive_real_accounts": "The independently authored posts describe return fulfillment, expired trials, adjustable/replaced components and later discomfort; all are unverified self-reports.",
+    "working_interpretation": "A promising research axis is managing uncertainty over time: reversibility of the whole purchase versus adjustability/repairability after purchase.",
+    "rival_interpretation": "The decisive variable might instead be mattress quality/comfort, seller reputation or each sleeper's non-product circumstances.",
+    "authorized_product_choice": "NONE",
+    "next_decision": "Run separate real tests: initial purchase reversal (same seller/product), longitudinal fit/repair, and sleep-outcome follow-up; do not use SSR to select a winner."
+  }
+}
