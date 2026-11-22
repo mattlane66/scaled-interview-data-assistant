@@ -25,11 +25,12 @@ def _evidence_ids(cell: object) -> set[str]:
 
 def build_brief(
     checkpoint: dict[str, Any], digest: str,
-    scenario: dict[str, Any], run: dict[str, Any],
+    scenario: dict[str, Any], run: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    """Create a provenance-bound brief; do not mutate human registries."""
+    """Create a provenance-bound brief; simulation is optional."""
     info = inspect_scenario(checkpoint, digest, scenario)
-    ensure_run_matches(run, scenario, digest)
+    if run is not None:
+        ensure_run_matches(run, scenario, digest)
     if "design_hypothesis" not in scenario:
         raise SimulationError(
             "Declare design_hypothesis before approving the scenario and generating its run"
@@ -73,16 +74,21 @@ def build_brief(
         "source_evidence_refs": response["evidence_refs"],
         "objections": response["objections"],
         "proposed_human_test": response["next_test"],
-    } for i, response in enumerate(run["responses"], start=1)]
+    } for i, response in enumerate(run["responses"], start=1)] if run else []
     return {
         "schema_version": "1.0",
         "artifact_type": "COUNTERFACTUAL_DECISION_BRIEF",
-        "scenario_id": scenario["scenario_id"], "run_id": run["run_id"],
+        "scenario_id": scenario["scenario_id"],
+        "run_id": run["run_id"] if run else None,
         "source_checkpoint_sha256": digest,
         "scenario_sha256": sha256_text(json.dumps(scenario, sort_keys=True)),
-        "run_sha256": sha256_text(json.dumps(run, sort_keys=True)),
-        "evidence_type": "ANALYST_HYPOTHESIS_AND_SIMULATED_ESTIMATE",
-        "evidence_grade": run["grade"],
+        "run_sha256": sha256_text(json.dumps(run, sort_keys=True)) if run else None,
+        "evidence_type": (
+            "ANALYST_HYPOTHESIS_AND_SIMULATED_ESTIMATE"
+            if run else "ANALYST_HYPOTHESIS"
+        ),
+        "evidence_grade": run["grade"] if run else "NOT_APPLICABLE",
+        "simulation_status": "RECORDED" if run else "NOT_RUN",
         "decision": scenario["decision"],
         "decision_owner": scenario["decision_owner"],
         "consequence_if_wrong": scenario["consequence_if_wrong"],
@@ -173,6 +179,8 @@ def render_brief(brief: dict[str, Any]) -> str:
         "",
         "## 4. Rival explanations suggested by simulation", "",
     ]
+    if not brief["simulated_hypotheses"]:
+        lines += ["NOT RUN: no synthetic mechanism has been generated.", ""]
     for item in brief["simulated_hypotheses"]:
         lines += [
             f"### Candidate {item['candidate']} — SIMULATED, NOT OBSERVED", "",
