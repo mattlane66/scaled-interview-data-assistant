@@ -18,6 +18,7 @@ from mcp.types import ToolAnnotations
 
 from plugin_runtime import operations
 
+
 def private_trusted_host(hostname: str | None) -> TransportSecuritySettings | None:
     """Allow a single, exact, DNS hostname for a private TLS reverse proxy.
 
@@ -30,7 +31,7 @@ def private_trusted_host(hostname: str | None) -> TransportSecuritySettings | No
         len(hostname) > 253
         or not re.fullmatch(
             r"(?=.{1,253}$)(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}"
-            r"[A-Za-z0-9])?\\.)+[A-Za-z]{2,63}",
+            r"[A-Za-z0-9])?\.)+[A-Za-z]{2,63}",
             hostname,
         )
     ):
