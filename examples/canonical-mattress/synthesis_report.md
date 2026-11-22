@@ -7,7 +7,7 @@
 - Excerpt locators: `E###` references point into `source-turns.json` `T####` IDs and `full-transcript.md`.
 - Human review status: **NOT HUMAN REVIEWED**. Source extraction and coding are assistant-curated teaching artifacts.
 - Analysis unit: Decision episode. Clustering method: **not performed** (one person, no defensible cross-person clustering).
-- Computed vs heuristic: registry validation and association matrices are computed when the pipeline runs; all timeline, code, link, and mechanism interpretations are provisional.
+- Computed vs. heuristic: registry validation and association matrices are computed when the pipeline runs; all timeline, code, link, and mechanism interpretations are provisional.
 - A↔B links are within-episode interpretations. Pair co-occurrence and Jaccard are secondary and not causal.
 
 ## VERIFIED (reported or described by the interviewee)
@@ -72,7 +72,7 @@ I WANT a credible way to try a substantially different sleep setup (B02/B03/B04)
 SO I CAN wake rested and participate well in my work and family life (B01).
 E002 E008 E014 E015 E018 E020 E021
 
-This is an **INFERRED** story, not a verbatim customer statement.
+This is an **INFERRED** story grounded in E002 E008 E014 E015 E018 E020 E021, not a verbatim statement.
 
 ## Reviewed links? No — explicitly provisional links
 
@@ -81,7 +81,7 @@ This is an **INFERRED** story, not a verbatim customer statement.
 - L003: A03 ↔ B03, with E008 E009 E017 E019, interpreted connection.
 - L004: A04 ↔ B04, with E013 E021 E025, interpreted connection.
 
-The link registry uses `basis=INFERRED` to describe its nature. The human
+The link registry uses `basis=INFERRED` for its connections E002 E010 E014 E020. The human
 review gate remains **unapproved** despite valid referential links.
 
 ## SPECULATIVE — competing explanations and tests
