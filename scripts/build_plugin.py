@@ -19,6 +19,7 @@ PLUGIN_ROOT = ROOT / "plugins" / "scaled-interview-data-assistant"
 ALLOWED = {"plugin.json", ".claude-plugin/plugin.json"}
 SKILLS = {
     "skills/get-started/SKILL.md",
+    "skills/research-router/SKILL.md",
     "skills/analyze-interview/SKILL.md",
     "skills/compare-mechanisms/SKILL.md",
     "skills/research-to-planning/SKILL.md",
