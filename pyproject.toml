@@ -28,7 +28,7 @@ Repository = "https://github.com/mattlane66/scaled-interview-data-assistant"
 
 [project.optional-dependencies]
 plugin = [
-  "mcp>=1.20,<2",
+  "mcp>=1.30.0,<2",
   "uvicorn>=0.30,<1",
 ]
 
