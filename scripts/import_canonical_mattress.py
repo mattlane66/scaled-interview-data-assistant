@@ -143,6 +143,14 @@ def extract(html: str) -> tuple[list[dict], list[dict], int]:
                 i += length
                 continue
         i += 1
+    # Preserve the last copy when an exact, substantial utterance appears twice.
+    # Short replies like "No" and "Yeah" must remain distinct.
+    latest_occurrence = {}
+    for i, key in enumerate(normalized):
+        if len(key) >= 80:
+            if key in latest_occurrence:
+                duplicates.add(latest_occurrence[key])
+            latest_occurrence[key] = i
     # A few parent paragraphs duplicate a long later utterance but collapse
     # whitespace or include editorial spillover. Preserve the final version.
     for i, row in enumerate(turns):
