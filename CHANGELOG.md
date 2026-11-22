@@ -1,5 +1,23 @@
 # Changelog
 
+## 1.7.0 — 2026-11-22
+
+- Created a portable private-test ChatGPT plugin package with four
+  source-grounded research skills and a reproducible ZIP builder.
+- Added a stateless MCP adapter around the tested local analysis pipeline,
+  validated checkpoints, mechanism studies and counterfactual briefs.
+- Provided private HTTP bearer authentication (fail-closed), explicit input and
+  output size limits, safe temporary source files, no persistent study storage,
+  no arbitrary local paths, and no unreviewed approval bypass.
+- Added regression tests for the licensed mattress interview, schema/checkpoint
+  fidelity, malicious paths, source leakage and auth enforcement.
+- Documented the explicit remaining public-release gates: secure HTTPS service,
+  OAuth, per-user authorization, privacy/terms publication, operational review,
+  directory identity verification and human-submitted test cases.
+- The private packaged skills-only prototype does not falsely claim the MCP
+  server is deployed or connected.
+
+
 ## 1.6.0 — 2026-11-22
 
 - Added a versioned research-to-planning boundary separating current x,
