@@ -148,6 +148,8 @@ def compile_map(checkpoint: dict[str, Any], digest: str,
         raise SimulationError("Evidence, A-to-B, and contrasting-case review required")
     if study["scope"]["kind"] == "CLUSTER" and not review["cluster_interpretation_reviewed"]:
         raise SimulationError("Cluster interpretation review required")
+    if any("UNREADABLE" in row["source_coverage"] for row in index["episodes"]):
+        raise SimulationError("Cannot compile mechanisms from unreadable source material")
     if not study["mechanisms"]:
         raise SimulationError("Declare at least one reviewed, provisional mechanism hypothesis")
     ids = [m["mechanism_id"] for m in study["mechanisms"]]
@@ -232,6 +234,9 @@ def compile_map(checkpoint: dict[str, Any], digest: str,
             "revisit_when": mechanism["revisit_when"],
             "observations": observations,
             "distinct_interviews_by_stance": stances,
+            "within_interview_conflicts": sorted(
+                set(stances["ALIGNS"]) & set(stances["COUNTEREXAMPLE"])
+            ),
             "unassessed_episode_ids": [
                 row["episode"] for row in observations if row["stance"] == "UNASSESSED"
             ],
@@ -264,6 +269,7 @@ def compile_map(checkpoint: dict[str, Any], digest: str,
             "Counts describe this selected sample; they do not estimate prevalence.",
             "Multiple episodes from one interview are not independent people.",
             "Unassessed cases are not negative evidence.",
+            "Claims without concrete event/observation evidence are weaker than observed behavior.",
             "Reviewer flags are attestations, not independent verification.",
             "Counterfactual effects require real-world identification or validation.",
         ] + ([
