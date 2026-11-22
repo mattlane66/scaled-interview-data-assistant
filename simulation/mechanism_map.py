@@ -11,6 +11,11 @@ import re
 from typing import Any
 
 from simulation.core import SimulationError, schema_check, sha256_text
+from simulation.research_boundaries import (
+    assess_outcomes,
+    frame_candidates,
+    handoff_outcomes,
+)
 
 STRONG_SOURCE_TYPES = {"concrete_event_or_behavior", "current_state", "observation"}
 
@@ -65,8 +70,10 @@ def make_study(checkpoint: dict[str, Any], digest: str,
             "a_to_b_links_reviewed": False,
             "cluster_interpretation_reviewed": False,
             "contrasting_cases_reviewed": False,
+            "outcomes_reviewed": False,
         },
         "mechanisms": [],
+        "outcome_assessments": [],
     }
 
 
@@ -226,7 +233,6 @@ def compile_map(checkpoint: dict[str, Any], digest: str,
             "rival_explanation": mechanism["rival_explanation"],
             "counterfactual_condition_change": mechanism["counterfactual_condition_change"],
             "disconfirming_observation": mechanism["disconfirming_observation"],
-            "discriminating_human_test": mechanism["discriminating_human_test"],
             "revisit_when": mechanism["revisit_when"],
             "observations": observations,
             "distinct_interviews_by_stance": stances,
@@ -241,6 +247,7 @@ def compile_map(checkpoint: dict[str, Any], digest: str,
                 "Absence of a counterexample in coded material is not evidence of absence.",
             ],
         })
+    outcomes = assess_outcomes(index, study)
     no_cross_person = index["distinct_interviews"] < 2
     incomplete_coverage = sorted({
         status for row in index["episodes"] for status in row["source_coverage"]
@@ -263,6 +270,7 @@ def compile_map(checkpoint: dict[str, Any], digest: str,
         },
         "source_inventory": index,
         "mechanisms": outputs,
+        "outcome_evidence": outcomes,
         "cross_person_comparison_possible": not no_cross_person,
         "limitations": [
             "Research coding and clusters are provisional and not causal proof.",
@@ -359,6 +367,28 @@ def render_map(mapped: dict[str, Any]) -> str:
             f"**Revisit when:** {mechanism['revisit_when']}", "",
         ]
     lines += [
+        "## Adoption, use, progress and effect", "",
+        "| Episode | Adoption | Use | Progress | Attribution |",
+        "|---|---|---|---|---|",
+    ]
+    for outcome in mapped["outcome_evidence"]:
+        lines.append(
+            f"| {outcome['episode']} | {outcome['adoption']['status']} | "
+            f"{outcome['use']['status']} | {outcome['progress']['status']} | "
+            f"{outcome['attribution']['status']} |"
+        )
+        for stage in ("adoption", "use", "progress"):
+            assessment = outcome[stage]
+            if assessment["evidence_refs"]:
+                lines.append(
+                    f"- {outcome['episode']} {stage}: "
+                    f"{', '.join(assessment['evidence_refs'])} — "
+                    f"{_clean(assessment['interpretation'])}"
+                )
+    lines += [
+        "", "A reported purchase is not evidence of use or realized progress. "
+        "Neither a reported improvement nor a before/after account alone identifies "
+        "the effect attributable to an intervention.", "",
         "## Research and inference boundaries", "",
     ]
     lines.extend(f"- {line}" for line in mapped["limitations"])
@@ -378,6 +408,10 @@ def planning_handoff(mapped: dict[str, Any]) -> dict[str, Any]:
         link for ep in mapped["source_inventory"]["episodes"]
         for link in ep["a_to_b_links"]
     ]
+    frame = frame_candidates(mapped["source_inventory"], mapped["study_id"])
+    source_outcomes = mapped.get("outcome_evidence", [])
+    if not source_outcomes:
+        raise SimulationError("No outcome inventory in mechanism map; rebuild the map")
     conditions = []
     for mechanism in mapped["mechanisms"]:
         cited = sorted({
@@ -413,13 +447,23 @@ def planning_handoff(mapped: dict[str, Any]) -> dict[str, Any]:
             "revisit_when": mechanism["revisit_when"],
         })
     return {
-        "schema_version": "1.0",
+        "schema_version": "1.1",
         "handoff_type": "RESEARCH_TO_PLANNING_PROPOSAL",
         "status": "PROPOSED",
         "acceptance_gate": "HUMAN_ACCEPTANCE_REQUIRED",
         "source_checkpoint_sha256": mapped["source_checkpoint_sha256"],
         "source_study": mapped["study_id"],
         "source_map_sha256": sha256_text(json.dumps(mapped, sort_keys=True)),
+        "frame_boundaries": frame,
+        "outcome_evidence": handoff_outcomes(source_outcomes, mapped["study_id"]),
+        "candidate_research_probes": [{
+            "research_ref": f"SID:{mapped['study_id']}:{m['mechanism_id']}",
+            "status": "UNTESTED_RESEARCH_PROBE",
+            "counterfactual_condition_change": m["counterfactual_condition_change"],
+            "discriminating_human_test": m["discriminating_human_test"],
+            "disconfirming_observation": m["disconfirming_observation"],
+            "not_part_of_M": True,
+        } for m in mapped["mechanisms"]],
         "x_current_struggles_candidates": sorted({
             link["a_definition"] for link in links
         }),
@@ -433,11 +477,17 @@ def planning_handoff(mapped: dict[str, Any]) -> dict[str, Any]:
         },
         "uncertainties": [
             "Researcher annotations and A-to-B links require planning-level review.",
+            "B-code definitions are interpretations of participants' stated or inferred progress; "
+            "they do not establish a product team's accepted outcome y.",
+            "The operating model M cannot assume a specific proposed solution will succeed.",
+            "A reported purchase does not establish usage or successful progress.",
             "No behavior model is an established causal law.",
         ] + mapped["limitations"],
         "next_move_after_acceptance": (
-            "Use framing-doc to establish x/y if unclear; otherwise use collaborative "
-            "shaping to consider these as Working x, y and M inputs. "
+            "Review participants' intent separately from design goals. An authorized "
+            "human must select y and handle competing priorities. Use framing-doc "
+            "to establish x/y; let shaping determine R and candidate f(). "
+            "Operating-model hypotheses M and research probes are distinct. "
             "No auto-selection or build authorization."
         ),
     }
