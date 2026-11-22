@@ -446,7 +446,7 @@ def planning_handoff(mapped: dict[str, Any]) -> dict[str, Any]:
             "discriminating_human_test": mechanism["discriminating_human_test"],
             "revisit_when": mechanism["revisit_when"],
         })
-    return {
+    handoff = {
         "schema_version": "1.1",
         "handoff_type": "RESEARCH_TO_PLANNING_PROPOSAL",
         "status": "PROPOSED",
@@ -491,3 +491,6 @@ def planning_handoff(mapped: dict[str, Any]) -> dict[str, Any]:
             "No auto-selection or build authorization."
         ),
     }
+
+    schema_check(handoff, "planning-handoff.schema.json")
+    return handoff
