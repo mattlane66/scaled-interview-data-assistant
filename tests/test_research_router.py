@@ -67,9 +67,28 @@ def test_checkpoint_overrides_inflated_counts_not_review():
     assert result["source_summary"]["decision_episodes"] == 1
     assert result["source_summary"]["evidence_rows"] == 28
     assert result["source_summary"]["distinct_people_agent_declared"] == 999
+    assert result["source_summary"]["effective_distinct_people_upper_bound"] == 1
     assert result["source_summary"]["review_verified"] is False
     assert result["routes"][0]["readiness"] == "NEED_CONTRASTING_EPISODES"
     assert result["source_summary"]["checkpoint_sha256"].startswith("sha256:")
+
+
+def test_reviewed_same_person_mechanisms_require_explicit_scope():
+    request = _request()
+    request["goals"][0]["type"] = "CONDITIONAL_MECHANISM"
+    request["evidence"].update({
+        "decision_episodes": 2,
+        "distinct_people": 1,
+        "human_review_completed": True,
+        "reviewed_links_present": True,
+    })
+    assert route_research(request)["routes"][0]["readiness"] == (
+        "NEED_DISTINCT_PERSON_COVERAGE"
+    )
+    request["goals"][0]["comparison_scope"] = "WITHIN_PERSON"
+    result = route_research(request)
+    assert result["routes"][0]["readiness"] == "ELIGIBLE_FOR_WITHIN_PERSON_MAP"
+    assert result["source_summary"]["effective_distinct_people_upper_bound"] == 1
 
 
 def test_malicious_or_unexpected_router_fields_fail_without_leaking():
