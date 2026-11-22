@@ -1,0 +1,37 @@
+{
+  "case_id": "CANON-MATTRESS-D01-PUBLIC",
+  "origin": "AUTHORED_DEMONSTRATION_NOT_INDEPENDENT_AGENT_RUN",
+  "selected_methods": [
+    "A2B"
+  ],
+  "claims": [
+    {
+      "statement": "The customer reported persistent waking discomfort from the prior mattress.",
+      "kind": "REPORTED",
+      "evidence_refs": [
+        "E002"
+      ]
+    },
+    {
+      "statement": "The customer considered but did not complete a Groupon purchase, partly over return risk.",
+      "kind": "REPORTED",
+      "evidence_refs": [
+        "E014"
+      ]
+    },
+    {
+      "statement": "The customer's desired progress was feeling rested enough for work and family.",
+      "kind": "REPORTED",
+      "evidence_refs": [
+        "E015"
+      ]
+    }
+  ],
+  "unknowns": [
+    "post_purchase_sleep"
+  ],
+  "human_review_claimed": false,
+  "qualified_lead_users_claimed": false,
+  "validated_prediction_claimed": false,
+  "next_research_move": "Follow up on actual mattress use and post-purchase waking comfort."
+}
