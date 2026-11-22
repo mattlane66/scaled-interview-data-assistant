@@ -72,6 +72,19 @@ Required fields: `link`, `episode`, `a_code`, `b_code`, `basis`, `evidence`, and
 `basis` is `EXPLICIT` or `INFERRED`. Supporting evidence must belong to the same episode. One row
 represents one reviewed episode/A/B relationship; computed co-presence does not create this record.
 
+## Optional outcome evidence and Planning Skills handoff
+
+The optional mechanism-map study accepts human-reviewed episode-level
+`outcome_assessments` with separate reported adoption, use and progress states.
+Missing evidence stays `UNKNOWN`. The analysis cannot establish a
+causal effect of an intervention from an interview alone.
+
+The [research-to-design v1.1 handoff](research-to-design-boundaries.md)
+keeps the situation `x`, participants' hopes, unselected organizational
+`y`, general operating hypotheses `M` and candidate research tests separate.
+The schema `simulation/schemas/planning-handoff.schema.json` enforces
+the authority and evidence boundaries, not the truth of an interpretation.
+
 ## Cluster assignments
 
 Required fields: `episode` and `cluster` when decision episode is the analysis unit. Cluster IDs are
