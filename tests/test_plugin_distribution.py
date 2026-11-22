@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import sys
 import zipfile
 from pathlib import Path
 
@@ -193,3 +194,41 @@ def test_http_mode_auth_guard_rejects_missing_or_wrong_token():
     assert asyncio.run(run_request(b"Bearer wrong"))[0]["status"] == 401
     assert asyncio.run(run_request(b"Bearer " + b"x" * 40))[0]["status"] == 200
     assert len(received) == 1
+
+
+def test_real_stdio_mcp_client_initializes_and_calls_read_only_tool():
+    pytest.importorskip("mcp")
+    from mcp import ClientSession, StdioServerParameters
+    from mcp.client.stdio import stdio_client
+
+    async def probe():
+        params = StdioServerParameters(
+            command=sys.executable,
+            args=["-m", "plugin_runtime.server"],
+            env={"PYTHONPATH": str(ROOT)},
+        )
+        async with stdio_client(params) as (read, write):
+            async with ClientSession(read, write) as session:
+                await session.initialize()
+                tools = await session.list_tools()
+                names = {tool.name for tool in tools.tools}
+                assert {
+                    "get_research_capabilities", "check_checkpoint",
+                    "check_study", "draft_mechanism_map",
+                    "preview_mechanism_evidence",
+                    "compile_reviewed_mechanism_map",
+                    "make_counterfactual_brief",
+                } <= names
+                for tool in tools.tools:
+                    assert tool.annotations is not None
+                    assert tool.annotations.readOnlyHint is True
+                    assert tool.annotations.openWorldHint is False
+                    assert tool.annotations.destructiveHint is False
+                result = await session.call_tool("get_research_capabilities")
+                assert not result.isError
+                assert any(
+                    "DETERMINISTIC_RESEARCH_TOOLS" in item.text
+                    for item in result.content if item.type == "text"
+                )
+
+    asyncio.run(asyncio.wait_for(probe(), timeout=20))
