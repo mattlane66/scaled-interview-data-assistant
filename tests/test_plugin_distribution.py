@@ -45,7 +45,7 @@ def _registries() -> dict:
 def test_build_private_plugin_has_only_public_methods_and_no_mcp_endpoint(tmp_path):
     manifest, payloads = validated_package()
     assert manifest["name"] == "scaled-interview-data-assistant"
-    assert len(payloads) == 6
+    assert len(payloads) == 7
     assert all("SECRET" not in body.decode() for body in payloads.values())
     dest = tmp_path / "private.zip"
     result = build_archive(dest)
@@ -53,11 +53,12 @@ def test_build_private_plugin_has_only_public_methods_and_no_mcp_endpoint(tmp_pa
     assert result["public_submission_ready"] is False
     with zipfile.ZipFile(dest) as z:
         files = z.namelist()
-        assert len(files) == 6
+        assert len(files) == 7
         assert all(x.startswith("scaled-interview-data-assistant/") for x in files)
         assert not any("mcp.json" in x for x in files)
         assert not any("full-transcript" in x for x in files)
         assert any(path.endswith("skills/get-started/SKILL.md") for path in files)
+        assert any(path.endswith("/.claude-plugin/plugin.json") for path in files)
 
 
 def test_remote_mcp_configuration_requires_real_https_and_auth(tmp_path):
@@ -298,3 +299,39 @@ def test_private_http_trusted_host_requires_exact_dns_name_and_keeps_rebinding_g
     ):
         with pytest.raises(ValueError, match="exact DNS hostname"):
             private_trusted_host(invalid)
+
+
+def test_codex_and_claude_marketplaces_share_one_plugin_source():
+    """Both hosts advertise the same five skill files, with no hidden MCP dependency."""
+    manifest, payloads = validated_package()
+    claude = json.loads(payloads[".claude-plugin/plugin.json"])
+    assert claude["name"] == manifest["name"]
+    assert claude["version"] == manifest["version"]
+    assert "extensions" not in claude
+    expected_skills = {
+        f"skills/{name}/SKILL.md" for name in (
+            "get-started", "analyze-interview", "compare-mechanisms",
+            "research-to-planning", "extend-context",
+        )
+    }
+    assert {p for p in payloads if p.endswith("/SKILL.md")} == expected_skills
+    assert "mcp.json" not in payloads and ".mcp.json" not in payloads
+
+    codex = json.loads(
+        (ROOT / ".agents/plugins/marketplace.json").read_text(encoding="utf-8")
+    )
+    claude_market = json.loads(
+        (ROOT / ".claude-plugin/marketplace.json").read_text(encoding="utf-8")
+    )
+    assert codex["name"] == claude_market["name"] == "scaled-interview-research"
+    assert len(codex["plugins"]) == len(claude_market["plugins"]) == 1
+    c = codex["plugins"][0]
+    a = claude_market["plugins"][0]
+    assert c["name"] == a["name"] == manifest["name"]
+    assert c["source"]["source"] == "local"
+    assert c["source"]["path"] == a["source"]
+    assert c["source"]["path"] == "./plugins/scaled-interview-data-assistant"
+    assert (ROOT / c["source"]["path"]).resolve() == (
+        ROOT / "plugins/scaled-interview-data-assistant"
+    ).resolve()
+    assert c["policy"]["installation"] == "AVAILABLE"

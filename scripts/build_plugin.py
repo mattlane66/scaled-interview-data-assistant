@@ -16,7 +16,7 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 PLUGIN_ROOT = ROOT / "plugins" / "scaled-interview-data-assistant"
-ALLOWED = {"plugin.json"}
+ALLOWED = {"plugin.json", ".claude-plugin/plugin.json"}
 SKILLS = {
     "skills/get-started/SKILL.md",
     "skills/analyze-interview/SKILL.md",
@@ -54,6 +54,14 @@ def validated_package() -> tuple[dict, dict[str, bytes]]:
         raise ValueError("Expected current portable Agent Plugins schema")
     if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", manifest["version"]):
         raise ValueError("Manifest version must be semver")
+    claude_manifest = json.loads(
+        (PLUGIN_ROOT / ".claude-plugin/plugin.json").read_text(encoding="utf-8")
+    )
+    for key in ("name", "version", "description", "author", "repository"):
+        if claude_manifest.get(key) != manifest.get(key):
+            raise ValueError(f"Claude manifest mismatch: {key}")
+    if claude_manifest.get("displayName") != "Interview Data Assistant":
+        raise ValueError("Claude display name mismatch")
     paths = manifest["extensions"]["com.openai"]
     onboarding = paths["onboardingSkill"]
     if onboarding != "./skills/get-started/SKILL.md":

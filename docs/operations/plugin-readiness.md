@@ -1,15 +1,18 @@
-# Plugin development and publication readiness (v1.8.0)
+# Plugin development and publication readiness (v1.8.0; Codex and Claude)
 
 This project has **two distinct deliverables**:
 
-1. A portable ChatGPT/Codex **skills-only plugin** suitable for a private preview without claiming execution of Python analysis tools.
+1. A portable ChatGPT/Codex/Claude Code **skills-only plugin** suitable for a private preview without claiming execution of Python analysis tools.
 2. An optional **stateless MCP service** wrapping the existing Python validators, checkpoint validation, mechanism map and reviewed counterfactual brief. It can run on localhost (stdio) or in a fail-closed **single-tenant private test** HTTP mode. It is **not** yet a production OAuth multi-user app.
 
 Do not publish a public MCP plugin or claim a successful ChatGPT MCP connection until the real service is deployed, domain/auth are verified, and end-to-end tool calls have been observed.
 
 ## Source of truth
 
-- Plugin root: `plugins/scaled-interview-data-assistant/plugin.json`
+- Portable plugin root: `plugins/scaled-interview-data-assistant/plugin.json`
+- Claude Code manifest: `plugins/scaled-interview-data-assistant/.claude-plugin/plugin.json`
+- GitHub marketplace entries: `.agents/plugins/marketplace.json` (Codex) and `.claude-plugin/marketplace.json` (Claude Code)
+- Install instructions: `docs/operations/cross-client-plugins.md`
 - Five skills: `skills/get-started`, `analyze-interview`, `compare-mechanisms`, `research-to-planning`, `extend-context`
 - Optional runtime: `plugin_runtime/operations.py` and `server.py`
 - Package builder: `scripts/build_plugin.py`
@@ -29,9 +32,9 @@ python -m pytest -q
 python scripts/build_plugin.py
 ~~~
 
-This creates `dist/scaled-interview-data-assistant-1.8.0.zip`, containing exactly **one** portable plugin root with `plugin.json` and five `SKILL.md` files. The archive does **not** bundle source transcripts, checkpoints, live user data, secrets or an `mcp.json` with a nonexistent server.
+This creates `dist/scaled-interview-data-assistant-1.8.0.zip`, containing exactly **one** portable plugin root with portable `plugin.json`, Claude `.claude-plugin/plugin.json`, and five identical `SKILL.md` files. The archive does **not** bundle source transcripts, checkpoints, live user data, secrets or an `mcp.json` with a nonexistent server.
 
-For private testing, import the ZIP as a private plugin in ChatGPT/Codex through a supported creator or plugin-import surface. Try:
+For private testing, import the ZIP as a private plugin in ChatGPT/Codex through a supported creator or plugin-import surface, or load the ZIP with Claude Code's `--plugin-dir` option. Both GitHub marketplace paths use the same skill source. See [client installation](cross-client-plugins.md). Try:
 - "I have a recorded switch interview. Reconstruct the decision episode and flag missing evidence."
 - "Review my source-located evidence bank and stop before unapproved A→B coding."
 - "Using two reviewed interviews, explain rival mechanisms and contrasting cases."
