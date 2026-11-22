@@ -27,7 +27,7 @@ def cosine(a: object, b: object) -> float:
     va, vb = _vector(a), _vector(b)
     if len(va) != len(vb):
         raise SimulationError("Mismatched embedding dimensions")
-    numerator = math.fsum(x * y for x, y in zip(va, vb))
+    numerator = math.fsum(x * y for x, y in zip(va, vb, strict=True))
     den = math.sqrt(math.fsum(x * x for x in va) * math.fsum(y * y for y in vb))
     if den <= 0 or not math.isfinite(den):
         raise SimulationError("Invalid embedding norm")
@@ -87,7 +87,7 @@ def measure(run: dict[str, Any], vectors: dict[str, Any]) -> dict[str, Any]:
             per_set.append(pmf)
         mean = _mean(per_set)
         sensitivity = max(
-            0.5 * math.fsum(abs(x - y) for x, y in zip(row, mean))
+            0.5 * math.fsum(abs(x - y) for x, y in zip(row, mean, strict=True))
             for row in per_set
         )
         individual.append({"response_index": index, "rating_probabilities": mean,
