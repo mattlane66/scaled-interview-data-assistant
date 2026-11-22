@@ -22,6 +22,7 @@ SKILLS = {
     "skills/analyze-interview/SKILL.md",
     "skills/compare-mechanisms/SKILL.md",
     "skills/research-to-planning/SKILL.md",
+    "skills/extend-context/SKILL.md",
 }
 PLUGIN_FILES = ALLOWED | SKILLS
 MCP_SCHEMA = "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json"

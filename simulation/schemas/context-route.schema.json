@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Optional context evidence triage request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "domain",
+    "decision",
+    "target_population",
+    "uncertainty",
+    "material_to_decision",
+    "episode_refs",
+    "evidence_refs",
+    "coverage",
+    "observability",
+    "future_facing"
+  ],
+  "properties": {
+    "domain": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1800
+    },
+    "decision": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1800
+    },
+    "target_population": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1800
+    },
+    "uncertainty": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1800
+    },
+    "material_to_decision": {
+      "type": "boolean"
+    },
+    "episode_refs": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^D[0-9]{2,}$"
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^E[0-9]{3,}$"
+      }
+    },
+    "coverage": {
+      "enum": [
+        "MISSING",
+        "PARTIAL",
+        "CONTRADICTORY"
+      ]
+    },
+    "observability": {
+      "enum": [
+        "TRACE_OBSERVABLE",
+        "PARTIALLY_OBSERVABLE",
+        "NOT_OBSERVABLE",
+        "UNKNOWN"
+      ]
+    },
+    "future_facing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "trend_candidate",
+        "advanced_user_signal",
+        "high_expected_benefit_signal"
+      ],
+      "properties": {
+        "trend_candidate": {
+          "type": "string",
+          "maxLength": 1800
+        },
+        "advanced_user_signal": {
+          "type": "string",
+          "maxLength": 1800
+        },
+        "high_expected_benefit_signal": {
+          "type": "string",
+          "maxLength": 1800
+        }
+      }
+    }
+  }
+}

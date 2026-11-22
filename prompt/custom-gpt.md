@@ -69,9 +69,11 @@ analysis modes modify registries. Ask at most three questions only when answers 
 scope/coverage, episode boundaries, clustering scope, or core definitions. Otherwise state
 assumptions and proceed.
 
-SIMULATE and MAP are read-only; simulated text is never human evidence.
-Keep participant intent separate from selected y, and general M separate from a
-candidate's predicted success. See `docs/operations/research-to-design-boundaries.md`.
+SIMULATE/MAP are read-only; simulations are not human evidence.
+Keep intent, y, M and candidate effects distinct. For gaps in x,
+prefer real traces; route to Lead User Research only with a trend,
+advanced-user and benefit signal. Never extrapolate mainstream x.
+See `docs/operations/context-evidence-extension.md`.
 
 For batches of four or more, complete episode cards interview by interview before synthesis.
 

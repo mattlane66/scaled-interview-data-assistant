@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.8.0 — 2026-11-22
+
+- Added an optional, conservative route for consequential current-situation x gaps:
+  defer, inspect observability, collect existing traces, target ordinary
+  research, or invoke separately owned Lead User Research when a future-facing
+  trend, advanced-user and high-benefit signal all warrant investigation.
+- Added a source/checkpoint-bound return handoff with explicit LU1/LU2
+  evidence references, episode ownership, namespaced upstream source locations,
+  transferability judgments and separate emerging x versus hypothesized transfer.
+- Preserved current interview evidence and x unchanged. Importing a Lead User
+  study never establishes mainstream behavior, prevalence, accepted y, or f().
+- Exposed two stateless read-only MCP functions and an optional fifth plugin
+  skill, `extend-context`, without duplicating Lead User Research itself.
+- Added provenance/negative-case tests, schemas, user guide and a new private
+  plugin release package. The external Lead User method remains authoritative.
+
+
 ## 1.7.1 — 2026-11-22
 
 - Corrected A→B link matrix metadata: a supplied link registry is `PROVIDED_UNATTESTED`,

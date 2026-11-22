@@ -45,7 +45,7 @@ def _registries() -> dict:
 def test_build_private_plugin_has_only_public_methods_and_no_mcp_endpoint(tmp_path):
     manifest, payloads = validated_package()
     assert manifest["name"] == "scaled-interview-data-assistant"
-    assert len(payloads) == 5
+    assert len(payloads) == 6
     assert all("SECRET" not in body.decode() for body in payloads.values())
     dest = tmp_path / "private.zip"
     result = build_archive(dest)
@@ -53,7 +53,7 @@ def test_build_private_plugin_has_only_public_methods_and_no_mcp_endpoint(tmp_pa
     assert result["public_submission_ready"] is False
     with zipfile.ZipFile(dest) as z:
         files = z.namelist()
-        assert len(files) == 5
+        assert len(files) == 6
         assert all(x.startswith("scaled-interview-data-assistant/") for x in files)
         assert not any("mcp.json" in x for x in files)
         assert not any("full-transcript" in x for x in files)
@@ -218,6 +218,8 @@ def test_real_stdio_mcp_client_initializes_and_calls_read_only_tool():
                     "preview_mechanism_evidence",
                     "compile_reviewed_mechanism_map",
                     "make_counterfactual_brief",
+                    "triage_context_uncertainty",
+                    "import_lead_user_context_evidence",
                 } <= names
                 for tool in tools.tools:
                     assert tool.annotations is not None

@@ -67,6 +67,7 @@ def get_research_capabilities() -> dict[str, Any]:
             "source episode inventory",
             "human-attested mechanism compilation and PROPOSED planning handoff",
             "review-gated, non-simulated counterfactual decision brief",
+            "optional source-bound Lead User research route and return provenance checks",
         ],
         "not_supported": [
             "audio transcription", "automatic human interview review",
@@ -147,6 +148,39 @@ def make_counterfactual_brief(
     """
     return operations.reviewed_counterfactual_brief(
         checkpoint_json, reviewed_scenario
+    )
+
+
+@mcp.tool(annotations=READ_ONLY)
+def triage_context_uncertainty(
+    context_question: dict[str, Any],
+    checkpoint_json: str = "",
+) -> dict[str, Any]:
+    """Decide whether to investigate traces, current behavior, or Lead Users.
+
+    The route is a PROPOSAL, never an executed Lead User study. Evidence and
+    selected D/E IDs must match the supplied checkpoint, or remain empty when
+    no checkpoint exists. Trend and high-benefit signals are *candidates*.
+    """
+    return operations.propose_context_research_route(
+        context_question, checkpoint_json=checkpoint_json
+    )
+
+
+@mcp.tool(annotations=READ_ONLY)
+def import_lead_user_context_evidence(
+    context_route: dict[str, Any],
+    lead_user_handoff: dict[str, Any],
+    checkpoint_json: str = "",
+) -> dict[str, Any]:
+    """Validate an optional upstream x extension without accepting it as fact.
+
+    Uses source-located E/LU refs, LU1 and LU2 support, provenance, transferability
+    and the original route hash. It never fetches websites, runs Lead User
+    Research, edits interview evidence, or accepts y or a product shape.
+    """
+    return operations.validate_lead_user_research_return(
+        context_route, lead_user_handoff, checkpoint_json=checkpoint_json
     )
 
 

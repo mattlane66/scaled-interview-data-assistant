@@ -1,4 +1,4 @@
-# Plugin development and publication readiness (v1.7.1)
+# Plugin development and publication readiness (v1.8.0)
 
 This project has **two distinct deliverables**:
 
@@ -10,7 +10,7 @@ Do not publish a public MCP plugin or claim a successful ChatGPT MCP connection 
 ## Source of truth
 
 - Plugin root: `plugins/scaled-interview-data-assistant/plugin.json`
-- Four skills: `skills/get-started`, `analyze-interview`, `compare-mechanisms`, `research-to-planning`
+- Five skills: `skills/get-started`, `analyze-interview`, `compare-mechanisms`, `research-to-planning`, `extend-context`
 - Optional runtime: `plugin_runtime/operations.py` and `server.py`
 - Package builder: `scripts/build_plugin.py`
 - Canonical real-world test: `examples/canonical-mattress/` (includes the licensed full published transcript, not independent outcome validation)
@@ -29,7 +29,7 @@ python -m pytest -q
 python scripts/build_plugin.py
 ~~~
 
-This creates `dist/scaled-interview-data-assistant-1.7.1.zip`, containing exactly **one** portable plugin root with `plugin.json` and four `SKILL.md` files. The archive does **not** bundle source transcripts, checkpoints, live user data, secrets or an `mcp.json` with a nonexistent server.
+This creates `dist/scaled-interview-data-assistant-1.8.0.zip`, containing exactly **one** portable plugin root with `plugin.json` and five `SKILL.md` files. The archive does **not** bundle source transcripts, checkpoints, live user data, secrets or an `mcp.json` with a nonexistent server.
 
 For private testing, import the ZIP as a private plugin in ChatGPT/Codex through a supported creator or plugin-import surface. Try:
 - "I have a recorded switch interview. Reconstruct the decision episode and flag missing evidence."
@@ -57,6 +57,8 @@ Default `SIDA_MCP_MODE=stdio` is a local standard-input MCP server for developme
 | `preview_mechanism_evidence` | Inspect episode coverage and original E/L IDs |
 | `compile_reviewed_mechanism_map` | Compile a genuinely human-reviewed study and PROPOSED planning handoff |
 | `make_counterfactual_brief` | Require source- and review-matched scenario; no synthetic run needed |
+| `triage_context_uncertainty` | Propose trace/current/Lead User research route for a source-bound consequential x gap |
+| `import_lead_user_context_evidence` | Validate upstream source/LU1/LU2 lineage and keep the x extension PROPOSED |
 
 Never feed the server a model-generated "reviewer" name or invented approved flags. Source and review states must come from the research process. A reviewer *attestation* is validated structurally, not independently verified.
 

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "scaled-interview-data-assistant",
-  "version": "1.7.1",
+  "version": "1.8.0",
   "description": "Reconstruct real customer switching decisions from interviews with source-located evidence, reviewed A-to-B relationships, rival behavioral explanations, and provisional product-decision handoffs. Separate reported behavior from hypotheses and simulations.",
   "author": {
     "name": "Matt Lane",
@@ -30,7 +30,8 @@
           "Evidence coding",
           "Interview synthesis",
           "Research review",
-          "Mechanism mapping"
+          "Mechanism mapping",
+          "Optional Lead User context routing"
         ],
         "websiteURL": "https://mattlane66.github.io",
         "supportURL": "https://github.com/mattlane66/scaled-interview-data-assistant/issues",
