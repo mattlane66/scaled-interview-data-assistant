@@ -12,6 +12,10 @@ It helps an analyst move from raw research to decision-episode cards, shared A/B
 cross-episode associations, exploratory job clusters, fit criteria, and an auditable synthesis report.
 It is not an autonomous research replacement or a hosted application.
 
+## Transcript-first question routing
+
+The [research execution contract](docs/operations/research-execution.md) and [research-router skill](plugins/scaled-interview-data-assistant/skills/research-router/SKILL.md) select the smallest applicable evidence method for a user's transcript. The optional MCP route_research_request tool returns advisory eligibility and missing-evidence gates, **not completed research**. Real client-run evaluations are distinguished from deterministic checks in the [agent evaluations guide](docs/operations/agent-evaluations.md).
+
 ## Use it when
 
 Use the workflow for interviews about a real struggle, workaround, adoption, rejection, purchase,
@@ -89,9 +93,9 @@ duplicate the Lead User method or automatically run its research.
 ## Codex, Claude Code, and ChatGPT plugin — private preview
 
 This repository now includes a [portable plugin package](plugins/scaled-interview-data-assistant/plugin.json)
-with five skills and a [stateless MCP adapter](plugin_runtime/server.py) over the existing
+with six skills and a [stateless MCP adapter](plugin_runtime/server.py) over the existing
 deterministic research tools. The skills-only archive can be privately imported without
-pretending an undeployed MCP server is available. The same five skills now have a Claude Code
+pretending an undeployed MCP server is available. The same six skills now have a Claude Code
 manifest and repository marketplace entries for both Claude and Codex; there is no fork of the
 research method.
 
