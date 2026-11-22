@@ -73,7 +73,6 @@ def measure(run: dict[str, Any], vectors: dict[str, Any]) -> dict[str, Any]:
     epsilon, temperature = vectors["epsilon"], vectors["temperature"]
     by_index = {entry["index"]: entry for entry in supplied}
     individual = []
-    set_rows: list[list[float]] = []
     for index, response in enumerate(responses):
         entry = by_index.get(index)
         if entry is None or entry["text_sha256"] != sha256_text(response["text"]):
@@ -86,7 +85,6 @@ def measure(run: dict[str, Any], vectors: dict[str, Any]) -> dict[str, Any]:
             pmf = distribution(entry["vector"], [a["vector"] for a in ordered],
                                epsilon=epsilon, temperature=temperature)
             per_set.append(pmf)
-            set_rows.append(pmf)
         mean = _mean(per_set)
         sensitivity = max(
             0.5 * math.fsum(abs(x - y) for x, y in zip(row, mean))
