@@ -10,7 +10,7 @@ Do not publish a public MCP plugin or claim a successful ChatGPT MCP connection 
 ## Source of truth
 
 - Plugin root: `plugins/scaled-interview-data-assistant/plugin.json`
-- Four skills: `skills/get-started`, `analyze-interview`, `compare-mechanisms`, `research-to-planning`
+- Five skills: `skills/get-started`, `analyze-interview`, `compare-mechanisms`, `research-to-planning`, `extend-context`
 - Optional runtime: `plugin_runtime/operations.py` and `server.py`
 - Package builder: `scripts/build_plugin.py`
 - Canonical real-world test: `examples/canonical-mattress/` (includes the licensed full published transcript, not independent outcome validation)
