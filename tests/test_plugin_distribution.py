@@ -239,6 +239,7 @@ def test_private_http_mcp_transport_initializes_with_auth_and_rejects_anonymous(
     """Exercise the actual Streamable HTTP app, not only a dummy ASGI handler."""
     pytest.importorskip("mcp")
     from httpx import ASGITransport, AsyncClient
+
     from plugin_runtime.server import BearerGuard, mcp
 
     async def check():
