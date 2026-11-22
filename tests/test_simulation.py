@@ -58,6 +58,12 @@ def source(tmp_path: Path):
         "observed_result": "UNKNOWN", "evidence_refs": ["E001"],
     })
     scenario["decision"] = "Which mechanism should be tested?"
+    scenario["measurement"] = {
+        "construct": "stated_switching_intent",
+        "question": "How likely would you switch if migration were assisted?",
+        "scale": "FIVE_POINT_LIKERT",
+        "anchor_version": "fixture-1",
+    }
     scenario["decision_owner"] = "Example analyst"
     scenario["consequence_if_wrong"] = "We could prioritize the wrong migration experiment."
     scenario["intervention"] = {
@@ -228,6 +234,10 @@ def test_ssr_validates_vectors_and_rating_mass(source):
     assert output["evidence_type"] == "SIMULATED_ESTIMATE"
     assert math.isclose(sum(output["aggregate"]), 1.0, abs_tol=1e-12)
     assert output["anchor_set_count"] == 2
+    no_question = copy.deepcopy(run)
+    no_question["measurement"] = None
+    with pytest.raises(SimulationError, match="predeclared"):
+        measure(no_question, vectors_for(no_question))
     broken = vectors_for(run)
     broken["response_embeddings"][0]["text_sha256"] = "sha256:" + "0" * 64
     with pytest.raises(SimulationError, match="does not match"):
