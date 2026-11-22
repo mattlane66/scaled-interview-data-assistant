@@ -72,3 +72,21 @@ jobs:
           print("Standalone wheel validated from outside checkout")
           PY
 
+
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build private MCP container
+        run: docker build --tag sida-mcp-audit .
+      - name: Import runtime inside non-root production image
+        run: |
+          docker run --rm --entrypoint python sida-mcp-audit -c '
+          import os
+          from plugin_runtime.server import BearerGuard, mcp
+          from plugin_runtime.operations import run_study_pipeline
+          assert os.getuid() != 0
+          assert mcp.name == "Scaled Interview Data Assistant"
+          assert callable(run_study_pipeline)
+          print("Container runtime imported with non-root identity")
+          '
