@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.2.0 — 2026-11-22
+
+- Added optional, read-only, checkpoint-bound behavioral simulation after reviewed JTBD synthesis.
+- Added strict scenario and model-response schemas, approval checks, evidence provenance, and CLI.
+- Added optional vector-based SSR measurement and guarded person-grouped holdout comparisons.
+- Separated simulated reports, evidence grades, and prospective human validation from observations.
+- Preserved original checkpoint and deterministic interview analysis without a model API dependency.
+
+
 ## 1.1.0 — 2026-07-15
 
 - Added source-coverage and reviewed A↔B link registries with stable `SRC##` and `L###` IDs.

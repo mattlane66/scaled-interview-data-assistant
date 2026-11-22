@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mattlane66/behavioral-simulation-for-agents-and-humans/behavioral-simulation/schemas/input.schema.json",
+  "title": "Behavioral Simulation Input",
+  "type": "object",
+  "required": ["schema_version","decision","population","baseline","scenario","outcome_space","mode","target_grade","time_context","consequence_if_wrong","input_provenance"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "decision": {"type": "string","minLength": 1},
+    "population": {"type": "string","minLength": 1},
+    "baseline": {"type": "string"},
+    "scenario": {"type": "string","minLength": 1},
+    "outcome_space": {"type": "string","minLength": 1},
+    "mode": {"enum": ["PLAUSIBILITY_SPACE","INDIVIDUAL_PROXY","POPULATION_PREDICTION","MULTI_AGENT_DYNAMICS"]},
+    "target_grade": {"enum": ["L0_ROLEPLAY","L1_PERSON_GROUNDED","L2_POPULATION_GROUNDED","L3_HELD_OUT_VALIDATED","L4_DECISION_CALIBRATED"]},
+    "time_context": {"type": "string"},
+    "consequence_if_wrong": {"type": "string"},
+    "input_provenance": {"type": "object","additionalProperties": {"enum": ["USER_SUPPLIED","EXPLICITLY_PROVISIONAL"]}}
+  },
+  "additionalProperties": false
+}

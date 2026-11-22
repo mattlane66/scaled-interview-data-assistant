@@ -80,3 +80,12 @@ remain explicitly `UNKNOWN`/`unknown`.
 
 See [data contracts](data-contracts.md). JSON and CSV are recommended. A Markdown input may contain
 only one table; multi-table report templates are not machine-readable inputs.
+
+## Optional simulation after the reviewed checkpoint
+
+`python scripts/simulation_cli.py --help` provides `init`, `prepare`, `record`,
+`ssr`, `evaluate`, and `report` subcommands. All outputs are written separately;
+none edits interview registries or invokes an LLM.
+
+See [evidence-grounded simulation](simulation.md) before exposing confidential
+human interview excerpts or interpreting synthetic response distributions.

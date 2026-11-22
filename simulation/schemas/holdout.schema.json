@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Human holdout for optional ordinal SSR validation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "validation_id",
+    "run_id",
+    "construct",
+    "split_unit",
+    "holdout_group_ids",
+    "observed_ratings",
+    "baseline_distribution",
+    "source",
+    "predeclared_at",
+    "collection_and_use_permitted",
+    "held_out_attested"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "validation_id": {
+      "type": "string",
+      "pattern": "^V[0-9]{3,}$"
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^R[0-9]{3,}$"
+    },
+    "construct": {
+      "type": "string",
+      "minLength": 1
+    },
+    "split_unit": {
+      "const": "PERSON"
+    },
+    "holdout_group_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "observed_ratings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5
+      }
+    },
+    "baseline_distribution": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "number",
+        "minimum": 0
+      }
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "predeclared_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "collection_and_use_permitted": {
+      "type": "boolean"
+    },
+    "held_out_attested": {
+      "type": "boolean"
+    }
+  }
+}

@@ -129,6 +129,29 @@ computes secondary association diagnostics, chooses an exploratory Jaccard group
 exports a validated checkpoint, and audits report references and method declarations. Use
 `--clusters none`, `--clusters auto` (default), or an explicit positive integer.
 
+## Optional: simulate changes to a reviewed decision episode
+
+After ordinary interview analysis and its human review gates, an independent downstream
+[behavioral simulation workflow](docs/operations/simulation.md) can explore how an explicit
+intervention might change behavior. It consumes a **read-only, SHA-bound checkpoint** and
+human-approved evidence references; it cannot add simulated statements to the evidence bank,
+A/B links, or job clusters.
+
+The default mode is `PLAUSIBILITY_SPACE` for hypotheses and edge cases. One-person
+`INDIVIDUAL_PROXY` work requires separately reviewed person-specific grounding.
+Generated output is always `SIMULATED_ESTIMATE`, never an observed interview or evidence
+of population demand.
+
+The provider-neutral `scripts/simulation_cli.py` prepares a privacy-gated context packet,
+records external model responses, and renders a separate decision-facing report. Optional
+semantic similarity rating (SSR) maps generated answers to **predeclared ordinal questions**
+onto rating distributions using externally supplied embeddings; optional independent human holdouts can be compared using TVD and KS
+similarity. Neither operation automatically upgrades evidentiary confidence or proves
+actual purchasing, switching, or a causal effect.
+
+See the [full end-to-end guide](docs/operations/simulation.md) for commands, schemas,
+human review, and limits. The existing deterministic interview pipeline is unchanged.
+
 ## Evidence contract
 
 - `VERIFIED` claims cite supporting `E###` IDs on the claim.
