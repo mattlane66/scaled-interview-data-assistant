@@ -160,8 +160,10 @@ The planning handoff is always \`status=PROPOSED\` with
 - **x candidates:** evidenced struggling conditions from A-code definitions
 - **y candidates:** hoped-for progress from B-code definitions
 - **f():** \`UNSPECIFIED\` — no solution shape is selected
-- **M candidates:** provisional conditions, rival hypotheses, cited evidence,
-  falsifiers, and revisit conditions
+- **M candidates:** provisional conditions, rival hypotheses, disconfirming tests,
+  revisit conditions, and case-by-case evidence **with ALIGNS, COUNTEREXAMPLE,
+  AMBIGUOUS, and UNASSESSED statuses preserved**. No combined citation list
+  may be interpreted as uniformly supporting the hypothesis.
 
 Evidence IDs are namespaced \`SID:BMST001:E###\` in the handoff to avoid colliding
 with requirements and other research workspaces.
