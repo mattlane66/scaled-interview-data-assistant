@@ -62,7 +62,8 @@
         "required": [
           "ref",
           "source_locator",
-          "evidence_kind"
+          "evidence_kind",
+          "lead_user_episode_ref"
         ],
         "properties": {
           "ref": {
@@ -81,6 +82,10 @@
               "INFERRED",
               "UNKNOWN"
             ]
+          },
+          "lead_user_episode_ref": {
+            "type": "string",
+            "pattern": "^LU[0-9]+$"
           }
         }
       }
