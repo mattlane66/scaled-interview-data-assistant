@@ -147,9 +147,32 @@ def test_compiled_map_records_variation_and_planning_handoff(source):
     ]
     assert cases[0]["a_to_b_link_refs"] == ["SID:BMST001:L002"]
     assert cases[0]["source_type_indicates_reported_behavior"] is False
-    assert handoff["M_operating_model"]["conditions_and_hypotheses"][0][
-        "discriminating_human_test"
-    ].startswith("Observe decisions")
+    assert handoff["candidate_research_probes"][0]["discriminating_human_test"].startswith(
+        "Observe decisions"
+    )
+    assert handoff["candidate_research_probes"][0]["not_part_of_M"] is True
+    assert "discriminating_human_test" not in json.dumps(handoff["M_operating_model"])
+    assert handoff["schema_version"] == "1.1"
+    assert handoff["frame_boundaries"]["y_selected_outcome"]["status"] == "NOT_SELECTED"
+    assert handoff["frame_boundaries"]["y_selected_outcome"]["decision_owner"] is None
+    assert handoff["frame_boundaries"]["human_intent"]["whose_account"] == (
+        "INTERVIEWED_PEOPLE"
+    )
+    assert handoff["frame_boundaries"]["human_intent"]["interview_refs"] == [
+        "SID:BMST001:I02", "SID:BMST001:I03"
+    ]
+    assert handoff["frame_boundaries"]["x_current_situation"]["representations"]
+    assert all(
+        entry["authority"] == "PROPOSED_RESEARCH_INTERPRETATION"
+        for entry in handoff["frame_boundaries"]["human_intent"]["progress_candidates"]
+    )
+    assert all(item["adoption"]["status"] == "UNKNOWN" for item in handoff["outcome_evidence"])
+    assert all(item["progress"]["status"] == "UNKNOWN" for item in handoff["outcome_evidence"])
+    assert all(
+        item["attribution"]["status"] == "NOT_ESTABLISHED"
+        for item in handoff["outcome_evidence"]
+    )
+    schema_check(handoff, "planning-handoff.schema.json")
     assert "selected_shape" not in json.dumps(handoff)
     assert "accepted_requirement" not in json.dumps(handoff)
 
@@ -312,3 +335,126 @@ def test_partial_coverage_and_zero_link_episodes_are_not_hidden(source):
     assert "Episodes without a reviewed A→B link" in report
     assert "D03 (I03)" in report
     assert "PARTIAL" in report
+
+
+def _stage(status="UNKNOWN", refs=None, interpretation="NOT ASSESSED"):
+    return {
+        "status": status,
+        "evidence_refs": [] if refs is None else refs,
+        "interpretation": interpretation,
+    }
+
+
+def test_reported_prior_use_does_not_imply_adoption_progress_or_attribution(source):
+    _, data, digest = source
+    study = reviewed_study(source)
+    study["scope"] = {"kind": "CLUSTER", "cluster_id": "C01"}
+    study["mechanisms"][0]["observations"] = [{
+        "episode": "D01",
+        "stance": "AMBIGUOUS",
+        "evidence_refs": ["E001"], "link_refs": ["L001"],
+        "interpretation": "Reported manual workaround, not evidence of outcome success.",
+    }]
+    study["review"]["outcomes_reviewed"] = True
+    study["outcome_assessments"] = [{
+        "episode": "D01",
+        "adoption": _stage(),
+        "use": _stage(
+            "REPORTED_USE", ["E001"],
+            "The interviewee reports using manual documents in the prior path.",
+        ),
+        "progress": _stage(),
+    }]
+    compiled = compile_map(data, digest, study)
+    observed = compiled["outcome_evidence"][0]
+    assert observed["adoption"]["status"] == "UNKNOWN"
+    assert observed["use"]["status"] == "REPORTED_USE"
+    assert observed["use"]["evidence_refs"] == ["E001"]
+    assert observed["progress"]["status"] == "UNKNOWN"
+    assert observed["attribution"]["status"] == "NOT_ESTABLISHED"
+    report = render_map(compiled)
+    assert "Adoption, use, progress and effect" in report
+    assert "REPORTED_USE" in report
+    handoff = planning_handoff(compiled)
+    case = handoff["outcome_evidence"][0]
+    assert case["use"]["source_evidence_refs"] == ["SID:BMST001:E001"]
+    assert case["progress"]["source_evidence_refs"] == []
+    assert case["attribution"]["status"] == "NOT_ESTABLISHED"
+    schema_check(handoff, "planning-handoff.schema.json")
+
+
+def test_outcome_assessments_reject_bad_refs_and_unsupported_positive_claims(source):
+    _, data, digest = source
+    study = reviewed_study(source)
+    study["scope"] = {"kind": "CLUSTER", "cluster_id": "C01"}
+    study["mechanisms"][0]["observations"] = [{
+        "episode": "D01", "stance": "ALIGNS", "evidence_refs": ["E001"],
+        "link_refs": ["L001"], "interpretation": "Prior workaround reported.",
+    }]
+    study["outcome_assessments"] = [{
+        "episode": "D01",
+        "adoption": _stage(),
+        "use": _stage("REPORTED_USE", ["E001"], "Reported prior workaround use."),
+        "progress": _stage(),
+    }]
+    with pytest.raises(SimulationError, match="Outcome evidence must be reviewed"):
+        compile_map(data, digest, study)
+    study["review"]["outcomes_reviewed"] = True
+
+    bad = copy.deepcopy(study)
+    bad["outcome_assessments"][0]["use"]["evidence_refs"] = ["E003"]
+    with pytest.raises(SimulationError, match="outside episode"):
+        compile_map(data, digest, bad)
+
+    bad = copy.deepcopy(study)
+    bad["outcome_assessments"][0]["progress"] = _stage(
+        "REPORTED_IMPROVEMENT", ["E002"], "Only an aspiration is recorded."
+    )
+    with pytest.raises(SimulationError, match="requires event, state, or observation"):
+        compile_map(data, digest, bad)
+
+    bad = copy.deepcopy(study)
+    bad["outcome_assessments"][0]["adoption"] = _stage(
+        "UNKNOWN", ["E001"], "Result is unknown."
+    )
+    with pytest.raises(SimulationError, match="UNKNOWN must not cite"):
+        compile_map(data, digest, bad)
+
+    bad = copy.deepcopy(study)
+    bad["outcome_assessments"][0]["use"] = _stage(
+        "REPORTED_USE", [], "Unsupported positive claim."
+    )
+    with pytest.raises(SimulationError, match="requires evidence"):
+        compile_map(data, digest, bad)
+
+    bad = copy.deepcopy(study)
+    bad["outcome_assessments"].append(copy.deepcopy(bad["outcome_assessments"][0]))
+    with pytest.raises(SimulationError, match="Duplicate outcome assessment"):
+        compile_map(data, digest, bad)
+
+    bad = copy.deepcopy(study)
+    bad["outcome_assessments"][0]["episode"] = "D02"
+    with pytest.raises(SimulationError, match="out-of-scope"):
+        compile_map(data, digest, bad)
+
+
+def test_handoff_schema_forbids_accepted_y_and_candidate_effects_inside_M(source):
+    _, data, digest = source
+    mapped = compile_map(data, digest, reviewed_study(source))
+    handoff = planning_handoff(mapped)
+    changed = copy.deepcopy(handoff)
+    changed["frame_boundaries"]["y_selected_outcome"]["status"] = "ACCEPTED"
+    with pytest.raises(SimulationError, match="NOT_SELECTED"):
+        schema_check(changed, "planning-handoff.schema.json")
+
+    changed = copy.deepcopy(handoff)
+    changed["M_operating_model"]["conditions_and_hypotheses"][0][
+        "predicted_purchase_lift"
+    ] = "Guaranteed conversion"
+    with pytest.raises(SimulationError, match="Additional properties"):
+        schema_check(changed, "planning-handoff.schema.json")
+
+    changed = copy.deepcopy(handoff)
+    changed["outcome_evidence"][0]["attribution"]["status"] = "PROVEN_CAUSAL"
+    with pytest.raises(SimulationError, match="NOT_ESTABLISHED"):
+        schema_check(changed, "planning-handoff.schema.json")
