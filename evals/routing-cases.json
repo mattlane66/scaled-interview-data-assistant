@@ -513,7 +513,6 @@
           "advanced_user_signal": false,
           "high_expected_benefit_signal": false
         },
-        "material": false,
         "goals": [
           {
             "type": "EMERGING_NEED",
