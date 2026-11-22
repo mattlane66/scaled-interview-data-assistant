@@ -163,10 +163,6 @@ def compile_map(checkpoint: dict[str, Any], digest: str,
         eid: row["evidence_types"][eid] for row in index["episodes"]
         for eid in row["evidence_refs"]
     }
-    links = {
-        row["link"]: row for episode in index["episodes"]
-        for row in episode["a_to_b_links"]
-    }
     outputs = []
     for mechanism in study["mechanisms"]:
         assigned = set()
