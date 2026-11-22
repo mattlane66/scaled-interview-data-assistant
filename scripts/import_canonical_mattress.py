@@ -115,6 +115,61 @@ def extract(html: str) -> tuple[list[dict], list[dict]]:
                               "section": current_heading})
                 previous_role = None
 
+    # The published page contains nested/duplicated dialogue fragments in
+    # some HTML blocks. Collapse *repeated multi-turn sequences*, keeping
+    # the later, correctly positioned segment. Do not dedupe individual
+    # "yes"/"no" utterances: the customer may genuinely repeat them.
+    normalized = [
+        row["speaker"] + " " + re.sub(r"\\s+", " ", row["text"]).strip()
+        for row in turns
+    ]
+    duplicates: set[int] = set()
+    i = 0
+    while i < len(turns):
+        if len(normalized[i]) >= 40:
+            length = 0
+            for j in range(i + 1, len(turns)):
+                if normalized[i] != normalized[j]:
+                    continue
+                count = 0
+                while (
+                    i + count < j and j + count < len(turns)
+                    and normalized[i + count] == normalized[j + count]
+                ):
+                    count += 1
+                length = max(length, count)
+            if length >= 4:
+                duplicates.update(range(i, i + length))
+                i += length
+                continue
+        i += 1
+    # A few parent paragraphs duplicate a long later utterance but collapse
+    # whitespace or include editorial spillover. Preserve the final version.
+    for i, row in enumerate(turns):
+        if i in duplicates or len(row["text"]) < 800:
+            continue
+        opening = normalized[i][:120]
+        for j in range(i + 1, len(turns)):
+            if row["speaker"] == turns[j]["speaker"] and normalized[j].startswith(opening):
+                duplicates.add(i)
+                break
+
+    removed_ids = {turns[i]["turn_id"] for i in duplicates}
+    clean = [turn for i, turn in enumerate(turns) if i not in duplicates]
+    id_map = {
+        row["turn_id"]: f"T{i:04d}" for i, row in enumerate(clean, start=1)
+    }
+    for row in clean:
+        row["turn_id"] = id_map[row["turn_id"]]
+    clean_mixed = [
+        row for row in mixed
+        if row.get("kind") != "DIALOGUE" or row["turn_id"] not in removed_ids
+    ]
+    for row in clean_mixed:
+        if row.get("kind") == "DIALOGUE":
+            row["turn_id"] = id_map[row["turn_id"]]
+    turns, mixed = clean, clean_mixed
+
     if len(turns) < 75:
         raise ValueError(f"Too few speaker turns ({len(turns)}): extraction may be partial")
     participant_text = " ".join(t["text"] for t in turns if t["role"] == "PARTICIPANT")
@@ -181,6 +236,7 @@ def main() -> None:
             "source_html_sha256": digest,
             "fetched_at": datetime.now(timezone.utc).isoformat(),
             "speaker_turns": len(turns),
+            "duplicate_html_speaker_turns_removed": len(removed_ids),
             "participant_turns": sum(x["role"] == "PARTICIPANT" for x in turns),
             "facilitator_turns": sum(x["role"] == "FACILITATOR" for x in turns),
             "audience_turns": sum(x["role"] == "AUDIENCE" for x in turns),
@@ -189,6 +245,8 @@ def main() -> None:
             "limitations": [
                 "The website is an edited published transcript with editorial material.",
                 "The audio has not been independently re-transcribed.",
+            "Repeated runs of website dialogue caused by HTML nesting were collapsed "
+            "using repeat-sequence matching; compare source for edge cases.",
                 "Do not treat game-off explanations, audience commentary, or site editorial "
                 "as first-person customer evidence.",
             ],
