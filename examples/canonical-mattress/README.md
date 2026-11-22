@@ -8,7 +8,7 @@
 
 ## Empirical multi-method extension — desk SCOUT, not approved research
 
-A new [source-traceable empirical extension](empirical-extension/README.md) rechecks the
+A new **[four-method real-evidence worked case](empirical-extension/findings.md)** with a [source-traceable evidence ledger](empirical-extension/source-ledger.json) and [machine-readable casebook](empirical-extension/casebook.json) rechecks the
 **core A→B analysis** and opens the mechanism-map, simulation validation and Lead User
 workstreams using **real published human accounts**. It is a bounded public-source
 desk SCOUT with no recruited participants, no independent human approval, no
