@@ -58,6 +58,8 @@ def source(tmp_path: Path):
         "observed_result": "UNKNOWN", "evidence_refs": ["E001"],
     })
     scenario["decision"] = "Which mechanism should be tested?"
+    scenario["decision_owner"] = "Example analyst"
+    scenario["consequence_if_wrong"] = "We could prioritize the wrong migration experiment."
     scenario["intervention"] = {
         "variable": "switching_effort", "from": "manual", "to": "assisted"
     }
