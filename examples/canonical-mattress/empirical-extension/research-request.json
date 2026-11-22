@@ -1,0 +1,43 @@
+{
+  "research_question": "What does this household's mattress-switch episode tell us, and what research is needed to study other contexts?",
+  "decision": "Choose the next source-grounded research study before choosing a product intervention.",
+  "goals": [
+    {
+      "type": "CURRENT_DECISION",
+      "question": "What did the original participant report doing, seeking and experiencing?"
+    },
+    {
+      "type": "CONDITIONAL_MECHANISM",
+      "question": "Which conditions explain differing switching paths across actual households?",
+      "comparison_scope": "CROSS_PERSON"
+    },
+    {
+      "type": "COUNTERFACTUAL_RESPONSE",
+      "question": "What if a credible no-cost return pickup were available?"
+    },
+    {
+      "type": "EMERGING_NEED",
+      "question": "Are there important future-facing mattress needs visible among advanced users?"
+    }
+  ],
+  "evidence": {
+    "transcript_coverage": "FULL",
+    "decision_episodes": 1,
+    "distinct_people": 1,
+    "source_locators_available": true,
+    "human_review_completed": false,
+    "reviewed_links_present": false,
+    "human_holdout_available": false
+  },
+  "counterfactual": {
+    "baseline_defined": true,
+    "intervention_defined": true,
+    "population_defined": true
+  },
+  "future_facing": {
+    "trend_candidate": false,
+    "advanced_user_signal": false,
+    "high_expected_benefit_signal": false
+  },
+  "available_skills": []
+}
