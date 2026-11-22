@@ -86,9 +86,32 @@ def test_reviewed_same_person_mechanisms_require_explicit_scope():
         "NEED_DISTINCT_PERSON_COVERAGE"
     )
     request["goals"][0]["comparison_scope"] = "WITHIN_PERSON"
+    request["goals"][0]["job_comparability"] = "SAME_JOB"
     result = route_research(request)
     assert result["routes"][0]["readiness"] == "ELIGIBLE_FOR_WITHIN_PERSON_MAP"
     assert result["source_summary"]["effective_distinct_people_upper_bound"] == 1
+
+
+def test_real_phone_and_camera_jobs_cannot_silently_share_mechanism_cluster():
+    request = _request()
+    request["goals"][0]["type"] = "CONDITIONAL_MECHANISM"
+    request["evidence"].update({
+        "decision_episodes": 2,
+        "distinct_people": 2,
+        "human_review_completed": True,
+        "reviewed_links_present": True,
+    })
+    assert route_research(request)["routes"][0]["readiness"] == (
+        "ASSESS_JOB_COMPARABILITY"
+    )
+    request["goals"][0]["job_comparability"] = "DISTINCT_JOBS"
+    result = route_research(request)
+    assert result["routes"][0]["readiness"] == "STOP_DIFFERENT_JOBS"
+    assert result["routes"][0]["execution"] == "NOT_EXECUTED_BY_ROUTER"
+    request["goals"][0]["job_comparability"] = "ANALOGY_ONLY"
+    assert route_research(request)["routes"][0]["readiness"] == (
+        "PROVISIONAL_CROSS_DOMAIN_ANALOGY_ONLY"
+    )
 
 
 def test_canonical_four_method_request_has_honest_evidence_gates():
