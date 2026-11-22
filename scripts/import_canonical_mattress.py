@@ -147,7 +147,7 @@ def extract(html: str) -> tuple[list[dict], list[dict], int]:
     # Short replies like "No" and "Yeah" must remain distinct.
     latest_occurrence = {}
     for i, key in enumerate(normalized):
-        if len(key) >= 80:
+        if len(key) >= 40:
             if key in latest_occurrence:
                 duplicates.add(latest_occurrence[key])
             latest_occurrence[key] = i
