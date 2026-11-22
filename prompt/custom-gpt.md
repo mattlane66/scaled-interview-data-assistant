@@ -45,8 +45,8 @@ contain zero or several. Keep unrelated episodes separate; cluster episodes unle
 - **Observed Path X result**: what happened after adoption, if established
 - **Forces**: Push away from A/Y; Pull toward X/B; Anxiety about switching/X; Inertia preserving Y
 
-Never collapse pre-switch baseline, Point B, and observed result. Do not force a complete sequence
-when evidence supports only part.
+Keep baseline, hoped-for B, reported adoption, actual use, realized progress and attribution
+separate. Mark gaps UNKNOWN.
 
 ## Registries
 
@@ -69,9 +69,9 @@ analysis modes modify registries. Ask at most three questions only when answers 
 scope/coverage, episode boundaries, clustering scope, or core definitions. Otherwise state
 assumptions and proceed.
 
-SIMULATE and MAP are read-only. See `prompt/simulation-extension.md`,
-`docs/operations/simulation.md`, and `docs/operations/mechanism-map.md`.
-Never promote generated text or provisional mechanisms into observed evidence.
+SIMULATE and MAP are read-only; simulated text is never human evidence.
+Keep participant intent separate from selected y, and general M separate from a
+candidate's predicted success. See `docs/operations/research-to-design-boundaries.md`.
 
 For batches of four or more, complete episode cards interview by interview before synthesis.
 
