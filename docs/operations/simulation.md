@@ -99,6 +99,24 @@ text and its evidence citations are **model claims**. The CLI cannot independent
 model was given the packet, verify provider identity, or detect whether the model paraphrased
 grounding accurately; human review remains essential.
 
+## Optional handoff to the companion Behavioral Simulation skill
+
+The companion repository is a file-backed skill, not a stable Python library. This adapter pins
+its `input.json` and `runs.json` v0.1.0 contracts to upstream commit
+`c11d29c8d121728306037dd799669bb0ef7cfabf`. It checks both exported documents against
+copies of those exact schemas. No upstream code is executed and no upload occurs.
+
+~~~bash
+python scripts/simulation_cli.py handoff \
+  --checkpoint outputs/CHECKPOINT.json --scenario data/scenario.json \
+  --run outputs/sim-run.json --output-dir outputs/upstream-study
+~~~
+
+The files are compatible with the upstream study's **input/run** artifacts, not a complete
+upstream study bundle. Downstream validation and calibration remain governed by the full
+[Behavioral Simulation Protocol](https://github.com/mattlane66/behavioral-simulation-for-agents-and-humans/blob/c11d29c8d121728306037dd799669bb0ef7cfabf/behavioral-simulation/PROTOCOL.md).
+If its schema version changes, review the mapping instead of silently assuming compatibility.
+
 ## Optional SSR (not an adoption forecast)
 
 Supply an external embedding model's vectors in a JSON document meeting
