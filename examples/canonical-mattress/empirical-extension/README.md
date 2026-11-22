@@ -6,7 +6,7 @@ This is a **source-traceable first research pass** across the four methods in th
 
 **Read the [four-method worked findings](findings.md) first.** The [casebook](casebook.json) contains eight real source-account histories, four explicitly contrasted mechanism hypotheses, actual computed SSR summaries, and Lead User candidate-screening outcomes. [The automated auditor](../../../scripts/audit_canonical_empirical.py) checks provenance and computation, **not** substantive human approval.
 
-See [structured source and evidence ledger](source-ledger.json), [core analysis adjudication](core-analysis-review.md), and [next-stage decision](next-stage-study.md).
+See [structured source and evidence ledger](source-ledger.json), [full provisional core A/B recode](proposed-core-recode.json), [core analysis adjudication](core-analysis-review.md), and [next-stage decision](next-stage-study.md).
 
 ## What has actually been done
 
