@@ -37,7 +37,7 @@ def text(value: Tag) -> str:
     return re.sub(r"[ \t]+", " ", value.get_text(" ", strip=True)).strip()
 
 
-def extract(html: str) -> tuple[list[dict], list[dict]]:
+def extract(html: str) -> tuple[list[dict], list[dict], int]:
     soup = BeautifulSoup(html, "html.parser")
     section = next(
         (h for h in soup.find_all(["h2", "h3"])
@@ -178,7 +178,7 @@ def extract(html: str) -> tuple[list[dict], list[dict]]:
             raise ValueError(f"Missing expected source topic {marker!r}")
     if sum(t["role"] == "PARTICIPANT" for t in turns) < 30:
         raise ValueError("Participant transcript appears incomplete")
-    return turns, mixed
+    return turns, mixed, len(removed_ids)
 
 
 def render(mixed: list[dict], sha: str) -> str:
@@ -223,7 +223,7 @@ def main() -> None:
             raw = response.read()
     content = raw.decode("utf-8")
     digest = hashlib.sha256(raw).hexdigest()
-    turns, mixed = extract(content)
+    turns, mixed, removed_count = extract(content)
     out = args.output_dir
     out.mkdir(parents=True, exist_ok=True)
     (out / "full-transcript.md").write_text(render(mixed, digest), encoding="utf-8")
@@ -236,7 +236,7 @@ def main() -> None:
             "source_html_sha256": digest,
             "fetched_at": datetime.now(timezone.utc).isoformat(),
             "speaker_turns": len(turns),
-            "duplicate_html_speaker_turns_removed": len(removed_ids),
+            "duplicate_html_speaker_turns_removed": removed_count,
             "participant_turns": sum(x["role"] == "PARTICIPANT" for x in turns),
             "facilitator_turns": sum(x["role"] == "FACILITATOR" for x in turns),
             "audience_turns": sum(x["role"] == "AUDIENCE" for x in turns),
