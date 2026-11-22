@@ -292,3 +292,23 @@ def test_cli_end_to_end_and_no_automatic_approval(source, tmp_path):
     assert json.loads(handoff.read_text())["status"] == "PROPOSED"
     assert "Behavioral Mechanism Map" in report.read_text()
     assert checkpoint.read_bytes() == original
+
+
+def test_partial_coverage_and_zero_link_episodes_are_not_hidden(source):
+    _, data, digest = source
+    copied = copy.deepcopy(data)
+    copied["a_to_b_links"] = [
+        row for row in copied["a_to_b_links"] if row["episode"] != "D03"
+    ]
+    for row in copied["source_index"]:
+        if row["source_id"] == "SRC03":
+            row["coverage"] = "PARTIAL"
+    study = reviewed_study(source)
+    study["mechanisms"][0]["observations"][1]["link_refs"] = []
+    result = compile_map(copied, digest, study)
+    assert "D03" in [row["episode"] for row in result["source_inventory"]["episodes"]]
+    assert any("Source coverage is not complete" in line for line in result["limitations"])
+    report = render_map(result)
+    assert "Episodes without a reviewed A→B link" in report
+    assert "D03 (I03)" in report
+    assert "PARTIAL" in report
