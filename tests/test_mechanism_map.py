@@ -458,3 +458,22 @@ def test_handoff_schema_forbids_accepted_y_and_candidate_effects_inside_M(source
     changed["outcome_evidence"][0]["attribution"]["status"] = "PROVEN_CAUSAL"
     with pytest.raises(SimulationError, match="NOT_ESTABLISHED"):
         schema_check(changed, "planning-handoff.schema.json")
+
+
+def test_legacy_mechanism_study_without_outcome_fields_stays_valid(source):
+    _, data, digest = source
+    study = reviewed_study(source)
+    study.pop("outcome_assessments")
+    study["review"].pop("outcomes_reviewed")
+    schema_check(study, "mechanism-study.schema.json")
+    mapped = compile_map(data, digest, study)
+    assert all(
+        case["adoption"]["status"] == "UNKNOWN"
+        and case["use"]["status"] == "UNKNOWN"
+        and case["progress"]["status"] == "UNKNOWN"
+        and case["attribution"]["status"] == "NOT_ESTABLISHED"
+        for case in mapped["outcome_evidence"]
+    )
+    proposed = planning_handoff(mapped)
+    assert proposed["schema_version"] == "1.1"
+    assert proposed["acceptance_gate"] == "HUMAN_ACCEPTANCE_REQUIRED"
