@@ -15,6 +15,7 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
+from simulation.context_bridge import import_lead_user_context, triage_context_gap
 from simulation.core import load_checkpoint
 from simulation.counterfactual import build_brief
 from simulation.mechanism_map import (
@@ -155,6 +156,37 @@ def reviewed_counterfactual_brief(
         checkpoint, digest = _checkpoint(checkpoint_json, Path(temp))
         brief = build_brief(checkpoint, digest, scenario)
         return _bounded_result(brief)
+
+
+def propose_context_research_route(
+    context_question: dict[str, Any], checkpoint_json: str = ""
+) -> dict[str, Any]:
+    """Source-bound, nonexecuting evidence-gap triage including an empty-data path."""
+    _bounded_json(context_question)
+    if checkpoint_json:
+        with tempfile.TemporaryDirectory(prefix="sida-context-") as temp:
+            checkpoint, digest = _checkpoint(checkpoint_json, Path(temp))
+            return _bounded_result(triage_context_gap(checkpoint, digest, context_question))
+    return _bounded_result(triage_context_gap(None, None, context_question))
+
+
+def validate_lead_user_research_return(
+    context_route: dict[str, Any],
+    lead_user_handoff: dict[str, Any],
+    checkpoint_json: str = "",
+) -> dict[str, Any]:
+    """Check cited LUR evidence lineage; never silently promote emerging x."""
+    _bounded_json(context_route)
+    _bounded_json(lead_user_handoff)
+    if checkpoint_json:
+        with tempfile.TemporaryDirectory(prefix="sida-context-return-") as temp:
+            checkpoint, digest = _checkpoint(checkpoint_json, Path(temp))
+            return _bounded_result(import_lead_user_context(
+                checkpoint, digest, context_route, lead_user_handoff
+            ))
+    return _bounded_result(import_lead_user_context(
+        None, None, context_route, lead_user_handoff
+    ))
 
 
 def run_study_pipeline(
