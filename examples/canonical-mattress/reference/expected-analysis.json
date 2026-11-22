@@ -290,7 +290,7 @@
     },
     {
       "id": "C06",
-      "issue": "The A03→B03 code link implies that competing obligations caused the joint Costco purchase.",
+      "issue": "L003 currently connects A03 to B03 and implies that competing obligations caused the joint Costco purchase.",
       "better": "Demote L003 to a weak opportunity/timing interpretation. B03 describes a purchase circumstance, not the ultimate desired progress.",
       "basis": [
         "O04",
