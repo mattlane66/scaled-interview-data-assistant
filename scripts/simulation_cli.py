@@ -22,6 +22,7 @@ from simulation.core import (  # noqa: E402
     write_json,
 )
 from simulation.evaluation import assess  # noqa: E402
+from simulation.handoff import protocol_input, protocol_runs  # noqa: E402
 from simulation.report import render  # noqa: E402
 from simulation.ssr import measure  # noqa: E402
 
@@ -61,6 +62,13 @@ def configure() -> argparse.ArgumentParser:
     for flag in ("--checkpoint", "--scenario", "--run", "--measurement", "--holdout", "--output"):
         _path(eva, flag)
 
+    upstream = actions.add_parser(
+        "handoff", help="Export companion Behavioral Simulation v0.1.0 files"
+    )
+    for flag in ("--checkpoint", "--scenario", "--run"):
+        _path(upstream, flag)
+    _path(upstream, "--output-dir")
+
     rep = actions.add_parser("report", help="Render separate simulation report")
     for flag in ("--checkpoint", "--scenario", "--run", "--output"):
         _path(rep, flag)
@@ -91,6 +99,10 @@ def execute(args: argparse.Namespace) -> None:
 
     run = read_json(args.run)
     ensure_run_matches(run, scenario, digest)
+    if args.command == "handoff":
+        write_json(args.output_dir / "input.json", protocol_input(scenario))
+        write_json(args.output_dir / "runs.json", protocol_runs(run, scenario))
+        return
     if args.command == "evaluate":
         measurement = read_json(args.measurement)
         holdout = read_json(args.holdout)
