@@ -235,7 +235,7 @@
         {
           "episode_id": "CD01",
           "relationship": "ALIGNS",
-          "reason": "Original purchaser account only; causal effects unobserved",
+          "reason": "A contemplated Groupon purchase was abandoned partly over what would happen if it failed; Costco differs in seller, product and shopping context.",
           "evidence_refs": [
             "E002",
             "E004",
@@ -245,7 +245,7 @@
         {
           "episode_id": "CD02",
           "relationship": "AMBIGUOUS",
-          "reason": "Short experiments and personal fit create alternative explanations",
+          "reason": "Sample packs would reportedly have reduced material returns, but this concerns component experiments rather than a new mattress purchase.",
           "evidence_refs": [
             "RE01",
             "RE02",
@@ -255,7 +255,7 @@
         {
           "episode_id": "CD03",
           "relationship": "AMBIGUOUS",
-          "reason": "Three-year reported use versus planned repairs; self-report",
+          "reason": "The author sold unused parts and planned selective replacement, leaving initial failure-recovery anxiety unspecified.",
           "evidence_refs": [
             "RE04",
             "RE05",
@@ -265,7 +265,7 @@
         {
           "episode_id": "CD04",
           "relationship": "UNASSESSED",
-          "reason": "Repeated changes reportedly failed to sustain support",
+          "reason": "Recurrent latex softening is alleged but buying/return decisions are not described in enough detail.",
           "evidence_refs": [
             "RE07",
             "RE08"
@@ -274,7 +274,7 @@
         {
           "episode_id": "CD05",
           "relationship": "AMBIGUOUS",
-          "reason": "A completed return occurred; initial reason for choosing seller unknown",
+          "reason": "A reportedly easy completed return is a contrast to difficult recovery, not evidence of what prompted original purchase.",
           "evidence_refs": [
             "RE09",
             "RE10",
@@ -284,7 +284,7 @@
         {
           "episode_id": "CD06",
           "relationship": "ALIGNS",
-          "reason": "Observed by poster as repeated attempts; disposal and logistics remain confounded",
+          "reason": "Reported donation/courier failures followed a return; dozens of alternative causes remain, but removal frictions were tangible.",
           "evidence_refs": [
             "RE12",
             "RE13",
@@ -294,7 +294,7 @@
         {
           "episode_id": "CD07",
           "relationship": "ALIGNS",
-          "reason": "Trial limit was missed; later exception unobserved",
+          "reason": "A missed 120-day trial cutoff is a case of time-bounded recoverability; actual final retailer decision is unknown.",
           "evidence_refs": [
             "RE15",
             "RE16"
@@ -303,7 +303,7 @@
         {
           "episode_id": "CD08",
           "relationship": "AMBIGUOUS",
-          "reason": "Return completed; tactile comfort did not imply overnight comfort",
+          "reason": "A completed latex refund is reported, yet seller trust and product mismatch are confounded with convenience.",
           "evidence_refs": [
             "RE17",
             "RE18",
@@ -324,7 +324,7 @@
         {
           "episode_id": "CD01",
           "relationship": "UNASSESSED",
-          "reason": "Original purchaser account only; causal effects unobserved",
+          "reason": "The spouse felt a sample and a purchase followed, but no observed overnight result of the new bed appears in this interview.",
           "evidence_refs": [
             "E002",
             "E004",
@@ -334,7 +334,7 @@
         {
           "episode_id": "CD02",
           "relationship": "ALIGNS",
-          "reason": "Short experiments and personal fit create alternative explanations",
+          "reason": "Builder explicitly reported showroom lying was unlike overnight latex sleeping and iterated layers for comfort.",
           "evidence_refs": [
             "RE01",
             "RE02",
@@ -344,7 +344,7 @@
         {
           "episode_id": "CD03",
           "relationship": "AMBIGUOUS",
-          "reason": "Three-year reported use versus planned repairs; self-report",
+          "reason": "Month of component experimentation could reflect poor predictiveness of brief feel, but no explicit before/after sampling comparison.",
           "evidence_refs": [
             "RE04",
             "RE05",
@@ -354,7 +354,7 @@
         {
           "episode_id": "CD04",
           "relationship": "AMBIGUOUS",
-          "reason": "Repeated changes reportedly failed to sustain support",
+          "reason": "Subjective support reportedly changed over months, not a direct test of momentary showroom feel.",
           "evidence_refs": [
             "RE07",
             "RE08"
@@ -363,7 +363,7 @@
         {
           "episode_id": "CD05",
           "relationship": "UNASSESSED",
-          "reason": "A completed return occurred; initial reason for choosing seller unknown",
+          "reason": "A six-week experience revealed softness dissatisfaction, but no brief-sample expectation is documented.",
           "evidence_refs": [
             "RE09",
             "RE10",
@@ -373,7 +373,7 @@
         {
           "episode_id": "CD06",
           "relationship": "UNASSESSED",
-          "reason": "Observed by poster as repeated attempts; disposal and logistics remain confounded",
+          "reason": "Many returns alone do not tell whether in-store or short trials predicted overnight comfort.",
           "evidence_refs": [
             "RE12",
             "RE13",
@@ -383,7 +383,7 @@
         {
           "episode_id": "CD07",
           "relationship": "ALIGNS",
-          "reason": "Trial limit was missed; later exception unobserved",
+          "reason": "A temporary period of improved sleep followed by worse nights undermines a one-time comfort reading, though lifestyle was different.",
           "evidence_refs": [
             "RE15",
             "RE16"
@@ -392,7 +392,7 @@
         {
           "episode_id": "CD08",
           "relationship": "ALIGNS",
-          "reason": "Return completed; tactile comfort did not imply overnight comfort",
+          "reason": "Person reported bed was comfortable to lie on yet caused recurring morning stiffness; work/travel differences may explain some of it.",
           "evidence_refs": [
             "RE17",
             "RE18",
@@ -413,7 +413,7 @@
         {
           "episode_id": "CD01",
           "relationship": "UNASSESSED",
-          "reason": "Original purchaser account only; causal effects unobserved",
+          "reason": "No component modification of the new purchased mattress reported; original bed adjustments belong to Path Y.",
           "evidence_refs": [
             "E002",
             "E004",
@@ -423,7 +423,7 @@
         {
           "episode_id": "CD02",
           "relationship": "AMBIGUOUS",
-          "reason": "Short experiments and personal fit create alternative explanations",
+          "reason": "The latest DIY build required many layer swaps; outcome only a few nights and total costs not audited.",
           "evidence_refs": [
             "RE01",
             "RE02",
@@ -433,7 +433,7 @@
         {
           "episode_id": "CD03",
           "relationship": "ALIGNS",
-          "reason": "Three-year reported use versus planned repairs; self-report",
+          "reason": "An assembled layered mattress reportedly worked over three years; replacing the worn base was planned, not verified completed.",
           "evidence_refs": [
             "RE04",
             "RE05",
@@ -443,7 +443,7 @@
         {
           "episode_id": "CD04",
           "relationship": "COUNTEREXAMPLE",
-          "reason": "Repeated changes reportedly failed to sustain support",
+          "reason": "Despite long-term experiments and layer changes, author reports the same softening problem—a direct negative case for easy improvement.",
           "evidence_refs": [
             "RE07",
             "RE08"
@@ -452,7 +452,7 @@
         {
           "episode_id": "CD05",
           "relationship": "AMBIGUOUS",
-          "reason": "A completed return occurred; initial reason for choosing seller unknown",
+          "reason": "A more expensive adjustable air replacement reportedly worked better, but this is an entire bed replacement not low-cost modular repair.",
           "evidence_refs": [
             "RE09",
             "RE10",
@@ -462,7 +462,7 @@
         {
           "episode_id": "CD06",
           "relationship": "AMBIGUOUS",
-          "reason": "Observed by poster as repeated attempts; disposal and logistics remain confounded",
+          "reason": "Author repurposed a returned bed and planned DIY components; ongoing sleep success remains unreported.",
           "evidence_refs": [
             "RE12",
             "RE13",
@@ -472,7 +472,7 @@
         {
           "episode_id": "CD07",
           "relationship": "UNASSESSED",
-          "reason": "Trial limit was missed; later exception unobserved",
+          "reason": "No adjustable components or repair alternative in reported episode.",
           "evidence_refs": [
             "RE15",
             "RE16"
@@ -481,7 +481,7 @@
         {
           "episode_id": "CD08",
           "relationship": "AMBIGUOUS",
-          "reason": "Return completed; tactile comfort did not imply overnight comfort",
+          "reason": "Multiple toppers failed; person moved to a local customized complete mattress, not sustained DIY maintenance.",
           "evidence_refs": [
             "RE17",
             "RE18",
@@ -495,14 +495,14 @@
     },
     {
       "id": "H04",
-      "title": "Purchase does not imply achieved restorative sleep",
-      "claim": "The intended progress and realized use may diverge well after a purchase, regardless of a seemingly confident decision.",
+      "title": "Purchase and first impressions do not establish durable Point B",
+      "claim": "The consumer's desired restorative sleep must be assessed after actual use; buying or briefly liking a mattress does not alone establish success.",
       "rival": "An uncomfortable period may be temporary or due to external context, not persistent product failure.",
       "case_assessments": [
         {
           "episode_id": "CD01",
           "relationship": "ALIGNS",
-          "reason": "Original purchaser account only; causal effects unobserved",
+          "reason": "A Costco purchase occurred, but old mattress use and unresolved sleep concern prevented attributing end-state progress.",
           "evidence_refs": [
             "E002",
             "E004",
@@ -512,7 +512,7 @@
         {
           "episode_id": "CD02",
           "relationship": "AMBIGUOUS",
-          "reason": "Short experiments and personal fit create alternative explanations",
+          "reason": "Only a few nights' improvement reported; no longer-term outcome to determine whether the configuration solved the job.",
           "evidence_refs": [
             "RE01",
             "RE02",
@@ -522,7 +522,7 @@
         {
           "episode_id": "CD03",
           "relationship": "COUNTEREXAMPLE",
-          "reason": "Three-year reported use versus planned repairs; self-report",
+          "reason": "Reported three-year comfort is an explicitly favorable outcome, in contrast to failure accounts, but no independent verification.",
           "evidence_refs": [
             "RE04",
             "RE05",
@@ -532,7 +532,7 @@
         {
           "episode_id": "CD04",
           "relationship": "ALIGNS",
-          "reason": "Repeated changes reportedly failed to sustain support",
+          "reason": "Long histories of replacing materials coexist with reported unsolved perceived support.",
           "evidence_refs": [
             "RE07",
             "RE08"
@@ -541,7 +541,7 @@
         {
           "episode_id": "CD05",
           "relationship": "ALIGNS",
-          "reason": "A completed return occurred; initial reason for choosing seller unknown",
+          "reason": "First bed was refunded after discomfort, later expensive air bed was reportedly better, showing outcomes differ between purchases.",
           "evidence_refs": [
             "RE09",
             "RE10",
@@ -551,7 +551,7 @@
         {
           "episode_id": "CD06",
           "relationship": "ALIGNS",
-          "reason": "Observed by poster as repeated attempts; disposal and logistics remain confounded",
+          "reason": "Repeated completed purchases were followed by failed comfort or recovery, not sustained solved progress.",
           "evidence_refs": [
             "RE12",
             "RE13",
@@ -561,7 +561,7 @@
         {
           "episode_id": "CD07",
           "relationship": "ALIGNS",
-          "reason": "Trial limit was missed; later exception unobserved",
+          "reason": "Writer reports high-cost purchase and intermittent relief, then return to discomfort after trial expiry.",
           "evidence_refs": [
             "RE15",
             "RE16"
@@ -570,7 +570,7 @@
         {
           "episode_id": "CD08",
           "relationship": "ALIGNS",
-          "reason": "Return completed; tactile comfort did not imply overnight comfort",
+          "reason": "An apparently comfortable initial bed led to refund; outcome of new custom bed was not yet observed.",
           "evidence_refs": [
             "RE17",
             "RE18",
