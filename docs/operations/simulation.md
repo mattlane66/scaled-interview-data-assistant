@@ -151,6 +151,7 @@ The SSR defaults `epsilon=0` and `temperature=1` follow Maier et al.
 
 ~~~bash
 python scripts/simulation_cli.py ssr \
+  --checkpoint outputs/CHECKPOINT.json --scenario data/scenario.json \
   --run outputs/sim-run.json --vectors data/ssr-vectors.json \
   --output outputs/sim-ssr.json
 ~~~
@@ -164,8 +165,8 @@ the cited paper manually optimized anchors on its evaluation surveys, so test on
 Create a **predeclared** validation input matching
 [`simulation/schemas/holdout.schema.json`](../../simulation/schemas/holdout.schema.json).
 It requires person-grouped holdout IDs absent from all source interviews, approved collection/use,
-a defined target construct, one human Likert response for each unique holdout person ID, and a naive
-distributional baseline.
+a defined target construct and **the exact approved question**, one human Likert response
+for each unique holdout person ID, and a naive distributional baseline.
 These fields do not, by themselves, prove true independence. Keep human holdout responses
 completely outside the grounding checkpoint and model packet.
 
@@ -181,6 +182,12 @@ python scripts/simulation_cli.py report \
   --validation outputs/sim-validation.json \
   --output outputs/simulation-report.md
 ~~~
+
+The validation result is bound to the exact scenario, run, and SSR measurement by their hashes.
+The report rejects mismatched combinations. These hashes detect accidental substitution but are
+not cryptographic signatures of independent human review. The model-output timestamp is the
+**time the external output was recorded by the CLI**, not a verified time of model generation;
+predeclaration timing remains an analyst attestation.
 
 The automated evaluator checks declared group overlap and timing, but cannot establish
 undocumented model exposure, duplicate/aliased identities, or generalization to unobserved
