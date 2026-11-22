@@ -1,0 +1,345 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Counterfactual product decision brief v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "artifact_type",
+    "scenario_id",
+    "run_id",
+    "source_checkpoint_sha256",
+    "scenario_sha256",
+    "run_sha256",
+    "evidence_type",
+    "evidence_grade",
+    "decision",
+    "decision_owner",
+    "consequence_if_wrong",
+    "target",
+    "episodes",
+    "evidence_refs",
+    "coverage",
+    "reviewed_a_to_b_links",
+    "omitted_links_outside_scope",
+    "baseline",
+    "intervention",
+    "held_constant",
+    "outcome_space",
+    "counterfactual_distance",
+    "design_hypothesis",
+    "analyst_assumptions",
+    "simulated_hypotheses",
+    "decision_status",
+    "validation_status",
+    "boundaries"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "artifact_type": {
+      "const": "COUNTERFACTUAL_DECISION_BRIEF"
+    },
+    "scenario_id": {
+      "type": "string",
+      "pattern": "^SIM[0-9]{3,}$"
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^R[0-9]{3,}$"
+    },
+    "source_checkpoint_sha256": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "scenario_sha256": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "run_sha256": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "evidence_type": {
+      "const": "ANALYST_HYPOTHESIS_AND_SIMULATED_ESTIMATE"
+    },
+    "evidence_grade": {
+      "enum": [
+        "L0_ROLEPLAY",
+        "L1_PERSON_GROUNDED"
+      ]
+    },
+    "decision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision_owner": {
+      "type": "string",
+      "minLength": 1
+    },
+    "consequence_if_wrong": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target": {
+      "type": "string",
+      "minLength": 1
+    },
+    "episodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "episode",
+          "interview",
+          "descriptor"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "episode": {
+            "type": "string"
+          },
+          "interview": {
+            "type": "string"
+          },
+          "descriptor": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^E[0-9]{3,}$"
+      }
+    },
+    "coverage": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "reviewed_a_to_b_links": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "link",
+          "episode",
+          "a_code",
+          "a_definition",
+          "b_code",
+          "b_definition",
+          "interpretation_basis",
+          "evidence_refs",
+          "rationale",
+          "contradictions"
+        ],
+        "properties": {
+          "link": {
+            "type": "string"
+          },
+          "episode": {
+            "type": "string"
+          },
+          "a_code": {
+            "type": "string"
+          },
+          "a_definition": {
+            "type": "string"
+          },
+          "b_code": {
+            "type": "string"
+          },
+          "b_definition": {
+            "type": "string"
+          },
+          "interpretation_basis": {
+            "type": "string"
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "contradictions": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "omitted_links_outside_scope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "baseline": {
+      "type": "object",
+      "required": [
+        "path_y",
+        "observed_result",
+        "evidence_refs"
+      ],
+      "properties": {
+        "path_y": {
+          "type": "string"
+        },
+        "observed_result": {
+          "type": "string"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "intervention": {
+      "type": "object",
+      "required": [
+        "variable",
+        "from",
+        "to"
+      ],
+      "properties": {
+        "variable": {
+          "type": "string"
+        },
+        "from": {
+          "type": "string"
+        },
+        "to": {
+          "type": "string"
+        }
+      }
+    },
+    "held_constant": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "outcome_space": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "counterfactual_distance": {
+      "type": "string"
+    },
+    "design_hypothesis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "product_change",
+        "critical_assumption",
+        "predicted_behavior",
+        "disconfirming_observation",
+        "if_disconfirmed"
+      ],
+      "properties": {
+        "product_change": {
+          "type": "string",
+          "minLength": 1
+        },
+        "critical_assumption": {
+          "type": "string",
+          "minLength": 1
+        },
+        "predicted_behavior": {
+          "type": "string",
+          "minLength": 1
+        },
+        "disconfirming_observation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "if_disconfirmed": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "analyst_assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "simulated_hypotheses": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "candidate",
+          "evidence_type",
+          "generated_statement",
+          "hypothesized_mechanism",
+          "source_evidence_refs",
+          "objections",
+          "proposed_human_test"
+        ],
+        "properties": {
+          "candidate": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "evidence_type": {
+            "const": "SIMULATED_ESTIMATE"
+          },
+          "generated_statement": {
+            "type": "string"
+          },
+          "hypothesized_mechanism": {
+            "type": "string"
+          },
+          "source_evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "objections": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "proposed_human_test": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "decision_status": {
+      "const": "TEST_BEFORE_BUILD"
+    },
+    "validation_status": {
+      "const": "NOT_VALIDATED"
+    },
+    "boundaries": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
