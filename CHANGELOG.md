@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.6.0 — 2026-11-22
+
+- Added a versioned research-to-planning boundary separating current x,
+  participant intent, unselected organizational y, and provisional operating M.
+- Kept candidate intervention probes outside M, with schema checks and continued
+  human authority over goal selection and requirements.
+- Added optional source-checked outcomes distinguishing reported adoption, use
+  and realized progress; interview evidence alone does not establish attribution.
+- Marked counterfactual effect claims as candidate-specific and untested.
+- Linked interviewing and design-theory articles from README and added
+  operational guidance and adversarial regression tests.
+- Kept original interview registries, checkpoints, approval gates and SSR unchanged.
+
+
 ## 1.5.1 — 2026-11-22
 
 - Independently audited the complete published mattress interview against
