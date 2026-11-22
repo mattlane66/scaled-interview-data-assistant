@@ -124,7 +124,8 @@ the cited paper manually optimized anchors on its evaluation surveys, so test on
 Create a **predeclared** validation input matching
 [`simulation/schemas/holdout.schema.json`](../../simulation/schemas/holdout.schema.json).
 It requires person-grouped holdout IDs absent from all source interviews, approved collection/use,
-a defined target construct, independent human Likert ratings, and a naive distributional baseline.
+a defined target construct, one human Likert response for each unique holdout person ID, and a naive
+distributional baseline.
 These fields do not, by themselves, prove true independence. Keep human holdout responses
 completely outside the grounding checkpoint and model packet.
 
