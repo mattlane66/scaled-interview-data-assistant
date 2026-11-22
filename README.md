@@ -144,8 +144,8 @@ of population demand.
 
 The provider-neutral `scripts/simulation_cli.py` prepares a privacy-gated context packet,
 records external model responses, and renders a separate decision-facing report. Optional
-semantic similarity rating (SSR) maps externally supplied embeddings onto ordinal rating
-distributions; optional independent human holdouts can be compared using TVD and KS
+semantic similarity rating (SSR) maps generated answers to **predeclared ordinal questions**
+onto rating distributions using externally supplied embeddings; optional independent human holdouts can be compared using TVD and KS
 similarity. Neither operation automatically upgrades evidentiary confidence or proves
 actual purchasing, switching, or a causal effect.
 
