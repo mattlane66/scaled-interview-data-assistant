@@ -21,12 +21,31 @@ def render(
         raise SimulationError("Run does not declare generated estimate evidence type")
     if run.get("mode") != scenario["mode"] or run.get("grade") != scenario["target_grade"]:
         raise SimulationError("Report cannot promote or alter simulation mode or evidence grade")
-    if measurement and measurement.get("run_sha256") != sha256_text(
-        json.dumps(run, sort_keys=True)
-    ):
-        raise SimulationError("SSR measurement belongs to another run")
-    if validation and validation.get("run_id") != run.get("run_id"):
-        raise SimulationError("Validation belongs to another run")
+    scenario_hash = sha256_text(json.dumps(scenario, sort_keys=True))
+    run_hash = sha256_text(json.dumps(run, sort_keys=True))
+    measurement_hash = None
+    if measurement:
+        declared = scenario.get("measurement")
+        if (
+            not isinstance(declared, dict)
+            or measurement.get("run_sha256") != run_hash
+            or measurement.get("construct") != declared.get("construct")
+            or measurement.get("anchor_version") != declared.get("anchor_version")
+        ):
+            raise SimulationError("SSR measurement does not match this run and scenario")
+        measurement_hash = sha256_text(json.dumps(measurement, sort_keys=True))
+    if validation:
+        if measurement_hash is None:
+            raise SimulationError("Validation cannot be reported without its SSR measurement")
+        if (
+            validation.get("run_id") != run.get("run_id")
+            or validation.get("scenario_sha256") != scenario_hash
+            or validation.get("run_sha256") != run_hash
+            or validation.get("measurement_sha256") != measurement_hash
+            or validation.get("construct") != measurement.get("construct")
+            or validation.get("grade_after_validation") != run.get("grade")
+        ):
+            raise SimulationError("Validation does not belong to the displayed measurement")
 
     lines = [
         "# Evidence-grounded simulation report",
