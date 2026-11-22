@@ -7,7 +7,8 @@ name = "scaled-interview-data-assistant"
 version = "1.7.0"
 description = "Evidence-traceable JTBD/A2B interview synthesis methods and deterministic helpers."
 readme = "README.md"
-license = { file = "LICENSE" }
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [{ name = "Matt Lane" }]
 requires-python = ">=3.10"
 dependencies = [
@@ -37,7 +38,12 @@ dev = [
 ]
 
 [tool.setuptools]
-py-modules = []
+packages = ["simulation", "plugin_runtime", "scripts", "schemas"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+simulation = ["schemas/*.schema.json"]
+schemas = ["*.schema.json", "README.md"]
 
 [tool.ruff]
 line-length = 100
