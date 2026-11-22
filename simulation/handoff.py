@@ -53,7 +53,9 @@ def protocol_input(scenario: dict[str, Any]) -> dict[str, Any]:
 def protocol_runs(run: dict[str, Any], scenario: dict[str, Any]) -> dict[str, Any]:
     if (run.get("scenario_id") != scenario["scenario_id"]
             or run.get("scenario_sha256") != sha256_text(json.dumps(scenario, sort_keys=True))
-            or run.get("evidence_type") != "SIMULATED_ESTIMATE"):
+            or run.get("evidence_type") != "SIMULATED_ESTIMATE"
+            or run.get("mode") != scenario["mode"]
+            or run.get("grade") != scenario["target_grade"]):
         raise SimulationError("Upstream handoff run is not bound to this scenario")
     evidence_refs = sorted({
         ref for item in run["responses"] for ref in item["evidence_refs"]
