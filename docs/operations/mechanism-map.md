@@ -154,6 +154,11 @@ analyst hypotheses, expose divergent cases and evidence limitations, and remain
 \`PROVISIONAL\`. Compilation fails for invalid/misaligned IDs, unreadable sources,
 missing human reviews, duplicate mechanism IDs, or absent hypotheses.
 
+The [research-to-design boundary](research-to-design-boundaries.md) distinguishes
+interview-derived current conditions `x`, participant progress claims, organizational
+outcome `y` (not selected by research), conditional operating model `M`,
+proposed research probes, and source-checked evidence of adoption/use/progress.
+
 The planning handoff is always \`status=PROPOSED\` with
 \`HUMAN_ACCEPTANCE_REQUIRED\`. It supplies:
 
