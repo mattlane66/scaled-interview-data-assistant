@@ -1,6 +1,6 @@
 {
   "checkpoint_version": "1.1.0",
-  "generated_at": "2026-11-22T11:53:58.109907+00:00",
+  "generated_at": "2026-11-22T11:55:52.958760+00:00",
   "analysis_unit": "episode",
   "computation": {
     "a_to_b_association": "reviewed links primary; Jaccard and descriptive phi secondary",

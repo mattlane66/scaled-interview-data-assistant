@@ -12,7 +12,7 @@ These are synthetic GPT-6-authored statements, not simulated independent populat
 
 ## Observed grounding and assumptions
 
-- Read-only checkpoint: `sha256:091ace88ddd55f95e1cb15dc16a4d443fb4b58431f576de4f230584eb42f09d3`
+- Read-only checkpoint: `sha256:5a9482de8687dcf4ff9753769cbf9d34008644a52d4541255831e48841c329a6`
 - Human episode references: D01
 - Source evidence IDs: E002, E006, E008, E014, E015, E018, E019, E020, E021, E023, E024, E025, E027
 - Coverage: FULL

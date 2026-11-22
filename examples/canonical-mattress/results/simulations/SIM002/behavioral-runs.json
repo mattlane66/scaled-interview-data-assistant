@@ -3,7 +3,7 @@
   "entries": [
     {
       "id": "R002",
-      "ran_at": "2026-11-22T11:53:59.952514+00:00",
+      "ran_at": "2026-11-22T11:55:56.016894+00:00",
       "mode": "PLAUSIBILITY_SPACE",
       "model": "GPT-6",
       "model_version": "GPT-6 authored text, not an independent API run",
@@ -50,7 +50,7 @@
           }
         ],
         "scenario_id": "SIM002",
-        "source_checkpoint_sha256": "sha256:091ace88ddd55f95e1cb15dc16a4d443fb4b58431f576de4f230584eb42f09d3"
+        "source_checkpoint_sha256": "sha256:5a9482de8687dcf4ff9753769cbf9d34008644a52d4541255831e48841c329a6"
       },
       "notes": "Source: Scaled Interview Data Assistant; grade: L0_ROLEPLAY; source coverage: ['FULL']. Not human observation or a calibrated population estimate."
     }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "run_id": "R001",
-  "run_sha256": "sha256:b78791710ea31c252212122eef2f30e88a831fcb661f0136f47220dfaa3d1cf7",
+  "run_sha256": "sha256:0b95e175328baadda924fcc7ac5bd0b66b3779baa657a76bbe6a856c90441b9b",
   "evidence_type": "SIMULATED_ESTIMATE",
   "construct": "hypothetical_stated_purchase_intent",
   "embedding_model": "BAAI/bge-small-en-v1.5",

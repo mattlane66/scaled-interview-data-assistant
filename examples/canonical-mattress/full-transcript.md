@@ -1,7 +1,7 @@
 # The Mattress Interview — full dialogue and teaching context
 
 Original page: https://jobstobedone.org/radio/the-mattress-interview-part-one/
-Source HTML SHA-256: cd143ad3740f6ae0de8ec88514abaf8b69a679847614c6154811d060492b6749
+Source HTML SHA-256: cd8d289e27bfff8c00535ca00265fdb5520c7252590852d8199991a05bbda9da
 
 This is a source snapshot, not an analyst reconstruction.
 Facilitator and audience commentary is preserved but is not participant evidence.
