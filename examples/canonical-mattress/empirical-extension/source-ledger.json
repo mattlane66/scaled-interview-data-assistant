@@ -1,9 +1,9 @@
 {
-  "schema_version": "0.1",
+  "schema_version": "0.2",
   "id": "CANON-MATTRESS-EMPIRICAL-SCOUT-2026-11-22",
   "checked_on": "2026-11-22",
   "execution_level": "DESK_RESEARCH",
-  "status": "PUBLIC_SOURCE_SCOUT_NOT_A_COMPLETED_STANDARD_OR_FULL_STUDY",
+  "status": "REAL_SOURCE_DESK_ANALYSIS_WITH_UNREVIEWED_MECHANISM_COMPARISON",
   "human_review": "NOT_REVIEWED",
   "independently_conducted_interviews": 0,
   "human_holdouts": 0,
@@ -82,6 +82,42 @@
       "role": "RETURN_CONTRAST",
       "locator": "Original post and original author's refund, comfort, and replacement replies",
       "note": "Historical self-report of an online purchase/return; not Costco's universal or present-day policy."
+    },
+    {
+      "id": "P09",
+      "url": "https://www.reddit.com/r/Mattress/comments/qgkykh/whats_the_catch_to_these_mattress_trial_periods/",
+      "kind": "FIRST_PERSON_PUBLIC_COMMENT",
+      "coverage": "AUTHOR_COMMENT_REVIEWED",
+      "role": "REPEATED_SWITCHING_CONTRAST",
+      "locator": "Comment starting 'In the last year I have ordered 8 beds online' (original commenter only)",
+      "note": "One person's account of many switches, not eight independent customers; refund and pending return are reported, not externally verified."
+    },
+    {
+      "id": "P10",
+      "url": "https://www.reddit.com/r/Mattress/comments/1fhes3c/dont_be_an_idiot_like_me_return_your_mattress/",
+      "kind": "FIRST_PERSON_PUBLIC_POST",
+      "coverage": "ORIGINAL_POST_REVIEWED",
+      "role": "EXPIRED_TRIAL_NEGATIVE_CASE",
+      "locator": "Opening post: $4,000 mattress, day 128 of 120-day trial, changing sleep conditions",
+      "note": "Deadline and discomfort self-reported; exchange refusal, clinical cause and later outcome not established."
+    },
+    {
+      "id": "P11",
+      "url": "https://www.reddit.com/r/Mattress/comments/1f93tts/the_trials_and_tribulations_of_mattress_shopping/",
+      "kind": "FIRST_PERSON_PUBLIC_POST",
+      "coverage": "ORIGINAL_POST_AND_AUTHOR_CLARIFICATION_REVIEWED",
+      "role": "RETURN_AND_RETAIL_CONTRAST",
+      "locator": "Opening post, paragraphs on Saatva, Sleep on Latex trial, morning stiffness, pickup and local custom mattress; author's later reply",
+      "note": "Finished latex return is reported; new custom mattress longer-term outcome was not yet known."
+    },
+    {
+      "id": "P12",
+      "url": "https://bettersleep.org/research/bsc-sub-study-mattress-shopping-behavior-during-covid-19/",
+      "kind": "ORIGINAL_INDUSTRY_ASSOCIATION_SURVEY_REPORT",
+      "coverage": "METHODOLOGY_AND_QUESTION_TABLES_REVIEWED",
+      "role": "OBSERVED_SHOPPING_SURVEY_CONTEXT",
+      "locator": "Background and Methodology; Mattress Purchasers, Q4 and Q6",
+      "note": "501 online surveys Oct 31-Nov 5 2020; Q4 and Q6 on n=314 recent buyers. Responses reflect reported activity/importance, not causal experimental evidence."
     }
   ],
   "contextual_claims": [
@@ -105,6 +141,13 @@
       "claim": "In a UK survey of 500 recent buyers in 2018, 51% reported buying online and 47% in stores.",
       "meaning": "Online buying was already present in a distinct market and earlier period.",
       "limit": "Geographically and temporally different sample, not evidence that online share is rising today."
+    },
+    {
+      "id": "TC04",
+      "source_id": "P12",
+      "claim": "Among 314 recent mattress purchasers in the 2020 BSC sub-study, 71% rated easy returns important to their final purchase decision; 46% rated a free at-home trial important.",
+      "meaning": "Retail reversibility is a plausible research dimension, using self-reported importance from a defined survey subgroup.",
+      "limit": "COVID-era online sample, unspecified denominator wording for importance scale, not a measured incremental effect of free pickup or a probability of switching."
     }
   ],
   "public_accounts": [
@@ -210,6 +253,82 @@
       "lead_user_qualification": "NOT_ASSESSED_NOT_AUTOMATICALLY_LEAD_USER",
       "lu1": "NO_RELEVANT_TREND_ADVANCEMENT_ASSIGNED",
       "lu2": "NO_LU2_ASSESSMENT"
+    },
+    {
+      "id": "R05",
+      "source_id": "P09",
+      "person_unit": "one anonymous commenter, not the thread author",
+      "grain": "ONE_REPORTED_REPEATED_SWITCHING_HISTORY",
+      "source_locator": "Single comment starting 'In the last year I have ordered 8 beds online' plus same author's remarks, not other comments",
+      "observations": [
+        {
+          "id": "RE12",
+          "kind": "REPORTED_BEHAVIOR",
+          "paraphrase": "The writer says they ordered eight online mattresses in a year, completed one return and expected to return another. Orders are not independent participants."
+        },
+        {
+          "id": "RE13",
+          "kind": "REPORTED_OUTCOME",
+          "paraphrase": "They describe a pickup failure involving proposed donation and three unsuccessful courier visits, followed by a refund and an unwanted mattress remaining in the home."
+        },
+        {
+          "id": "RE14",
+          "kind": "REPORTED_BEHAVIOR",
+          "paraphrase": "To avoid discarding the returned mattress, they describe cutting it down and reusing it in a spare room, while planning a DIY replacement."
+        }
+      ],
+      "lead_user_qualification": "CANDIDATE_UNQUALIFIED",
+      "lu1": "UNUSUALLY_MANY_TRIALS_REPORTED; RELEVANT_IMPORTANT_TREND_NOT_INDEPENDENTLY_ESTABLISHED",
+      "lu2": "HIGH_TIME_SPACE_AND_UNWANTED_RETURNS_BURDEN_REPORTED; EXPECTED_BENEFIT_NOT_MEASURED"
+    },
+    {
+      "id": "R06",
+      "source_id": "P10",
+      "person_unit": "one anonymous first-person original post",
+      "grain": "ONE_REPORTED_LATE_TRIAL_NONRETURN",
+      "source_locator": "Original post opening paragraphs: day 128 vs declared 120-day trial, perceived interim improvement",
+      "observations": [
+        {
+          "id": "RE15",
+          "kind": "REPORTED_BEHAVIOR",
+          "paraphrase": "The writer reports disliking the mattress initially, perceiving a temporary improvement, and passing a stated 120-day trial limit by eight days."
+        },
+        {
+          "id": "RE16",
+          "kind": "REPORTED_OUTCOME",
+          "paraphrase": "The writer reports still having the mattress and recurring nighttime discomfort; whether the retailer eventually authorized an exception is unknown."
+        }
+      ],
+      "lead_user_qualification": "NOT_ASSESSED_NOT_AUTOMATICALLY_LEAD_USER",
+      "lu1": "NOT_ASSESSED",
+      "lu2": "NOT_ASSESSED"
+    },
+    {
+      "id": "R07",
+      "source_id": "P11",
+      "person_unit": "one anonymous first-person original post",
+      "grain": "ONE_REPORTED_ONLINE_RETURN_TO_LOCAL_CUSTOM_ORDER",
+      "source_locator": "Original post paragraphs on online search, latex with toppers, overnight discomfort, pickup/refund and newly delivered local custom bed",
+      "observations": [
+        {
+          "id": "RE17",
+          "kind": "REPORTED_BEHAVIOR",
+          "paraphrase": "After online-only research, the writer reports buying a latex mattress, trying two topper thicknesses and experimenting with pillows without resolving next-morning stiffness."
+        },
+        {
+          "id": "RE18",
+          "kind": "REPORTED_CONTRAST",
+          "paraphrase": "The writer reports that the bed could feel comfortable on lying down while nighttime use was associated with morning stiffness; they also reported feeling better away from home."
+        },
+        {
+          "id": "RE19",
+          "kind": "REPORTED_OUTCOME",
+          "paraphrase": "They report a completed trial return and refund, followed by an order for a locally configured mattress; its later sleeping outcome was then unknown."
+        }
+      ],
+      "lead_user_qualification": "NOT_ASSESSED_NOT_AUTOMATICALLY_LEAD_USER",
+      "lu1": "NO_ADVANCEMENT_QUALIFICATION",
+      "lu2": "NO_BENEFIT_ASSESSMENT"
     }
   ],
   "methodology_guards": {
@@ -246,6 +365,12 @@
       "action": "Define matched simulation questions and an independent holdout with actual responses/outcomes before claiming SSR predictive validity.",
       "owner": "RESEARCH_TEAM",
       "gate": "EXTERNAL_HOLDOUT_NOT_PERFORMED"
+    },
+    {
+      "id": "A05",
+      "action": "Separate decision accounts from source authors and separate reported completed transactions from claimed product outcomes; preserve expired-trial and failed-pickup negative cases.",
+      "owner": "ANALYST",
+      "gate": "SOURCE_BOUND_CASE_CODING_UNREVIEWED"
     }
   ]
 }

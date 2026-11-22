@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0",
+  "id": "CANON-MATTRESS-CORE-RECODE-PROPOSAL",
+  "status": "PROPOSED_NOT_APPLIED",
+  "source_interview": "I01",
+  "source_episode": "D01",
+  "source_checkpoint": "../results/CHECKPOINT.json",
+  "human_evidence_review": "NOT_DONE",
+  "authority": "HUMAN_REVIEW_REQUIRED",
+  "purpose": "Correct source-overreach and distinguish the customer's ultimate progress from purchase conditions while preserving original stable IDs.",
+  "code_proposals": [
+    {
+      "code": "A01",
+      "original_issue": "States that old mattress caused impaired functioning",
+      "proposed_definition": "Participant associates recurring waking discomfort and perceived sinkage with the existing mattress, while other causes remain possible.",
+      "role": "STRUGGLING_CONTEXT",
+      "evidence": [
+        "E002",
+        "E005"
+      ],
+      "status": "CHANGE_PROPOSED"
+    },
+    {
+      "code": "A02",
+      "proposed_definition": "Buyer perceives risk of being unable to recover from another disappointing purchase.",
+      "role": "STRUGGLING_CONTEXT",
+      "evidence": [
+        "E010",
+        "E014",
+        "E020"
+      ],
+      "status": "REFINE_PROPOSED"
+    },
+    {
+      "code": "A03",
+      "proposed_definition": "Business, childcare and moving demands repeatedly displace mattress replacement priority.",
+      "role": "CONSTRAINT",
+      "evidence": [
+        "E008",
+        "E009"
+      ],
+      "status": "RETAIN_PROPOSED"
+    },
+    {
+      "code": "A04",
+      "proposed_definition": "Buyer reports aversion to conventional mattress sales settings, without denying having visited them.",
+      "role": "CHANNEL_FRICTION",
+      "evidence": [
+        "E013",
+        "E025"
+      ],
+      "status": "REFINE_PROPOSED"
+    },
+    {
+      "code": "A05",
+      "proposed_definition": "Older mattress was still kept or used after purchase; a post-adoption outcome unknown remains.",
+      "role": "POST_PURCHASE_STATE_NOT_PRE_SWITCH_A",
+      "evidence": [
+        "E023",
+        "E024",
+        "E026"
+      ],
+      "status": "RECLASSIFY_PROPOSED"
+    },
+    {
+      "code": "B01",
+      "proposed_definition": "Wake restored enough to function well in work and family roles.",
+      "role": "END_PROGRESS",
+      "evidence": [
+        "E015"
+      ],
+      "status": "RETAIN_PROPOSED"
+    },
+    {
+      "code": "B02",
+      "proposed_definition": "Find a purchase path whose failure can credibly be reversed or recovered.",
+      "role": "ADOPTION_ENABLER_NOT_END_PROGRESS",
+      "evidence": [
+        "E010",
+        "E014",
+        "E020",
+        "E027"
+      ],
+      "status": "RECLASSIFY_PROPOSED"
+    },
+    {
+      "code": "B03",
+      "proposed_definition": "Act when a feasible joint purchasing occasion becomes available.",
+      "role": "ADOPTION_CIRCUMSTANCE_NOT_END_PROGRESS",
+      "evidence": [
+        "E008",
+        "E017",
+        "E018",
+        "E019"
+      ],
+      "status": "RECLASSIFY_PROPOSED"
+    },
+    {
+      "code": "B04",
+      "proposed_definition": "Evaluate a materially different mattress in a way the household can tolerate.",
+      "role": "ADOPTION_EVALUATION_NOT_END_PROGRESS",
+      "evidence": [
+        "E013",
+        "E021",
+        "E025"
+      ],
+      "status": "RECLASSIFY_PROPOSED"
+    }
+  ],
+  "link_proposals": [
+    {
+      "link": "L001",
+      "decision": "RETAIN_PROVISIONAL",
+      "reason": "Reported waking discomfort and desired functioning are closely connected, without confirming mattress causation.",
+      "evidence": [
+        "E002",
+        "E004",
+        "E015"
+      ]
+    },
+    {
+      "link": "L002",
+      "decision": "REFRAME_PROVISIONAL",
+      "reason": "The purchase-recovery concern is reported; free pickup did not enter the original choice because it was learned about later.",
+      "evidence": [
+        "E010",
+        "E014",
+        "E020",
+        "E027"
+      ]
+    },
+    {
+      "link": "L003",
+      "decision": "PROPOSE_RETIRE_AFTER_REVIEW",
+      "reason": "Competing obligations and a joint Costco purchase occurred, but there is no defensible link establishing that obligations caused this purchase moment.",
+      "evidence": [
+        "E008",
+        "E009",
+        "E017",
+        "E019"
+      ]
+    },
+    {
+      "link": "L004",
+      "decision": "REFRAME_PROVISIONAL",
+      "reason": "Retail aversion and sample use coexist but do not establish their independent causal roles.",
+      "evidence": [
+        "E013",
+        "E021",
+        "E025"
+      ]
+    }
+  ],
+  "distinct_roles": {
+    "desired_progress": "B01",
+    "adoption_enablers": [
+      "B02",
+      "B03",
+      "B04"
+    ],
+    "postpurchase_state": [
+      "A05"
+    ],
+    "actual_result": "UNKNOWN: historic sleep improvement not established",
+    "organizational_y": "NOT_SELECTED"
+  },
+  "review_actions": [
+    "Reviewer must inspect original participant turns and interviewer/audience comments before accepting any definition.",
+    "Check omissions and negative cases, then backcode the complete source for each accepted change.",
+    "Preserve deprecated IDs and alias history; avoid silently rewriting accepted source evidence.",
+    "Only after actual approval regenerate the checkpoint and a human-attributed decision log."
+  ]
+}

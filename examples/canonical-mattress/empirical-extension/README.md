@@ -4,16 +4,18 @@
 
 This is a **source-traceable first research pass** across the four methods in the canonical example. It uses publicly available original human accounts and industry survey reports, not invented interviews. It is deliberately **separate from** the licensed [original mattress interview](../README.md), its 28 extracts, A/B links, checkpoint and AI-authored demonstration simulations.
 
-See [structured source and evidence ledger](source-ledger.json), [core analysis adjudication](core-analysis-review.md), and [next-stage decision](next-stage-study.md).
+**Read the [four-method worked findings](findings.md) first.** The [casebook](casebook.json) contains eight real source-account histories, four explicitly contrasted mechanism hypotheses, actual computed SSR summaries, and Lead User candidate-screening outcomes. [The automated auditor](../../../scripts/audit_canonical_empirical.py) checks provenance and computation, **not** substantive human approval.
+
+See [structured source and evidence ledger](source-ledger.json), [full provisional core A/B recode](proposed-core-recode.json), [core analysis adjudication](core-analysis-review.md), and [next-stage decision](next-stage-study.md).
 
 ## What has actually been done
 
 | Workstream | Material inspected in this pass | What is established | What is not established |
 | --- | --- | --- | --- |
 | Core JTBD/A→B | Published live interview, the repo's pinned 279-turn source, 28 excerpt bank, four code links, prior independent *AI* audit, and facilitator Q&A | One participant's *reported* past sequence; material coding disagreements are identifiable | Independent human approval or verified improvement after purchase |
-| Behavioral Mechanism Map | Four distinct later first-person published accounts, plus the original episode | Rival, contrastive **observations to investigate**, including trial/recovery versus adaptive repair | Review-gated multi-episode mechanism map, comparative effect estimates, representative coverage |
-| Behavioral Simulation + SSR | Existing two authored L0 role-play variants and SSR reports | Reproducible calculation over hypothetical text | Real cohort simulations, independent holdout, calibrated purchase predictions |
-| Lead User Research | Three firsthand DIY candidate accounts, two industry survey reports, original interview | Potential leads and defensible research questions, based on real sources | Validated important modular-DIY trend, LU1/LU2-qualified episodes, pyramiding or interviews |
+| Behavioral Mechanism Map | Seven distinct later first-person published accounts, plus the original episode | **Worked case-by-case mechanism comparison** with rivals, negative cases, refuters, and targeted tests | Human-reviewed formal mechanism map, causal estimates, representative coverage |
+| Behavioral Simulation + SSR | Two authored L0 variants, six-set SSR vectors and actual independent human accounts | **Recomputed and interpreted** source-grounded model-text scores; identified concrete contrary human outcomes | A matching independent human holdout, model calibration or behavior prediction |
+| Lead User Research | Four firsthand DIY/repeated-trial candidate accounts, three industry survey reports, original interview | **Completed desk SCOUT screening**, documented trend qualifications, contradictions and a negative qualification result | Verified modular-DIY trend, LU1/LU2-qualified episodes, pyramiding or interviews |
 
 Research coverage is **biased** toward English-speaking, public-posting DIY enthusiasts and people motivated to report memorable outcomes. A reddit post is a real authored account but is **not** independently verified observation. Multiple replies by one author are one unit, not more participants. Dates are source-published historical observations, not current retail return policies.
 
@@ -29,7 +31,7 @@ Research coverage is **biased** toward English-speaking, public-posting DIY enth
 
 ### What this changes
 
-The original interview rightly raised **recovery anxiety** and **physical evaluation** as competing explanations. The real DIY reports introduce a different untested possibility: users may value **ongoing adjustment and repair after purchase**, rather than an entirely reversible first choice. This is **INFERRED**, not proven to matter to ordinary mattress buyers. It changes the *research question*, not the selected product.
+The original interview rightly raised **recovery anxiety** and **physical evaluation** as competing explanations. The extended real-source mechanism comparison now examines four rivals across eight account histories. The DIY reports introduce a different untested possibility: users may value **ongoing adjustment and repair after purchase**, rather than an entirely reversible first choice. This is **INFERRED**, not proven to matter to ordinary mattress buyers. It changes the *research question*, not the selected product.
 
 ## Boundaries and next move
 
