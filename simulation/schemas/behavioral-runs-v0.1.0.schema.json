@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Behavioral Simulation Runs",
+  "type": "object",
+  "required": ["schema_version","entries"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id","ran_at","mode","model","model_version","configuration","seed","sample_size","evidence_ids","estimate","notes"],
+        "properties": {
+          "id": {"type": "string","pattern": "^R[0-9]{3,}$"},
+          "ran_at": {"type": "string"},
+          "mode": {"enum": ["PLAUSIBILITY_SPACE","INDIVIDUAL_PROXY","POPULATION_PREDICTION","MULTI_AGENT_DYNAMICS"]},
+          "model": {"type": "string","minLength": 1},
+          "model_version": {"type": "string","minLength": 1},
+          "configuration": {"type": "string"},
+          "seed": {"type": ["integer","string","null"]},
+          "sample_size": {"type": "integer","minimum": 1},
+          "evidence_ids": {"type": "array","items": {"type": "string","pattern": "^E[0-9]{3,}$"}},
+          "estimate": {"type": "object"},
+          "notes": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
