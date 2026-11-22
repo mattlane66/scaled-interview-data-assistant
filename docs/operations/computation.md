@@ -23,7 +23,7 @@ not prove the participant lacked the need—it may reflect interview coverage.
 
 ## A↔B association
 
-The primary A↔B artifact is the reviewed `L###` link registry. Each record says that a named
+The primary A↔B artifact is the source-grounded `L###` link registry. **Supplying a link registry is not proof of human review.** The association CSV reports `PROVIDED_UNATTESTED` when links are supplied; actual review is a separate research decision and gate. Each record says that a named
 A-code and B-code are explicitly or inferentially linked within one decision episode, cites the
 supporting evidence, and records the analyst's rationale.
 
