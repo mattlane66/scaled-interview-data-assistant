@@ -108,7 +108,7 @@ def holdout(run):
     return {
         "schema_version": "1.0", "validation_id": "V001", "run_id": run["run_id"],
         "construct": "stated_switching_intent", "split_unit": "PERSON",
-        "holdout_group_ids": ["I99", "I98"],
+        "holdout_group_ids": ["I99", "I98", "I97"],
         "observed_ratings": [3, 4, 5], "baseline_distribution": [0.2] * 5,
         "source": "Illustrative external human response fixture",
         "predeclared_at": "2020-01-01T00:00:00+00:00",
@@ -173,6 +173,18 @@ def test_individual_proxy_requires_one_person_and_grounding_review(source):
         inspect_scenario(data, digest, bad)
 
 
+def test_counterfactual_must_change_one_condition(source):
+    _, data, digest, scenario = source
+    bad = copy.deepcopy(scenario)
+    bad["intervention"]["to"] = bad["intervention"]["from"]
+    with pytest.raises(SimulationError, match="must change"):
+        inspect_scenario(data, digest, bad)
+    bad = copy.deepcopy(scenario)
+    bad["held_constant"] = ["switching_effort"]
+    with pytest.raises(SimulationError, match="held constant"):
+        inspect_scenario(data, digest, bad)
+
+
 def test_generated_content_cannot_forge_evidence(source):
     _, data, digest, scenario = source
     fake = model_response()
@@ -228,8 +240,12 @@ def test_holdout_checks_leakage_and_never_promotes_grade(source):
     assert math.isclose(tvd([0.2] * 5, [0.2] * 5), 0)
     assert math.isclose(ks_similarity([0.2] * 5, [0.2] * 5), 1)
     bad = holdout(run)
-    bad["holdout_group_ids"] = ["I01"]
+    bad["holdout_group_ids"] = ["I01", "I98", "I97"]
     with pytest.raises(SimulationError, match="overlap"):
+        assess(data, scenario, run, measurement, bad)
+    bad = holdout(run)
+    bad["holdout_group_ids"] = ["I99"]
+    with pytest.raises(SimulationError, match="one response"):
         assess(data, scenario, run, measurement, bad)
     bad = holdout(run)
     bad["predeclared_at"] = datetime.now(timezone.utc).replace(
