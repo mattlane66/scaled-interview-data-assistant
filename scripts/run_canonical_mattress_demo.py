@@ -17,7 +17,12 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from simulation.core import (
-    SimulationError, initialize, load_checkpoint, schema_check, sha256_text, write_json,
+    SimulationError,
+    initialize,
+    load_checkpoint,
+    schema_check,
+    sha256_text,
+    write_json,
 )
 from simulation.handoff import protocol_input, protocol_runs
 from simulation.report import render
