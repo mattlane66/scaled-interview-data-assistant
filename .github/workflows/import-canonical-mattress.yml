@@ -1,0 +1,48 @@
+name: Import licensed canonical mattress transcript
+
+on:
+  push:
+    branches: [feat/canonical-real-mattress-ssr]
+    paths:
+      - scripts/import_canonical_mattress.py
+      - .github/workflows/import-canonical-mattress.yml
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    if: github.repository == 'mattlane66/scaled-interview-data-assistant'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install HTML parser
+        run: python -m pip install beautifulsoup4
+      - name: Import complete published source
+        run: python scripts/import_canonical_mattress.py --output-dir examples/canonical-mattress
+      - name: Verify snapshot size
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('examples/canonical-mattress')
+          m = json.loads((root/'source-manifest.json').read_text())
+          assert m['participant_turns'] >= 30, m
+          assert len((root/'full-transcript.md').read_text()) > 15000
+          print('Snapshot verified', m)
+          PY
+      - name: Commit source snapshot back to feature branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add examples/canonical-mattress/full-transcript.md examples/canonical-mattress/source-turns.json examples/canonical-mattress/source-manifest.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data(canonical): snapshot complete published mattress interview"
+            git push origin HEAD:feat/canonical-real-mattress-ssr
+          fi
