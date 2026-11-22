@@ -54,7 +54,9 @@ def configure() -> argparse.ArgumentParser:
     _path(rec, "--output")
     rec.add_argument("--run-id", default="R001")
 
-    ssr = actions.add_parser("ssr", help="Map supplied embedding vectors to Likert distributions")
+    ssr = actions.add_parser("ssr", help="Map verified generated responses to Likert distributions")
+    _path(ssr, "--checkpoint")
+    _path(ssr, "--scenario")
     _path(ssr, "--run")
     _path(ssr, "--vectors")
     _path(ssr, "--output")
@@ -82,15 +84,16 @@ def execute(args: argparse.Namespace) -> None:
     if args.command == "init":
         write_json(args.output, initialize(args.checkpoint, args.episode, args.evidence))
         return
-    if args.command == "ssr":
-        write_json(args.output, measure(read_json(args.run), read_json(args.vectors)))
-        return
-
     checkpoint, digest = load_checkpoint(args.checkpoint)
     scenario = read_json(args.scenario)
     inspect_scenario(checkpoint, digest, scenario)
     if args.command == "prepare":
         write_json(args.output, prepare(checkpoint, digest, scenario, args.include_verbatim))
+        return
+    if args.command == "ssr":
+        run = read_json(args.run)
+        ensure_run_matches(run, scenario, digest)
+        write_json(args.output, measure(run, read_json(args.vectors)))
         return
     if args.command == "record":
         write_json(args.output,
