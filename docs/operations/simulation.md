@@ -28,6 +28,14 @@ or observed purchasing and switching behavior.
   predeclaration, and isolation are attested, not independently proven.
 - A separate report that keeps observation, assumptions, synthetic estimates, and validation distinct.
 
+## Evidence-first product design counterfactuals
+
+Use [counterfactual decisions](counterfactual-decisions.md) if your first goal is to
+decide **which product assumption to test** using real interview findings. It can
+produce a human-grounded decision brief and compare different design moves **without**
+model generation, embeddings, or SSR. This simulation workflow remains an optional
+additional layer for rival mechanisms and ordinal attitude measurements.
+
 ## Start from a validated source checkpoint
 
 Produce `outputs/CHECKPOINT.json` via the normal `scripts/run_pipeline.py` or

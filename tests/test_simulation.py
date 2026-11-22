@@ -22,6 +22,7 @@ from simulation.core import (
     schema_check,
     sha256_text,
 )
+from simulation.counterfactual import build_brief, compare_briefs, render_brief
 from simulation.evaluation import assess, ks_similarity, tvd
 from simulation.handoff import protocol_input, protocol_runs
 from simulation.report import render
@@ -371,3 +372,183 @@ def test_cli_prepares_records_and_reports(source, tmp_path):
     ], check=True, capture_output=True)
     assert (handoff / "input.json").exists()
     assert (handoff / "runs.json").exists()
+
+
+def design_hypothesis():
+    return {
+        "product_change": "Assisted migration instead of more reporting features",
+        "critical_assumption": "Manual migration effort is the primary switching barrier.",
+        "predicted_behavior": "People attempt migration rather than defer.",
+        "disconfirming_observation": (
+            "People offered assisted migration still decline due to security concerns."
+        ),
+        "if_disconfirmed": "Test reversible migration and trust assurances instead.",
+    }
+
+
+def test_counterfactual_brief_grounds_a_to_b_and_separates_claims(source):
+    checkpoint, data, digest, scenario = source
+    scenario["design_hypothesis"] = design_hypothesis()
+    run = record(data, digest, scenario, model_response())
+    original = checkpoint.read_bytes()
+    brief = build_brief(data, digest, scenario, run)
+    schema_check(brief, "counterfactual-brief.schema.json")
+    assert brief["validation_status"] == "NOT_VALIDATED"
+    assert brief["decision_status"] == "TEST_BEFORE_BUILD"
+    assert brief["evidence_grade"] == "L0_ROLEPLAY"
+    assert brief["reviewed_a_to_b_links"][0]["link"] == "L001"
+    assert brief["reviewed_a_to_b_links"][0]["a_definition"].startswith(
+        "Manual synthesis"
+    )
+    assert brief["reviewed_a_to_b_links"][0]["b_code"] == "B01"
+    assert brief["simulated_hypotheses"][0]["evidence_type"] == "SIMULATED_ESTIMATE"
+    assert brief["simulated_hypotheses"][0]["source_evidence_refs"] == ["E001"]
+    text = render_brief(brief)
+    assert "Reviewed" not in brief["simulated_hypotheses"][0]["generated_statement"]
+    assert "L001 / INFERRED / E001, E002" in text
+    assert "TEST BEFORE BUILD" in text
+    assert "SIMULATED, NOT OBSERVED" in text
+    assert "Disconfirming observation" in text
+    assert checkpoint.read_bytes() == original
+
+
+def test_counterfactual_requires_predeclared_hypothesis_and_reviewed_link(source):
+    _, data, digest, scenario = source
+    run = generated(source)
+    with pytest.raises(SimulationError, match="Declare design_hypothesis"):
+        build_brief(data, digest, scenario, run)
+    scenario["design_hypothesis"] = design_hypothesis()
+    run = record(data, digest, scenario, model_response())
+    scenario["evidence_refs"] = ["E001"]
+    scenario["baseline"]["evidence_refs"] = ["E001"]
+    scenario["source_checkpoint_sha256"] = digest
+    with pytest.raises(SimulationError, match="approved scenario"):
+        build_brief(data, digest, scenario, run)
+    fresh = record(data, digest, scenario, model_response())
+    with pytest.raises(SimulationError, match="No reviewed A-to-B links"):
+        build_brief(data, digest, scenario, fresh)
+
+
+def test_counterfactual_rejects_placeholder_design_and_invalid_comparison(source):
+    _, data, digest, scenario = source
+    scenario["design_hypothesis"] = design_hypothesis()
+    scenario["design_hypothesis"]["product_change"] = "REPLACE"
+    with pytest.raises(SimulationError, match="Complete design_hypothesis"):
+        inspect_scenario(data, digest, scenario)
+    scenario["design_hypothesis"] = design_hypothesis()
+    run = record(data, digest, scenario, model_response())
+    first = build_brief(data, digest, scenario, run)
+    other = copy.deepcopy(scenario)
+    other["scenario_id"] = "SIM002"
+    other["intervention"]["to"] = "automatic"
+    other["design_hypothesis"]["product_change"] = "Automatic migration"
+    second_run = record(data, digest, other, model_response(), run_id="R002")
+    second = build_brief(data, digest, other, second_run)
+    comparison = compare_briefs([first, second])
+    assert "SIM001" in comparison and "SIM002" in comparison
+    assert "not measured" in comparison
+    with pytest.raises(SimulationError, match="distinct"):
+        compare_briefs([first, first])
+    other["baseline"]["path_y"] = "Not the same baseline"
+    third = record(data, digest, other, model_response(), run_id="R003")
+    wrong = build_brief(data, digest, other, third)
+    with pytest.raises(SimulationError, match="identical human evidence"):
+        compare_briefs([first, wrong])
+
+
+def test_counterfactual_cli_brief_and_compare(source, tmp_path):
+    checkpoint, data, digest, scenario = source
+    scenario["design_hypothesis"] = design_hypothesis()
+    run = record(data, digest, scenario, model_response())
+    scenario_path = tmp_path / "scenario.json"
+    run_path = tmp_path / "run.json"
+    scenario_path.write_text(json.dumps(scenario))
+    run_path.write_text(json.dumps(run))
+    cli = [sys.executable, str(ROOT / "scripts" / "simulation_cli.py")]
+    markdown = tmp_path / "brief.md"
+    output_json = tmp_path / "brief.json"
+    subprocess.run(cli + [
+        "counterfactual", "--checkpoint", str(checkpoint),
+        "--scenario", str(scenario_path), "--run", str(run_path),
+        "--output", str(markdown), "--json-output", str(output_json),
+    ], check=True, capture_output=True)
+    assert "Manual synthesis" in markdown.read_text()
+    assert json.loads(output_json.read_text())["validation_status"] == "NOT_VALIDATED"
+
+    second = copy.deepcopy(scenario)
+    second["scenario_id"] = "SIM002"
+    second["intervention"]["to"] = "one-click"
+    second["design_hypothesis"]["product_change"] = "One-click migration"
+    second_run = record(data, digest, second, model_response(), run_id="R002")
+    second_path = tmp_path / "second.json"
+    second_run_path = tmp_path / "second-run.json"
+    second_path.write_text(json.dumps(second))
+    second_run_path.write_text(json.dumps(second_run))
+    comparison = tmp_path / "compare.md"
+    subprocess.run(cli + [
+        "compare", "--checkpoint", str(checkpoint),
+        "--scenario", str(scenario_path), "--run", str(run_path),
+        "--scenario", str(second_path), "--run", str(second_run_path),
+        "--output", str(comparison),
+    ], check=True, capture_output=True)
+    assert "SIM001" in comparison.read_text()
+    assert "SIM002" in comparison.read_text()
+
+
+def test_evidence_first_counterfactual_needs_no_model_run(source, tmp_path):
+    checkpoint, data, digest, scenario = source
+    scenario["design_hypothesis"] = design_hypothesis()
+    before = checkpoint.read_bytes()
+    brief = build_brief(data, digest, scenario)
+    schema_check(brief, "counterfactual-brief.schema.json")
+    assert brief["run_id"] is None
+    assert brief["simulation_status"] == "NOT_RUN"
+    assert brief["evidence_grade"] == "NOT_APPLICABLE"
+    assert brief["simulated_hypotheses"] == []
+    assert "NOT RUN" in render_brief(brief)
+    assert checkpoint.read_bytes() == before
+
+    path = tmp_path / "scenario.json"
+    path.write_text(json.dumps(scenario))
+    markdown = tmp_path / "decision.md"
+    cli = [sys.executable, str(ROOT / "scripts" / "simulation_cli.py")]
+    subprocess.run(cli + [
+        "counterfactual", "--checkpoint", str(checkpoint),
+        "--scenario", str(path), "--output", str(markdown),
+    ], check=True, capture_output=True)
+    assert "Manual synthesis" in markdown.read_text()
+    assert "NOT RUN" in markdown.read_text()
+
+    second = copy.deepcopy(scenario)
+    second["scenario_id"] = "SIM002"
+    second["intervention"]["to"] = "automatic"
+    second["design_hypothesis"]["product_change"] = "Automatic migration"
+    path2 = tmp_path / "second.json"
+    path2.write_text(json.dumps(second))
+    comparison = tmp_path / "comparison.md"
+    subprocess.run(cli + [
+        "compare", "--checkpoint", str(checkpoint),
+        "--scenario", str(path), "--scenario", str(path2),
+        "--output", str(comparison),
+    ], check=True, capture_output=True)
+    assert "SIM001" in comparison.read_text() and "SIM002" in comparison.read_text()
+
+
+def test_counterfactual_initialization_opt_in_preserves_old_simulation(source, tmp_path):
+    checkpoint, _, _, _ = source
+    cli = [sys.executable, str(ROOT / "scripts" / "simulation_cli.py")]
+    normal = tmp_path / "ordinary.json"
+    enhanced = tmp_path / "counterfactual.json"
+    base = [
+        "--checkpoint", str(checkpoint),
+        "--episode", "D01", "--evidence", "E001", "--evidence", "E002",
+    ]
+    subprocess.run(cli + ["init", *base, "--output", str(normal)],
+                   check=True, capture_output=True)
+    subprocess.run(cli + ["init", *base, "--counterfactual", "--output", str(enhanced)],
+                   check=True, capture_output=True)
+    assert "design_hypothesis" not in json.loads(normal.read_text())
+    special = json.loads(enhanced.read_text())
+    assert "design_hypothesis" in special
+    assert not special["review"]["evidence_reviewed"]
+    assert special["design_hypothesis"]["product_change"].startswith("REPLACE")

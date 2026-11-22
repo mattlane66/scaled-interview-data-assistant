@@ -22,6 +22,11 @@ from simulation.core import (  # noqa: E402
     schema_check,
     write_json,
 )
+from simulation.counterfactual import (  # noqa: E402
+    build_brief,
+    compare_briefs,
+    render_brief,
+)
 from simulation.evaluation import assess  # noqa: E402
 from simulation.handoff import protocol_input, protocol_runs  # noqa: E402
 from simulation.report import render  # noqa: E402
@@ -40,6 +45,8 @@ def configure() -> argparse.ArgumentParser:
     _path(init, "--output")
     init.add_argument("--episode", action="append", required=True)
     init.add_argument("--evidence", action="append", required=True)
+    init.add_argument("--counterfactual", action="store_true",
+                      help="Include an unapproved product design hypothesis template")
 
     prep = actions.add_parser("prepare", help="Make a privacy-gated model prompt packet")
     _path(prep, "--checkpoint")
@@ -72,6 +79,22 @@ def configure() -> argparse.ArgumentParser:
         _path(upstream, flag)
     _path(upstream, "--output-dir")
 
+    brief = actions.add_parser(
+        "counterfactual", help="Connect an approved design hypothesis to reviewed A-to-B links"
+    )
+    for flag in ("--checkpoint", "--scenario", "--output"):
+        _path(brief, flag)
+    _path(brief, "--run", required=False)
+    _path(brief, "--json-output", required=False)
+
+    compare = actions.add_parser(
+        "compare", help="Compare counterfactual product moves over the same evidence"
+    )
+    _path(compare, "--checkpoint")
+    compare.add_argument("--scenario", type=Path, action="append", required=True)
+    compare.add_argument("--run", type=Path, action="append")
+    _path(compare, "--output")
+
     rep = actions.add_parser("report", help="Render separate simulation report")
     for flag in ("--checkpoint", "--scenario", "--run", "--output"):
         _path(rep, flag)
@@ -82,7 +105,35 @@ def configure() -> argparse.ArgumentParser:
 
 def execute(args: argparse.Namespace) -> None:
     if args.command == "init":
-        write_json(args.output, initialize(args.checkpoint, args.episode, args.evidence))
+        scenario = initialize(args.checkpoint, args.episode, args.evidence)
+        if args.counterfactual:
+            scenario["design_hypothesis"] = {
+                "product_change": "REPLACE: product design move",
+                "critical_assumption": "REPLACE: what must be true to justify it",
+                "predicted_behavior": "REPLACE: what behavior would differ",
+                "disconfirming_observation": "REPLACE: what would prove us wrong",
+                "if_disconfirmed": "REPLACE: what we would design differently",
+            }
+        write_json(args.output, scenario)
+        return
+    if args.command == "compare":
+        if len(args.scenario) < 2 or (
+            args.run and len(args.scenario) != len(args.run)
+        ):
+            raise SimulationError(
+                "Provide at least two --scenario files and either zero or matching --run files"
+            )
+        checkpoint, digest = load_checkpoint(args.checkpoint)
+        runs = args.run or [None] * len(args.scenario)
+        briefs = [
+            build_brief(
+                checkpoint, digest, read_json(scenario),
+                read_json(run) if run is not None else None,
+            )
+            for scenario, run in zip(args.scenario, runs, strict=True)
+        ]
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(compare_briefs(briefs), encoding="utf-8")
         return
     checkpoint, digest = load_checkpoint(args.checkpoint)
     scenario = read_json(args.scenario)
@@ -99,6 +150,14 @@ def execute(args: argparse.Namespace) -> None:
         write_json(args.output,
                    record(checkpoint, digest, scenario, read_json(args.model_output),
                           run_id=args.run_id))
+        return
+    if args.command == "counterfactual":
+        run = read_json(args.run) if args.run else None
+        brief = build_brief(checkpoint, digest, scenario, run)
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(render_brief(brief), encoding="utf-8")
+        if args.json_output:
+            write_json(args.json_output, brief)
         return
 
     run = read_json(args.run)
