@@ -19,6 +19,7 @@ from simulation.core import (  # noqa: E402
     prepare,
     read_json,
     record,
+    schema_check,
     write_json,
 )
 from simulation.evaluation import assess  # noqa: E402
@@ -100,8 +101,12 @@ def execute(args: argparse.Namespace) -> None:
     run = read_json(args.run)
     ensure_run_matches(run, scenario, digest)
     if args.command == "handoff":
-        write_json(args.output_dir / "input.json", protocol_input(scenario))
-        write_json(args.output_dir / "runs.json", protocol_runs(run, scenario))
+        upstream_input = protocol_input(scenario)
+        upstream_runs = protocol_runs(run, scenario)
+        schema_check(upstream_input, "behavioral-input-v0.1.0.schema.json")
+        schema_check(upstream_runs, "behavioral-runs-v0.1.0.schema.json")
+        write_json(args.output_dir / "input.json", upstream_input)
+        write_json(args.output_dir / "runs.json", upstream_runs)
         return
     if args.command == "evaluate":
         measurement = read_json(args.measurement)
