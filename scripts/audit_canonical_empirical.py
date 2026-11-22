@@ -107,9 +107,35 @@ def audit() -> dict:
             assert row["reason"] and set(row["evidence_refs"]) <= set(
                 episodes[eid]["evidence_refs"]
             )
+            if row["relationship"] != "UNASSESSED":
+                assert row["evidence_refs"], "Assessed mechanism requires cited evidence"
         matrix[m["id"]] = dict(sorted(Counter(
             row["relationship"] for row in records.values()
         ).items()))
+
+    # A valid ID is not a valid citation for every hypothesis. Protect the
+    # specific interpretations of the original switch against generic reuse
+    # of the same unrelated excerpts across mechanisms.
+    required_core_evidence = {
+        "H01": {"E014", "E020"},  # Abandoned online path/recovery concern
+        "H02": {"E018", "E021"},  # Sample encounter; later outcome not known
+        "H03": {"E004", "E006"},  # Old-bed adjustment, not proven new modular use
+        "H04": {"E023", "E024", "E026"},  # Unresolved post-purchase outcome
+    }
+    for mid, required in required_core_evidence.items():
+        original = next(
+            row for row in mechanisms[mid]["case_assessments"]
+            if row["episode_id"] == "CD01"
+        )
+        assert required <= set(original["evidence_refs"]), (mid, original)
+
+    for eid, e in episodes.items():
+        if len(e["evidence_refs"]) > 1:
+            cited_sets = {
+                tuple(row["evidence_refs"]) for m in mechanisms.values()
+                for row in m["case_assessments"] if row["episode_id"] == eid
+            }
+            assert len(cited_sets) >= 2, f"Generic reused links for {eid}"
 
     lead = casebook["lead_user_scout"]
     assert lead["evidence_freeze"] == "NOT_PERFORMED"
