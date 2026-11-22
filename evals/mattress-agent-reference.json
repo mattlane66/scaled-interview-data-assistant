@@ -1,0 +1,23 @@
+{
+  "case_id": "CANON-MATTRESS-D01-PUBLIC",
+  "reference_status": "AI_AUDITED_NOT_HUMAN_REVIEWED",
+  "original_source": "examples/canonical-mattress/source-turns.json",
+  "expected_methods": [
+    "A2B"
+  ],
+  "allowed_source_refs": [
+    "E002",
+    "E014",
+    "E015",
+    "E023",
+    "E024",
+    "E026"
+  ],
+  "required_unknowns": [
+    "post_purchase_sleep"
+  ],
+  "human_review_authorized": false,
+  "qualified_lead_users_authorized": false,
+  "validated_prediction_authorized": false,
+  "independent_human_gold_standard": false
+}
