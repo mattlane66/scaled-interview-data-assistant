@@ -64,7 +64,7 @@ on use or successful progress, an analyst may add an episode-scoped assessment:
   "episode": "D01",
   "adoption": {
     "status": "REPORTED_ADOPTION",
-    "evidence_refs": ["E017"],
+    "evidence_refs": ["E019", "E020"],
     "interpretation": "Participant describes making the purchase."
   },
   "use": {
