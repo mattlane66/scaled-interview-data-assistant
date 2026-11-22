@@ -29,7 +29,7 @@ python -m pytest -q
 python scripts/build_plugin.py
 ~~~
 
-This creates `dist/scaled-interview-data-assistant-1.7.1.zip`, containing exactly **one** portable plugin root with `plugin.json` and five `SKILL.md` files. The archive does **not** bundle source transcripts, checkpoints, live user data, secrets or an `mcp.json` with a nonexistent server.
+This creates `dist/scaled-interview-data-assistant-1.8.0.zip`, containing exactly **one** portable plugin root with `plugin.json` and five `SKILL.md` files. The archive does **not** bundle source transcripts, checkpoints, live user data, secrets or an `mcp.json` with a nonexistent server.
 
 For private testing, import the ZIP as a private plugin in ChatGPT/Codex through a supported creator or plugin-import surface. Try:
 - "I have a recorded switch interview. Reconstruct the decision episode and flag missing evidence."
