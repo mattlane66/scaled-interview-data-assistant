@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1.0",
+  "decision": "Would an at-home foam sample enable a joint purchase decision?",
+  "population": "A hypothetical one-person proxy, not a sampled population",
+  "baseline": "Path Y: Keep old mattress while experimenting with remedies and searching; observed result: Costco purchase occurred; sleep improvement not established; evidence: E002, E006, E014, E023",
+  "scenario": "Change tactile_evaluation from no shared tactile assessment of the offered foam to both spouses can handle a take-home foam sample; hold constant: Poor home sleep, Buyer has a spouse, Mattress price; distance: NEAR_OOD",
+  "outcome_space": "attempt_purchase, defer_or_reject",
+  "mode": "PLAUSIBILITY_SPACE",
+  "target_grade": "L0_ROLEPLAY",
+  "time_context": "Counterfactual period before the historic Costco purchase",
+  "consequence_if_wrong": "Team could optimize the wrong switching condition",
+  "input_provenance": {
+    "decision": "USER_SUPPLIED",
+    "population": "EXPLICITLY_PROVISIONAL",
+    "baseline": "USER_SUPPLIED",
+    "scenario": "USER_SUPPLIED",
+    "outcome_space": "USER_SUPPLIED"
+  }
+}

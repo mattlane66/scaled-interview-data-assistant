@@ -1,0 +1,42 @@
+[
+  {
+    "link": "L001",
+    "episode": "D01",
+    "a_code": "A01",
+    "b_code": "B01",
+    "basis": "INFERRED",
+    "evidence": "E002, E004, E015",
+    "rationale": "Reported waking impairment motivates desire for rested functioning.",
+    "contradictions": ""
+  },
+  {
+    "link": "L002",
+    "episode": "D01",
+    "a_code": "A02",
+    "b_code": "B02",
+    "basis": "INFERRED",
+    "evidence": "E010, E014, E020, E027",
+    "rationale": "Failed recovery and Groupon anxiety make known-store return experience salient.",
+    "contradictions": "New purchase did not establish problem resolution; old mattress retained."
+  },
+  {
+    "link": "L003",
+    "episode": "D01",
+    "a_code": "A03",
+    "b_code": "B03",
+    "basis": "INFERRED",
+    "evidence": "E008, E009, E017, E019",
+    "rationale": "Competing obligations make convenient joint purchase a plausible path.",
+    "contradictions": ""
+  },
+  {
+    "link": "L004",
+    "episode": "D01",
+    "a_code": "A04",
+    "b_code": "B04",
+    "basis": "INFERRED",
+    "evidence": "E013, E021, E025",
+    "rationale": "Retail aversion and foam sample shape a different product evaluation path.",
+    "contradictions": ""
+  }
+]

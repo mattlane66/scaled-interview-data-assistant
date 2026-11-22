@@ -1,0 +1,1955 @@
+[
+  {
+    "turn_id": "T0001",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why we are sharing a live JTBD interview",
+    "text": "Welcome to the latest edition of Jobs-to-be-Done Radio. As always, I’m here with my partner Bob Moesta."
+  },
+  {
+    "turn_id": "T0002",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Why we are sharing a live JTBD interview",
+    "text": "Hi, Chris."
+  },
+  {
+    "turn_id": "T0003",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why we are sharing a live JTBD interview",
+    "text": "How you doing, Bob?"
+  },
+  {
+    "turn_id": "T0004",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Why we are sharing a live JTBD interview",
+    "text": "Good."
+  },
+  {
+    "turn_id": "T0005",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why we are sharing a live JTBD interview",
+    "text": "Good. We’ve been gone for a while. Not a planned thing, but had the holidays go by, and schedules just got crazy. This is the first time we’ve had a chance to be together and record a radio episode. This is exciting."
+  },
+  {
+    "turn_id": "T0006",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Why we are sharing a live JTBD interview",
+    "text": "Yeah, I think we’ve been to Europe, we’ve been to California a couple times, we’ve been all over. With the holidays, I hate to have an excuse, but it was a good holiday for both of us. I think we’re ready to hit the road and make Jobs even better this year."
+  },
+  {
+    "turn_id": "T0007",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why we are sharing a live JTBD interview",
+    "text": "Yeah, so the good thing is between both of us we’ve been doing a lot of interviews, a lot analysis, so it’s been good exposure to different markets and that sort of thing. We’re hoping to bring that back to all of you who are listening in the form of some good content.\nJust to cover a few administrative things, I think the biggest news is we have a Switch workshop coming up on January 29th at the W Hotel in San Francisco. Phil from Precision Nutrition, the CEO over at Precision Nutrition, has been nice enough to sponsor this event for us and help us organize it and get it together.\nThere are still seats available, so you can go to jobstobedone.org to find out how to register. The last few sold out in five or six days, and this one seems to be tracking along that same pace. If you want a seat, try to snag one."
+  },
+  {
+    "turn_id": "T0008",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Why we are sharing a live JTBD interview",
+    "text": "Yeah. The important thing for us is to keep it down to 24 people or so, and make it intimate and really make sure that everybody gets it. It’s not trying to be a big event.\nThe other thing is to say that we’re going to Asymconf on the next day to see Horace, which I think we’re both pretty excited about."
+  },
+  {
+    "turn_id": "T0009",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why we are sharing a live JTBD interview",
+    "text": "Yeah, absolutely. Big fans of his podcast and everything that he’s doing over there, and it’ll be good to see him face to face and see what he has going on."
+  },
+  {
+    "turn_id": "T0010",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Why we are sharing a live JTBD interview",
+    "text": "Yeah, yeah. We’ve had lots of requests for, ‘can you share interviews with us? Help us listen to what an interview sounds like.’ That’s what we’re going to do today. We’re not going to talk much from this side of the mic, but we recorded some information at the last Switch conference."
+  },
+  {
+    "turn_id": "T0011",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why we are sharing a live JTBD interview",
+    "text": "Yeah, we actually reached out to one of the attendees from the last Switch workshop. We had done a live interview with him about his recent purchase of a new mattress. Neither Bob nor I have any experience selling furniture or doing product development in mattresses. We plucked him out of the audience, had him come up front, and literally did an impromptu interview for around 45 minutes around the progress that he was trying to make through the purchase of this new mattress.\nWe want to play that for you today. We use a method during the interview called ‘game on, game off,’ in which we’ll actually have an iPhone sitting on the table. If it’s screen up, that means game on, so we’re in the interview, we’re conducting the interview, we’re asking questions.\nIf you flip it over so it’s screen down, we call that game off. We’re talking about interview techniques, we’re talking about the Jobs-to-be-Done method. It’s something that you’ll hear us do through the course of the audio. Just know that we’re coming in and out of the interview.\nIt’s only an instructional tool. We would never do it with an actual consumer who we were interviewing, but it allows us to interject our commentary as we’re interviewing."
+  },
+  {
+    "turn_id": "T0012",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Why we are sharing a live JTBD interview",
+    "text": "Right. The other thing is that I think we’re going to attach both the capture grid, which is the timeline, and the forces diagram. Those of you who are listening not in the car can actually listen along and fill in the timeline and draw out the forces and see exactly what pushed and what pulled and what was his anxiety, what was his allegiance to the past, etc.\nYou can use the capture methods that we use real time to go through that. Love to hear feedback from you all on what you thought of the interview, what was interesting, what was different. Love to hear some information about that.\nIt’s a typical interview, but again, it’s how we usually go in cold and we just start probing."
+  },
+  {
+    "turn_id": "T0013",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why we are sharing a live JTBD interview",
+    "text": "Yeah, so I guess a couple things I’ll say is one, we’re extremely grateful to this attendee for allowing us to do this. Because I think at the time he was opening himself up to 23 other people and us, and we approached him afterwards and said, ‘This is really valuable.’\nWe know that everyone, I’d say most of the people who’ve been listening to this show, that’s the number one request that we’ve gotten. You talk about your methods and you talk about how you do analysis, but we’ve never actually heard how you gather these insights.\nIt’s not a black box. We want to share it as much as we can, and Bob and I are always on the look out for interviews that we can publish and share. They’re just really, really hard to come by because of confidentiality.\nOnce again, we’re very thankful to be able to put this out there and start to get reactions from all of you that listen."
+  },
+  {
+    "turn_id": "T0014",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Why we are sharing a live JTBD interview",
+    "text": "Yeah. It’s also sparked us to add some functionality to jobstobedone.org around the notion of being able to create a practice space for people, for people who want to be interviewed and people who can be interviewed, so they can practice their interviewing techniques.\nWe’re in the early stages of exploring how to do that, so people can practice and get better at it."
+  },
+  {
+    "turn_id": "T0015",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why we are sharing a live JTBD interview",
+    "text": "Absolutely. We’ll leave you with that. We’re going to follow this episode of Jobs-to-be-Done Radio up with another one soon, where we can actually get into some detail about this mattress interview, and talk about the important points and when you want to really dig in and that sort of thing. We’ll follow that up during the next episode. For now I think we’re going to leave you with this audio."
+  },
+  {
+    "turn_id": "T0016",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Why we are sharing a live JTBD interview",
+    "text": "Yeah, enjoy the interview."
+  },
+  {
+    "turn_id": "T0017",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why we are sharing a live JTBD interview",
+    "text": "Talk to you soon. Thanks everyone."
+  },
+  {
+    "turn_id": "T0018",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "The best way to think about this is we’re literally filming a documentary. We want all the details around when you first started thinking about buying the mattress, when you made the decision, and then using it and experiencing it for the first time.\nWe’ll ask really broad questions, and there’ll be some situations where we’ll slow down time and ask who were you with, what time of day it was, and get really really deep into details. It’s a goofy method, but you’ll have to bear with us and you’ll see it all come together."
+  },
+  {
+    "turn_id": "T0019",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "If the people in back can’t hear for any reason, you guys can move up or just tell us that you can’t hear."
+  },
+  {
+    "turn_id": "T0020",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Tell us, just yell.\nLet’s just start with when did you buy the mattress pad?"
+  },
+  {
+    "turn_id": "T0021",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "About 45 days ago."
+  },
+  {
+    "turn_id": "T0022",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "When was that? Mid-September?"
+  },
+  {
+    "turn_id": "T0023",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Yeah, mid-September."
+  },
+  {
+    "turn_id": "T0024",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "OK, did you order online, or did you order it . . ."
+  },
+  {
+    "turn_id": "T0025",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "I bought it at Costco."
+  },
+  {
+    "turn_id": "T0026",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "At Costco, OK. It was mid-September.\nGame off for a second. The thing is, think about this as almost investigation. We’re building a timeline, and we’re going to piece it together. He’s going to start saying things, and all of a sudden it’s going to be like, ‘Wait a second, it doesn’t jive. I’m confused.’ Part of this it is being able to make sure that we get the timeline right."
+  },
+  {
+    "turn_id": "T0027",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Let’s try to stay on for as long as we . . . let’s [inaudible 07:35], sorry."
+  },
+  {
+    "turn_id": "T0028",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "OK, good. Go."
+  },
+  {
+    "turn_id": "T0029",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Can I have my attorney here?"
+  },
+  {
+    "turn_id": "T0030",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "No."
+  },
+  {
+    "turn_id": "T0031",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Yeah."
+  },
+  {
+    "turn_id": "T0032",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "It feels like that, but what you’ll see is at the end the customers that you interview love the fact that you care about hearing their story. You bought it at Costco, was it weekend, weekday?"
+  },
+  {
+    "turn_id": "T0033",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "It was a weekend."
+  },
+  {
+    "turn_id": "T0034",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Weekend. Saturday or Sunday?"
+  },
+  {
+    "turn_id": "T0035",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "I believe it was a Saturday."
+  },
+  {
+    "turn_id": "T0036",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Did you buy anything else with it, or was it just . . ."
+  },
+  {
+    "turn_id": "T0037",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "You can never go in Costco and buy just one thing, so yes, I did buy other things."
+  },
+  {
+    "turn_id": "T0038",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Did you go with ‘OK, I’m going to buy this thing today, and oh, I need this and this and this’?"
+  },
+  {
+    "turn_id": "T0039",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "No."
+  },
+  {
+    "turn_id": "T0040",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "You didn’t go with the intent to buy it?"
+  },
+  {
+    "turn_id": "T0041",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "I did not."
+  },
+  {
+    "turn_id": "T0042",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Wow, OK."
+  },
+  {
+    "turn_id": "T0043",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "What else did you leave with? Do you remember what else you bought in that trip?"
+  },
+  {
+    "turn_id": "T0044",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Well, I have kids, so baby wipes. A lot of milk."
+  },
+  {
+    "turn_id": "T0045",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "How much milk?"
+  },
+  {
+    "turn_id": "T0046",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "You get the thing with the three almond milk thing, and then a couple gallons of something else."
+  },
+  {
+    "turn_id": "T0047",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "What was the something else?"
+  },
+  {
+    "turn_id": "T0048",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Just the organic, my son has the 2% and my daughter has the non-fat."
+  },
+  {
+    "turn_id": "T0049",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Got it, OK.\nGame off for a second, [inaudible 08:47]."
+  },
+  {
+    "turn_id": "T0050",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Yeah."
+  },
+  {
+    "turn_id": "T0051",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "OK. Two things. The whole thing is getting him back to the moment. We’re asking ridiculous amounts of detail, like what did he buy. What you’ll find is the brain actually has a lot of this stuff stored in it, and the fact is when we interview Jason on something, it was like Jason, ‘I can’t remember,’ and then two seconds later, ‘Yeah, I did this and this and this.’\nPart of it is setting it up. It’s unpacking that moment and getting to the detail, so then all of a sudden he’ll have the resolution. Say he can’t remember, we typically dive into, ‘so tell me what else was in the cart.’ That’s why we both asked that same question, setting the scene kind of thing."
+  },
+  {
+    "turn_id": "T0052",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "This was one of the most interesting things for me when I learned how to do this. Why in the hell do you care about the milk that he bought? We’re talking about a mattress. But you can’t look at things in isolation, it’s not just a mattress. He went to go shopping, he didn’t even think about the mattress in the first place.\nWhere was his head, what he thinking about, what else was in his heart? In some cases you might go to the store with a cart, or not even with a cart, you might just go with your two hands. Then you fill up your two hands and you can’t carry anything else.\nHe had a cart, so does that mean he’s going to fill the cart up because he had more room? You just keep thinking about stuff like that."
+  },
+  {
+    "turn_id": "T0053",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "I had to get one of those . . ."
+  },
+  {
+    "turn_id": "T0054",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Game on?"
+  },
+  {
+    "turn_id": "T0055",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Game on."
+  },
+  {
+    "turn_id": "T0056",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": ". . . the flat bed. I had to go back outside to get the flat bed."
+  },
+  {
+    "turn_id": "T0057",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Did you start, so you didn’t start with anything."
+  },
+  {
+    "turn_id": "T0058",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Did you have a push cart that you started with?"
+  },
+  {
+    "turn_id": "T0059",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Yeah, started with a push cart to get the weekly, the monthly supplies. Paper towels, the milk. The baby wipes."
+  },
+  {
+    "turn_id": "T0060",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Anybody with you, or by yourself?"
+  },
+  {
+    "turn_id": "T0061",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "We had the whole crew there. [inaudible 10:24] wife and two kids."
+  },
+  {
+    "turn_id": "T0062",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Oh my God, so this is like a cruise . . ."
+  },
+  {
+    "turn_id": "T0063",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Family man. This is like ‘Family Man’ inside the Costco."
+  },
+  {
+    "turn_id": "T0064",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "It’s Saturday, or is it Sunday?"
+  },
+  {
+    "turn_id": "T0065",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "It’s Saturday."
+  },
+  {
+    "turn_id": "T0066",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Remember early on he said ‘I’m not sure if it was Saturday or Sunday’ and boom, it’s Saturday."
+  },
+  {
+    "turn_id": "T0067",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "What are your kids’ names?"
+  },
+  {
+    "turn_id": "T0068",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Annette and Edmond."
+  },
+  {
+    "turn_id": "T0069",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "How old are they?"
+  },
+  {
+    "turn_id": "T0070",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Four and a half and two."
+  },
+  {
+    "turn_id": "T0071",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Oh my gosh. Wait a second, you’re talking into Costco, get the cart out, walking through, they’re running, they see that first part of the aisle thing. Do you have a list?"
+  },
+  {
+    "turn_id": "T0072",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Small list, but they’re not running because when you go in Costco they’ll get run over."
+  },
+  {
+    "turn_id": "T0073",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Especially on Saturday."
+  },
+  {
+    "turn_id": "T0074",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "You lock them in because you say, ‘If you’re not in the cart, you don’t get the samples.’ Because those are like drug dealers with kids at Costco."
+  },
+  {
+    "turn_id": "T0075",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "This is a family experience.\nI’m sorry, game off for a second. This is the empathy part. You need to empathize with them. You need to be able to say, ‘Wait a second, I’ve got two kids, I’m with my wife, I’ve got a list. Literally I’m trying to keep my kids close. I’ve got drug dealers pushing these samples for my kids, I’m trying to watch everybody.’\nIn the midst of this, he buys a mattress. Right? You’re like, OK.\nGame back on. Where did you come across the mattress? Early on or later?"
+  },
+  {
+    "turn_id": "T0076",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Towards the end of the 45 minutes we were in Costco."
+  },
+  {
+    "turn_id": "T0077",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "45 minutes in Costco."
+  },
+  {
+    "turn_id": "T0078",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Was your cart full at that point?"
+  },
+  {
+    "turn_id": "T0079",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Pretty full."
+  },
+  {
+    "turn_id": "T0080",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "With what else?"
+  },
+  {
+    "turn_id": "T0081",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "The milk and the boxes and the paper towels and all that will fill up a cart pretty quick, so I think I went through everything. There was some produce and that was about it."
+  },
+  {
+    "turn_id": "T0082",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Was the list done? Did you guys check everything off?"
+  },
+  {
+    "turn_id": "T0083",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Yeah, and like any Costco trip, there were some things we bought that weren’t on that list too."
+  },
+  {
+    "turn_id": "T0084",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Give me an example of that."
+  },
+  {
+    "turn_id": "T0085",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Mattress. Sorry."
+  },
+  {
+    "turn_id": "T0086",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Yeah."
+  },
+  {
+    "turn_id": "T0087",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "No."
+  },
+  {
+    "turn_id": "T0088",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Yeah, the mattress was not on the list."
+  },
+  {
+    "turn_id": "T0089",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "No, no, I understand that, but was there anything else there?"
+  },
+  {
+    "turn_id": "T0090",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "I think some salad and some meat for dinner."
+  },
+  {
+    "turn_id": "T0091",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "OK, nothing else?"
+  },
+  {
+    "turn_id": "T0092",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "Surprisingly no. Maybe a box of . . . actually no, there was. There was that box that I insisted on getting because I took something from the drug dealer, which was the 48 packages of instant, in the back Eggo mini-pancakes, that now have maple syrup infused in them. Again to the liquid cigarette guy, this guy . . ."
+  },
+  {
+    "turn_id": "T0093",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Building the timeline: the day at Costco",
+    "text": "OK. You’re getting to the end of this trip."
+  },
+  {
+    "turn_id": "T0094",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Building the timeline: the day at Costco",
+    "text": "And it’s getting stressful. It always gets stressful at the end of Costco, because it’s like trying to merge into the Kennedy in rush hour traffic. They’ve got 1,000 products in the store, but they’ve got four lanes open.\nIt’s getting stressful, we’re getting near the end. I actually go down an aisle unexpectedly, and the lightbulb goes off, and there’s the mattress."
+  },
+  {
+    "turn_id": "T0095",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "OK, so I’ve got to stop for a second."
+  },
+  {
+    "turn_id": "T0096",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "Game off. No, no, you."
+  },
+  {
+    "turn_id": "T0097",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "No, no, game off for a second. When in the world did you think you needed a new mattress?"
+  },
+  {
+    "turn_id": "T0098",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "That’s something you guys haven’t asked me about, which is the background."
+  },
+  {
+    "turn_id": "T0099",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "I know. That’s right. Game off on that. The thing is, you’re trying to set the scene, and you want to get to the scene of the crime as fast as possible. Because as much of it is if you start at the beginning, ‘give me the first thought,’ they’re going to give you all this back filled, logical stuff. It’s like, ‘Well, we thought about it . . .’\nThe thing is, all of a sudden it doesn’t fit. Part of it is you want to make sure you set that scene hard, because that’s like the foundation of the story. First of all, who had the first thought? You? Your wife? Who thought . . ."
+  },
+  {
+    "turn_id": "T0100",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "About a new mattress?"
+  },
+  {
+    "turn_id": "T0101",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "Yeah, about a new mattress."
+  },
+  {
+    "turn_id": "T0102",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "Definitely me first, because about four years prior, did a lot of research and bought an overpriced Sterns & Foster that was guaranteed to give me a great night’s sleep, and you’re going to have a mattress for at least ten years, so it’s worth the bigger investment, and we got the cushy pillow top.\nI would say for about a year I kept waking up every morning when I was saying, ‘This bed is awful, I wake up with a headache, a neckache and a backache. It’s starting to sink, this was a waste of $2,000, I need to find something different.’"
+  },
+  {
+    "turn_id": "T0103",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "How long did you enjoy the mattress? Was it the first year right when you bought it?"
+  },
+  {
+    "turn_id": "T0104",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "Yeah."
+  },
+  {
+    "turn_id": "T0105",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "Right when you got it . . ."
+  },
+  {
+    "turn_id": "T0106",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "Yeah, right when I got it, it was something that I enjoyed four about two years. Year three kind of ‘eh,’ year four, couldn’t stand it. Had total buyer’s remorse."
+  },
+  {
+    "turn_id": "T0107",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "When did you start to say it was the mattress?"
+  },
+  {
+    "turn_id": "T0108",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "Because the backaches and the shoulder and neck aches were always waking up that next morning. I tried sleeping without pillows, I tried adjusting my position, all this stuff. At the same time slowly I started to see also, and as you guys can see I’m not a big, big guy, but I started to notice in the mattress the sinkage.\nIt felt like I was constantly in this arch, and I woke up every morning thinking, ‘I don’t just need Red Bull, I need three Advil or something else.’"
+  },
+  {
+    "turn_id": "T0109",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "You made the comment ‘when you’re home,’ so you travel a lot?"
+  },
+  {
+    "turn_id": "T0110",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "Last year I did."
+  },
+  {
+    "turn_id": "T0111",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "OK, and did you not have these problems when you were on the road?"
+  },
+  {
+    "turn_id": "T0112",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "I did not. Last year was the first year of my business, and I was gone 37 weeks. As I told you at breakfast, I was held up in the Marriot Renaissance Center three days a week. I would assure you at least that that mattress I’m sure was not the one that I had at home, but I didn’t have those problems."
+  },
+  {
+    "turn_id": "T0113",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "What else did you do? Did you change anything about the mattress at home? You said you tried no pillows."
+  },
+  {
+    "turn_id": "T0114",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "Yeah, I flipped it, I rotated it, I turned it upside down, I took it off the frame, took it off the box springs."
+  },
+  {
+    "turn_id": "T0115",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "You actually removed the box spring, tried the mattress on its own?"
+  },
+  {
+    "turn_id": "T0116",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "Yeah."
+  },
+  {
+    "turn_id": "T0117",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "What’d you do with the box spring?"
+  },
+  {
+    "turn_id": "T0118",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "They’re in my garage."
+  },
+  {
+    "turn_id": "T0119",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "Did your wife help you do all that?"
+  },
+  {
+    "turn_id": "T0120",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "No."
+  },
+  {
+    "turn_id": "T0121",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "Was your wife having a problem sleeping?"
+  },
+  {
+    "turn_id": "T0122",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "It’s funny, because she started, I would say the last six months, to realize too, whether it was guilt by association or legitimate, she would say, ‘I’m starting to have problems too. It’s uncomfortable,’ and believe me, as I said, I’m not a big buy and she’s probably half of me.\nShe was saying, ‘I’m having the same problems, and you can see it’s starting to sink, and this pillow top isn’t what I thought it was going to be. PS, your uncle’s an a**hole because he sold it to us.’"
+  },
+  {
+    "turn_id": "T0123",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "Were you complaining to your wife about this? Were you complaining about the condition you were in, or was this something you felt internally?"
+  },
+  {
+    "turn_id": "T0124",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "Initially I felt, and then I started voicing it. Then she started saying, ‘Why are you so cranky?’ As you wrote in your book chapter and you nicely illustrated, you’ve got to get sleep, or your irritability level . . ."
+  },
+  {
+    "turn_id": "T0125",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "Do you remember when she actually first told you that she was being affected by it? Do you remember that conversation, or when it was approximately?"
+  },
+  {
+    "turn_id": "T0126",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "I would say it’s probably about six months ago."
+  },
+  {
+    "turn_id": "T0127",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "When was the, you’re on the road all the time, and you’re cranky, you need to come home, you’ve got two kids. When did that argument happen? It had to be something like OK, you come home and you’re cranky but I’m not sleeping, so there had to be some conflict around that discussion at some point in time."
+  },
+  {
+    "turn_id": "T0128",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "Oh, there was a lot of that. Because remember my son is two now, so a year ago he was one."
+  },
+  {
+    "turn_id": "T0129",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "And you’re gone all the time."
+  },
+  {
+    "turn_id": "T0130",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "For most of the year he was less than that. I was not around much."
+  },
+  {
+    "turn_id": "T0131",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "Then when you come home, you’re waking up and you’re feeling like crap and it’s like, ‘Why aren’t you helping?’"
+  },
+  {
+    "turn_id": "T0132",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The struggling moment: a year of bad sleep",
+    "text": "Yeah, and ‘hey, you’ve been gone all week, so you can be a dad for three days.’"
+  },
+  {
+    "turn_id": "T0133",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "Why didn’t you go get a mattress earlier? It sounded like you knew it for a year, your wife is basically . . . you bought it in September, so a year ago September, it’s like OK. By February she’s like, ‘Yeah, there’s something not right here.’ Right?\nWhy did you wait so long to get a mattress?"
+  },
+  {
+    "turn_id": "T0134",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "I think life gets in the way, between building a company over the last 18 months and trying to raise two kids in a small condo and sell it, and then move to a different place."
+  },
+  {
+    "turn_id": "T0135",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "Amazing, you moved in this . . .?"
+  },
+  {
+    "turn_id": "T0136",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "Buying a new mattress was not top of priority list."
+  },
+  {
+    "turn_id": "T0137",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "When did you move?"
+  },
+  {
+    "turn_id": "T0138",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "Yeah, when did you move?"
+  },
+  {
+    "turn_id": "T0139",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "June."
+  },
+  {
+    "turn_id": "T0140",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "OK."
+  },
+  {
+    "turn_id": "T0141",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "You brought the old mattress with you?"
+  },
+  {
+    "turn_id": "T0142",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "Could I lay on a sofa for this?"
+  },
+  {
+    "turn_id": "T0143",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "OK, just game off for a second. What are you guys hearing?"
+  },
+  {
+    "turn_id": "T0144",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "Why he waited so long to switch",
+    "text": "He’s got a stressed out life, and he’s fine when he’s traveling, away from the stressed life part. The mattress is being the victim of blame."
+  },
+  {
+    "turn_id": "T0145",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "Right. Let’s compare it back to how you guys talk to your customers. If we were interviewing him about mattresses, what would we be asking him about versus what we’re talking about right now?"
+  },
+  {
+    "turn_id": "T0146",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "Why he waited so long to switch",
+    "text": "Competitor information, where did you find, did you look at other . . ."
+  },
+  {
+    "turn_id": "T0147",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "How firm is it, do you want firmness, coiled box springs. We’re talking about none of that stuff yet, right?"
+  },
+  {
+    "turn_id": "T0148",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "Why he waited so long to switch",
+    "text": "[inaudible 20:44 to 20:46]"
+  },
+  {
+    "turn_id": "T0149",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "See, you don’t get this in focus groups. “See, you don’t get this in focus groups.” Mattress Interviewee"
+  },
+  {
+    "turn_id": "T0150",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "Why he waited so long to switch",
+    "text": "You’re delighted [inaudible 20:48] $2,000 on it."
+  },
+  {
+    "turn_id": "T0151",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "What was that?"
+  },
+  {
+    "turn_id": "T0152",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "Why he waited so long to switch",
+    "text": "You put $2,000 on the mattress, and if we do it again, did you want, ‘I’ve got to get my use out of the $2,000.’"
+  },
+  {
+    "turn_id": "T0153",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "Right, he wants to extend the life of it, right?"
+  },
+  {
+    "turn_id": "T0154",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "Why he waited so long to switch",
+    "text": "Even though he’s uncomfortable, he doesn’t want to make that commitment."
+  },
+  {
+    "turn_id": "T0155",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "Why he waited so long to switch",
+    "text": "I just wonder with the $2,000 mattress purchase, did you ever go back to the manufacturer, the company, and say, ‘Hey, I’m having this trouble.’ There should be some sort of guarantee timeline where you can . . ."
+  },
+  {
+    "turn_id": "T0156",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "Are we game on or off?"
+  },
+  {
+    "turn_id": "T0157",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "Game on, go ahead and answer that question."
+  },
+  {
+    "turn_id": "T0158",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "Well, no, I just didn’t know if that was something [inaudible 21:26]."
+  },
+  {
+    "turn_id": "T0159",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "No, it’s a good question."
+  },
+  {
+    "turn_id": "T0160",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "Yeah, well, the other caveat that makes this interesting that you might have heard me say really subtly when everyone was talking was, it was sold to me by my uncle."
+  },
+  {
+    "turn_id": "T0161",
+    "speaker": "Audience",
+    "role": "AUDIENCE",
+    "section": "Why he waited so long to switch",
+    "text": "Oh."
+  },
+  {
+    "turn_id": "T0162",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "No, no, but to answer your question, yes. It was Macy’s Home Store, and I had done, when we purchased the original mattress."
+  },
+  {
+    "turn_id": "T0163",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "The research, you knew exactly [inaudible 21:55]."
+  },
+  {
+    "turn_id": "T0164",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "Did a lot of research on it. Was hoping that my uncle would actually give me a deal, which I found out at check out he wasn’t going to. It’s not like he was pushing this, but. I went back to Macy’s Home Store and asked some questions, ‘Well, you’ve got to rotate your mattress. Well, you’ve got to try this. Well, is it maybe how you’re sleeping? Well, our warranty is good for this, but it covers sinkage, and what you have to do is lay a yard stick across the sink of the mattress.’"
+  },
+  {
+    "turn_id": "T0165",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "Did you do that?"
+  },
+  {
+    "turn_id": "T0166",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "I did not do that, because they said it had to be at least an inch and a half. Then I thought in my head, and other people suggested, ‘Why don’t you get some giant [inaudible 22:42], and set it in where the sinkholes are already, and have the guy come out."
+  },
+  {
+    "turn_id": "T0167",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "And measure it?"
+  },
+  {
+    "turn_id": "T0168",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "And measure it to make sure you’ve hit that magic number, because if it didn’t hit that magic number, nothing about the warranty mattered. It was not an issue of, ‘oh, you found it uncomfortable? You can return it and we’ll get you something else.’"
+  },
+  {
+    "turn_id": "T0169",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "Why he waited so long to switch",
+    "text": "Was it your uncle or your wife’s?"
+  },
+  {
+    "turn_id": "T0170",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "My uncle."
+  },
+  {
+    "turn_id": "T0171",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "Who suggested the cement bags?"
+  },
+  {
+    "turn_id": "T0172",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "My brother-in-law."
+  },
+  {
+    "turn_id": "T0173",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "Not related to your uncle though?"
+  },
+  {
+    "turn_id": "T0174",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "No."
+  },
+  {
+    "turn_id": "T0175",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "How did he even know that this was happening?"
+  },
+  {
+    "turn_id": "T0176",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "Good question, because then once I went through, which we’re not even talking about yet, actually the experience on the memory foam mattress, there was a lot of discussion around that, and they asked the same question about, ‘Well, did Macy’s do anything to work with you or help you on your existing mattress experience?’ That was a topic of conversation."
+  },
+  {
+    "turn_id": "T0177",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "After you bought the new mattress?"
+  },
+  {
+    "turn_id": "T0178",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "Yes."
+  },
+  {
+    "turn_id": "T0179",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "The cement thing happened, the suggestion for the cement bags happened before or after you bought the foam mattress?"
+  },
+  {
+    "turn_id": "T0180",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "That was after the foam mattress, because I had said earlier on that although there’s these little sink areas on each side of the bed, it didn’t get an inch and a half. The warranty didn’t matter, so I wasn’t going to get any recourse there."
+  },
+  {
+    "turn_id": "T0181",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "Game off. This is really interesting to me that you’re still talking about this old mattress that you hated, after you even bought the new one, and you’re talking about it with a family member, and then the cement bags come up. Why are you still so attached?\nMaybe this should be game on, but I find it interesting that you’re still talking about this mattress, even after you bought the new one."
+  },
+  {
+    "turn_id": "T0182",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "I actually slept on the old mattress last night."
+  },
+  {
+    "turn_id": "T0183",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "Wait, you didn’t throw it out?"
+  },
+  {
+    "turn_id": "T0184",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "I have not thrown it out yet.\nI once had, you know dueling piano bars? I had two king sized beds in my bedroom."
+  },
+  {
+    "turn_id": "T0185",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "Game off for a second."
+  },
+  {
+    "turn_id": "T0186",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Why he waited so long to switch",
+    "text": "See, you don’t get this in focus groups."
+  },
+  {
+    "turn_id": "T0187",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "No you don’t. The point though is think of all the emotional energy that he’s gone through. In a focus group, yeah, he’s an impulse buyer at a Costco, that he happened to be cutting through the aisle to pick up the mattress. I say, bulls***. The fact is, he’s been looking for a year and figuring out ways to see how he can return the old mattress, and then just happened to run by . . .\nSee the thing is, he’s been thinking about it, and there was something about the moment that said, ‘Now.’ Right? We’re going to dig back to the moment of now. We only have scheduled an hour, but the key is to see, we need to find the emotional energy. We need to find out what’s driving him. We need to understand how he’s choosing.\nThe thing is literally, there’s so much emotion tied up in all this. Is he worried about springs? Is he worried about this has 32 coils versus 21 coils? There’s just none of that thought.\nThe thing is, what we want to get to is how did he choose that one, and how many times has he actually walked by it before and never saw it? You have a question up here."
+  },
+  {
+    "turn_id": "T0188",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "Why he waited so long to switch",
+    "text": "I might give it away, but the trigger [inaudible 26:23] aisle, going to check-out at Costco, you have the history of stress and that trigger of stress checking out. At that point it seemed like you were looking for piece of mind, or piece and tranquility at that moment. You saw the mattress as maybe a solution to that."
+  },
+  {
+    "turn_id": "T0189",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Why he waited so long to switch",
+    "text": "Game off for a second. The thing is that what you want to be able to do is, as he formed a theory about how that happened, what you want to do is ease into the theory.\nNobody wants to be told what happened. There’s a technique we call ‘dumbing up.’ I’m a little confused here for a second, so let me just play it.\nI have to say I’m confused, because at some point you’re not sleeping well. You’re all stressed. You’re in the middle of Costco, taking a shortcut to try to ease your way onto the Kennedy a little bit faster, get out of there faster, and you see a mattress. You say, ‘This is the time.’\nWhat made you think you had the time today to get that? Because you had to go all the way back and get a flatbed and re-enter the Kennedy to get out?"
+  },
+  {
+    "turn_id": "T0190",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "As we talked about, this is mid-September. Now let’s rewind about three months. Within that three month window, I started doing research, saying, ‘The old mattress has to be replaced.’ The idea of going into a mattress store or furniture store just gave me the skeeves.\nI did a lot of online research, and I thought, ‘You know what? I’m going to make a commitment to a memory foam mattress of some kind.’\nI did a lot of online research, came this close to pulling the trigger on a Groupon for a memory foam mattress, and said after my experience with Macy’s Home Store, the last thing I want to do is order something through Groupon online. In the event that I don’t like it, then what am I going to do?\nThen this brings us back to the day of, apparently, the crime and the crime scene. I’m in the aisle, and all of a sudden here’s all these different memory foam mattresses. I’m like, OK. I’m in Costco. I’ve done a lot of research. The idea of box springs versus 18 inch versus 12 versus coils, none of that stuff had ever even gone through my head.\nTo me, it was about a good night’s sleep. Waking up, feeling pretty good, so I could be as productive as I could be as a business guy and a dad and a husband the next day. I see this, my kids are talking about they want to get pizza in the checkout, and I’m like OK. Here it is.\nWe joked about packaging earlier? The biggest thing that fascinated me is if anyone has bought one of these is to know actually how to package. Because it’s in a box about this high, about that wide, cube rectangle I guess. I’m like, ‘Wow.’\nI had to go back for the flatbed because I’m like, I pull it down and realize, this is really effing heavy. As you had asked me, the cart was pretty full. Trying to throw that on top of everything else wasn’t going to work."
+  },
+  {
+    "turn_id": "T0191",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "What was your wife doing at the time? Was your wife going, ‘Good idea,’ was she going, ‘Oh come on’?"
+  },
+  {
+    "turn_id": "T0192",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "She was a little skeptic."
+  },
+  {
+    "turn_id": "T0193",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "What did you say? Here’s the scene, I think we should get this. What’d she look like? Hands on the hip, what’s the scene?"
+  },
+  {
+    "turn_id": "T0194",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "Well, she’s beautiful, so I’m setting the stage."
+  },
+  {
+    "turn_id": "T0195",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "Of course. That’s on tape and on video, we’re all settled there."
+  },
+  {
+    "turn_id": "T0196",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "Bless her, she was probably more content in keeping my kids from hitting each other. There was some franticness. There was some, ‘Are you sure you want it?’ Then I pulled down the little 12 inch by 12 inch sample of the foam. ‘Here touch it, feel it.’\n‘Oh, that’s actually not bad. If you want it, get it. It’s a lot of money, I know you’re not sleeping, get it.’ That’s when I went out and got the flatbed."
+  },
+  {
+    "turn_id": "T0197",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "Had she done it, if you did the Groupon one, she hadn’t touched or felt it before, right?"
+  },
+  {
+    "turn_id": "T0198",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "No."
+  },
+  {
+    "turn_id": "T0199",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "How much was it? Do you remember what you paid?"
+  },
+  {
+    "turn_id": "T0200",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "Yeah, it was $699. It’s funny, because the Groupon happens to be available, and the one on Groupon was less, but again I felt very concerned about if I have a bad experience about this, do I want to go the Groupon, online route versus getting it at the Costco that’s five minutes from my house?"
+  },
+  {
+    "turn_id": "T0201",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "What was the variety?"
+  },
+  {
+    "turn_id": "T0202",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "Go ahead guys, go ahead."
+  },
+  {
+    "turn_id": "T0203",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "Was there one kind of mattress or was there a huge assortment?"
+  },
+  {
+    "turn_id": "T0204",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "Not a huge assortment, but there was two or three different kinds, and then they had them by your different bed sizes."
+  },
+  {
+    "turn_id": "T0205",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "Got it. Were there different samples or just one sample? You don’t do it to me all the time."
+  },
+  {
+    "turn_id": "T0206",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "I know."
+  },
+  {
+    "turn_id": "T0207",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "OK."
+  },
+  {
+    "turn_id": "T0208",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "Yeah."
+  },
+  {
+    "turn_id": "T0209",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "Did you squeeze all of them, or?"
+  },
+  {
+    "turn_id": "T0210",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "There was two that we were specifically looking at, and one was a lot higher and seemed a lot softer. That was the one that we went with."
+  },
+  {
+    "turn_id": "T0211",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "Was it the most expensive one?"
+  },
+  {
+    "turn_id": "T0212",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "It was."
+  },
+  {
+    "turn_id": "T0213",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "Can I ask a question?"
+  },
+  {
+    "turn_id": "T0214",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "Game on, go ahead."
+  },
+  {
+    "turn_id": "T0215",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "Take a step back. When you were in that alley [sic], and you saw the mattress, could you tell us what was the spark or the attraction or the appetite that you said, ‘Oh, this one.’ Because it seems like there was a couple of them, and was it price, was it something on the package, a statement or somebody sleeping, looking comfortable? Was there anything that you remember?"
+  },
+  {
+    "turn_id": "T0216",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "It’s funny that you ask about the packaging, because they had their four or five, and as someone that part of my life is marketing too, it’s funny to see the four or five people at point, and of course the couple that’s getting a great night’s sleep on some mattress.\nThat really didn’t get me. What got me was the ability to at least touch and feel it a little bit. Again, also knowing that whatever mattress I had been having and still have wasn’t cutting the deal, I wanted to try something radically different. To me going with foam was radically different.\nI don’t know what it is about, and I’m sure everyone’s experienced this at some point or other, there’s also something about a Costco that just fuels that occasional impulse, where it just pulls you over . . ."
+  },
+  {
+    "turn_id": "T0217",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "Let me ask you, if it was Walgreens or any other store, would that be the case?"
+  },
+  {
+    "turn_id": "T0218",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "I think that’s a great question."
+  },
+  {
+    "turn_id": "T0219",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "Like if you didn’t happen to be at Costco, just at Walgreens that day . . ."
+  },
+  {
+    "turn_id": "T0220",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "I will tell you this. Walgreens specifically I wouldn’t purchase it there. I would’ve only purchased at a store where I know I’ve had a great brand and customer experience, and if I ever have had a problem with any product . . .\nI know a couple of people have mentioned Zappos earlier. One of the things everyone loves about them is their experience. People feel more confident there. I’ve always historically had good experiences in a Costco. If I’ve had an issue it’s been very [inaudible 33:56] Espoused behavior vs. real behavior"
+  },
+  {
+    "turn_id": "T0221",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "You laugh, but that’s the point. Do you know how many people have this story? They’re thinking, again, he bought the most expensive mattress. He had an opportunity to buy it cheaper on Groupon, from somebody he didn’t know. The four forces: anxiety, habit, and the moment of truth"
+  },
+  {
+    "turn_id": "T0222",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Passive looking, active looking, and the decision",
+    "text": "That’s right. “It all built to that one moment. She finally slumped her shoulders and said, ‘Yeah, just go ahead and get it.'” A Switch Workshop audience member, recapping the interview Inside the method: lowering anxiety and finding the job"
+  },
+  {
+    "turn_id": "T0223",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Espoused behavior vs. real behavior",
+    "text": "Game off for a second. OK? You need to strike all of that from the record. Every last thing from ‘where else would you buy it? Why?’ It’s espoused behavior. We end up locking onto it and saying, ‘If we did this and this and this, we could sell mattresses too.’\nThe thing is that as much as he’s talking about it, it’s not the real behavior that he experienced. It’s very, very risky to actually take what he just said and turn it into an opportunity for Walgreens or whatever.\nThe notion is you want to get the stories of what it was, and we’ll show you a way in which to get at that point. Not implying Walgreens, if you hadn’t come across this, where would you have gone, how would you have gone?\nThe best part about it is he had a Groupon, right? What was the store you were going to buy that from? You’re not buying it from Groupon, Groupon’s offering the promotion. Who was the company that was selling the mattress?"
+  },
+  {
+    "turn_id": "T0224",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Espoused behavior vs. real behavior",
+    "text": "I honestly can’t think of it now."
+  },
+  {
+    "turn_id": "T0225",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Espoused behavior vs. real behavior",
+    "text": "Did you hear that? Can’t even figure out who it was. The thing is he’s substituting retail with Groupon at this point. There’s two other big points. One is price. Is he a knowledgeable shopper? He literally has been researching it for at least three months prior to . . .\nNow wait, he had a move. The thing is that the move, I had to get through the move, I had to get out of my condo, I had to get into my house, I’ve got two young kids, I’m getting the house settled.\nOK. I’m still getting a s***ty night’s sleep every night. This now bubbles to the top. I couldn’t have done it three months ago because you were just moving, and it’s like I’ve got enough expenses on the other side of this thing. Prior three months is basically I know we’re looking for a house, and it takes time to close. I’m not going to buy a mattress because I don’t know what the house is going to be like.\nHe’s got all these barriers holding him up, but it was time. OK, go ahead. Ryan?"
+  },
+  {
+    "turn_id": "T0226",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "Espoused behavior vs. real behavior",
+    "text": "There’s a gap in the story I’m trying to understand. I’ve got a sense, I’m trying to see the timeline in my head. There was a period of a year where you said, over the last year, I’m really unhappy with the mattress.\nThen there’s a period, going back from the day that you bought it, three months where you said you were doing some research, looking around online. Do you remember a time when you were researching online?"
+  },
+  {
+    "turn_id": "T0227",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Espoused behavior vs. real behavior",
+    "text": "Specifically."
+  },
+  {
+    "turn_id": "T0228",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "Espoused behavior vs. real behavior",
+    "text": "Specific time."
+  },
+  {
+    "turn_id": "T0229",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Espoused behavior vs. real behavior",
+    "text": "When were you like, ‘I’m looking for mattresses, man’?"
+  },
+  {
+    "turn_id": "T0230",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Espoused behavior vs. real behavior",
+    "text": "A couple times in the middle of the night when I couldn’t sleep."
+  },
+  {
+    "turn_id": "T0231",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Espoused behavior vs. real behavior",
+    "text": "Key point. Where were you? In the bedroom, or did you get up and get out?"
+  },
+  {
+    "turn_id": "T0232",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Espoused behavior vs. real behavior",
+    "text": "No, I was downstairs."
+  },
+  {
+    "turn_id": "T0233",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Espoused behavior vs. real behavior",
+    "text": "Literally, it’s ‘I can’t sleep, I’m going to get up. I can’t sleep because of this damn mattress.’ You went down to the kitchen table?"
+  },
+  {
+    "turn_id": "T0234",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Espoused behavior vs. real behavior",
+    "text": "There or the island a couple times."
+  },
+  {
+    "turn_id": "T0235",
+    "speaker": "Jason",
+    "role": "FACILITATOR",
+    "section": "Espoused behavior vs. real behavior",
+    "text": "Can I throw something out really quick?"
+  },
+  {
+    "turn_id": "T0236",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Espoused behavior vs. real behavior",
+    "text": "Go ahead."
+  },
+  {
+    "turn_id": "T0237",
+    "speaker": "Jason",
+    "role": "FACILITATOR",
+    "section": "Espoused behavior vs. real behavior",
+    "text": "This is just, so much popped in my head if I’m a mattress manufacturer. I’m offering discounts between midnight and 3:00 a.m. now. Buy now between midnight and 3:00 for 10% off."
+  },
+  {
+    "turn_id": "T0238",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Espoused behavior vs. real behavior",
+    "text": "You laugh, but that’s the point. Do you know how many people have this story? They’re thinking, again, he bought the most expensive mattress. He had an opportunity to buy it cheaper on Groupon, from somebody he didn’t know."
+  },
+  {
+    "turn_id": "T0239",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "The other thing to realize is there’s a subtle action that was in the middle of this, which is his wife was with him, she has to sleep on the bed. It’s going to be impossible to make a purchase like that, because in a lot of cases the anxiety of saying, ‘You bought this crappy mattress and I wasn’t part of it,’ the dynamic you have between those kinds of decisions are really, really difficult.\nThe notion of both being in the same place, her being able to touch it, and her acknowledging that you can, OK, ‘I know you’re not sleeping well, you can’ is like . . . I’ll go. That’s the dynamic."
+  },
+  {
+    "turn_id": "T0240",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "The other thing we need to dive into is you made the comment that going into a mattress store gave you the heebie-jeebies, something like that. When’s the last time you were in a mattress store, do you remember?\nYou went to Macy’s, so that counts. Was there any other mattress stores in between?"
+  },
+  {
+    "turn_id": "T0241",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "Well, Macy’s was more of a furniture store with a mattress department, but been a long time. I walk by them. I just walked by one the other day, and since this mattress issue still hasn’t actually been resolved, I was like, ‘I can’t go in.’"
+  },
+  {
+    "turn_id": "T0242",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "What happens in a mattress store?"
+  },
+  {
+    "turn_id": "T0243",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "First of all, I’m a germaphobe. I see all these beds lined up everywhere and it’s creepy. Secondly I generally see someone that is working in the mattress store that I think can have no concept of, has asked anywhere near the level of questions that you’ve asked me. It’s usually a, ‘What size bed do you have? How much are you looking to spend?’\nI think there’s a lot of people at that mattress world from my previous experiences in them that is the same as the bad notion of the car salesman. I’m not saying they’re all that way, it’s just that’s how some of my experiences have been."
+  },
+  {
+    "turn_id": "T0244",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "Game off."
+  },
+  {
+    "turn_id": "T0245",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "Game off. Sorry, I’ve got to stand up."
+  },
+  {
+    "turn_id": "T0246",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "The interesting thing is shopping on the island downstairs, he doesn’t buy until he can feel the mattress, right? You give it to your wife, that experience of being able to touch and feel the product, we can’t replicate online.\nThe normal purchase process is impossible for you. You can’t walk into a mattress store and even feel it, because there’s this anxiety around, you’re going to get approached by this salesperson."
+  },
+  {
+    "turn_id": "T0247",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "Part of it you could say this is a sample of one. My thing is when you start to interview, you start to see patterns. Holy crap, 38% of these people all touch it before they buy it, and they both touch it at the same time.\nHow can I sell a mattress online if I don’t have samples? It might be that we need to say, we need to cut samples, order a sample here and return it to us with a self-addressed envelope that allows us to come to the house, that allows them to say, ‘Yeah, we’re going to order this,’ and you order it.\nThe thing is if you know that that’s a critical point, you need to know how to do it. It has nothing to do with the features and benefits of the mattress."
+  },
+  {
+    "turn_id": "T0248",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "The other . . . oh, sorry."
+  },
+  {
+    "turn_id": "T0249",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "She can barely contain herself over here."
+  },
+  {
+    "turn_id": "T0250",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "I’m like [inaudible 40:37], did you lay on the mattress at Macy’s? If you’re a germophobe."
+  },
+  {
+    "turn_id": "T0251",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "I did."
+  },
+  {
+    "turn_id": "T0252",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "OK, because the fact that you would buy a mattress just by touching it with your hand, I have to lay on it, I’m rolling around, I’m spooning my husband."
+  },
+  {
+    "turn_id": "T0253",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "Oh you’re the one. There’s a YouTube video about you."
+  },
+  {
+    "turn_id": "T0254",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "Even the thought, I guess sleeping, if you’re taking away oh, for an online mattress company to cut away samples, his problem isn’t solved. So maybe that’s not . . ."
+  },
+  {
+    "turn_id": "T0255",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "Right. You have to do enough interviews to understand how they actually chose, but the thing is, how did you feel when you had to lay on that bed in Macy’s? Were you like, ‘oh my God,’ or were you like, ‘eh.’ Can you remember the moment?"
+  },
+  {
+    "turn_id": "T0256",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "I can, only because . . ."
+  },
+  {
+    "turn_id": "T0257",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "How long ago was it? Four years?"
+  },
+  {
+    "turn_id": "T0258",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "That would’ve been five years ago, and I remember the moment only though because my wife was pregnant, and we wanted to get this new bed before the baby came, and I just remember being more concerned as to whether she was comfortable than I was comfortable.\nAlong my OCD journey, it’s gotten worse the last couple years. I’m on my way to becoming Jack Nicholson in ‘As Good As It Gets,’ but I’m not there yet."
+  },
+  {
+    "turn_id": "T0259",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "That’s the other thing. I’m not sure we’re going to talk about it but the whole thing is he’ll say, ‘Yeah, I’m a germophobe,’ that’s something you need to probe deep. Because the thing is, in some cases there are people who are like rubber gloves in their house, and ‘I’m a germophobe, I use wipes.’"
+  },
+  {
+    "turn_id": "T0260",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "He’s a germophobe, but he touched a public mattress sample. It was probably dirty."
+  },
+  {
+    "turn_id": "T0261",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "That may have been why I got sick."
+  },
+  {
+    "turn_id": "T0262",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "All right, go, go."
+  },
+  {
+    "turn_id": "T0263",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "It just sounds like, I’m focusing on the moment of truth, right? It seems like his wife was calling him a nag or a complainer, right? The moment of truth is when she finally resigned, there’s the nagging, kids are in the cart, everything, chaos is going all over the place. He’s stressed out, he’s not sleeping.\nIt all built to that one moment. She finally slumped her shoulders and said, ‘Yeah, just go ahead and get it.’ It seems like the moment of truth, where the shoulders just relaxed."
+  },
+  {
+    "turn_id": "T0264",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "The four forces: anxiety, habit, and the moment of truth",
+    "text": "That’s right."
+  },
+  {
+    "turn_id": "T0265",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Inside the method: lowering anxiety and finding the job",
+    "text": "Let me go really quick. There’s a couple things. What you just experienced is the normal interview outcome. It defies all logic. You never laid on the mattress, I can’t believe it. This is what comes out of these things.\nWhen you look at the forces there’s all this, we’ll describe how we use this, but there’s all this push around I haven’t slept in a year and a half. There’s the reduction in anxiety because my wife, I’ve got her buy-in. If this thing stinks, first of all, you were in that with me. You can’t blame me completely for it.\nPlus, have you returned anything at Costco ever? Have you brought anything back?"
+  },
+  {
+    "turn_id": "T0266",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Inside the method: lowering anxiety and finding the job",
+    "text": "Other than the mattress?"
+  },
+  {
+    "turn_id": "T0267",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Inside the method: lowering anxiety and finding the job",
+    "text": "Yeah."
+  },
+  {
+    "turn_id": "T0268",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Inside the method: lowering anxiety and finding the job",
+    "text": "Oh yeah. Not a lot, but a couple things."
+  },
+  {
+    "turn_id": "T0269",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Inside the method: lowering anxiety and finding the job",
+    "text": "He’s done the return process, so it’s possible to take this back. I’m lowering the anxiety around that. As awkward as it seems, it’s easier for him to take that leap, never having laid on it, than it is to walk into the mattress store and lay down.\nIt’s one of those things where we just want to hear it a couple times, and we could say, ‘That’s real.’\nThere is a catalog of actual interviews along with analysis available here ."
+  },
+  {
+    "turn_id": "T0270",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "Inside the method: lowering anxiety and finding the job",
+    "text": "I’m fascinated by this, because I bought one at Costco, and I’m not a germophobe, and I was going to get a Tempurpedic. I went into the mattress store, which I also find skeevy. Laid on it, did everything else.\nMine came far more into, ‘Wait a minute, is it really worth . . .’ Tempurpedic is like $3,500 or whatever it was. ‘Is it really worth this?’ When I really looked into it, people were saying, ‘No, it’s insane.’ To me Costco was the huge thing because of the return policy. They have lifetime, if you don’t like it, I literally said to my wife, she’d laid on the Tempurpedic, ‘We’ll buy it, it’s $800,’ or whatever it is. ‘If we don’t like it . . .’"
+  },
+  {
+    "turn_id": "T0271",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Inside the method: lowering anxiety and finding the job",
+    "text": "Let me throw something out here. [inaudible 44:52] interview like Bob was saying. Let’s say this return policy ends up being one of the key things. You can’t just think about return policy, because returning something like a mattress is hard.\nWhat if the store’s return policy is, ‘We’ll pick the mattress up at your house.’ That’s one of the things that will reduce the anxiety."
+  },
+  {
+    "turn_id": "T0272",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "Inside the method: lowering anxiety and finding the job",
+    "text": "For me Costco said that they would."
+  },
+  {
+    "turn_id": "T0273",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Inside the method: lowering anxiety and finding the job",
+    "text": "OK, that was it? It’s not just we’ll accept the return, it’s ‘we’ll pick it up for you.’"
+  },
+  {
+    "turn_id": "T0274",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Inside the method: lowering anxiety and finding the job",
+    "text": "They did that?"
+  },
+  {
+    "turn_id": "T0275",
+    "speaker": "Audience Member",
+    "role": "AUDIENCE",
+    "section": "Inside the method: lowering anxiety and finding the job",
+    "text": "I ordered it and I never even touched it."
+  },
+  {
+    "turn_id": "T0276",
+    "speaker": "Interviewee",
+    "role": "PARTICIPANT",
+    "section": "Inside the method: lowering anxiety and finding the job",
+    "text": "I wish I knew that."
+  },
+  {
+    "turn_id": "T0277",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Inside the method: lowering anxiety and finding the job",
+    "text": "The notion of this is that they’re willing to pay more for it. As much as they say ‘I’m not going to pay more for it,’ it’s the thing holding you back from buying. This is one of the frameworks which we’re going to go through, but the thing is, this is . . .\nFrom the first thought to basically all the way through what we call passive looking. I’m not going to invest time, but if I’m looking through the paper and there’s a circular, I’m going to start to look at it.\nAt some point there’s some event that basically causes him to actively start to invest his time to look. Then there’s another event, usually it’s a time-based event. Things are only going to get worse, there’s a time event that causes him to say, ‘I need to decide.’\nThen there’s basically purchase and consumption. What happens is most of the time, we stand in the interview in two places. Most people will say, ‘Hey, you’re looking, what are you looking for?’ The notion is that they haven’t made the trade-offs. ‘I have to lay on the mattress to make a decision. I guess not.’\nEverything they’re going to say looking at it this way, you get bulls***."
+  },
+  {
+    "turn_id": "T0278",
+    "speaker": "Bob",
+    "role": "FACILITATOR",
+    "section": "Inside the method: lowering anxiety and finding the job",
+    "text": "I bet you the mattress industry is obsessed with the laying on the mattress part. That’s all they can think about. That’s how you buy mattresses, because you’re going to sleep on it so you’ve got to lay on it.\nAgain, this is one interview, but it might turn out that that’s not the case at all. But they can’t see that."
+  },
+  {
+    "turn_id": "T0279",
+    "speaker": "Chris",
+    "role": "FACILITATOR",
+    "section": "Inside the method: lowering anxiety and finding the job",
+    "text": "The second part is the interview is most people will say, ‘Tell me about the experience of buying the mattress.’ A customer satisfaction thing, you’re looking back. We’re not listening to that either.\nMost of the time when you get people and they’re talking, they want to say, ‘Oh, I love the mattress,’ or ‘I hate it,’ and they’ll tell you all the stuff about the consumption. To be honest with you, don’t care. Whatever the product is, we need to be able to understand this story, all the way to the decide.\nI really don’t care that he didn’t like it. OK? At the end of the day, being a product person at the end of the day, I don’t want to know what it didn’t do. It’s what’s the magic in his mind to say, ‘Poof. I just got that new mattress in my room, I’m sleeping like a baby, I’m playing with the kids, I’ve got more energy. When I bought that thing, what was my life going to be like?’\nIt really doesn’t matter what he bought, because that’s the job. The job is basically what is he hoping for the moment he puts the money down? It’s not the free. Let me give you a free trial. That’s not commitment. You need to make sure they understand, what are they willing to trade off, what are they willing to pay.\nThink of the music. People are wrestling with music. ‘I want this, I want this, I want this.’ As you go back and forth, it’s just not shaped up enough to make the commitment."
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "status": "UNVALIDATED_EDUCATIONAL_DEMONSTRATION",
+  "human_participants": 1,
+  "human_holdouts": 0,
+  "model": "GPT-6 authored illustrative alternative responses",
+  "anchor_sets": 6,
+  "rating_question": "Under the proposed conditions, how likely are you to attempt a mattress purchase?",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "scenarios": [
+    {
+      "scenario": "SIM001",
+      "run_id": "R001",
+      "five_rating_probabilities": [
+        0.10944274246645377,
+        0.1747543016921346,
+        0.31168008017636223,
+        0.2132509349897594,
+        0.19087194067529004
+      ],
+      "illustrative_mean_rating": 3.2013550297152973,
+      "model": "GPT-6 authored hypothetical text",
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "human_validation": "NONE",
+      "evidence_grade": "L0_ROLEPLAY"
+    },
+    {
+      "scenario": "SIM002",
+      "run_id": "R002",
+      "five_rating_probabilities": [
+        0.10874265442003626,
+        0.2599056503310402,
+        0.3119027880109299,
+        0.181600529485003,
+        0.13784837775299064
+      ],
+      "illustrative_mean_rating": 2.9799063258198712,
+      "model": "GPT-6 authored hypothetical text",
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "human_validation": "NONE",
+      "evidence_grade": "L0_ROLEPLAY"
+    }
+  ],
+  "limitations": [
+    "No human outcome prediction accuracy can be inferred",
+    "SSR allocation describes similarity of written synthetic responses to anchors",
+    "Synthetic alternatives are neither independent samples nor real purchase behavior",
+    "Embedding model and anchors differ from published SSR experiment",
+    "No reviewer approved the original codebook or links for formal research use"
+  ]
+}

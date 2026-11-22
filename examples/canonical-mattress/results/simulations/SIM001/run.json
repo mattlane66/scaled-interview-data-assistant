@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "run_id": "R001",
+  "scenario_id": "SIM001",
+  "source_checkpoint_sha256": "sha256:5a9482de8687dcf4ff9753769cbf9d34008644a52d4541255831e48841c329a6",
+  "scenario_sha256": "sha256:f1b439bb6297bbf2297091e99fc8c59dbb29ca0d70d88a55d605584b789eab2e",
+  "generated_at": "2026-11-22T11:55:53.569082+00:00",
+  "evidence_type": "SIMULATED_ESTIMATE",
+  "mode": "PLAUSIBILITY_SPACE",
+  "grade": "L0_ROLEPLAY",
+  "measurement": {
+    "construct": "hypothetical_stated_purchase_intent",
+    "question": "Under the proposed conditions, how likely are you to attempt a mattress purchase?",
+    "scale": "FIVE_POINT_LIKERT",
+    "anchor_version": "mattress-intent-anchors-v1"
+  },
+  "model": "GPT-6",
+  "model_version": "GPT-6 authored text, not an independent API run",
+  "configuration": {
+    "origin": "AI-authored illustrative responses",
+    "independent_sampling": false,
+    "prompt_contract": "free text response to predeclared five-point question"
+  },
+  "responses": [
+    {
+      "text": "I would probably buy if someone reliably picked up the mattress and refunded me if it did not work, but I would still check with my wife.",
+      "mechanism": "Reduced anticipated loss or disposal burden",
+      "evidence_refs": [
+        "E014",
+        "E019",
+        "E020",
+        "E027"
+      ],
+      "objections": [
+        "Seller credibility",
+        "Spouse's agreement"
+      ],
+      "next_test": "Offer an actual pickup-backed trial and observe paid attempts"
+    },
+    {
+      "text": "I might consider it, but I am still unsure whether I trust an unknown seller to honor the collection promise.",
+      "mechanism": "Trust in the promise may matter as much as logistics",
+      "evidence_refs": [
+        "E014",
+        "E020",
+        "E027"
+      ],
+      "objections": [
+        "Unfamiliar company",
+        "Potential noncompliance"
+      ],
+      "next_test": "Hold pickup fixed and compare verified seller familiarity"
+    }
+  ],
+  "source_coverage": [
+    "FULL"
+  ],
+  "coverage_limited": false,
+  "review_status": "AI_CURATED_NOT_HUMAN_APPROVED",
+  "limitations": [
+    "Teaching artifact, not approved through formal human review-gated record command",
+    "GPT-6 authored two variants, not independent samples of a human population",
+    "Source interview is one person; no independent validation outcomes exist"
+  ]
+}

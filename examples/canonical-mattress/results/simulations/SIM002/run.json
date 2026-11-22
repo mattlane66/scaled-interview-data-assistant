@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "run_id": "R002",
+  "scenario_id": "SIM002",
+  "source_checkpoint_sha256": "sha256:5a9482de8687dcf4ff9753769cbf9d34008644a52d4541255831e48841c329a6",
+  "scenario_sha256": "sha256:1d4ccad11303fc698e807f1899cb0f351a71c22778f2f84fafbcbcbe77cd5020",
+  "generated_at": "2026-11-22T11:55:56.016894+00:00",
+  "evidence_type": "SIMULATED_ESTIMATE",
+  "mode": "PLAUSIBILITY_SPACE",
+  "grade": "L0_ROLEPLAY",
+  "measurement": {
+    "construct": "hypothetical_stated_purchase_intent",
+    "question": "Under the proposed conditions, how likely are you to attempt a mattress purchase?",
+    "scale": "FIVE_POINT_LIKERT",
+    "anchor_version": "mattress-intent-anchors-v1"
+  },
+  "model": "GPT-6",
+  "model_version": "GPT-6 authored text, not an independent API run",
+  "configuration": {
+    "origin": "AI-authored illustrative responses",
+    "independent_sampling": false,
+    "prompt_contract": "free text response to predeclared five-point question"
+  },
+  "responses": [
+    {
+      "text": "I would be more willing to buy if my wife and I could try a material sample, but I would still want easy returns.",
+      "mechanism": "Shared reassurance about unfamiliar material",
+      "evidence_refs": [
+        "E018",
+        "E019",
+        "E021",
+        "E025"
+      ],
+      "objections": [
+        "Difficult return path"
+      ],
+      "next_test": "Offer samples while holding the return policy fixed"
+    },
+    {
+      "text": "I would probably not purchase right away if the return process remained uncertain, even after feeling the sample.",
+      "mechanism": "Tactile familiarity alone leaves reverse-logistics anxiety",
+      "evidence_refs": [
+        "E014",
+        "E020",
+        "E021"
+      ],
+      "objections": [
+        "Failure recovery uncertainty"
+      ],
+      "next_test": "Keep sampling constant and test guaranteed returns"
+    }
+  ],
+  "source_coverage": [
+    "FULL"
+  ],
+  "coverage_limited": false,
+  "review_status": "AI_CURATED_NOT_HUMAN_APPROVED",
+  "limitations": [
+    "Teaching artifact, not approved through formal human review-gated record command",
+    "GPT-6 authored two variants, not independent samples of a human population",
+    "Source interview is one person; no independent validation outcomes exist"
+  ]
+}

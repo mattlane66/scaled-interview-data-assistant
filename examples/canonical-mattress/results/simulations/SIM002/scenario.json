@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "SIM002",
+  "source_checkpoint_sha256": "sha256:5a9482de8687dcf4ff9753769cbf9d34008644a52d4541255831e48841c329a6",
+  "decision": "Would an at-home foam sample enable a joint purchase decision?",
+  "decision_owner": "Educational case; no product owner has reviewed the study",
+  "consequence_if_wrong": "Team could optimize the wrong switching condition",
+  "target": "A hypothetical one-person proxy, not a sampled population",
+  "mode": "PLAUSIBILITY_SPACE",
+  "target_grade": "L0_ROLEPLAY",
+  "episode_refs": [
+    "D01"
+  ],
+  "evidence_refs": [
+    "E002",
+    "E006",
+    "E008",
+    "E014",
+    "E015",
+    "E018",
+    "E019",
+    "E020",
+    "E021",
+    "E023",
+    "E024",
+    "E025",
+    "E027"
+  ],
+  "baseline": {
+    "path_y": "Keep old mattress while experimenting with remedies and searching",
+    "observed_result": "Costco purchase occurred; sleep improvement not established",
+    "evidence_refs": [
+      "E002",
+      "E006",
+      "E014",
+      "E023"
+    ]
+  },
+  "intervention": {
+    "variable": "tactile_evaluation",
+    "from": "no shared tactile assessment of the offered foam",
+    "to": "both spouses can handle a take-home foam sample"
+  },
+  "held_constant": [
+    "Poor home sleep",
+    "Buyer has a spouse",
+    "Mattress price"
+  ],
+  "outcome_space": [
+    "attempt_purchase",
+    "defer_or_reject"
+  ],
+  "time_context": "Counterfactual period before the historic Costco purchase",
+  "counterfactual_distance": "NEAR_OOD",
+  "assumptions": [
+    "Reconstructed hypothetical behavior is not directly observed",
+    "The stated intent question is distinct from actual buying"
+  ],
+  "review": {
+    "reviewer": "",
+    "approved_at": "2026-11-22T11:55:56.016561+00:00",
+    "approved_checkpoint_sha256": "sha256:5a9482de8687dcf4ff9753769cbf9d34008644a52d4541255831e48841c329a6",
+    "evidence_reviewed": false,
+    "codebook_links_reviewed": false,
+    "clusters_reviewed": false,
+    "person_grounding_reviewed": false,
+    "processing_permitted": false
+  },
+  "measurement": {
+    "construct": "hypothetical_stated_purchase_intent",
+    "question": "Under the proposed conditions, how likely are you to attempt a mattress purchase?",
+    "scale": "FIVE_POINT_LIKERT",
+    "anchor_version": "mattress-intent-anchors-v1"
+  },
+  "design_hypothesis": {
+    "product_change": "Provide a small mattress material sample before ordering",
+    "critical_assumption": "Jointly feeling unfamiliar foam is pivotal to commitment",
+    "predicted_behavior": "An accessible physical sample could improve willingness to buy",
+    "disconfirming_observation": "Couples try the sample but still refuse because returns remain hard",
+    "if_disconfirmed": "Focus on seller assurance and reversibility rather than sampling"
+  }
+}

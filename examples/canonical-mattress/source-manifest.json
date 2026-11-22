@@ -1,0 +1,18 @@
+{
+  "source_url": "https://jobstobedone.org/radio/the-mattress-interview-part-one/",
+  "source_html_sha256": "cd8d289e27bfff8c00535ca00265fdb5520c7252590852d8199991a05bbda9da",
+  "fetched_at": "2026-11-22T11:55:50.186788+00:00",
+  "speaker_turns": 279,
+  "duplicate_html_speaker_turns_removed": 182,
+  "participant_turns": 99,
+  "facilitator_turns": 157,
+  "audience_turns": 23,
+  "editorial_blocks": 21,
+  "coverage": "FULL_PUBLISHED_PAGE_NOT_ORIGINAL_AUDIO",
+  "limitations": [
+    "The website is an edited published transcript with editorial material.",
+    "The audio has not been independently re-transcribed.",
+    "Repeated runs of website dialogue caused by HTML nesting were collapsed using repeat-sequence matching; compare source for edge cases.",
+    "Do not treat game-off explanations, audience commentary, or site editorial as first-person customer evidence."
+  ]
+}

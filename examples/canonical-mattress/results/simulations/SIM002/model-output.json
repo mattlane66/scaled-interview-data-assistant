@@ -1,0 +1,38 @@
+{
+  "model": "GPT-6",
+  "model_version": "GPT-6 authored text, not an independent API run",
+  "configuration": {
+    "origin": "AI-authored illustrative responses",
+    "independent_sampling": false,
+    "prompt_contract": "free text response to predeclared five-point question"
+  },
+  "responses": [
+    {
+      "text": "I would be more willing to buy if my wife and I could try a material sample, but I would still want easy returns.",
+      "mechanism": "Shared reassurance about unfamiliar material",
+      "evidence_refs": [
+        "E018",
+        "E019",
+        "E021",
+        "E025"
+      ],
+      "objections": [
+        "Difficult return path"
+      ],
+      "next_test": "Offer samples while holding the return policy fixed"
+    },
+    {
+      "text": "I would probably not purchase right away if the return process remained uncertain, even after feeling the sample.",
+      "mechanism": "Tactile familiarity alone leaves reverse-logistics anxiety",
+      "evidence_refs": [
+        "E014",
+        "E020",
+        "E021"
+      ],
+      "objections": [
+        "Failure recovery uncertainty"
+      ],
+      "next_test": "Keep sampling constant and test guaranteed returns"
+    }
+  ]
+}

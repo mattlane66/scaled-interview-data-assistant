@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "SIM001",
+  "source_checkpoint_sha256": "sha256:5a9482de8687dcf4ff9753769cbf9d34008644a52d4541255831e48841c329a6",
+  "decision": "Would guaranteed home return pickup help overcome switching anxiety?",
+  "decision_owner": "Educational case; no product owner has reviewed the study",
+  "consequence_if_wrong": "Team could optimize the wrong switching condition",
+  "target": "A hypothetical one-person proxy, not a sampled population",
+  "mode": "PLAUSIBILITY_SPACE",
+  "target_grade": "L0_ROLEPLAY",
+  "episode_refs": [
+    "D01"
+  ],
+  "evidence_refs": [
+    "E002",
+    "E006",
+    "E008",
+    "E014",
+    "E015",
+    "E018",
+    "E019",
+    "E020",
+    "E021",
+    "E023",
+    "E024",
+    "E025",
+    "E027"
+  ],
+  "baseline": {
+    "path_y": "Keep old mattress while experimenting with remedies and searching",
+    "observed_result": "Costco purchase occurred; sleep improvement not established",
+    "evidence_refs": [
+      "E002",
+      "E006",
+      "E014",
+      "E023"
+    ]
+  },
+  "intervention": {
+    "variable": "return_logistics",
+    "from": "uncertain customer-organized return",
+    "to": "free home pickup after an unsatisfactory trial"
+  },
+  "held_constant": [
+    "Poor home sleep",
+    "Buyer has a spouse",
+    "Mattress price"
+  ],
+  "outcome_space": [
+    "attempt_purchase",
+    "defer_or_reject"
+  ],
+  "time_context": "Counterfactual period before the historic Costco purchase",
+  "counterfactual_distance": "NEAR_OOD",
+  "assumptions": [
+    "Reconstructed hypothetical behavior is not directly observed",
+    "The stated intent question is distinct from actual buying"
+  ],
+  "review": {
+    "reviewer": "",
+    "approved_at": "2026-11-22T11:55:53.568811+00:00",
+    "approved_checkpoint_sha256": "sha256:5a9482de8687dcf4ff9753769cbf9d34008644a52d4541255831e48841c329a6",
+    "evidence_reviewed": false,
+    "codebook_links_reviewed": false,
+    "clusters_reviewed": false,
+    "person_grounding_reviewed": false,
+    "processing_permitted": false
+  },
+  "measurement": {
+    "construct": "hypothetical_stated_purchase_intent",
+    "question": "Under the proposed conditions, how likely are you to attempt a mattress purchase?",
+    "scale": "FIVE_POINT_LIKERT",
+    "anchor_version": "mattress-intent-anchors-v1"
+  },
+  "design_hypothesis": {
+    "product_change": "Offer guaranteed collection and refund if a mattress trial fails",
+    "critical_assumption": "Recovery logistics substantially contribute to purchase hesitation",
+    "predicted_behavior": "An easier recovery path could make purchase attempts more likely",
+    "disconfirming_observation": "The customer rejects the offer despite verified pickup terms",
+    "if_disconfirmed": "Investigate trust in seller and whether spouses can assess the product"
+  }
+}

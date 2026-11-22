@@ -1,0 +1,38 @@
+[
+  {
+    "code": "A01",
+    "definition": "Prior mattress causes reported morning discomfort and impaired functioning."
+  },
+  {
+    "code": "A02",
+    "definition": "Replacement feels hard to reverse or recover from when a product disappoints."
+  },
+  {
+    "code": "A03",
+    "definition": "Competing family, business, and move demands delay the replacement."
+  },
+  {
+    "code": "A04",
+    "definition": "Conventional mattress sales channels feel uncomfortable or untrustworthy."
+  },
+  {
+    "code": "A05",
+    "definition": "Old mattress remains in use or retained after the new purchase."
+  },
+  {
+    "code": "B01",
+    "definition": "Wake rested enough to function well in work and family roles."
+  },
+  {
+    "code": "B02",
+    "definition": "Try a replacement with a credible, recoverable purchase path."
+  },
+  {
+    "code": "B03",
+    "definition": "Make a joint buying decision during an existing shopping occasion."
+  },
+  {
+    "code": "B04",
+    "definition": "Choose a materially different mattress through a manageable evaluation."
+  }
+]

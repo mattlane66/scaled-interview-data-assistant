@@ -1,0 +1,21 @@
+analysis_unit,a_code,b_code,n_units,a_units,b_units,n11,n10,n01,n00,cooccurring_units,union_units,jaccard,phi,definition_cosine,explicit_linked_units,inferred_linked_units,linked_units,supporting_evidence,link_registry_status,low_support_flag,negative_edge_flag
+episode,A01,B01,1,1,1,1,0,0,0,1,1,1.0,,0.0614,0,1,1,"E002, E004, E015",REVIEWED,True,False
+episode,A02,B02,1,1,1,1,0,0,0,1,1,1.0,,0.0689,0,1,1,"E010, E014, E020, E027",REVIEWED,True,False
+episode,A03,B03,1,1,1,1,0,0,0,1,1,1.0,,0.0,0,1,1,"E008, E009, E017, E019",REVIEWED,True,False
+episode,A04,B04,1,1,1,1,0,0,0,1,1,1.0,,0.063,0,1,1,"E013, E021, E025",REVIEWED,True,False
+episode,A01,B02,1,1,1,1,0,0,0,1,1,1.0,,0.0,0,0,0,,REVIEWED,True,False
+episode,A01,B03,1,1,1,1,0,0,0,1,1,1.0,,0.0,0,0,0,,REVIEWED,True,False
+episode,A01,B04,1,1,1,1,0,0,0,1,1,1.0,,0.0589,0,0,0,,REVIEWED,True,False
+episode,A02,B01,1,1,1,1,0,0,0,1,1,1.0,,0.0733,0,0,0,,REVIEWED,True,False
+episode,A02,B03,1,1,1,1,0,0,0,1,1,1.0,,0.0,0,0,0,,REVIEWED,True,False
+episode,A02,B04,1,1,1,1,0,0,0,1,1,1.0,,0.0,0,0,0,,REVIEWED,True,False
+episode,A03,B01,1,1,1,1,0,0,0,1,1,1.0,,0.147,0,0,0,,REVIEWED,True,False
+episode,A03,B02,1,1,1,1,0,0,0,1,1,1.0,,0.0787,0,0,0,,REVIEWED,True,False
+episode,A03,B04,1,1,1,1,0,0,0,1,1,1.0,,0.0,0,0,0,,REVIEWED,True,False
+episode,A04,B01,1,1,1,1,0,0,0,1,1,1.0,,0.0,0,0,0,,REVIEWED,True,False
+episode,A04,B02,1,1,1,1,0,0,0,1,1,1.0,,0.0,0,0,0,,REVIEWED,True,False
+episode,A04,B03,1,1,1,1,0,0,0,1,1,1.0,,0.0,0,0,0,,REVIEWED,True,False
+episode,A05,B01,1,1,1,1,0,0,0,1,1,1.0,,0.076,0,0,0,,REVIEWED,True,False
+episode,A05,B02,1,1,1,1,0,0,0,1,1,1.0,,0.0946,0,0,0,,REVIEWED,True,False
+episode,A05,B03,1,1,1,1,0,0,0,1,1,1.0,,0.0,0,0,0,,REVIEWED,True,False
+episode,A05,B04,1,1,1,1,0,0,0,1,1,1.0,,0.0551,0,0,0,,REVIEWED,True,False

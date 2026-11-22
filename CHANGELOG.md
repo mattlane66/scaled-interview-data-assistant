@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.5.0 — 2026-11-22
+
+- Added a canonical licensed real-world mattress-switch interview with complete
+  published transcript and teaching commentary, speaker-role identifiers, and source hash.
+- Added 28 machine-verifiable participant excerpts, provisional A/B coding and
+  four interpreted within-episode links, single-episode synthesis, and a runnable
+  deterministic validation and checkpoint workflow without artificial clustering.
+- Added two transparent GPT-6-authored L0 hypothetical interventions, a pinned
+  Behavioral Simulation protocol handoff, and six-anchor semantic similarity rating
+  with a separate embedding dependency and explicit no-human-validation boundary.
+- Added canonical provenance and SSR reproducibility tests; original synthetic
+  fixtures and formal human-review requirements remain unchanged.
+
+
 ## 1.4.0 — 2026-11-22
 
 - Added human-reviewed, cross-episode Behavioral Mechanism Maps over source-located

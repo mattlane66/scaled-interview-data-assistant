@@ -1,0 +1,80 @@
+name: Import licensed canonical mattress transcript
+
+on:
+  push:
+    branches: [feat/canonical-real-mattress-ssr]
+    paths:
+      - scripts/import_canonical_mattress.py
+      - scripts/build_canonical_mattress.py
+      - scripts/run_canonical_mattress_demo.py
+      - examples/canonical-mattress/synthesis_report.md
+      - .github/workflows/import-canonical-mattress.yml
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    if: github.repository == 'mattlane66/scaled-interview-data-assistant'
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install research pipeline and HTML parser
+        run: python -m pip install -e ".[dev]" beautifulsoup4 fastembed
+      - name: Import complete published source
+        run: python scripts/import_canonical_mattress.py --output-dir examples/canonical-mattress
+      - name: Verify snapshot size
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('examples/canonical-mattress')
+          m = json.loads((root/'source-manifest.json').read_text())
+          assert m['participant_turns'] >= 30, m
+          assert len((root/'full-transcript.md').read_text()) > 15000
+          print('Snapshot verified', m)
+          PY
+      - name: Build source-verified provisional research registries
+        run: |
+          python scripts/build_canonical_mattress.py --folder examples/canonical-mattress
+      - name: Run deterministic complete single-episode pipeline
+        run: |
+          python scripts/run_pipeline.py \
+            --sources examples/canonical-mattress/sources.json \
+            --interviews examples/canonical-mattress/interviews.json \
+            --episodes examples/canonical-mattress/episodes.json \
+            --segments examples/canonical-mattress/segments.json \
+            --source-root examples/canonical-mattress \
+            --evidence examples/canonical-mattress/evidence_bank.json \
+            --codebook examples/canonical-mattress/codebook.json \
+            --mappings examples/canonical-mattress/evidence_mappings.json \
+            --links examples/canonical-mattress/links.json \
+            --report examples/canonical-mattress/synthesis_report.md \
+            --clusters none \
+            --output-dir examples/canonical-mattress/results
+      - name: Run illustrative behavioral simulations and six-anchor SSR
+        run: |
+          python scripts/run_canonical_mattress_demo.py \
+            --checkpoint examples/canonical-mattress/results/CHECKPOINT.json \
+            --output-dir examples/canonical-mattress/results/simulations
+      - name: Commit source snapshot back to feature branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add examples/canonical-mattress/*.json examples/canonical-mattress/full-transcript.md
+          git add -f examples/canonical-mattress/results/
+          if ! git diff --cached --quiet; then
+            git commit -m "data(canonical): snapshot complete published mattress interview"
+            git fetch origin feat/canonical-real-mattress-ssr
+            # Generated snapshots are authoritative for this importer run.
+            # Keep unrelated remote code/docs; resolve generated-file conflicts
+            # toward the newly recorded, internally consistent snapshot.
+            git rebase -X theirs origin/feat/canonical-real-mattress-ssr
+            git push origin HEAD:feat/canonical-real-mattress-ssr
+          fi

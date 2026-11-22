@@ -199,6 +199,25 @@ The synthetic extension remains useful for generating rival hypotheses to test.
 
 See the full [data contracts](docs/operations/data-contracts.md).
 
+## Canonical real mattress interview
+
+The [licensed real mattress interview](examples/canonical-mattress/README.md) is
+the evidence-first worked case for this repository. It preserves the **complete
+published transcript** with speaker-turn provenance, separates the participant's
+decision account from instructor and audience commentary, and runs the original
+one-episode A→B pipeline through an audited checkpoint.
+
+Two clearly labeled **GPT-6-authored hypothetical counterfactuals** (guaranteed
+return pickup versus a shared foam sample) demonstrate the optional Behavioral
+Simulation protocol handoff and six-anchor semantic similarity rating (SSR).
+The calculated distributions measure similarity of *synthetic stated intent*
+to ordinal statements, **not actual human purchase probability**. No independent
+holdout, human-reviewed coding, or cross-person clustering is claimed.
+
+The [original synthetic mattress example](examples/mattress/README.md) and
+[three-interview synthetic fixture](examples/synthetic-study/README.md) remain
+available for calibration and software operations requiring more than one person.
+
 ## Examples
 
 - [`examples/mattress/`](examples/mattress/) — one original synthetic decision-episode example,

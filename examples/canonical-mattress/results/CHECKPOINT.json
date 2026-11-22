@@ -1,0 +1,746 @@
+{
+  "checkpoint_version": "1.1.0",
+  "generated_at": "2026-11-22T11:55:52.958760+00:00",
+  "analysis_unit": "episode",
+  "computation": {
+    "a_to_b_association": "reviewed links primary; Jaccard and descriptive phi secondary",
+    "clustering_method": "not performed",
+    "cluster_count": 0
+  },
+  "metadata": {},
+  "source_index": [
+    {
+      "source_id": "SRC01",
+      "source": "full-transcript.md",
+      "coverage": "FULL",
+      "accessible_range": "T0001–T0279",
+      "notes": "Full published web transcript only; NOT verified against audio. https://jobstobedone.org/radio/the-mattress-interview-part-one/"
+    }
+  ],
+  "interview_index": [
+    {
+      "interview": "I01",
+      "descriptor": "Public workshop mattress-switch interview, one anonymous attendee, one replacement decision"
+    }
+  ],
+  "episode_index": [
+    {
+      "episode": "D01",
+      "interview": "I01",
+      "descriptor": "Replace disappointing, deteriorating mattress via an unexpected Costco foam-mattress purchase"
+    }
+  ],
+  "segment_index": [
+    {
+      "interview": "I01",
+      "segment": "S01",
+      "location": "Building the timeline: the day at Costco"
+    },
+    {
+      "interview": "I01",
+      "segment": "S02",
+      "location": "The struggling moment: a year of bad sleep"
+    },
+    {
+      "interview": "I01",
+      "segment": "S03",
+      "location": "Why he waited so long to switch"
+    },
+    {
+      "interview": "I01",
+      "segment": "S04",
+      "location": "Passive looking, active looking, and the decision"
+    },
+    {
+      "interview": "I01",
+      "segment": "S05",
+      "location": "Espoused behavior vs. real behavior"
+    },
+    {
+      "interview": "I01",
+      "segment": "S06",
+      "location": "The four forces: anxiety, habit, and the moment of truth"
+    },
+    {
+      "interview": "I01",
+      "segment": "S07",
+      "location": "Inside the method: lowering anxiety and finding the job"
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence": "E001",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S02",
+      "source": "full-transcript.md",
+      "source_location": "T0102 | The struggling moment: a year of bad sleep",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "current_state",
+      "verbatim_excerpt": "bought an overpriced Sterns & Foster that was guaranteed to give me a great night’s sleep, and you’re going to have a mattress for at least ten years, so it’s worth the bigger investment, and we got the cushy pillow top.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Old mattress: significant prior investment and expectation."
+    },
+    {
+      "evidence": "E002",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S02",
+      "source": "full-transcript.md",
+      "source_location": "T0102 | The struggling moment: a year of bad sleep",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "current_state",
+      "verbatim_excerpt": "I would say for about a year I kept waking up every morning when I was saying, ‘This bed is awful, I wake up with a headache, a neckache and a backache. It’s starting to sink, this was a waste of $2,000, I need to find something different.’",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Year of waking pain; reported, not independently diagnosed."
+    },
+    {
+      "evidence": "E003",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S02",
+      "source": "full-transcript.md",
+      "source_location": "T0106 | The struggling moment: a year of bad sleep",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "current_state",
+      "verbatim_excerpt": "Year three kind of ‘eh,’ year four, couldn’t stand it. Had total buyer’s remorse.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Reported degradation over years; no objective clinical data."
+    },
+    {
+      "evidence": "E004",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S02",
+      "source": "full-transcript.md",
+      "source_location": "T0108 | The struggling moment: a year of bad sleep",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "concrete_event_or_behavior",
+      "verbatim_excerpt": "I tried sleeping without pillows, I tried adjusting my position, all this stuff.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Concrete prior attempts before replacement."
+    },
+    {
+      "evidence": "E005",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S02",
+      "source": "full-transcript.md",
+      "source_location": "T0112 | The struggling moment: a year of bad sleep",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "current_state",
+      "verbatim_excerpt": "I did not. Last year was the first year of my business, and I was gone 37 weeks. As I told you at breakfast, I was held up in the Marriot Renaissance Center three days a week. I would assure you at least that that mattress I’m sure was not the one that I had at home, but I didn’t have those problems.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Reported contrast with hotel sleep; not proof of mattress causality."
+    },
+    {
+      "evidence": "E006",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S02",
+      "source": "full-transcript.md",
+      "source_location": "T0114 | The struggling moment: a year of bad sleep",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "concrete_event_or_behavior",
+      "verbatim_excerpt": "Yeah, I flipped it, I rotated it, I turned it upside down, I took it off the frame, took it off the box springs.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Repeated attempts to preserve old bed."
+    },
+    {
+      "evidence": "E007",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S02",
+      "source": "full-transcript.md",
+      "source_location": "T0122 | The struggling moment: a year of bad sleep",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "current_state",
+      "verbatim_excerpt": "she started, I would say the last six months, to realize too, whether it was guilt by association or legitimate, she would say, ‘I’m starting to have problems too. It’s uncomfortable,’",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Wife's reported struggle is secondhand testimony."
+    },
+    {
+      "evidence": "E008",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S03",
+      "source": "full-transcript.md",
+      "source_location": "T0134 | Why he waited so long to switch",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "current_state",
+      "verbatim_excerpt": "I think life gets in the way, between building a company over the last 18 months and trying to raise two kids in a small condo and sell it, and then move to a different place.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Business, children, and moving competed for attention."
+    },
+    {
+      "evidence": "E009",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S03",
+      "source": "full-transcript.md",
+      "source_location": "T0136 | Why he waited so long to switch",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "current_state",
+      "verbatim_excerpt": "Buying a new mattress was not top of priority list.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Explicit priority constraint."
+    },
+    {
+      "evidence": "E010",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S03",
+      "source": "full-transcript.md",
+      "source_location": "T0164 | Why he waited so long to switch",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "concrete_event_or_behavior",
+      "verbatim_excerpt": "I went back to Macy’s Home Store and asked some questions, ‘Well, you’ve got to rotate your mattress. Well, you’ve got to try this. Well, is it maybe how you’re sleeping? Well, our warranty is good for this, but it covers sinkage, and what you have to do is lay a yard stick across the sink of the mattress.’",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Unsuccessful warranty-help pathway."
+    },
+    {
+      "evidence": "E011",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S03",
+      "source": "full-transcript.md",
+      "source_location": "T0166 | Why he waited so long to switch",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "concrete_event_or_behavior",
+      "verbatim_excerpt": "I did not do that, because they said it had to be at least an inch and a half.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Reported eligibility threshold blocked claim."
+    },
+    {
+      "evidence": "E012",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S03",
+      "source": "full-transcript.md",
+      "source_location": "T0168 | Why he waited so long to switch",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "interpretation",
+      "verbatim_excerpt": "And measure it to make sure you’ve hit that magic number, because if it didn’t hit that magic number, nothing about the warranty mattered.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Participant's interpretation of an unsatisfactory return process."
+    },
+    {
+      "evidence": "E013",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S04",
+      "source": "full-transcript.md",
+      "source_location": "T0190 | Passive looking, active looking, and the decision",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "concrete_event_or_behavior",
+      "verbatim_excerpt": "Within that three month window, I started doing research, saying, ‘The old mattress has to be replaced.’ The idea of going into a mattress store or furniture store just gave me the skeeves.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Active research and aversion to conventional mattress retail."
+    },
+    {
+      "evidence": "E014",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S04",
+      "source": "full-transcript.md",
+      "source_location": "T0190 | Passive looking, active looking, and the decision",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "concrete_event_or_behavior",
+      "verbatim_excerpt": "I did a lot of online research, came this close to pulling the trigger on a Groupon for a memory foam mattress, and said after my experience with Macy’s Home Store, the last thing I want to do is order something through Groupon online. In the event that I don’t like it, then what am I going to do?",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Near purchase abandoned because recovery path felt uncertain."
+    },
+    {
+      "evidence": "E015",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S04",
+      "source": "full-transcript.md",
+      "source_location": "T0190 | Passive looking, active looking, and the decision",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "aspiration",
+      "verbatim_excerpt": "To me, it was about a good night’s sleep. Waking up, feeling pretty good, so I could be as productive as I could be as a business guy and a dad and a husband the next day.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Desired progress explicitly independent of mattress features."
+    },
+    {
+      "evidence": "E016",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S01",
+      "source": "full-transcript.md",
+      "source_location": "T0088 | Building the timeline: the day at Costco",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "concrete_event_or_behavior",
+      "verbatim_excerpt": "Yeah, the mattress was not on the list.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "No planned mattress purchase on shopping trip."
+    },
+    {
+      "evidence": "E017",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S01",
+      "source": "full-transcript.md",
+      "source_location": "T0094 | Building the timeline: the day at Costco",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "concrete_event_or_behavior",
+      "verbatim_excerpt": "I actually go down an aisle unexpectedly, and the lightbulb goes off, and there’s the mattress.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Unplanned discovery at trusted existing shopping location."
+    },
+    {
+      "evidence": "E018",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S04",
+      "source": "full-transcript.md",
+      "source_location": "T0196 | Passive looking, active looking, and the decision",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "concrete_event_or_behavior",
+      "verbatim_excerpt": "There was some, ‘Are you sure you want it?’ Then I pulled down the little 12 inch by 12 inch sample of the foam. ‘Here touch it, feel it.’",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Partner's hesitation; participant offers physical foam sample."
+    },
+    {
+      "evidence": "E019",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S04",
+      "source": "full-transcript.md",
+      "source_location": "T0196 | Passive looking, active looking, and the decision",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "concrete_event_or_behavior",
+      "verbatim_excerpt": "‘Oh, that’s actually not bad. If you want it, get it. It’s a lot of money, I know you’re not sleeping, get it.’ That’s when I went out and got the flatbed.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Participant-reported spouse endorsement and purchase action."
+    },
+    {
+      "evidence": "E020",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S04",
+      "source": "full-transcript.md",
+      "source_location": "T0200 | Passive looking, active looking, and the decision",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "concrete_event_or_behavior",
+      "verbatim_excerpt": "Yeah, it was $699. It’s funny, because the Groupon happens to be available, and the one on Groupon was less, but again I felt very concerned about if I have a bad experience about this, do I want to go the Groupon, online route versus getting it at the Costco that’s five minutes from my house?",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Paid more than Groupon option; local return mattered."
+    },
+    {
+      "evidence": "E021",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S04",
+      "source": "full-transcript.md",
+      "source_location": "T0216 | Passive looking, active looking, and the decision",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "interpretation",
+      "verbatim_excerpt": "That really didn’t get me. What got me was the ability to at least touch and feel it a little bit. Again, also knowing that whatever mattress I had been having and still have wasn’t cutting the deal, I wanted to try something radically different. To me going with foam was radically different.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Participant attributes choice to touch and novel material."
+    },
+    {
+      "evidence": "E022",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S04",
+      "source": "full-transcript.md",
+      "source_location": "T0210 | Passive looking, active looking, and the decision",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "concrete_event_or_behavior",
+      "verbatim_excerpt": "There was two that we were specifically looking at, and one was a lot higher and seemed a lot softer. That was the one that we went with.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Selected one of the foam options, not merely hypothetical intent."
+    },
+    {
+      "evidence": "E023",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S03",
+      "source": "full-transcript.md",
+      "source_location": "T0182 | Why he waited so long to switch",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "concrete_event_or_behavior",
+      "verbatim_excerpt": "I actually slept on the old mattress last night.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Old product still in use after new purchase."
+    },
+    {
+      "evidence": "E024",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S03",
+      "source": "full-transcript.md",
+      "source_location": "T0184 | Why he waited so long to switch",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "current_state",
+      "verbatim_excerpt": "I have not thrown it out yet.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Retention of old mattress; reasons are not fully established."
+    },
+    {
+      "evidence": "E025",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S06",
+      "source": "full-transcript.md",
+      "source_location": "T0243 | The four forces: anxiety, habit, and the moment of truth",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "current_state",
+      "verbatim_excerpt": "First of all, I’m a germaphobe. I see all these beds lined up everywhere and it’s creepy.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Reported discomfort in showroom setting."
+    },
+    {
+      "evidence": "E026",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S06",
+      "source": "full-transcript.md",
+      "source_location": "T0241 | The four forces: anxiety, habit, and the moment of truth",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "current_state",
+      "verbatim_excerpt": "this mattress issue still hasn’t actually been resolved, I was like, ‘I can’t go in.’",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Post-purchase situation remained unresolved; mechanism unknown."
+    },
+    {
+      "evidence": "E027",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S07",
+      "source": "full-transcript.md",
+      "source_location": "T0268 | Inside the method: lowering anxiety and finding the job",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "concrete_event_or_behavior",
+      "verbatim_excerpt": "Oh yeah. Not a lot, but a couple things.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Reports prior successful Costco returns."
+    },
+    {
+      "evidence": "E028",
+      "source_id": "SRC01",
+      "interview": "I01",
+      "episode": "D01",
+      "segment": "S04",
+      "source": "full-transcript.md",
+      "source_location": "T0220 | Passive looking, active looking, and the decision",
+      "speaker": "PARTICIPANT",
+      "evidence_type": "hypothetical",
+      "verbatim_excerpt": "I will tell you this. Walgreens specifically I wouldn’t purchase it there.",
+      "tags": "Participant testimony; preliminary A/B inference",
+      "note": "Hypothetical response: expressly excluded from observed choice."
+    }
+  ],
+  "codebook": [
+    {
+      "code": "A01",
+      "definition": "Prior mattress causes reported morning discomfort and impaired functioning."
+    },
+    {
+      "code": "A02",
+      "definition": "Replacement feels hard to reverse or recover from when a product disappoints."
+    },
+    {
+      "code": "A03",
+      "definition": "Competing family, business, and move demands delay the replacement."
+    },
+    {
+      "code": "A04",
+      "definition": "Conventional mattress sales channels feel uncomfortable or untrustworthy."
+    },
+    {
+      "code": "A05",
+      "definition": "Old mattress remains in use or retained after the new purchase."
+    },
+    {
+      "code": "B01",
+      "definition": "Wake rested enough to function well in work and family roles."
+    },
+    {
+      "code": "B02",
+      "definition": "Try a replacement with a credible, recoverable purchase path."
+    },
+    {
+      "code": "B03",
+      "definition": "Make a joint buying decision during an existing shopping occasion."
+    },
+    {
+      "code": "B04",
+      "definition": "Choose a materially different mattress through a manageable evaluation."
+    }
+  ],
+  "evidence_to_code_mappings": [
+    {
+      "evidence": "E001",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A02",
+      "b_codes": ""
+    },
+    {
+      "evidence": "E002",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A01",
+      "b_codes": ""
+    },
+    {
+      "evidence": "E003",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A01",
+      "b_codes": ""
+    },
+    {
+      "evidence": "E004",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A01",
+      "b_codes": ""
+    },
+    {
+      "evidence": "E005",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A01",
+      "b_codes": ""
+    },
+    {
+      "evidence": "E006",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A01",
+      "b_codes": ""
+    },
+    {
+      "evidence": "E007",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A01",
+      "b_codes": ""
+    },
+    {
+      "evidence": "E008",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A03",
+      "b_codes": ""
+    },
+    {
+      "evidence": "E009",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A03",
+      "b_codes": ""
+    },
+    {
+      "evidence": "E010",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A02",
+      "b_codes": ""
+    },
+    {
+      "evidence": "E011",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A02",
+      "b_codes": ""
+    },
+    {
+      "evidence": "E012",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A02",
+      "b_codes": ""
+    },
+    {
+      "evidence": "E013",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A04",
+      "b_codes": ""
+    },
+    {
+      "evidence": "E014",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A02",
+      "b_codes": ""
+    },
+    {
+      "evidence": "E015",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "",
+      "b_codes": "B01"
+    },
+    {
+      "evidence": "E016",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "",
+      "b_codes": ""
+    },
+    {
+      "evidence": "E017",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "",
+      "b_codes": "B03"
+    },
+    {
+      "evidence": "E018",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A02",
+      "b_codes": "B03"
+    },
+    {
+      "evidence": "E019",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "",
+      "b_codes": "B03"
+    },
+    {
+      "evidence": "E020",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A02",
+      "b_codes": "B02"
+    },
+    {
+      "evidence": "E021",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A04",
+      "b_codes": "B04"
+    },
+    {
+      "evidence": "E022",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "",
+      "b_codes": "B04"
+    },
+    {
+      "evidence": "E023",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A05",
+      "b_codes": ""
+    },
+    {
+      "evidence": "E024",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A05",
+      "b_codes": ""
+    },
+    {
+      "evidence": "E025",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A04",
+      "b_codes": ""
+    },
+    {
+      "evidence": "E026",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "A04",
+      "b_codes": ""
+    },
+    {
+      "evidence": "E027",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "",
+      "b_codes": "B02"
+    },
+    {
+      "evidence": "E028",
+      "interview": "I01",
+      "episode": "D01",
+      "a_codes": "",
+      "b_codes": ""
+    }
+  ],
+  "a_to_b_links": [
+    {
+      "link": "L001",
+      "episode": "D01",
+      "a_code": "A01",
+      "b_code": "B01",
+      "basis": "INFERRED",
+      "evidence": "E002, E004, E015",
+      "rationale": "Reported waking impairment motivates desire for rested functioning.",
+      "contradictions": ""
+    },
+    {
+      "link": "L002",
+      "episode": "D01",
+      "a_code": "A02",
+      "b_code": "B02",
+      "basis": "INFERRED",
+      "evidence": "E010, E014, E020, E027",
+      "rationale": "Failed recovery and Groupon anxiety make known-store return experience salient.",
+      "contradictions": "New purchase did not establish problem resolution; old mattress retained."
+    },
+    {
+      "link": "L003",
+      "episode": "D01",
+      "a_code": "A03",
+      "b_code": "B03",
+      "basis": "INFERRED",
+      "evidence": "E008, E009, E017, E019",
+      "rationale": "Competing obligations make convenient joint purchase a plausible path.",
+      "contradictions": ""
+    },
+    {
+      "link": "L004",
+      "episode": "D01",
+      "a_code": "A04",
+      "b_code": "B04",
+      "basis": "INFERRED",
+      "evidence": "E013, E021, E025",
+      "rationale": "Retail aversion and foam sample shape a different product evaluation path.",
+      "contradictions": ""
+    }
+  ],
+  "clusters": [],
+  "alias_map": [],
+  "decision_log": "",
+  "latest_diff_log": ""
+}
