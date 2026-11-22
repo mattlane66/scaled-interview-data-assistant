@@ -242,6 +242,10 @@ def compile_map(checkpoint: dict[str, Any], digest: str,
             ],
         })
     no_cross_person = index["distinct_interviews"] < 2
+    incomplete_coverage = sorted({
+        status for row in index["episodes"] for status in row["source_coverage"]
+        if status != "FULL"
+    })
     index["review_status"] = "HUMAN_REVIEW_ATTESTED_NOT_INDEPENDENTLY_VERIFIED"
     return {
         "schema_version": "1.0",
@@ -270,7 +274,9 @@ def compile_map(checkpoint: dict[str, Any], digest: str,
             "Counterfactual effects require real-world identification or validation.",
         ] + ([
             "Only one interview contributes; no cross-person pattern can be inferred."
-        ] if no_cross_person else []),
+        ] if no_cross_person else []) + ([
+            "Source coverage is not complete: " + ", ".join(incomplete_coverage)
+        ] if incomplete_coverage else []),
     }
 
 
@@ -290,8 +296,8 @@ def render_map(mapped: dict[str, Any]) -> str:
         f"**Distinct interviews:** {mapped['source_inventory']['distinct_interviews']}",
         "**No population prevalence or identified causal effects.**", "",
         "## Human-source A→B relationships", "",
-        "| Episode | Struggle (A) | Progress (B) | Link | Source IDs |",
-        "|---|---|---|---|---|",
+        "| Episode | Struggle (A) | Progress (B) | Link | Source IDs | Coverage |",
+        "|---|---|---|---|---|---|",
     ]
     for row in mapped["source_inventory"]["episodes"]:
         for link in row["a_to_b_links"]:
@@ -299,8 +305,30 @@ def render_map(mapped: dict[str, Any]) -> str:
                 f"| {row['episode']} | {_clean(link['a_definition'])} | "
                 f"{_clean(link['b_definition'])} | "
                 f"{link['link']} ({link['basis']}) | "
-                f"{', '.join(link['evidence_refs'])} |"
+                f"{', '.join(link['evidence_refs'])} | "
+                f"{', '.join(row['source_coverage'])} |"
             )
+    unlinked = [
+        row for row in mapped["source_inventory"]["episodes"] if not row["a_to_b_links"]
+    ]
+    if unlinked:
+        lines += ["", "**Episodes without a reviewed A→B link (retained, not discarded):**"]
+        for row in unlinked:
+            lines.append(
+                f"- {row['episode']} ({row['interview']}), "
+                f"evidence: {', '.join(row['evidence_refs']) or 'NONE'}, "
+                f"coverage: {', '.join(row['source_coverage'])}"
+            )
+    contradictions = [
+        (row["episode"], link["link"], link["contradictions"])
+        for row in mapped["source_inventory"]["episodes"]
+        for link in row["a_to_b_links"]
+        if link["contradictions"] != "NONE RECORDED"
+    ]
+    if contradictions:
+        lines += ["", "**Contradictions noted against reviewed A→B links:**"]
+        for episode, link, note in contradictions:
+            lines.append(f"- {episode}/{link}: {_clean(note)}")
     lines += ["", "## Provisional behavioral mechanism hypotheses", ""]
     for mechanism in mapped["mechanisms"]:
         lines += [
