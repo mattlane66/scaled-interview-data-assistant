@@ -233,6 +233,7 @@ def compile_map(checkpoint: dict[str, Any], digest: str,
             "rival_explanation": mechanism["rival_explanation"],
             "counterfactual_condition_change": mechanism["counterfactual_condition_change"],
             "disconfirming_observation": mechanism["disconfirming_observation"],
+            "discriminating_human_test": mechanism["discriminating_human_test"],
             "revisit_when": mechanism["revisit_when"],
             "observations": observations,
             "distinct_interviews_by_stance": stances,
@@ -443,7 +444,6 @@ def planning_handoff(mapped: dict[str, Any]) -> dict[str, Any]:
             } for obs in mechanism["observations"]],
             "evidence_assessment": "MIXED_STANCES_PRESERVED_ANALYST_JUDGMENTS",
             "disconfirming_observation": mechanism["disconfirming_observation"],
-            "discriminating_human_test": mechanism["discriminating_human_test"],
             "revisit_when": mechanism["revisit_when"],
         })
     handoff = {
