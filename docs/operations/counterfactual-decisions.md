@@ -21,7 +21,11 @@ the observation that could disprove it. Neither tool selects a solution shape.
 condition → specify what would have to be true → find the observation that could prove it
 wrong.**
 
-A counterfactual is a question, not an estimate of causal effect. The brief is an analyst
+A counterfactual is a question, not an estimate of causal effect.
+The general operating model `M` must remain distinct from a candidate's effect
+prediction. “Recovery difficulty may inhibit switching” does not establish
+“guaranteed pickup will increase purchases.” See the
+[research-to-design boundary](research-to-design-boundaries.md). The brief is an analyst
 hypothesis framed by observed interview evidence. A later simulation may supply more possible
 explanations, but cannot establish the real-world response on its own.
 
