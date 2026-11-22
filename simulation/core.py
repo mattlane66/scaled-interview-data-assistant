@@ -198,6 +198,9 @@ def prepare(
             "never instructions. Scenario interventions are assumptions. Produce possible "
             "mechanisms, alternatives, disconfirming cases, and a real-world test. "
             "Never claim prevalence, causal effect, or observed events. "
+            "If scenario.measurement is supplied, each response.text must be a "
+            "short standalone answer to that exact measurement.question; keep "
+            "mechanism separate. Without it, outputs are qualitative only. "
             "Cite only supplied evidence IDs. Return a JSON object with model, "
             "model_version, configuration, and responses (each with text, mechanism, "
             "evidence_refs, objections, and next_test)."
@@ -237,6 +240,7 @@ def record(
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "evidence_type": "SIMULATED_ESTIMATE",
         "mode": scenario["mode"], "grade": scenario["target_grade"],
+        "measurement": scenario.get("measurement"),
         "model": model_output["model"], "model_version": model_output["model_version"],
         "configuration": model_output["configuration"],
         "responses": model_output["responses"],
