@@ -150,6 +150,9 @@ def compile_map(checkpoint: dict[str, Any], digest: str,
         raise SimulationError("Cluster interpretation review required")
     if not study["mechanisms"]:
         raise SimulationError("Declare at least one reviewed, provisional mechanism hypothesis")
+    ids = [m["mechanism_id"] for m in study["mechanisms"]]
+    if len(ids) != len(set(ids)):
+        raise SimulationError("Mechanism IDs must be unique")
     if study["research_question"].strip().upper().startswith("REPLACE"):
         raise SimulationError("Complete the research question")
 
@@ -238,6 +241,7 @@ def compile_map(checkpoint: dict[str, Any], digest: str,
             ],
         })
     no_cross_person = index["distinct_interviews"] < 2
+    index["review_status"] = "HUMAN_REVIEW_ATTESTED_NOT_INDEPENDENTLY_VERIFIED"
     return {
         "schema_version": "1.0",
         "artifact_type": "BEHAVIORAL_MECHANISM_MAP",
