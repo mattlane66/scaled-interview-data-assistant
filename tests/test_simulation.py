@@ -493,3 +493,62 @@ def test_counterfactual_cli_brief_and_compare(source, tmp_path):
     ], check=True, capture_output=True)
     assert "SIM001" in comparison.read_text()
     assert "SIM002" in comparison.read_text()
+
+
+def test_evidence_first_counterfactual_needs_no_model_run(source, tmp_path):
+    checkpoint, data, digest, scenario = source
+    scenario["design_hypothesis"] = design_hypothesis()
+    before = checkpoint.read_bytes()
+    brief = build_brief(data, digest, scenario)
+    schema_check(brief, "counterfactual-brief.schema.json")
+    assert brief["run_id"] is None
+    assert brief["simulation_status"] == "NOT_RUN"
+    assert brief["evidence_grade"] == "NOT_APPLICABLE"
+    assert brief["simulated_hypotheses"] == []
+    assert "NOT RUN" in render_brief(brief)
+    assert checkpoint.read_bytes() == before
+
+    path = tmp_path / "scenario.json"
+    path.write_text(json.dumps(scenario))
+    markdown = tmp_path / "decision.md"
+    cli = [sys.executable, str(ROOT / "scripts" / "simulation_cli.py")]
+    subprocess.run(cli + [
+        "counterfactual", "--checkpoint", str(checkpoint),
+        "--scenario", str(path), "--output", str(markdown),
+    ], check=True, capture_output=True)
+    assert "Manual synthesis" in markdown.read_text()
+    assert "NOT RUN" in markdown.read_text()
+
+    second = copy.deepcopy(scenario)
+    second["scenario_id"] = "SIM002"
+    second["intervention"]["to"] = "automatic"
+    second["design_hypothesis"]["product_change"] = "Automatic migration"
+    path2 = tmp_path / "second.json"
+    path2.write_text(json.dumps(second))
+    comparison = tmp_path / "comparison.md"
+    subprocess.run(cli + [
+        "compare", "--checkpoint", str(checkpoint),
+        "--scenario", str(path), "--scenario", str(path2),
+        "--output", str(comparison),
+    ], check=True, capture_output=True)
+    assert "SIM001" in comparison.read_text() and "SIM002" in comparison.read_text()
+
+
+def test_counterfactual_initialization_opt_in_preserves_old_simulation(source, tmp_path):
+    checkpoint, _, _, _ = source
+    cli = [sys.executable, str(ROOT / "scripts" / "simulation_cli.py")]
+    normal = tmp_path / "ordinary.json"
+    enhanced = tmp_path / "counterfactual.json"
+    base = [
+        "--checkpoint", str(checkpoint),
+        "--episode", "D01", "--evidence", "E001", "--evidence", "E002",
+    ]
+    subprocess.run(cli + ["init", *base, "--output", str(normal)],
+                   check=True, capture_output=True)
+    subprocess.run(cli + ["init", *base, "--counterfactual", "--output", str(enhanced)],
+                   check=True, capture_output=True)
+    assert "design_hypothesis" not in json.loads(normal.read_text())
+    special = json.loads(enhanced.read_text())
+    assert "design_hypothesis" in special
+    assert not special["review"]["evidence_reviewed"]
+    assert special["design_hypothesis"]["product_change"].startswith("REPLACE")
