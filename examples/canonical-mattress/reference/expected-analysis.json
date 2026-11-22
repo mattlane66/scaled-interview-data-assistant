@@ -171,7 +171,7 @@
     },
     {
       "id": "O12",
-      "claim": "He reported past successful Costco returns of some products, but had not previously known about any mattress home-pickup service.",
+      "claim": "He reported previously returning a few products to Costco, but had not known of any mattress home-pickup service before the workshop.",
       "status": "REPORTED",
       "evidence_ids": [
         "E027"
