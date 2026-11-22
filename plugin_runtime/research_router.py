@@ -125,7 +125,10 @@ def route_research(
             elif goal.get("job_comparability", "UNASSESSED") != "SAME_JOB":
                 readiness = "ASSESS_JOB_COMPARABILITY"
                 needed = ["source-grounded reason these episodes share a researchable job"]
-                step = "Assess progress and decision context; product category alone is insufficient."
+                step = (
+                    "Assess progress and decision context; "
+                    "product category alone is insufficient."
+                )
             elif not (evidence.get("human_review_completed", False)
                       and evidence.get("reviewed_links_present", False)):
                 readiness = "PROVISIONAL_MECHANISMS_ONLY"
