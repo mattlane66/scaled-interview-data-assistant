@@ -65,6 +65,32 @@ It gives six core questions, follow-up probes, and guidance for studying people 
 as before or did nothing. This repository begins where those **source-grounded accounts**
 become analyzable evidence; it cannot reconstruct questions that were never asked.
 
+## ChatGPT plugin — private preview
+
+This repository now includes a [portable plugin package](plugins/scaled-interview-data-assistant/plugin.json)
+with four skills and a [stateless MCP adapter](plugin_runtime/server.py) over the existing
+deterministic research tools. The skills-only archive can be privately imported without
+pretending an undeployed MCP server is available.
+
+Build the private package:
+
+```bash
+python scripts/build_plugin.py
+```
+
+For the MCP development server, install the optional dependencies:
+
+```bash
+python -m pip install -e ".[plugin]"
+python -m plugin_runtime.server
+```
+
+The default server uses local stdio. Private HTTP testing requires an explicit bearer
+secret; a **public** remote plugin still requires secure HTTPS deployment, OAuth,
+per-user authorization, operational hardening, privacy/terms documents and review.
+See [Plugin readiness](docs/operations/plugin-readiness.md) and the
+[reviewer test cases](docs/operations/plugin-review-cases.md).
+
 ## Quick start
 
 ### 1. Install the deterministic tools
