@@ -1,0 +1,139 @@
+{
+  "status": "REAL_SOURCE_METADATA_AGENT_DECLARED_NOT_INDEPENDENTLY_VERIFIED",
+  "requests": [
+    {
+      "id": "IPHONE-FOUR-METHODS",
+      "source_ids": [
+        "SRC-IPHONE"
+      ],
+      "request": {
+        "research_question": "What can the real smartphone purchase transcript tell us?",
+        "decision": "Identify credible source-grounded findings and next research.",
+        "goals": [
+          {
+            "type": "CURRENT_DECISION",
+            "question": "Reconstruct the actual historical switch with source citations."
+          },
+          {
+            "type": "CONDITIONAL_MECHANISM",
+            "question": "Can conditional mechanisms be tested from the available reviewed episodes?",
+            "comparison_scope": "CROSS_PERSON"
+          },
+          {
+            "type": "COUNTERFACTUAL_RESPONSE",
+            "question": "Can we predict what would happen under a hypothetical changed offer?"
+          },
+          {
+            "type": "EMERGING_NEED",
+            "question": "Can this transcript qualify a future-facing Lead User need?"
+          }
+        ],
+        "evidence": {
+          "transcript_coverage": "PARTIAL",
+          "decision_episodes": 1,
+          "distinct_people": 1,
+          "source_locators_available": true,
+          "human_review_completed": false,
+          "reviewed_links_present": false,
+          "human_holdout_available": false
+        },
+        "future_facing": {
+          "trend_candidate": false,
+          "advanced_user_signal": false,
+          "high_expected_benefit_signal": false
+        }
+      },
+      "expected_readiness": [
+        "PROVISIONAL_REVIEW_REQUIRED",
+        "NEED_CONTRASTING_EPISODES",
+        "SPECIFY_COUNTERFACTUAL_FIRST",
+        "DISCOVER_TRENDS_AND_CANDIDATES"
+      ]
+    },
+    {
+      "id": "CAMERA-FOUR-METHODS",
+      "source_ids": [
+        "SRC-CAMERA"
+      ],
+      "request": {
+        "research_question": "What can the real mirrorless camera purchase transcript tell us?",
+        "decision": "Identify credible source-grounded findings and next research.",
+        "goals": [
+          {
+            "type": "CURRENT_DECISION",
+            "question": "Reconstruct the actual historical switch with source citations."
+          },
+          {
+            "type": "CONDITIONAL_MECHANISM",
+            "question": "Can conditional mechanisms be tested from the available reviewed episodes?",
+            "comparison_scope": "CROSS_PERSON"
+          },
+          {
+            "type": "COUNTERFACTUAL_RESPONSE",
+            "question": "Can we predict what would happen under a hypothetical changed offer?"
+          },
+          {
+            "type": "EMERGING_NEED",
+            "question": "Can this transcript qualify a future-facing Lead User need?"
+          }
+        ],
+        "evidence": {
+          "transcript_coverage": "PARTIAL",
+          "decision_episodes": 1,
+          "distinct_people": 1,
+          "source_locators_available": true,
+          "human_review_completed": false,
+          "reviewed_links_present": false,
+          "human_holdout_available": false
+        },
+        "future_facing": {
+          "trend_candidate": false,
+          "advanced_user_signal": false,
+          "high_expected_benefit_signal": false
+        }
+      },
+      "expected_readiness": [
+        "PROVISIONAL_REVIEW_REQUIRED",
+        "NEED_CONTRASTING_EPISODES",
+        "SPECIFY_COUNTERFACTUAL_FIRST",
+        "DISCOVER_TRENDS_AND_CANDIDATES"
+      ]
+    },
+    {
+      "id": "CROSS-JOB-NEGATIVE-CASE",
+      "source_ids": [
+        "SRC-IPHONE",
+        "SRC-CAMERA"
+      ],
+      "request": {
+        "research_question": "Do the phone and camera switches share one behavioral mechanism?",
+        "decision": "Assess whether these two real cases should form one job cluster.",
+        "goals": [
+          {
+            "type": "CONDITIONAL_MECHANISM",
+            "question": "Can they be pooled as one coherent job cluster?",
+            "comparison_scope": "CROSS_PERSON",
+            "job_comparability": "DISTINCT_JOBS"
+          }
+        ],
+        "evidence": {
+          "transcript_coverage": "PARTIAL",
+          "decision_episodes": 2,
+          "distinct_people": 2,
+          "source_locators_available": true,
+          "human_review_completed": false,
+          "reviewed_links_present": false,
+          "human_holdout_available": false
+        },
+        "future_facing": {
+          "trend_candidate": false,
+          "advanced_user_signal": false,
+          "high_expected_benefit_signal": false
+        }
+      },
+      "expected_readiness": [
+        "STOP_DIFFERENT_JOBS"
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Evaluating research agents on unfamiliar transcripts
 
-**Scope:** An evaluation system for whether agents *actually perform* the four methods appropriately. The existing [16 routing scenarios](../../evals/routing-cases.json) exercise software decisions only; they are **not** blind human-judged agent runs or a scientific validation of the research methodologies.
+**Scope:** An evaluation system for whether agents *actually perform* the four methods appropriately. The existing [19 routing scenarios](../../evals/routing-cases.json) exercise software decisions only; they are **not** blind human-judged agent runs or a scientific validation of the research methodologies.
 
 ## 1. Assemble a permissioned, genuinely held-out real corpus
 
@@ -71,6 +71,6 @@ When making a paper-derived repair, link *exactly* the source section and releva
 
 The initial release must pass deterministic router scenarios, file/schema and security checks, plus a real local MCP client smoke test in CI. For a **claim of reliable agent research execution**, additionally require actual Codex and Claude sessions against unfamiliar, permissioned transcripts with independently adjudicated source-level interpretations, including at least one negative/inapplicable case per method; document error rates and residual contradictions.
 
-**Current status:** deterministic router and structural artifact scorer implemented; external blind human evaluations, native Codex and Claude CLI invocation and empirical prediction/calibration are **NOT RUN** unless a separate dated result record establishes otherwise.
+**Current status:** deterministic router and structural artifact scorer implemented. A [source-located two-interview self-pilot](../../evals/real-source-pilot/README.md) has exercised provisional A→B on real public interviews and corrected a formal-mechanism eligibility gap, but it is not blind human adjudication or a native Codex/Claude run; external blind human evaluations, native Codex and Claude CLI invocation and empirical prediction/calibration are **NOT RUN** unless a separate dated result record establishes otherwise.
 
 Never equate passing CI or correct reference IDs with complete, correct interpretation of unfamiliar source material.

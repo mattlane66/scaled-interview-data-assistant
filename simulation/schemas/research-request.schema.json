@@ -54,6 +54,15 @@
               "WITHIN_PERSON",
               "UNSPECIFIED"
             ]
+          },
+          "job_comparability": {
+            "description": "Analyst-declared research scope; not automatically verified from titles or product categories.",
+            "enum": [
+              "SAME_JOB",
+              "DISTINCT_JOBS",
+              "ANALOGY_ONLY",
+              "UNASSESSED"
+            ]
           }
         }
       }

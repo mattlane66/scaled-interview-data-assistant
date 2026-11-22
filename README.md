@@ -14,6 +14,8 @@ It is not an autonomous research replacement or a hosted application.
 
 ## Transcript-first question routing
 
+The [real published-source pilot](evals/real-source-pilot/README.md) applies provisional A→B to two unfamiliar workshop interviews and tests **why they must not be pooled into a single reviewed mechanism map**. It is a same-assistant, partial-source study—not an independent agent or human validation.
+
 The [research execution contract](docs/operations/research-execution.md) and [research-router skill](plugins/scaled-interview-data-assistant/skills/research-router/SKILL.md) select the smallest applicable evidence method for a user's transcript. The optional MCP route_research_request tool returns advisory eligibility and missing-evidence gates, **not completed research**. Real client-run evaluations are distinguished from deterministic checks in the [agent evaluations guide](docs/operations/agent-evaluations.md).
 
 ## Use it when

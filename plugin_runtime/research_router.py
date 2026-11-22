@@ -114,6 +114,21 @@ def route_research(
                 readiness = "NEED_DISTINCT_PERSON_COVERAGE"
                 needed = ["distinct people or explicit WITHIN_PERSON scope"]
                 step = "Limit claims to one person or gather independent cases."
+            elif goal.get("job_comparability", "UNASSESSED") == "DISTINCT_JOBS":
+                readiness = "STOP_DIFFERENT_JOBS"
+                needed = ["separate coherent job scopes or a new explicit study question"]
+                step = "Analyze the different jobs separately; do not pool as one mechanism."
+            elif goal.get("job_comparability", "UNASSESSED") == "ANALOGY_ONLY":
+                readiness = "PROVISIONAL_CROSS_DOMAIN_ANALOGY_ONLY"
+                needed = ["reviewed comparability if formal within-job mapping is wanted"]
+                step = "Compare analogies as hypotheses, not one job cluster."
+            elif goal.get("job_comparability", "UNASSESSED") != "SAME_JOB":
+                readiness = "ASSESS_JOB_COMPARABILITY"
+                needed = ["source-grounded reason these episodes share a researchable job"]
+                step = (
+                    "Assess progress and decision context; "
+                    "product category alone is insufficient."
+                )
             elif not (evidence.get("human_review_completed", False)
                       and evidence.get("reviewed_links_present", False)):
                 readiness = "PROVISIONAL_MECHANISMS_ONLY"
@@ -121,7 +136,7 @@ def route_research(
                 step = "Draft rivals and falsifiers, then obtain required reviews."
             elif people < 2:
                 readiness = "ELIGIBLE_FOR_WITHIN_PERSON_MAP"
-                step = "Compare one person\u0027s episodes; do not generalize across people."
+                step = "Compare one person's episodes; do not generalize across people."
             else:
                 readiness = "ELIGIBLE_FOR_REVIEW_GATED_MAP"
                 step = "Compare cases with ALIGNS/COUNTEREXAMPLE/AMBIGUOUS/UNASSESSED."

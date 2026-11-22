@@ -1,0 +1,43 @@
+{
+  "pilot_id": "REAL-TRANSCRIPT-SOURCE-READ-2026-11-22",
+  "date": "2026-11-22",
+  "status": "CURRENT_GPT6_ANALYST_PILOT_NOT_BLIND_OR_INDEPENDENT",
+  "purpose": "Exercise method selection and A2B evidence reconstruction on two previously unused real published switch interviews; do not claim external agent generalization.",
+  "original_canonical_reused": false,
+  "independent_native_codex_runs": 0,
+  "independent_native_claude_runs": 0,
+  "independent_human_adjudications": 0,
+  "validated_simulation_holdouts": 0,
+  "qualified_lead_users": 0,
+  "source_coverage": "PARTIAL: selected material ranges read, not full human transcript adjudication",
+  "source_material_republished": false,
+  "source_restrictions": "External copyrighted source transcripts are linked only, not reproduced. Paraphrases are analyst-generated, not licensed excerpts.",
+  "sources": [
+    {
+      "id": "SRC-IPHONE",
+      "kind": "PUBLISHED_WORKSHOP_SWITCH_INTERVIEW",
+      "url": "https://jobstobedone.org/radio/iphone-jobs-to-be-done-interview/",
+      "participant_label": "Person who reported buying an iPhone",
+      "coverage": "PARTIAL_SOURCE_RANGE_REVIEW",
+      "speaker_basis": "Participant labeled Becky in published transcript; interviewer interpretation excluded",
+      "job_boundary": "Feature-phone to smartphone purchase",
+      "licensing": "Website copyright retained; do not copy original transcript into this repository"
+    },
+    {
+      "id": "SRC-CAMERA",
+      "kind": "PUBLISHED_WORKSHOP_SWITCH_INTERVIEW",
+      "url": "https://jobstobedone.org/news/jobs-to-be-done-camera-interview/",
+      "participant_label": "Person who reported buying a Sony A6500",
+      "coverage": "PARTIAL_SOURCE_RANGE_REVIEW",
+      "speaker_basis": "Participant labeled Eva in published transcript; interviewer/audience interpretations excluded",
+      "job_boundary": "Mobile-phone/GoPro travel recording to first mirrorless-camera purchase",
+      "licensing": "Website copyright retained; do not copy original transcript into this repository"
+    }
+  ],
+  "notes": [
+    "The two real interviews concern different progress goals; do not pool them as one job cluster or report mechanism prevalence.",
+    "Speaker commentary and workshop hosts' causal claims are not participant evidence.",
+    "Publication of an interview is not verification that the participant's claims reflect independent external transactions.",
+    "Because the analyst both chose the sources and drafted the output, results are neither held-out nor independently adjudicated."
+  ]
+}
