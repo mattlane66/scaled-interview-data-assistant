@@ -45,8 +45,20 @@ def assess(
             or measurement.get("run_id") != run.get("run_id")
             or measurement.get("run_sha256") != sha256_text(json.dumps(run, sort_keys=True))):
         raise SimulationError("Holdout or measurement is bound to a different run")
-    if holdout["construct"] != measurement.get("construct"):
-        raise SimulationError("Validation construct does not match SSR measurement")
+    scenario_hash = sha256_text(json.dumps(scenario, sort_keys=True))
+    run_hash = sha256_text(json.dumps(run, sort_keys=True))
+    measurement_hash = sha256_text(json.dumps(measurement, sort_keys=True))
+    if run.get("scenario_sha256") != scenario_hash:
+        raise SimulationError("Simulation run does not match the approved scenario")
+    declared = scenario.get("measurement")
+    if (
+        not isinstance(declared, dict)
+        or holdout["construct"] != measurement.get("construct")
+        or holdout["construct"] != declared.get("construct")
+        or holdout["question"] != declared.get("question")
+        or measurement.get("anchor_version") != declared.get("anchor_version")
+    ):
+        raise SimulationError("Validation question, construct, or anchors do not match scenario")
     if not holdout["collection_and_use_permitted"] or not holdout["held_out_attested"]:
         raise SimulationError("Human holdout permission and isolation must be attested")
     if datetime.fromisoformat(holdout["predeclared_at"].replace("Z", "+00:00")) >= (
@@ -70,6 +82,8 @@ def assess(
         "schema_version": "1.0",
         "validation_id": holdout["validation_id"], "run_id": run["run_id"],
         "scenario_id": scenario["scenario_id"],
+        "scenario_sha256": scenario_hash, "run_sha256": run_hash,
+        "measurement_sha256": measurement_hash,
         "construct": holdout["construct"], "correctness_unit": "DISTRIBUTION",
         "split_unit": "PERSON", "holdout_size": len(holdout["observed_ratings"]),
         "split_group_count": len(held_out),
@@ -83,6 +97,8 @@ def assess(
         "grade_after_validation": run["grade"],
         "limitations": [
             "External holdout independence and response provenance are attested, not proven.",
+            "Predeclaration is checked against artifact recording time, not independently "
+            "verified model-generation time.",
             "Distributional fidelity does not establish individual accuracy or behavior change.",
             "No L3/L4 promotion without independently checked leakage, baseline, subgroup, "
             "model freeze, decision threshold, and calibration where applicable.",

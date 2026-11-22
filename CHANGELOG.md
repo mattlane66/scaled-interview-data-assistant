@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.2.1 — 2026-11-22
+
+- Audited and strengthened links between an approved scenario, generated run,
+  ordinal measurement, held-out comparison, and rendered report.
+- Reject attaching unrelated validation artifacts even if their run IDs match.
+- Require the checkpoint and scenario during SSR execution; reject changed measurement definitions.
+- Require the exact approved human question in holdout evaluation and add adversarial regression tests.
+- Clarify that predeclaration times and external model-generation provenance are not independently verified.
+
+
 ## 1.2.0 — 2026-11-22
 
 - Added optional, read-only, checkpoint-bound behavioral simulation after reviewed JTBD synthesis.
