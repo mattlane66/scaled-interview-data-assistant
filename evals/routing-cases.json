@@ -1,0 +1,600 @@
+{
+  "version": "1.0",
+  "corpus_status": "ROUTING_METADATA_FIXTURES_NOT_BLIND_HUMAN_EVALUATION",
+  "cases": [
+    {
+      "id": "real-mattress-a2b",
+      "source_kind": "CANONICAL_REAL_SOURCE_METADATA",
+      "request": {
+        "research_question": "What should we study?",
+        "decision": "Choose a credible next research move.",
+        "evidence": {
+          "transcript_coverage": "FULL",
+          "decision_episodes": 1,
+          "distinct_people": 1,
+          "source_locators_available": true,
+          "human_review_completed": false,
+          "reviewed_links_present": false,
+          "human_holdout_available": false
+        },
+        "counterfactual": {
+          "baseline_defined": false,
+          "intervention_defined": false,
+          "population_defined": false
+        },
+        "future_facing": {
+          "trend_candidate": false,
+          "advanced_user_signal": false,
+          "high_expected_benefit_signal": false
+        },
+        "goals": [
+          {
+            "type": "CURRENT_DECISION",
+            "question": "What can this evidence establish?",
+            "material_to_decision": true
+          }
+        ]
+      },
+      "expected": [
+        [
+          "A2B",
+          "PROVISIONAL_REVIEW_REQUIRED"
+        ]
+      ]
+    },
+    {
+      "id": "real-mattress-mechanism",
+      "source_kind": "CANONICAL_REAL_SOURCE_METADATA",
+      "request": {
+        "research_question": "What should we study?",
+        "decision": "Choose a credible next research move.",
+        "evidence": {
+          "transcript_coverage": "FULL",
+          "decision_episodes": 1,
+          "distinct_people": 1,
+          "source_locators_available": true,
+          "human_review_completed": false,
+          "reviewed_links_present": false,
+          "human_holdout_available": false
+        },
+        "counterfactual": {
+          "baseline_defined": false,
+          "intervention_defined": false,
+          "population_defined": false
+        },
+        "future_facing": {
+          "trend_candidate": false,
+          "advanced_user_signal": false,
+          "high_expected_benefit_signal": false
+        },
+        "goals": [
+          {
+            "type": "CONDITIONAL_MECHANISM",
+            "question": "What can this evidence establish?",
+            "material_to_decision": true
+          }
+        ]
+      },
+      "expected": [
+        [
+          "BEHAVIORAL_MECHANISM_MAP",
+          "NEED_CONTRASTING_EPISODES"
+        ]
+      ]
+    },
+    {
+      "id": "reviewed-two",
+      "source_kind": "SYNTHETIC_METADATA_NOT_HUMAN_DATA",
+      "request": {
+        "research_question": "What should we study?",
+        "decision": "Choose a credible next research move.",
+        "evidence": {
+          "transcript_coverage": "FULL",
+          "decision_episodes": 2,
+          "distinct_people": 2,
+          "source_locators_available": true,
+          "human_review_completed": true,
+          "reviewed_links_present": true,
+          "human_holdout_available": false
+        },
+        "counterfactual": {
+          "baseline_defined": false,
+          "intervention_defined": false,
+          "population_defined": false
+        },
+        "future_facing": {
+          "trend_candidate": false,
+          "advanced_user_signal": false,
+          "high_expected_benefit_signal": false
+        },
+        "goals": [
+          {
+            "type": "CONDITIONAL_MECHANISM",
+            "question": "What can this evidence establish?",
+            "material_to_decision": true
+          }
+        ]
+      },
+      "expected": [
+        [
+          "BEHAVIORAL_MECHANISM_MAP",
+          "ELIGIBLE_FOR_REVIEW_GATED_MAP"
+        ]
+      ]
+    },
+    {
+      "id": "unreviewed-two",
+      "source_kind": "SYNTHETIC_METADATA_NOT_HUMAN_DATA",
+      "request": {
+        "research_question": "What should we study?",
+        "decision": "Choose a credible next research move.",
+        "evidence": {
+          "transcript_coverage": "FULL",
+          "decision_episodes": 2,
+          "distinct_people": 2,
+          "source_locators_available": true,
+          "human_review_completed": false,
+          "reviewed_links_present": false,
+          "human_holdout_available": false
+        },
+        "counterfactual": {
+          "baseline_defined": false,
+          "intervention_defined": false,
+          "population_defined": false
+        },
+        "future_facing": {
+          "trend_candidate": false,
+          "advanced_user_signal": false,
+          "high_expected_benefit_signal": false
+        },
+        "goals": [
+          {
+            "type": "CONDITIONAL_MECHANISM",
+            "question": "What can this evidence establish?",
+            "material_to_decision": true
+          }
+        ]
+      },
+      "expected": [
+        [
+          "BEHAVIORAL_MECHANISM_MAP",
+          "PROVISIONAL_MECHANISMS_ONLY"
+        ]
+      ]
+    },
+    {
+      "id": "one-person-many-episodes",
+      "source_kind": "SYNTHETIC_METADATA_NOT_HUMAN_DATA",
+      "request": {
+        "research_question": "What should we study?",
+        "decision": "Choose a credible next research move.",
+        "evidence": {
+          "transcript_coverage": "FULL",
+          "decision_episodes": 4,
+          "distinct_people": 1,
+          "source_locators_available": true,
+          "human_review_completed": false,
+          "reviewed_links_present": false,
+          "human_holdout_available": false
+        },
+        "counterfactual": {
+          "baseline_defined": false,
+          "intervention_defined": false,
+          "population_defined": false
+        },
+        "future_facing": {
+          "trend_candidate": false,
+          "advanced_user_signal": false,
+          "high_expected_benefit_signal": false
+        },
+        "goals": [
+          {
+            "type": "CONDITIONAL_MECHANISM",
+            "question": "What can this evidence establish?",
+            "material_to_decision": true
+          }
+        ]
+      },
+      "expected": [
+        [
+          "BEHAVIORAL_MECHANISM_MAP",
+          "NEED_DISTINCT_PERSON_COVERAGE"
+        ]
+      ]
+    },
+    {
+      "id": "missing-intervention",
+      "source_kind": "SYNTHETIC_METADATA_NOT_HUMAN_DATA",
+      "request": {
+        "research_question": "What should we study?",
+        "decision": "Choose a credible next research move.",
+        "evidence": {
+          "transcript_coverage": "FULL",
+          "decision_episodes": 1,
+          "distinct_people": 1,
+          "source_locators_available": true,
+          "human_review_completed": false,
+          "reviewed_links_present": false,
+          "human_holdout_available": false
+        },
+        "counterfactual": {
+          "baseline_defined": false,
+          "intervention_defined": false,
+          "population_defined": false
+        },
+        "future_facing": {
+          "trend_candidate": false,
+          "advanced_user_signal": false,
+          "high_expected_benefit_signal": false
+        },
+        "goals": [
+          {
+            "type": "COUNTERFACTUAL_RESPONSE",
+            "question": "What can this evidence establish?",
+            "material_to_decision": true
+          }
+        ]
+      },
+      "expected": [
+        [
+          "BEHAVIORAL_SIMULATION",
+          "SPECIFY_COUNTERFACTUAL_FIRST"
+        ]
+      ]
+    },
+    {
+      "id": "l0-not-prediction",
+      "source_kind": "SYNTHETIC_METADATA_NOT_HUMAN_DATA",
+      "request": {
+        "research_question": "What should we study?",
+        "decision": "Choose a credible next research move.",
+        "evidence": {
+          "transcript_coverage": "FULL",
+          "decision_episodes": 1,
+          "distinct_people": 1,
+          "source_locators_available": true,
+          "human_review_completed": false,
+          "reviewed_links_present": false,
+          "human_holdout_available": false
+        },
+        "counterfactual": {
+          "baseline_defined": true,
+          "intervention_defined": true,
+          "population_defined": true
+        },
+        "future_facing": {
+          "trend_candidate": false,
+          "advanced_user_signal": false,
+          "high_expected_benefit_signal": false
+        },
+        "goals": [
+          {
+            "type": "COUNTERFACTUAL_RESPONSE",
+            "question": "What can this evidence establish?",
+            "material_to_decision": true
+          }
+        ]
+      },
+      "expected": [
+        [
+          "BEHAVIORAL_SIMULATION",
+          "L0_EXPLORATION_NOT_PREDICTION"
+        ]
+      ]
+    },
+    {
+      "id": "holdout-not-validated",
+      "source_kind": "SYNTHETIC_METADATA_NOT_HUMAN_DATA",
+      "request": {
+        "research_question": "What should we study?",
+        "decision": "Choose a credible next research move.",
+        "evidence": {
+          "transcript_coverage": "FULL",
+          "decision_episodes": 1,
+          "distinct_people": 1,
+          "source_locators_available": true,
+          "human_review_completed": false,
+          "reviewed_links_present": false,
+          "human_holdout_available": true
+        },
+        "counterfactual": {
+          "baseline_defined": true,
+          "intervention_defined": true,
+          "population_defined": true
+        },
+        "future_facing": {
+          "trend_candidate": false,
+          "advanced_user_signal": false,
+          "high_expected_benefit_signal": false
+        },
+        "available_skills": [
+          "behavioral-simulation"
+        ],
+        "goals": [
+          {
+            "type": "COUNTERFACTUAL_RESPONSE",
+            "question": "What can this evidence establish?",
+            "material_to_decision": true
+          }
+        ]
+      },
+      "expected": [
+        [
+          "BEHAVIORAL_SIMULATION",
+          "HOLDOUT_DESIGN_NOT_VALIDATED"
+        ]
+      ]
+    },
+    {
+      "id": "no-trend-not-lead-user",
+      "source_kind": "SYNTHETIC_METADATA_NOT_HUMAN_DATA",
+      "request": {
+        "research_question": "What should we study?",
+        "decision": "Choose a credible next research move.",
+        "evidence": {
+          "transcript_coverage": "FULL",
+          "decision_episodes": 1,
+          "distinct_people": 1,
+          "source_locators_available": true,
+          "human_review_completed": false,
+          "reviewed_links_present": false,
+          "human_holdout_available": false
+        },
+        "counterfactual": {
+          "baseline_defined": false,
+          "intervention_defined": false,
+          "population_defined": false
+        },
+        "future_facing": {
+          "trend_candidate": false,
+          "advanced_user_signal": true,
+          "high_expected_benefit_signal": true
+        },
+        "goals": [
+          {
+            "type": "EMERGING_NEED",
+            "question": "What can this evidence establish?",
+            "material_to_decision": true
+          }
+        ]
+      },
+      "expected": [
+        [
+          "LEAD_USER_RESEARCH",
+          "DISCOVER_TRENDS_AND_CANDIDATES"
+        ]
+      ]
+    },
+    {
+      "id": "scout-not-qualified",
+      "source_kind": "SYNTHETIC_METADATA_NOT_HUMAN_DATA",
+      "request": {
+        "research_question": "What should we study?",
+        "decision": "Choose a credible next research move.",
+        "evidence": {
+          "transcript_coverage": "FULL",
+          "decision_episodes": 1,
+          "distinct_people": 1,
+          "source_locators_available": true,
+          "human_review_completed": false,
+          "reviewed_links_present": false,
+          "human_holdout_available": false
+        },
+        "counterfactual": {
+          "baseline_defined": false,
+          "intervention_defined": false,
+          "population_defined": false
+        },
+        "future_facing": {
+          "trend_candidate": true,
+          "advanced_user_signal": true,
+          "high_expected_benefit_signal": true
+        },
+        "available_skills": [
+          "lead-user-research"
+        ],
+        "goals": [
+          {
+            "type": "EMERGING_NEED",
+            "question": "What can this evidence establish?",
+            "material_to_decision": true
+          }
+        ]
+      },
+      "expected": [
+        [
+          "LEAD_USER_RESEARCH",
+          "LEAD_USER_SCOUT_NOT_QUALIFIED"
+        ]
+      ]
+    },
+    {
+      "id": "no-transcript",
+      "source_kind": "SYNTHETIC_METADATA_NOT_HUMAN_DATA",
+      "request": {
+        "research_question": "What should we study?",
+        "decision": "Choose a credible next research move.",
+        "evidence": {
+          "transcript_coverage": "NONE",
+          "decision_episodes": 0,
+          "distinct_people": 1,
+          "source_locators_available": false,
+          "human_review_completed": false,
+          "reviewed_links_present": false,
+          "human_holdout_available": false
+        },
+        "counterfactual": {
+          "baseline_defined": false,
+          "intervention_defined": false,
+          "population_defined": false
+        },
+        "future_facing": {
+          "trend_candidate": false,
+          "advanced_user_signal": false,
+          "high_expected_benefit_signal": false
+        },
+        "goals": [
+          {
+            "type": "CURRENT_DECISION",
+            "question": "What can this evidence establish?",
+            "material_to_decision": true
+          }
+        ]
+      },
+      "expected": [
+        [
+          "A2B",
+          "NEED_SOURCE"
+        ]
+      ]
+    },
+    {
+      "id": "out-of-scope",
+      "source_kind": "SYNTHETIC_METADATA_NOT_HUMAN_DATA",
+      "request": {
+        "research_question": "What should we study?",
+        "decision": "Choose a credible next research move.",
+        "evidence": {
+          "transcript_coverage": "FULL",
+          "decision_episodes": 1,
+          "distinct_people": 1,
+          "source_locators_available": true,
+          "human_review_completed": false,
+          "reviewed_links_present": false,
+          "human_holdout_available": false
+        },
+        "counterfactual": {
+          "baseline_defined": false,
+          "intervention_defined": false,
+          "population_defined": false
+        },
+        "future_facing": {
+          "trend_candidate": false,
+          "advanced_user_signal": false,
+          "high_expected_benefit_signal": false
+        },
+        "goals": [
+          {
+            "type": "OTHER",
+            "question": "What can this evidence establish?",
+            "material_to_decision": true
+          }
+        ]
+      },
+      "expected": [
+        [
+          "OTHER_METHOD",
+          "REFER_TO_OTHER_RESEARCH"
+        ]
+      ]
+    },
+    {
+      "id": "defer-nonmaterial",
+      "source_kind": "SYNTHETIC_METADATA_NOT_HUMAN_DATA",
+      "request": {
+        "research_question": "What should we study?",
+        "decision": "Choose a credible next research move.",
+        "evidence": {
+          "transcript_coverage": "FULL",
+          "decision_episodes": 1,
+          "distinct_people": 1,
+          "source_locators_available": true,
+          "human_review_completed": false,
+          "reviewed_links_present": false,
+          "human_holdout_available": false
+        },
+        "counterfactual": {
+          "baseline_defined": false,
+          "intervention_defined": false,
+          "population_defined": false
+        },
+        "future_facing": {
+          "trend_candidate": false,
+          "advanced_user_signal": false,
+          "high_expected_benefit_signal": false
+        },
+        "material": false,
+        "goals": [
+          {
+            "type": "EMERGING_NEED",
+            "question": "What can this evidence establish?",
+            "material_to_decision": false
+          }
+        ]
+      },
+      "expected": [
+        [
+          "LEAD_USER_RESEARCH",
+          "DEFER_NOT_MATERIAL"
+        ]
+      ]
+    },
+    {
+      "id": "four-methods-one-interview",
+      "source_kind": "CANONICAL_REAL_SOURCE_METADATA",
+      "request": {
+        "research_question": "What should we study?",
+        "decision": "Choose a credible next research move.",
+        "evidence": {
+          "transcript_coverage": "FULL",
+          "decision_episodes": 1,
+          "distinct_people": 1,
+          "source_locators_available": true,
+          "human_review_completed": false,
+          "reviewed_links_present": false,
+          "human_holdout_available": false
+        },
+        "counterfactual": {
+          "baseline_defined": true,
+          "intervention_defined": true,
+          "population_defined": true
+        },
+        "future_facing": {
+          "trend_candidate": false,
+          "advanced_user_signal": false,
+          "high_expected_benefit_signal": false
+        },
+        "goals": [
+          {
+            "type": "CURRENT_DECISION",
+            "question": "What can this evidence establish?",
+            "material_to_decision": true
+          },
+          {
+            "type": "CONDITIONAL_MECHANISM",
+            "question": "What can this evidence establish?",
+            "material_to_decision": true
+          },
+          {
+            "type": "COUNTERFACTUAL_RESPONSE",
+            "question": "What can this evidence establish?",
+            "material_to_decision": true
+          },
+          {
+            "type": "EMERGING_NEED",
+            "question": "What can this evidence establish?",
+            "material_to_decision": true
+          }
+        ]
+      },
+      "expected": [
+        [
+          "A2B",
+          "PROVISIONAL_REVIEW_REQUIRED"
+        ],
+        [
+          "BEHAVIORAL_MECHANISM_MAP",
+          "NEED_CONTRASTING_EPISODES"
+        ],
+        [
+          "BEHAVIORAL_SIMULATION",
+          "L0_EXPLORATION_NOT_PREDICTION"
+        ],
+        [
+          "LEAD_USER_RESEARCH",
+          "DISCOVER_TRENDS_AND_CANDIDATES"
+        ]
+      ]
+    }
+  ]
+}
