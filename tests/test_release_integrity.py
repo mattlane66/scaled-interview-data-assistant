@@ -80,3 +80,24 @@ def test_source_text_cannot_be_overwritten_by_generated_synthesis_report():
     bundle["report"] = "This is an unrelated computed report, not a transcript."
     with pytest.raises(ValueError, match="reserved|overwritten"):
         run_study_pipeline(bundle)
+
+
+def test_canonical_link_registry_is_not_falsely_human_approved():
+    import csv
+
+    matrix_path = CASE / "results" / "matrices" / "a_to_b_associations.csv"
+    with matrix_path.open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    assert rows
+    assert {row["link_registry_status"] for row in rows} == {
+        "PROVIDED_UNATTESTED"
+    }
+    # Existence of four interpretive source links is not a review attestation.
+    assert any(int(row["linked_units"]) > 0 for row in rows)
+    assert "human_approved" in (
+        CASE / "reference" / "expected-analysis.json"
+    ).read_text(encoding="utf-8")
+    ref = json.loads(
+        (CASE / "reference" / "expected-analysis.json").read_text(encoding="utf-8")
+    )
+    assert ref["adjudication"]["human_approved"] is False
