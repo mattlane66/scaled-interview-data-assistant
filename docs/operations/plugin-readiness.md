@@ -79,6 +79,16 @@ export SIDA_MCP_BEARER_TOKEN="<independently generated high-entropy secret>"
 python -m plugin_runtime.server
 ~~~
 
+**Trusted host configuration:** The MCP SDK intentionally accepts only
+loopback `Host` headers by default. To run a **private test** behind an
+HTTPS reverse proxy, set `SIDA_MCP_TRUSTED_HOST` to exactly one verified DNS
+hostname (without scheme, path, or port). The server then enables an exact
+host allowlist, including that hostname with a port suffix, and disallows
+browser `Origin` requests by default. Configure TLS and proxy-side Host
+validation yourself; never disable DNS-rebinding protection simply to fix
+a 421 error. This setting does **not** create OAuth or multi-user isolation.
+See the [MCP SDK Host allowlist guidance](https://py.sdk.modelcontextprotocol.io/run/deploy/).
+
 The guard responds `401` without a valid bearer header. Do **not** publish this private-test variant as a public multi-user MCP plugin. Fixed tokens neither identify users nor enforce tenant permissions. A public deployment needs verified OAuth 2.1, access-token audience/scopes, per-request authorization, user isolation, rate limits, abuse prevention, HTTPS, reliable operations, safe error and proxy logging, and incident/deletion procedures.
 
 Only once a **real HTTPS /mcp** endpoint exists and is independently validated, a private combined package can be generated with:
