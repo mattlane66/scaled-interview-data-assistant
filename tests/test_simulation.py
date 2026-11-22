@@ -11,7 +11,6 @@ from pathlib import Path
 
 import pytest
 
-from simulation.counterfactual import build_brief, compare_briefs, render_brief
 from simulation.core import (
     SimulationError,
     ensure_run_matches,
@@ -23,6 +22,7 @@ from simulation.core import (
     schema_check,
     sha256_text,
 )
+from simulation.counterfactual import build_brief, compare_briefs, render_brief
 from simulation.evaluation import assess, ks_similarity, tvd
 from simulation.handoff import protocol_input, protocol_runs
 from simulation.report import render
