@@ -8,13 +8,11 @@ from __future__ import annotations
 
 import json
 import re
-from datetime import datetime, timezone
 from typing import Any
 
 from simulation.core import SimulationError, schema_check, sha256_text
 
 STRONG_SOURCE_TYPES = {"concrete_event_or_behavior", "current_state", "observation"}
-INTERPRETED = {"ALIGNS", "COUNTEREXAMPLE", "AMBIGUOUS"}
 
 
 def _tokens(value: object) -> list[str]:
@@ -38,12 +36,11 @@ def resolve_scope(checkpoint: dict[str, Any], scope: dict[str, Any]) -> list[str
         raise SimulationError(f"Unknown cluster: {cluster}")
     unit = checkpoint["analysis_unit"]
     members = {r[unit] for r in checkpoint["clusters"] if r["cluster"] == cluster}
-    chosen = [
-        eid for eid, row in episodes.items()
-        if eid in members if unit == "episode"
-    ] if unit == "episode" else [
-        eid for eid, row in episodes.items() if row["interview"] in members
-    ]
+    chosen = (
+        [eid for eid in episodes if eid in members]
+        if unit == "episode" else
+        [eid for eid, row in episodes.items() if row["interview"] in members]
+    )
     if not chosen:
         raise SimulationError(f"Cluster {cluster} has no decision episodes")
     return sorted(chosen)
@@ -62,7 +59,7 @@ def make_study(checkpoint: dict[str, Any], digest: str,
         "research_question": "REPLACE: what conditions appear to distinguish decisions?",
         "review": {
             "reviewer": "",
-            "reviewed_at": datetime.now(timezone.utc).isoformat(),
+            "reviewed_at": None,
             "approved_checkpoint_sha256": digest,
             "evidence_reviewed": False,
             "a_to_b_links_reviewed": False,
@@ -143,8 +140,8 @@ def compile_map(checkpoint: dict[str, Any], digest: str,
     review = study["review"]
     if review["approved_checkpoint_sha256"] != digest:
         raise SimulationError("Human review attestation refers to another checkpoint")
-    if not review["reviewer"].strip():
-        raise SimulationError("Named human reviewer required")
+    if not review["reviewer"].strip() or review["reviewed_at"] is None:
+        raise SimulationError("Named human reviewer and actual review date required")
     if not all(review[k] for k in (
         "evidence_reviewed", "a_to_b_links_reviewed", "contrasting_cases_reviewed"
     )):
