@@ -58,6 +58,8 @@ def assess(
     # Block overlap with the *whole* input checkpoint, not just selected scenario episodes.
     grounded = {r["interview"] for r in checkpoint["interview_index"]}
     held_out = set(holdout["holdout_group_ids"])
+    if len(holdout["holdout_group_ids"]) != len(holdout["observed_ratings"]):
+        raise SimulationError("Provide exactly one response per person-group ID")
     if grounded & held_out:
         raise SimulationError("Holdout participants overlap source checkpoint interviews")
     observed = [holdout["observed_ratings"].count(i) / len(holdout["observed_ratings"])
