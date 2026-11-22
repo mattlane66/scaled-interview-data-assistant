@@ -57,7 +57,7 @@ def test_plugin_manifest_matches_repo_release_and_onboarding():
     assert manifest["extensions"]["com.openai"]["onboardingSkill"] == (
         "./skills/get-started/SKILL.md"
     )
-    assert len(files) == 5
+    assert len(files) == 6
 
 
 def test_source_text_cannot_be_overwritten_by_generated_synthesis_report():
