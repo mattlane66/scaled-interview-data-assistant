@@ -40,6 +40,10 @@ def render(
         f"- Read-only checkpoint: `{scenario['source_checkpoint_sha256']}`",
         f"- Human episode references: {', '.join(scenario['episode_refs'])}",
         f"- Source evidence IDs: {', '.join(scenario['evidence_refs'])}",
+        f"- Coverage: {', '.join(run.get('source_coverage', ['UNKNOWN']))}"
+        + (" (**LIMITED**)" if run.get("coverage_limited", True) else ""),
+        f"- Baseline evidence IDs: "
+        f"{', '.join(scenario['baseline']['evidence_refs']) or 'NONE — ASSUMPTION'}",
         f"- Baseline Path Y: {scenario['baseline']['path_y']}",
         f"- Observed Path X result: {scenario['baseline']['observed_result']}",
         f"- Changed: {scenario['intervention']['variable']} "
