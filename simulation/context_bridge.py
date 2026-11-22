@@ -32,7 +32,7 @@ def _source_scope(checkpoint: dict | None, request: dict) -> None:
     if not chosen <= episodes:
         raise SimulationError("Context route cites an unknown decision episode")
     refs = set(request["evidence_refs"])
-    if not refs <= evidence:
+    if not refs <= evidence.keys():
         raise SimulationError("Context route cites an unknown source evidence ID")
     if any(evidence[ref]["episode"] not in chosen for ref in refs):
         raise SimulationError("Context route evidence belongs outside the chosen episodes")
