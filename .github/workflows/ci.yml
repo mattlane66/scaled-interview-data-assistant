@@ -31,6 +31,8 @@ jobs:
       - name: Score source-grounded demonstration without claiming human review
         run: |
           python scripts/score_agent_research.py --reference evals/mattress-agent-reference.json --artifact evals/mattress-agent-output-demo.json
+      - name: Audit new real-source method execution pilot
+        run: python scripts/evaluate_real_source_pilot.py
       - name: Audit source-grounded canonical mattress methods
         run: python scripts/audit_canonical_empirical.py
       - name: Build portable Codex and Claude plugin archive
