@@ -347,6 +347,14 @@ python scripts/import_checkpoint.py \
 - Small or convenience samples do not support population estimates.
 - Cluster output is exploratory and always requires analyst review.
 
+## Engineering release audit
+
+The [November 22, 2026 release audit](docs/operations/release-audit-2026-11-22.md)
+records the audited scope, independently reproduced defects, corrections,
+new installation and protocol tests, and unresolved scientific and public
+deployment gates. **Passing CI does not imply independent human review or
+production security certification.**
+
 ## Development
 
 ```bash
