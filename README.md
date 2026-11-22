@@ -86,12 +86,17 @@ source-located; mainstream transfer remains a hypothesis with a
 Human review is required before any planning use. The repository does not
 duplicate the Lead User method or automatically run its research.
 
-## ChatGPT plugin — private preview
+## Codex, Claude Code, and ChatGPT plugin — private preview
 
 This repository now includes a [portable plugin package](plugins/scaled-interview-data-assistant/plugin.json)
 with five skills and a [stateless MCP adapter](plugin_runtime/server.py) over the existing
 deterministic research tools. The skills-only archive can be privately imported without
-pretending an undeployed MCP server is available.
+pretending an undeployed MCP server is available. The same five skills now have a Claude Code
+manifest and repository marketplace entries for both Claude and Codex; there is no fork of the
+research method.
+
+See [Codex and Claude installation](docs/operations/cross-client-plugins.md) for
+marketplace commands, native validation, and optional local MCP setup.
 
 Build the private package:
 
@@ -333,8 +338,9 @@ Synthetic examples demonstrate the workflow; they are not market evidence.
 ├── simulation/                  # Mechanisms, counterfactuals, SSR and handoffs
 ├── plugin_runtime/              # Optional stateless Python MCP service
 ├── plugins/scaled-interview-data-assistant/
-│   ├── plugin.json
-│   └── skills/                  # Portable private-plugin skills
+│   ├── plugin.json             # Portable ChatGPT/Codex manifest
+│   ├── .claude-plugin/plugin.json # Claude Code manifest
+│   └── skills/                  # Shared skills for both clients
 ├── examples/
 │   ├── canonical-mattress/      # Licensed source and unapproved reference
 │   ├── mattress/                # Synthetic one-interview tutorial

@@ -1,0 +1,15 @@
+{
+  "name": "scaled-interview-research",
+  "description": "Evidence-traceable JTBD interview analysis skills",
+  "owner": {
+    "name": "Matt Lane",
+    "url": "https://mattlane66.github.io"
+  },
+  "plugins": [
+    {
+      "name": "scaled-interview-data-assistant",
+      "source": "./plugins/scaled-interview-data-assistant",
+      "description": "Reconstruct and audit customer switching decisions with source-located evidence and human review gates"
+    }
+  ]
+}
