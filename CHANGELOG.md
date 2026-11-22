@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.5.1 — 2026-11-22
+
+- Independently audited the complete published mattress interview against
+  its pinned speaker-turn snapshot, not the prior model-produced synthesis.
+- Added source-cited chronology, 16 reported findings, 10 corrective
+  judgments, and five explicitly rival behavioral explanations.
+- Added a test-only product decision: real randomized 2×2 trial
+  of verified return pickup and shared tactile sampling, with observable
+  purchase and post-purchase outcomes.
+- Added human-adjudication rubric and reference-integrity regression tests.
+- Kept original coding and human review status unchanged until researcher
+  approval; educational SSR scores cannot rank interventions.
+
+
 ## 1.5.0 — 2026-11-22
 
 - Added a canonical licensed real-world mattress-switch interview with complete
