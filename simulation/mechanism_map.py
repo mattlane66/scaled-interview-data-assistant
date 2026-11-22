@@ -366,7 +366,22 @@ def planning_handoff(mapped: dict[str, Any]) -> dict[str, Any]:
             "source_evidence_refs": [
                 f"SID:{mapped['study_id']}:{eid}" for eid in cited
             ],
+            "case_evidence": [{
+                "episode_ref": f"SID:{mapped['study_id']}:{obs['episode']}",
+                "stance": obs["stance"],
+                "evidence_refs": [
+                    f"SID:{mapped['study_id']}:{eid}" for eid in obs["evidence_refs"]
+                ],
+                "a_to_b_link_refs": [
+                    f"SID:{mapped['study_id']}:{link}" for link in obs["link_refs"]
+                ],
+                "source_type_indicates_reported_behavior": obs[
+                    "behavior_observed_in_sources"
+                ],
+            } for obs in mechanism["observations"]],
+            "evidence_assessment": "MIXED_STANCES_PRESERVED_ANALYST_JUDGMENTS",
             "disconfirming_observation": mechanism["disconfirming_observation"],
+            "discriminating_human_test": mechanism["discriminating_human_test"],
             "revisit_when": mechanism["revisit_when"],
         })
     return {
