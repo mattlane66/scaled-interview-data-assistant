@@ -118,6 +118,7 @@ def holdout(run):
     return {
         "schema_version": "1.0", "validation_id": "V001", "run_id": run["run_id"],
         "construct": "stated_switching_intent", "split_unit": "PERSON",
+        "question": "How likely would you switch if migration were assisted?",
         "holdout_group_ids": ["I99", "I98", "I97"],
         "observed_ratings": [3, 4, 5], "baseline_distribution": [0.2] * 5,
         "source": "Illustrative external human response fixture",
@@ -216,6 +217,10 @@ def test_generated_content_cannot_forge_evidence(source):
         ensure_run_matches(forged, scenario, digest)
     with pytest.raises(SimulationError, match="cannot promote"):
         render(scenario, forged)
+    wrong_measurement = copy.deepcopy(run)
+    wrong_measurement["measurement"]["question"] = "A different question"
+    with pytest.raises(SimulationError, match="does not match"):
+        ensure_run_matches(wrong_measurement, scenario, digest)
 
 
 def test_privacy_defaults_are_closed(source):
@@ -256,6 +261,15 @@ def test_holdout_checks_leakage_and_never_promotes_grade(source):
     measurement = measure(run, vectors_for(run))
     evaluation = assess(data, scenario, run, measurement, holdout(run))
     assert evaluation["grade_after_validation"] == "L0_ROLEPLAY"
+    assert evaluation["scenario_sha256"] == run["scenario_sha256"]
+    assert evaluation["run_sha256"] == sha256_text(json.dumps(run, sort_keys=True))
+    assert evaluation["measurement_sha256"] == sha256_text(
+        json.dumps(measurement, sort_keys=True)
+    )
+    bad = holdout(run)
+    bad["question"] = "Would you buy a totally different product?"
+    with pytest.raises(SimulationError, match="question"):
+        assess(data, scenario, run, measurement, bad)
     assert 0 <= evaluation["tvd"] <= 1
     assert 0 <= evaluation["ks_similarity"] <= 1
     assert math.isclose(tvd([0.2] * 5, [0.2] * 5), 0)
@@ -285,6 +299,16 @@ def test_report_is_explicitly_synthetic(source):
     assert "SIMULATED_ESTIMATE" in report
     assert "not actual customer responses" in report
     assert "not automatically authorize L3" in report
+    with pytest.raises(SimulationError, match="without its SSR measurement"):
+        render(scenario, run, None, result)
+    forged = copy.deepcopy(result)
+    forged["measurement_sha256"] = sha256_text("other valid-looking measurement")
+    with pytest.raises(SimulationError, match="does not belong"):
+        render(scenario, run, measurement, forged)
+    forged = copy.deepcopy(result)
+    forged["grade_after_validation"] = "L4_DECISION_CALIBRATED"
+    with pytest.raises(SimulationError, match="does not belong"):
+        render(scenario, run, measurement, forged)
 
 
 
@@ -320,6 +344,26 @@ def test_cli_prepares_records_and_reports(source, tmp_path):
         "--run", str(output_path), "--output", str(report_path),
     ], check=True, capture_output=True)
     assert "NOT VALIDATED" in report_path.read_text()
+    vectors_path = tmp_path / "vectors.json"
+    measurement_path = tmp_path / "measurement.json"
+    vectors_path.write_text(json.dumps(vectors_for(run)))
+    subprocess.run(cli + [
+        "ssr", "--checkpoint", str(checkpoint), "--scenario", str(scenario_path),
+        "--run", str(output_path), "--vectors", str(vectors_path),
+        "--output", str(measurement_path),
+    ], check=True, capture_output=True)
+    assert json.loads(measurement_path.read_text())["run_id"] == "R001"
+    corrupted = copy.deepcopy(run)
+    corrupted["measurement"]["question"] = "Wrong question"
+    corrupt_path = tmp_path / "invalid-run.json"
+    corrupt_path.write_text(json.dumps(corrupted))
+    bad_result = subprocess.run(cli + [
+        "ssr", "--checkpoint", str(checkpoint), "--scenario", str(scenario_path),
+        "--run", str(corrupt_path), "--vectors", str(vectors_path),
+        "--output", str(measurement_path),
+    ], capture_output=True, text=True)
+    assert bad_result.returncode != 0
+    assert "does not match" in bad_result.stderr
     handoff = tmp_path / "upstream"
     subprocess.run(cli + [
         "handoff", "--checkpoint", str(checkpoint), "--scenario", str(scenario_path),
