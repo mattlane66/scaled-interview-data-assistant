@@ -152,6 +152,25 @@ actual purchasing, switching, or a causal effect.
 See the [full end-to-end guide](docs/operations/simulation.md) for commands, schemas,
 human review, and limits. The existing deterministic interview pipeline is unchanged.
 
+## Behavioral Mechanism Map — cross-episode research
+
+The optional [Behavioral Mechanism Map](docs/operations/mechanism-map.md)
+examines **why different people might make different decisions within one job cluster**.
+It starts from the already-reviewed A→B links and source evidence, requires the
+analyst to declare rival explanations and seek contrasting cases, and preserves
+`ALIGNS`, `COUNTEREXAMPLE`, `AMBIGUOUS`, and `UNASSESSED` distinctions.
+Episode counts are never presented as population estimates or established causal effects.
+
+`scripts/mechanism_map_cli.py init` creates an unapproved study; `inventory`
+exposes the cases and references; `compile` produces an evidence-bound map and
+a **PROPOSED** x/y/M handoff for Planning Skills. No model call is required.
+The handoff needs human acceptance before it enters planning as Working material
+and cannot create accepted requirements or select shapes.
+
+This is the research-side operating model, not another solution-shaping method.
+Use the [counterfactual decision workflow](docs/operations/counterfactual-decisions.md)
+when an individual hypothesis should become a testable product-design change.
+
 ## Counterfactual product decisions
 
 The optional [counterfactual decision workflow](docs/operations/counterfactual-decisions.md)
