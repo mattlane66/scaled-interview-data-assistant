@@ -71,5 +71,7 @@ jobs:
           git add -f examples/canonical-mattress/results/
           if ! git diff --cached --quiet; then
             git commit -m "data(canonical): snapshot complete published mattress interview"
+            git fetch origin feat/canonical-real-mattress-ssr
+            git rebase origin/feat/canonical-real-mattress-ssr
             git push origin HEAD:feat/canonical-real-mattress-ssr
           fi
