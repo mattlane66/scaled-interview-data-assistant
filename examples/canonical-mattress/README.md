@@ -6,6 +6,27 @@
 
 **Pinned source snapshot:** 279 speaker turns (99 participant, 157 facilitator, 23 audience), plus 21 marked editorial blocks. The website contained 182 duplicate speaker turns due to nested/repeated HTML, which the importer collapsed. [The source manifest](source-manifest.json) records the exact published-page hash and import date.
 
+## Independent analytical reference and product decision
+
+The [independent full-transcript audit](reference/independent-audit.md)
+reconstructs the switching chronology, inspects the original A→B relationships,
+identifies ten corrections or evidence limitations, and compares five rival
+behavioral explanations. Its recommendation is **a live experiment, not a
+product launch**: hold mattress, seller and price constant while testing genuine
+no-cost return pickup and a shared material sample as separate factors.
+
+The [frozen expected-analysis contract](reference/expected-analysis.json) and
+[evaluation rubric](reference/evaluation-rubric.md) provide source-located,
+machine-checkable expectations for future analyses. They distinguish actual
+participant reports from inferred mechanisms and prohibit turning two
+educational SSR values into a product ranking.
+
+**Approval boundary:** This reference is `AI_AUDITED_CANDIDATE_PENDING_HUMAN_ADJUDICATION`.
+It is not an independently approved research baseline. The original registries
+and checkpoints remain unchanged pending adjudication; disagreements about
+A01, L003, and enabling conditions versus desired progress are recorded for
+review rather than silently recoded.
+
 ## The evidence boundary
 
 The complete source is in [full-transcript.md](full-transcript.md), indexed in [source-turns.json](source-turns.json), with source-page hash and completeness notes in [source-manifest.json](source-manifest.json). The published webpage contained repeated HTML dialogue blocks; the importer removes identifiable duplicates while preserving the final original wording. The HTML is fetched again only when the source importer workflow is explicitly triggered.
