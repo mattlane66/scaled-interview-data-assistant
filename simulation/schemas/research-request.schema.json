@@ -47,6 +47,13 @@
           },
           "material_to_decision": {
             "type": "boolean"
+          },
+          "comparison_scope": {
+            "enum": [
+              "CROSS_PERSON",
+              "WITHIN_PERSON",
+              "UNSPECIFIED"
+            ]
           }
         }
       }
