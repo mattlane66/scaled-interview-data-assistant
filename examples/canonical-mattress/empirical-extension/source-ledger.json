@@ -1,0 +1,251 @@
+{
+  "schema_version": "0.1",
+  "id": "CANON-MATTRESS-EMPIRICAL-SCOUT-2026-11-22",
+  "checked_on": "2026-11-22",
+  "execution_level": "DESK_RESEARCH",
+  "status": "PUBLIC_SOURCE_SCOUT_NOT_A_COMPLETED_STANDARD_OR_FULL_STUDY",
+  "human_review": "NOT_REVIEWED",
+  "independently_conducted_interviews": 0,
+  "human_holdouts": 0,
+  "verified_behavioral_outcomes": 0,
+  "main_interview_checkpoint_policy": "UNCHANGED",
+  "source_handling": "External public source URLs and short researcher paraphrases only; original text is not reproduced; online self-reports have not been independently verified.",
+  "sources": [
+    {
+      "id": "P01",
+      "url": "https://jobstobedone.org/radio/the-mattress-interview-part-one/",
+      "kind": "ORIGINAL_WORKSHOP_PUBLISHED_TRANSCRIPT",
+      "coverage": "PINNED_LOCAL_TRANSCRIPT",
+      "role": "CANONICAL_CORE",
+      "locator": "see ../source-manifest.json and ../source-turns.json",
+      "note": "Workshop teaching material contains facilitator and audience turns; those are not customer testimony."
+    },
+    {
+      "id": "P02",
+      "url": "https://jobstobedone.org/radio/the-mattress-interview-qa/",
+      "kind": "FACILITATOR_Q_AND_A",
+      "coverage": "WEB_PAGE_REVIEWED",
+      "role": "METHODOLOGY_ONLY",
+      "locator": "Key takeaways and Q&A introduction",
+      "note": "Expert discussion is not a second mattress consumer."
+    },
+    {
+      "id": "P03",
+      "url": "https://bedtimesmagazine.com/2024/05/online-vs-in-store-mattress-shopping/",
+      "kind": "TRADE_BODY_SURVEY_REPORT",
+      "coverage": "WEB_PAGE_REVIEWED",
+      "role": "TREND_CONTEXT",
+      "locator": "The Rise of Online Mattress Shopping and The Mattress Buying Decision",
+      "note": "2023 Better Sleep Council survey, n=1,039; reported shopping consideration and self-reported decision factors, not observed causal effects."
+    },
+    {
+      "id": "P04",
+      "url": "https://www.bedfed.org.uk/online-overtakes-instore-mattress-purchases/",
+      "kind": "INDUSTRY_ASSOCIATION_SURVEY_REPORT",
+      "coverage": "WEB_PAGE_REVIEWED",
+      "role": "TREND_CONTEXT",
+      "locator": "NBF press release, 28 April 2018, survey disclosure",
+      "note": "UK purchaser sample n=500; different geography/time, do not pool with US BSC survey."
+    },
+    {
+      "id": "P05",
+      "url": "https://www.reddit.com/r/MattressMod/comments/1g0oi73/two_months_later_i_can_see_the_finish_line_for_my/",
+      "kind": "FIRST_PERSON_PUBLIC_POST",
+      "coverage": "WEB_POST_REVIEWED",
+      "role": "DIY_CANDIDATE",
+      "locator": "Original post, first paragraph, build, Things I've learned, and Other layers I tried",
+      "note": "Self-published retrospective account, no identity or independently verified materials/outcome."
+    },
+    {
+      "id": "P06",
+      "url": "https://www.reddit.com/r/Mattress/comments/1l44ojs/3_year_diy_mattress_build_review_6_foam_base/",
+      "kind": "FIRST_PERSON_PUBLIC_POST",
+      "coverage": "WEB_POST_AND_AUTHOR_REPLY_REVIEWED",
+      "role": "DIY_CANDIDATE",
+      "locator": "Original post before / Begin AI analysis /, plus author's response to higher-density-foam question",
+      "note": "Embedded AI analysis is not a firsthand observation; exclude it and other commenters as corroboration."
+    },
+    {
+      "id": "P07",
+      "url": "https://www.reddit.com/r/MattressMod/comments/1nkral8/tired_of_latex_degrading_within_the_year/",
+      "kind": "FIRST_PERSON_PUBLIC_POST",
+      "coverage": "WEB_POST_AND_AUTHOR_REPLIES_REVIEWED",
+      "role": "DIY_CONTRAST",
+      "locator": "Original post and original author's clarification of no visible indentation",
+      "note": "Perceived softening is self-reported, not laboratory-tested material degradation."
+    },
+    {
+      "id": "P08",
+      "url": "https://www.reddit.com/r/Mattress/comments/1bzuk1o/costco_mattress_return_super_easy/",
+      "kind": "FIRST_PERSON_PUBLIC_POST",
+      "coverage": "WEB_POST_AND_COMMENTS_REVIEWED",
+      "role": "RETURN_CONTRAST",
+      "locator": "Original post and original author's refund, comfort, and replacement replies",
+      "note": "Historical self-report of an online purchase/return; not Costco's universal or present-day policy."
+    }
+  ],
+  "contextual_claims": [
+    {
+      "id": "TC01",
+      "source_id": "P03",
+      "claim": "In the 2023 US survey, 54% said they would consider buying a mattress online, compared with 27% in a 2016 comparison cited by the publication.",
+      "meaning": "A context signal for online-shopping consideration; not observed online sales or a continuous panel.",
+      "limit": "Different survey years and wording. Does not establish a modular DIY trend or Lead User qualification."
+    },
+    {
+      "id": "TC02",
+      "source_id": "P03",
+      "claim": "Fulfillment was chosen by 82% as a reason to buy from a particular retailer, a grouping that includes delivery, pickup, returns and other services.",
+      "meaning": "Return logistics are worth investigating as a consideration.",
+      "limit": "Bundled category, self-report and no causal effect of home pickup; never describe 82% as demand for pickup."
+    },
+    {
+      "id": "TC03",
+      "source_id": "P04",
+      "claim": "In a UK survey of 500 recent buyers in 2018, 51% reported buying online and 47% in stores.",
+      "meaning": "Online buying was already present in a distinct market and earlier period.",
+      "limit": "Geographically and temporally different sample, not evidence that online share is rising today."
+    }
+  ],
+  "public_accounts": [
+    {
+      "id": "R01",
+      "source_id": "P05",
+      "person_unit": "one anonymous first-person account",
+      "grain": "ONE_REPORTED_DIY_EVALUATION",
+      "source_locator": "Original post: two months of layer swaps; notes/spreadsheet and sample packs; earlier Leesa mattress getting soft",
+      "observations": [
+        {
+          "id": "RE01",
+          "kind": "REPORTED_BEHAVIOR",
+          "paraphrase": "The writer reports approximately two months of repeated layer changes and systematic notes to adjust support, heat, and feel."
+        },
+        {
+          "id": "RE02",
+          "kind": "REPORTED_OUTCOME",
+          "paraphrase": "The latest configuration had been slept on for only a few nights; durable improvement is not established."
+        },
+        {
+          "id": "RE03",
+          "kind": "REPORTED_CONTRAST",
+          "paraphrase": "In-store testing did not reproduce overnight sleeping experience, and earlier sample packs might have avoided some returns."
+        }
+      ],
+      "lead_user_qualification": "CANDIDATE_UNQUALIFIED",
+      "lu1": "EXPERIMENTATION_AHEAD_OF_TYPICAL_BUYER_PLAUSIBLE; IMPORTANCE_OF_RELEVANT_TREND_NOT_ESTABLISHED",
+      "lu2": "REPEATED_SLEEP_DIFFICULTIES_AND_ITERATIONS_REPORTED; BENEFIT_NOT_INDEPENDENTLY_ASSESSED"
+    },
+    {
+      "id": "R02",
+      "source_id": "P06",
+      "person_unit": "one anonymous first-person account",
+      "grain": "ONE_REPORTED_MULTIYEAR_DIY_PATH",
+      "source_locator": "Original post: 3-year review and 1-month layer trial; author's reply comparing foam densities; exclude embedded AI passage",
+      "observations": [
+        {
+          "id": "RE04",
+          "kind": "REPORTED_BEHAVIOR",
+          "paraphrase": "The writer reports spending heavily on candidate layers, iterating with a spouse for about a month, and selling unused materials."
+        },
+        {
+          "id": "RE05",
+          "kind": "REPORTED_OUTCOME",
+          "paraphrase": "After about three years of reported comfort, one foam base layer was considered worn; the writer intended a selective replacement."
+        },
+        {
+          "id": "RE06",
+          "kind": "REPORTED_TRADEOFF",
+          "paraphrase": "The author states that a denser base was tested but less comfortable, so replacement frequency was accepted for comfort."
+        }
+      ],
+      "lead_user_qualification": "CANDIDATE_UNQUALIFIED",
+      "lu1": "MODULAR_COMPONENT_LIFECYCLE_BEHAVIOR_DEMONSTRATED_BY_REPORT; MARKET_TREND_IMPORTANCE_NOT_PROVEN",
+      "lu2": "TESTING_COST_AND_REPLACEMENT_BENEFIT_CANDIDATES; INDEPENDENT_VALIDATION_MISSING"
+    },
+    {
+      "id": "R03",
+      "source_id": "P07",
+      "person_unit": "one anonymous first-person account",
+      "grain": "ONE_REPORTED_LONGTERM_DIY_PATH",
+      "source_locator": "Original post describing 15 years and repeated setups; author clarifications of subjective softening without visible indentation",
+      "observations": [
+        {
+          "id": "RE07",
+          "kind": "REPORTED_BEHAVIOR",
+          "paraphrase": "The writer reports experimenting with several latex-based arrangements over approximately 15 years."
+        },
+        {
+          "id": "RE08",
+          "kind": "REPORTED_OUTCOME",
+          "paraphrase": "Repeated loss of perceived support at habitual pressure points is reported; physical material failure and a universal one-year lifetime are unverified."
+        }
+      ],
+      "lead_user_qualification": "CANDIDATE_UNQUALIFIED",
+      "lu1": "LONG_EXPERIMENTATION_REPORTED; TREND_ADVANCEMENT_NOT_ESTABLISHED",
+      "lu2": "RECURRING_REPLACEMENT_BURDEN_REPORTED; MAGNITUDE_AND_CAUSES_UNVERIFIED"
+    },
+    {
+      "id": "R04",
+      "source_id": "P08",
+      "person_unit": "one anonymous first-person account",
+      "grain": "ONE_REPORTED_ONLINE_BUY_RETURN_REPLACE_PATH",
+      "source_locator": "Original post lines beginning 'I bought a Casper hybrid queen' through refund; author responses about the replacement air bed",
+      "observations": [
+        {
+          "id": "RE09",
+          "kind": "REPORTED_BEHAVIOR",
+          "paraphrase": "The writer reports buying a bed-in-box online, sleeping on it roughly six weeks, scheduling a pickup, and receiving a refund."
+        },
+        {
+          "id": "RE10",
+          "kind": "REPORTED_OUTCOME",
+          "paraphrase": "The replacement six-chamber adjustable air bed reportedly worked better but cost more than twice as much."
+        },
+        {
+          "id": "RE11",
+          "kind": "REPORTED_CONTRAST",
+          "paraphrase": "Pickup was reportedly easy after scheduling and clarification, but this does not establish that its availability caused the initial purchase."
+        }
+      ],
+      "lead_user_qualification": "NOT_ASSESSED_NOT_AUTOMATICALLY_LEAD_USER",
+      "lu1": "NO_RELEVANT_TREND_ADVANCEMENT_ASSIGNED",
+      "lu2": "NO_LU2_ASSESSMENT"
+    }
+  ],
+  "methodology_guards": {
+    "sources_are_proof_of_posts_existing_not_proof_that_claimed_events_occurred": true,
+    "no_independent_human_review": true,
+    "no_human_interviews_or_recruitment": true,
+    "no_cross_person_population_inference": true,
+    "no_causal_estimation": true,
+    "no_validated_simulation_or_ssr": true,
+    "no_qualified_lead_users": true,
+    "original_interview_evidence_unchanged": true
+  },
+  "next_research_decisions": [
+    {
+      "id": "A01",
+      "action": "Adjudicate original 28 evidence excerpts and A/B codes with an independent human reviewer; inspect uncoded participant turns and contradictions.",
+      "owner": "HUMAN_RESEARCH_REVIEWER",
+      "gate": "CORE_APPROVAL_REQUIRED"
+    },
+    {
+      "id": "A02",
+      "action": "Conduct trend and expert/referral discovery beyond online hobbyist forums; qualify LU1 and LU2 separately before calling a participant a Lead User.",
+      "owner": "RESEARCH_TEAM",
+      "gate": "LEAD_USER_QUALIFICATION"
+    },
+    {
+      "id": "A03",
+      "action": "Interview consenting DIY candidates and ordinary/negative cases; verify histories, physical artifacts, outcomes, and competing explanations.",
+      "owner": "RESEARCH_TEAM",
+      "gate": "FIELDWORK_NOT_PERFORMED"
+    },
+    {
+      "id": "A04",
+      "action": "Define matched simulation questions and an independent holdout with actual responses/outcomes before claiming SSR predictive validity.",
+      "owner": "RESEARCH_TEAM",
+      "gate": "EXTERNAL_HOLDOUT_NOT_PERFORMED"
+    }
+  ]
+}
