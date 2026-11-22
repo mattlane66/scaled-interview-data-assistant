@@ -134,6 +134,17 @@ def test_malicious_source_paths_and_oversized_inputs_are_rejected():
         run_study_pipeline({
             **bundle, "source_files": {"interview.md": "x" * 2_000_001}
         })
+    # A safe uploaded filename is not enough: the registry itself can try to
+    # cause the legacy validator to open a path outside the scratch directory.
+    changed = _registries()
+    changed["sources"][0]["source"] = "../../etc/passwd"
+    with pytest.raises(ValueError, match="registered|safe filenames"):
+        run_study_pipeline(changed)
+
+    changed = _registries()
+    changed["evidence_bank"][0]["source"] = "../../etc/passwd"
+    with pytest.raises(ValueError, match="registered sources"):
+        run_study_pipeline(changed)
 
 
 def test_invalid_study_never_issues_fake_success_or_leaks_content():
