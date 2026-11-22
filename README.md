@@ -65,6 +65,27 @@ It gives six core questions, follow-up probes, and guidance for studying people 
 as before or did nothing. This repository begins where those **source-grounded accounts**
 become analyzable evidence; it cannot reconstruct questions that were never asked.
 
+## When the evidence for x is incomplete
+
+When a consequential part of the current situation is unknown, first identify
+**what must be learned** and whether actual traces can answer it. Do not use
+Lead User evidence to fill gaps in the observed decisions of ordinary users.
+
+The optional [Context Evidence Extension](docs/operations/context-evidence-extension.md)
+routes source-grounded uncertainties to trace research, targeted ordinary
+interviews/observation, or the separate
+[Lead User Research method](https://github.com/mattlane66/planning-skills-for-agents-and-humans/tree/main/lead-user-research)
+when an important future trend, advanced users and high expected benefit are
+credible *candidates*. It never treats discovery signals as qualified LU1/LU2
+evidence.
+
+A returned upstream study is a **separate, proposed** evidence sidecar:
+observed interview x stays unchanged; emerging advanced-user contexts are
+source-located; mainstream transfer remains a hypothesis with a
+`SUPPORTED | PLAUSIBLE | LEAD_USER_BOUND | UNKNOWN` assessment.
+Human review is required before any planning use. The repository does not
+duplicate the Lead User method or automatically run its research.
+
 ## ChatGPT plugin — private preview
 
 This repository now includes a [portable plugin package](plugins/scaled-interview-data-assistant/plugin.json)
