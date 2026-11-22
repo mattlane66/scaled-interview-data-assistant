@@ -119,6 +119,28 @@ If its schema version changes, review the mapping instead of silently assuming c
 
 ## Optional SSR (not an adoption forecast)
 
+SSR can only be calculated when the approved scenario contains a fixed, predeclared ordinal
+measurement. Add this object **before review and model generation**:
+
+~~~json
+{
+  "measurement": {
+    "construct": "stated_switching_intent",
+    "question": "How likely would you switch under the proposed conditions?",
+    "scale": "FIVE_POINT_LIKERT",
+    "anchor_version": "switch-intent-v1"
+  }
+}
+~~~
+
+This is an excerpt to add to `scenario.json`, not a complete scenario. The model must answer
+the exact question with a short, standalone first-person statement in `responses[].text`;
+put hypothesized mechanisms, objections, and tests in their separate fields. Do **not** use
+SSR on general narratives or explanations of behavior. The tool validates the declared
+construct and anchor version, but cannot semantically verify that the generated answer
+actually addressed the question. Review it before interpreting the distribution.
+
+
 Supply an external embedding model's vectors in a JSON document meeting
 [`simulation/schemas/ssr-input.schema.json`](../../simulation/schemas/ssr-input.schema.json).
 Provide one vector per generated response, its SHA-256 text hash, the embedding model/version,
