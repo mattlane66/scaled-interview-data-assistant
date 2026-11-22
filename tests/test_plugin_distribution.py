@@ -277,3 +277,22 @@ def test_private_http_mcp_transport_initializes_with_auth_and_rejects_anonymous(
                 assert "capabilities" in parsed["result"]
 
     asyncio.run(asyncio.wait_for(check(), timeout=20))
+
+
+
+def test_private_http_trusted_host_requires_exact_dns_name_and_keeps_rebinding_guard():
+    pytest.importorskip("mcp")
+    from plugin_runtime.server import private_trusted_host
+
+    assert private_trusted_host(None) is None
+    config = private_trusted_host("research.example.org")
+    assert config.enable_dns_rebinding_protection is True
+    assert config.allowed_hosts == ["research.example.org", "research.example.org:*"]
+    assert config.allowed_origins == []
+    for invalid in (
+        "0.0.0.0", "localhost", "*", "*.example.org",
+        "research.example.org:443", "https://research.example.org",
+        "a..example.org", "research.example.org/path",
+    ):
+        with pytest.raises(ValueError, match="exact DNS hostname"):
+            private_trusted_host(invalid)
