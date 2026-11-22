@@ -15,7 +15,7 @@ Keep these distinct:
 - **candidate probes**: hypothetical product changes and their untested predictions; never write their expected success into `M`
 - outcomes: reported **adoption**, actual **use**, realized **progress** and **causal attribution** are separate. Missing evidence stays UNKNOWN; a single interview cannot identify causal effect
 
-Export research as PROPOSED with full source and reviewer status. No B-code by itself sets the product team's accepted outcome. Do not automatically create requirements, authorize a solution or select `f()`. Planning Skills owns y, R, solution shaping and Fit Check; later field measurement assesses effects.
+If a consequential x gap concerns genuinely advanced or emerging conditions, use the optional `extend-context` skill before shaping; never replace absent current-user evidence with lead-user predictions. Export research as PROPOSED with full source and reviewer status. No B-code by itself sets the product team's accepted outcome. Do not automatically create requirements, authorize a solution or select `f()`. Planning Skills owns y, R, solution shaping and Fit Check; later field measurement assesses effects.
 
 If `make_counterfactual_brief` is available, invoke it only with a valid, genuinely reviewed scenario and checkpoint. The brief is an untested design hypothesis even when a model offers plausible responses. Report the critical assumption, what observation would falsify it and a real test before building.
 
