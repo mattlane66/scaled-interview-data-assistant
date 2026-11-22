@@ -57,7 +57,7 @@ def test_plugin_manifest_matches_repo_release_and_onboarding():
     assert manifest["extensions"]["com.openai"]["onboardingSkill"] == (
         "./skills/get-started/SKILL.md"
     )
-    assert len(files) == 7
+    assert len(files) == 8
     assert ".claude-plugin/plugin.json" in files
 
 
