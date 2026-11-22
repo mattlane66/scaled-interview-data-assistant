@@ -1,0 +1,535 @@
+{
+  "schema_version": "1.0",
+  "reference_id": "CANON-MATTRESS-AUDIT-001",
+  "status": "AI_AUDITED_CANDIDATE_PENDING_HUMAN_ADJUDICATION",
+  "source_url": "https://jobstobedone.org/radio/the-mattress-interview-part-one/",
+  "source_snapshot_sha256": "cd8d289e27bfff8c00535ca00265fdb5520c7252590852d8199991a05bbda9da",
+  "source_file": "examples/canonical-mattress/source-turns.json",
+  "source_grain": {
+    "interviews": 1,
+    "participants": 1,
+    "decision_episodes": 1,
+    "held_out_human_observations": 0
+  },
+  "reported_findings": [
+    {
+      "id": "O01",
+      "claim": "The earlier expensive mattress was initially satisfactory, later deteriorated, and was associated by the participant with waking discomfort.",
+      "status": "REPORTED",
+      "evidence_ids": [
+        "E001",
+        "E002",
+        "E003"
+      ],
+      "participant_turn_ids": [
+        "T0102",
+        "T0106"
+      ],
+      "limit": "Association reported by one person, not clinically or causally verified."
+    },
+    {
+      "id": "O02",
+      "claim": "The participant tried changing pillows, posture, rotation, and bed support before replacing the mattress.",
+      "status": "REPORTED",
+      "evidence_ids": [
+        "E004",
+        "E006"
+      ],
+      "participant_turn_ids": [
+        "T0108",
+        "T0114"
+      ],
+      "limit": "Attempts reported; outcomes of each modification are not quantified."
+    },
+    {
+      "id": "O03",
+      "claim": "Travel/hotel stays reportedly did not produce the same waking discomfort.",
+      "status": "REPORTED",
+      "evidence_ids": [
+        "E005"
+      ],
+      "participant_turn_ids": [
+        "T0112"
+      ],
+      "limit": "Different setting and stress are confounded with different mattress."
+    },
+    {
+      "id": "O04",
+      "claim": "Work, family care, and moving were described as reasons replacement was postponed.",
+      "status": "REPORTED",
+      "evidence_ids": [
+        "E008",
+        "E009"
+      ],
+      "participant_turn_ids": [
+        "T0134",
+        "T0136",
+        "T0139"
+      ],
+      "limit": "Specific contribution of each competing demand is unknown."
+    },
+    {
+      "id": "O05",
+      "claim": "He sought help with the Macy's mattress, rejected the required sinkage-measurement procedure, and understood the warranty as inapplicable.",
+      "status": "REPORTED",
+      "evidence_ids": [
+        "E010",
+        "E011",
+        "E012"
+      ],
+      "participant_turn_ids": [
+        "T0164",
+        "T0166",
+        "T0168"
+      ],
+      "limit": "His recollection of warranty terms is not an independently verified retailer policy."
+    },
+    {
+      "id": "O06",
+      "claim": "He conducted active online research for roughly three months and considered, but did not complete, a Groupon foam-mattress purchase.",
+      "status": "REPORTED",
+      "evidence_ids": [
+        "E013",
+        "E014"
+      ],
+      "participant_turn_ids": [
+        "T0190",
+        "T0230",
+        "T0232",
+        "T0234"
+      ],
+      "limit": "Specific Groupon seller was not remembered; nighttime browsing is self-reported."
+    },
+    {
+      "id": "O07",
+      "claim": "He described a desire to sleep and function better as a worker, father, and husband.",
+      "status": "REPORTED",
+      "evidence_ids": [
+        "E015"
+      ],
+      "participant_turn_ids": [
+        "T0190"
+      ],
+      "limit": "Desired progress is not a verified post-purchase outcome."
+    },
+    {
+      "id": "O08",
+      "claim": "The Costco mattress purchase was not planned for that trip, but a mattress purchase had been considered before the trip.",
+      "status": "REPORTED",
+      "evidence_ids": [
+        "E013",
+        "E014",
+        "E016",
+        "E017"
+      ],
+      "participant_turn_ids": [
+        "T0088",
+        "T0094",
+        "T0190"
+      ],
+      "limit": "No evidence that the aisle encounter created the original need."
+    },
+    {
+      "id": "O09",
+      "claim": "The participant reported his wife's hesitation, a small foam sample she could touch, her subsequent assent, and his action obtaining a flatbed.",
+      "status": "REPORTED_SECONDHAND_PARTNER",
+      "evidence_ids": [
+        "E018",
+        "E019"
+      ],
+      "participant_turn_ids": [
+        "T0196"
+      ],
+      "limit": "Partner reaction is his account, not an independent interview with his wife."
+    },
+    {
+      "id": "O10",
+      "claim": "He reported paying $699 at Costco, above a Groupon alternative, and expressed worry about an unfamiliar online recovery path.",
+      "status": "REPORTED",
+      "evidence_ids": [
+        "E020"
+      ],
+      "participant_turn_ids": [
+        "T0200"
+      ],
+      "limit": "Different mattresses, retailers and terms; no controlled willingness-to-pay premium can be estimated."
+    },
+    {
+      "id": "O11",
+      "claim": "He attributed importance to physically touching foam and trying a materially different mattress; product packaging did not resonate with him.",
+      "status": "REPORTED_REASON",
+      "evidence_ids": [
+        "E021",
+        "E022"
+      ],
+      "participant_turn_ids": [
+        "T0210",
+        "T0212",
+        "T0216"
+      ],
+      "limit": "Post-hoc explanation does not isolate the effect of the sample, novelty or mattress softness."
+    },
+    {
+      "id": "O12",
+      "claim": "He reported previously returning a few products to Costco, but had not known of any mattress home-pickup service before the workshop.",
+      "status": "REPORTED",
+      "evidence_ids": [
+        "E027"
+      ],
+      "participant_turn_ids": [
+        "T0268",
+        "T0274",
+        "T0276"
+      ],
+      "limit": "The claimed pickup service was introduced by an audience member AFTER the purchase and was not verified."
+    },
+    {
+      "id": "O13",
+      "claim": "He reported retaining and sleeping on the old mattress after the Costco purchase, and described the mattress issue as still unresolved.",
+      "status": "REPORTED",
+      "evidence_ids": [
+        "E023",
+        "E024",
+        "E026"
+      ],
+      "participant_turn_ids": [
+        "T0182",
+        "T0184",
+        "T0241"
+      ],
+      "limit": "Does not prove either the new mattress failed or that it improved sleep."
+    },
+    {
+      "id": "O14",
+      "claim": "He described discomfort with mattress showrooms and sales interactions, yet acknowledged lying on a mattress during the earlier Macy's purchase.",
+      "status": "REPORTED",
+      "evidence_ids": [
+        "E025"
+      ],
+      "participant_turn_ids": [
+        "T0243",
+        "T0251",
+        "T0258"
+      ],
+      "limit": "Avoid equating aversion with complete refusal to visit or lie on a display mattress."
+    },
+    {
+      "id": "O15",
+      "claim": "The original mattress was purchased with his wife while she was pregnant, and he recalled focusing on her comfort.",
+      "status": "REPORTED",
+      "evidence_ids": [
+        "E001"
+      ],
+      "participant_turn_ids": [
+        "T0102",
+        "T0258"
+      ],
+      "limit": "Different earlier purchase episode; not evidence of a present cross-person pattern."
+    },
+    {
+      "id": "O16",
+      "claim": "His Walgreens counterfactual was a stated hypothetical preference, not an observed shopping decision.",
+      "status": "HYPOTHETICAL_REPORT",
+      "evidence_ids": [
+        "E028"
+      ],
+      "participant_turn_ids": [
+        "T0220"
+      ],
+      "limit": "Exclude it from observed purchase evidence."
+    }
+  ],
+  "analysis_corrections": [
+    {
+      "id": "C01",
+      "issue": "The A01 code definition says the old mattress 'causes' morning discomfort.",
+      "better": "The participant associated waking discomfort with the old mattress and noted a hotel contrast; do not infer physical causality.",
+      "basis": [
+        "O01",
+        "O03"
+      ],
+      "severity": "MATERIAL"
+    },
+    {
+      "id": "C02",
+      "issue": "Old purchase price is sometimes interpreted as proof of sunk-cost inertia.",
+      "better": "The $2,000 expenditure and regret are reported, but the participant cited competing life demands for delay. Sunk-cost inhibition remains speculative.",
+      "basis": [
+        "O01",
+        "O04"
+      ],
+      "severity": "MATERIAL"
+    },
+    {
+      "id": "C03",
+      "issue": "Comparing $699 at Costco against a cheaper Groupon product may be framed as willingness to pay for easier returns.",
+      "better": "Treat price, product, seller identity, and return terms as confounded. No price-premium estimate.",
+      "basis": [
+        "O10"
+      ],
+      "severity": "MATERIAL"
+    },
+    {
+      "id": "C04",
+      "issue": "Guaranteed mattress pickup might be described as a driver of the historical Costco purchase.",
+      "better": "Explicitly mark pickup as a NEW counterfactual. He learned of the possibility during the workshop.",
+      "basis": [
+        "O12"
+      ],
+      "severity": "MATERIAL"
+    },
+    {
+      "id": "C05",
+      "issue": "The tactile sample or wife’s approval can appear as an established independent causal mechanism.",
+      "better": "Both occurred in the same account; either or their interaction may matter. Her statements are reported by her husband.",
+      "basis": [
+        "O09",
+        "O11"
+      ],
+      "severity": "MATERIAL"
+    },
+    {
+      "id": "C06",
+      "issue": "L003 currently connects A03 to B03 and implies that competing obligations caused the joint Costco purchase.",
+      "better": "Demote L003 to a weak opportunity/timing interpretation. B03 describes a purchase circumstance, not the ultimate desired progress.",
+      "basis": [
+        "O04",
+        "O08",
+        "O09"
+      ],
+      "severity": "IMPORTANT"
+    },
+    {
+      "id": "C07",
+      "issue": "The buyer’s showroom aversion is sometimes restated as never lying on a store mattress.",
+      "better": "He confirmed lying on one during the original Macy’s purchase. Report aversion and reluctant participation, not categorical avoidance.",
+      "basis": [
+        "O14"
+      ],
+      "severity": "MATERIAL"
+    },
+    {
+      "id": "C08",
+      "issue": "Costco purchase or post-purchase retention is treated as proof the customer reached Point B.",
+      "better": "Purchase occurred; actual sleep improvement remains UNKNOWN. Old mattress still used and the broader mattress issue unresolved.",
+      "basis": [
+        "O07",
+        "O13"
+      ],
+      "severity": "MATERIAL"
+    },
+    {
+      "id": "C09",
+      "issue": "The site’s facilitator/audience causal explanations are sometimes promoted as interviewee evidence.",
+      "better": "Only participant turns support direct reported facts; preserve game-off commentary as hypotheses and instructional context.",
+      "basis": [
+        "O12",
+        "O16"
+      ],
+      "severity": "MATERIAL"
+    },
+    {
+      "id": "C10",
+      "issue": "The phrase 'reviewed link' can be confused with a link that has passed human approval.",
+      "better": "All four existing L### links are code-valid but AI-authored and not independently human-reviewed.",
+      "basis": [
+        "O01",
+        "O05",
+        "O09"
+      ],
+      "severity": "IMPORTANT"
+    }
+  ],
+  "conditional_mechanisms": [
+    {
+      "id": "M01",
+      "condition": "Perceived ability to recover after an unsatisfactory purchase",
+      "hypothesis": "Concern about getting stuck with another costly mattress may delay or redirect purchase.",
+      "support": [
+        "O05",
+        "O06",
+        "O10",
+        "O12"
+      ],
+      "rival": "Retailer familiarity and general confidence may matter more than pickup logistics themselves.",
+      "tension": [
+        "O12"
+      ],
+      "untested": "Home pickup was unknown at the time; actual returns from this mattress not established.",
+      "discriminating_observation": "Holding retailer, price and product fixed, does genuine pickup/refund availability increase real purchase attempts?",
+      "status": "PROVISIONAL"
+    },
+    {
+      "id": "M02",
+      "condition": "Joint tactile evaluation of unfamiliar foam",
+      "hypothesis": "A sample and partner assent may reduce unfamiliarity and household decision friction.",
+      "support": [
+        "O09",
+        "O11",
+        "O15"
+      ],
+      "rival": "The spouse may have consented mainly because of prior discomfort or known retailer reputation; the sample was incidental.",
+      "tension": [
+        "O09",
+        "O11"
+      ],
+      "untested": "Sample and partner assent co-occurred; no independent effect estimate.",
+      "discriminating_observation": "Holding returns, seller and price fixed, does sample access change actual paid attempts? Observe partner assent as a separate process.",
+      "status": "PROVISIONAL"
+    },
+    {
+      "id": "M03",
+      "condition": "Purchase opportunity aligns with a previously activated need",
+      "hypothesis": "An easy-to-act-on store encounter may convert long-held intent into action.",
+      "support": [
+        "O04",
+        "O06",
+        "O08"
+      ],
+      "rival": "The participant had become ready to buy anyway; the specific Costco encounter may be incidental.",
+      "tension": [
+        "O08"
+      ],
+      "untested": "No comparable non-encounter case or contemporaneous control.",
+      "discriminating_observation": "Among replacement-seekers, does ready availability in their ordinary shopping context alter real purchase attempts?",
+      "status": "PROVISIONAL"
+    },
+    {
+      "id": "M04",
+      "condition": "Avoidance of an aversive sales and trial environment",
+      "hypothesis": "An alternative that avoids sales pressure and shared display beds may be easier to consider.",
+      "support": [
+        "O06",
+        "O14"
+      ],
+      "rival": "Difficult reversal, not the store environment, may explain the avoidance.",
+      "tension": [
+        "O14"
+      ],
+      "untested": "Past Macy’s bed-lying behavior conflicts with categorical 'cannot enter' claims.",
+      "discriminating_observation": "Hold trial quality and return terms constant; compare pressured showroom, low-contact demonstration and home sample.",
+      "status": "PROVISIONAL"
+    },
+    {
+      "id": "M05",
+      "condition": "Bad sleep creates desire for restored functioning",
+      "hypothesis": "The job concerns restored daily performance; the product purchase is an attempted means rather than end-state progress.",
+      "support": [
+        "O01",
+        "O03",
+        "O07",
+        "O13"
+      ],
+      "rival": "Stress, travel setting or other causes besides the home mattress may explain symptoms.",
+      "tension": [
+        "O03",
+        "O13"
+      ],
+      "untested": "No longitudinal sleep/usage follow-up after purchase.",
+      "discriminating_observation": "Measure use of the new mattress and whether reported waking comfort/function changes over time, compared to pretrial baseline.",
+      "status": "PROVISIONAL"
+    }
+  ],
+  "design_decision": {
+    "status": "TEST_AN_ASSUMPTION_NOT_AUTHORIZE_FULL_BUILD",
+    "primary_product_direction": "A credible, reversible home trial for people replacing disappointing mattresses; evaluate an accessible material sample separately.",
+    "immediate_recommendation": "Run a real low-cost field experiment with trustworthy return fulfillment before building a dedicated pickup service or claiming product-market fit.",
+    "alternatives": [
+      {
+        "id": "D01",
+        "move": "Clear ordinary trial/return terms through the same trusted seller",
+        "role": "CONTROL",
+        "does_not_prove": "Trust and timing remain bundled"
+      },
+      {
+        "id": "D02",
+        "move": "Offer verified no-cost home pickup and refund",
+        "role": "TEST_RECOVERY_FRICTION",
+        "does_not_prove": "Not a known cause of the historical purchase"
+      },
+      {
+        "id": "D03",
+        "move": "Offer a physical foam sample both co-buyers can inspect",
+        "role": "TEST_TACTILE_ACCESS",
+        "does_not_prove": "Does not isolate partner agreement from sample use"
+      },
+      {
+        "id": "D04",
+        "move": "Combine real pickup/refund with a physical sample",
+        "role": "TEST_INTERACTION",
+        "does_not_prove": "No causal effect established until experiment"
+      }
+    ],
+    "experiment": {
+      "design": "Prospectively randomized 2x2 factorial field trial with a real merchant and a fixed product",
+      "participants": "People actively considering replacement of an unsatisfactory mattress; record household co-deciders and recent failure experiences",
+      "unit_of_randomization": "Household/purchase decision, not page views or generated personas",
+      "factor_1": "Standard disclosed return path vs genuinely guaranteed no-cost return pickup and refund",
+      "factor_2": "No optional material sample vs genuine shareable foam sample before purchase",
+      "hold_constant": [
+        "Same mattress and price",
+        "Same merchant/reputation and assurances",
+        "Same trial duration and fulfillment commitments",
+        "Same recruitment and exposure window"
+      ],
+      "primary_behavioral_measure": "Verified paid purchase attempt within a preregistered window, analyzed by assigned condition",
+      "follow_up_measures": [
+        "Actual delivery and use",
+        "Return attempts and completed returns",
+        "Net retained purchase after an appropriate trial",
+        "Reported sleep and daily functioning, explicitly self-report",
+        "Whether household co-buyer participated"
+      ],
+      "critical_process_measure": "Seller fulfillment actually honors the pickup promise; otherwise treatment is invalid",
+      "baseline": "Ordinary offer under identical merchant, product, price and clear legal return terms",
+      "predeclare_before_launch": [
+        "Minimum worthwhile lift and logistics unit economics",
+        "Randomized sample size and statistical analysis",
+        "Time window and attrition handling",
+        "Intention-to-treat and confidence intervals",
+        "Rules for main effects and interaction",
+        "Do not present stated interest or SSR as a paid purchase"
+      ],
+      "limits": [
+        "No effect estimates until observed human outcomes",
+        "This isolates pickup and sample under one seller, not retailer trust",
+        "Separate follow-up needed to identify seller familiarity versus trust in guarantees"
+      ]
+    },
+    "planning_handoff": {
+      "status": "PROPOSED_HUMAN_ACCEPTANCE_REQUIRED",
+      "x": "An unsatisfying home sleep arrangement plus replacement anxiety and competing demands",
+      "y": "Wake better able to function in work and family roles",
+      "M": [
+        "Reversibility/trust may determine whether purchase is attempted",
+        "Partner co-evaluation may change household assent",
+        "Situational opportunity may change when long-standing intent becomes action",
+        "Success must be assessed after use, separately from checkout"
+      ],
+      "f": "UNSPECIFIED_BEFORE_SHAPING",
+      "next": "Use Planning Skills framing and Fit Check only after accepting or revising these conditional, provisional inputs."
+    }
+  },
+  "epistemic_guardrails": [
+    "Reported interview statements are not independently verified physical causes or merchant policies.",
+    "Facilitator and audience opinions are not participant firsthand evidence.",
+    "Observed checkout is distinct from desired progress after product use.",
+    "One respondent cannot establish prevalence, switching lift, willingness to pay or job-cluster mechanism.",
+    "Never use the prior two handcrafted SSR mean scores as a ranking or prediction.",
+    "Counterfactual return pickup was unknown to the participant during the historical purchase.",
+    "Do not classify a counterexample as a negative case without source-located evidence.",
+    "Human acceptance is required before this candidate is a canonical analytical reference."
+  ],
+  "adjudication": {
+    "human_approved": false,
+    "reviewer": null,
+    "reviewed_at": null,
+    "questions": [
+      "Is E005 a useful negative/control contrast without overstating causation?",
+      "Should L003 be retired, reframed, or kept with explicit weak evidence?",
+      "Should B02/B03/B04 be labeled enabling conditions rather than end-progress?",
+      "Does the old-mattress postpurchase usage support unresolved progress or only unresolved logistics?",
+      "Are there further decisive participant turns omitted from the original 28-source bank?"
+    ]
+  }
+}

@@ -199,6 +199,20 @@ The synthetic extension remains useful for generating rival hypotheses to test.
 
 See the full [data contracts](docs/operations/data-contracts.md).
 
+## Canonical analytical quality reference
+
+The [full-transcript audit](examples/canonical-mattress/reference/independent-audit.md)
+and [evaluation rubric](examples/canonical-mattress/reference/evaluation-rubric.md)
+identify where a plausible synthesis would overstate the evidence: return pickup
+was unknown at purchase, $699 versus Groupon was not a controlled premium,
+and the purchase did not establish successful sleep improvement.
+
+The [source-bound expected analysis](examples/canonical-mattress/reference/expected-analysis.json)
+compares five rival behavioral explanations and proposes a real randomized trial
+of return-recovery logistics versus shared tactile evaluation. It remains
+**AI-audited, pending independent human acceptance**, not a validated prediction
+or an approved plan to build.
+
 ## Canonical real mattress interview
 
 The [licensed real mattress interview](examples/canonical-mattress/README.md) is
