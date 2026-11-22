@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.4.0 — 2026-11-22
+
+- Added human-reviewed, cross-episode Behavioral Mechanism Maps over source-located
+  A→B links and exploratory JTBD clusters.
+- Added analyst-coded aligning, counterexample, ambiguous, and unassessed cases,
+  with evidence ownership, review gates, and participant-grain distinctions.
+- Added rival mechanism hypotheses, disconfirming observations, human test proposals,
+  and a read-only, PROPOSED x/y/M handoff to Planning Skills.
+- Added stand-alone `mechanism_map_cli.py`, deterministic inventory/compilation,
+  documentation, and adversarial regression tests; no LLM or source-registry changes.
+
+
 ## 1.3.0 — 2026-11-22
 
 - Added evidence-first counterfactual product decision briefs using reviewed human A→B
