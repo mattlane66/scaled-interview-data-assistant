@@ -1,7 +1,7 @@
 {
   "name": "scaled-interview-data-assistant",
-  "version": "1.8.0",
-  "description": "Reconstruct real customer switching decisions from interviews with source-located evidence, reviewed A-to-B relationships, rival behavioral explanations, and provisional product-decision handoffs. Separate reported behavior from hypotheses and simulations.",
+  "version": "1.9.0",
+  "description": "Route transcript research questions to source-grounded A2B and mechanism work, with evidence-gated handoffs to independent simulation and Lead User skills.",
   "author": {
     "name": "Matt Lane",
     "url": "https://mattlane66.github.io"

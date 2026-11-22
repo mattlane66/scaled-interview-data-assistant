@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent-declared transcript research request (not a source verification)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "research_question",
+    "decision",
+    "goals"
+  ],
+  "properties": {
+    "research_question": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 1500
+    },
+    "decision": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 1500
+    },
+    "goals": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "type",
+          "question"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "CURRENT_DECISION",
+              "CONDITIONAL_MECHANISM",
+              "COUNTERFACTUAL_RESPONSE",
+              "EMERGING_NEED",
+              "OTHER"
+            ]
+          },
+          "question": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 1200
+          },
+          "material_to_decision": {
+            "type": "boolean"
+          },
+          "comparison_scope": {
+            "enum": [
+              "CROSS_PERSON",
+              "WITHIN_PERSON",
+              "UNSPECIFIED"
+            ]
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "transcript_coverage": {
+          "enum": [
+            "FULL",
+            "PARTIAL",
+            "NONE",
+            "UNKNOWN"
+          ]
+        },
+        "decision_episodes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2500
+        },
+        "distinct_people": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2500
+        },
+        "source_locators_available": {
+          "type": "boolean"
+        },
+        "human_review_completed": {
+          "type": "boolean"
+        },
+        "reviewed_links_present": {
+          "type": "boolean"
+        },
+        "human_holdout_available": {
+          "type": "boolean"
+        }
+      }
+    },
+    "counterfactual": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "baseline_defined": {
+          "type": "boolean"
+        },
+        "intervention_defined": {
+          "type": "boolean"
+        },
+        "population_defined": {
+          "type": "boolean"
+        }
+      }
+    },
+    "future_facing": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "trend_candidate": {
+          "type": "boolean"
+        },
+        "advanced_user_signal": {
+          "type": "boolean"
+        },
+        "high_expected_benefit_signal": {
+          "type": "boolean"
+        }
+      }
+    },
+    "available_skills": {
+      "type": "array",
+      "uniqueItems": true,
+      "maxItems": 2,
+      "items": {
+        "enum": [
+          "behavioral-simulation",
+          "lead-user-research"
+        ]
+      }
+    }
+  }
+}

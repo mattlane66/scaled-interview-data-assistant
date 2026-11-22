@@ -45,7 +45,7 @@ def _registries() -> dict:
 def test_build_private_plugin_has_only_public_methods_and_no_mcp_endpoint(tmp_path):
     manifest, payloads = validated_package()
     assert manifest["name"] == "scaled-interview-data-assistant"
-    assert len(payloads) == 7
+    assert len(payloads) == 8
     assert all("SECRET" not in body.decode() for body in payloads.values())
     dest = tmp_path / "private.zip"
     result = build_archive(dest)
@@ -53,7 +53,7 @@ def test_build_private_plugin_has_only_public_methods_and_no_mcp_endpoint(tmp_pa
     assert result["public_submission_ready"] is False
     with zipfile.ZipFile(dest) as z:
         files = z.namelist()
-        assert len(files) == 7
+        assert len(files) == 8
         assert all(x.startswith("scaled-interview-data-assistant/") for x in files)
         assert not any("mcp.json" in x for x in files)
         assert not any("full-transcript" in x for x in files)
@@ -214,7 +214,7 @@ def test_real_stdio_mcp_client_initializes_and_calls_read_only_tool():
                 tools = await session.list_tools()
                 names = {tool.name for tool in tools.tools}
                 assert {
-                    "get_research_capabilities", "check_checkpoint",
+                    "get_research_capabilities", "route_research_request", "check_checkpoint",
                     "check_study", "draft_mechanism_map",
                     "preview_mechanism_evidence",
                     "compile_reviewed_mechanism_map",
@@ -302,7 +302,7 @@ def test_private_http_trusted_host_requires_exact_dns_name_and_keeps_rebinding_g
 
 
 def test_codex_and_claude_marketplaces_share_one_plugin_source():
-    """Both hosts advertise the same five skill files, with no hidden MCP dependency."""
+    """Both hosts advertise the same six skill files, with no hidden MCP dependency."""
     manifest, payloads = validated_package()
     claude = json.loads(payloads[".claude-plugin/plugin.json"])
     assert claude["name"] == manifest["name"]
@@ -310,7 +310,7 @@ def test_codex_and_claude_marketplaces_share_one_plugin_source():
     assert "extensions" not in claude
     expected_skills = {
         f"skills/{name}/SKILL.md" for name in (
-            "get-started", "analyze-interview", "compare-mechanisms",
+            "get-started", "research-router", "analyze-interview", "compare-mechanisms",
             "research-to-planning", "extend-context",
         )
     }

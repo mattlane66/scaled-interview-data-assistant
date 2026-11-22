@@ -24,6 +24,13 @@ jobs:
       - run: python -m pip install -e ".[dev,plugin]"
       - run: python -m ruff check .
       - run: python -m pytest -q
+      - name: Evaluate evidence-gated research router
+        run: python scripts/evaluate_research_router.py
+      - name: Route real canonical checkpoint via local CLI
+        run: python scripts/route_research.py --request examples/canonical-mattress/empirical-extension/research-request.json --checkpoint examples/canonical-mattress/results/CHECKPOINT.json
+      - name: Score source-grounded demonstration without claiming human review
+        run: |
+          python scripts/score_agent_research.py --reference evals/mattress-agent-reference.json --artifact evals/mattress-agent-output-demo.json
       - name: Audit source-grounded canonical mattress methods
         run: python scripts/audit_canonical_empirical.py
       - name: Build portable Codex and Claude plugin archive

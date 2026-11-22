@@ -4,7 +4,7 @@
 
 This is a **source-traceable first research pass** across the four methods in the canonical example. It uses publicly available original human accounts and industry survey reports, not invented interviews. It is deliberately **separate from** the licensed [original mattress interview](../README.md), its 28 extracts, A/B links, checkpoint and AI-authored demonstration simulations.
 
-**Read the [four-method worked findings](findings.md) first.** The [casebook](casebook.json) contains eight real source-account histories, four explicitly contrasted mechanism hypotheses, actual computed SSR summaries, and Lead User candidate-screening outcomes. [The automated auditor](../../../scripts/audit_canonical_empirical.py) checks provenance and computation, **not** substantive human approval.
+**Read the [four-method worked findings](findings.md) first.** A [real-canonical four-question routing request](research-request.json) demonstrates which method is eligible and which additional evidence is required, without manufacturing a reviewed study. The [casebook](casebook.json) contains eight real source-account histories, four explicitly contrasted mechanism hypotheses, actual computed SSR summaries, and Lead User candidate-screening outcomes. [The automated auditor](../../../scripts/audit_canonical_empirical.py) checks provenance and computation, **not** substantive human approval.
 
 See [structured source and evidence ledger](source-ledger.json), [full provisional core A/B recode](proposed-core-recode.json), [core analysis adjudication](core-analysis-review.md), and [next-stage decision](next-stage-study.md).
 

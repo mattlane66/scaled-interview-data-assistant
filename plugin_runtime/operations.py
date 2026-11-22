@@ -15,6 +15,7 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
+from plugin_runtime.research_router import route_research
 from simulation.context_bridge import import_lead_user_context, triage_context_gap
 from simulation.core import load_checkpoint
 from simulation.counterfactual import build_brief
@@ -168,6 +169,20 @@ def propose_context_research_route(
             checkpoint, digest = _checkpoint(checkpoint_json, Path(temp))
             return _bounded_result(triage_context_gap(checkpoint, digest, context_question))
     return _bounded_result(triage_context_gap(None, None, context_question))
+
+
+def propose_transcript_research_route(
+    research_request: dict[str, Any], checkpoint_json: str = ""
+) -> dict[str, Any]:
+    """Select source-bounded methods, without execution or approval."""
+    _bounded_json(research_request)
+    if checkpoint_json:
+        with tempfile.TemporaryDirectory(prefix="sida-research-route-") as temp:
+            checkpoint, digest = _checkpoint(checkpoint_json, Path(temp))
+            return _bounded_result(route_research(
+                research_request, checkpoint=checkpoint, checkpoint_sha256=digest
+            ))
+    return _bounded_result(route_research(research_request))
 
 
 def validate_lead_user_research_return(

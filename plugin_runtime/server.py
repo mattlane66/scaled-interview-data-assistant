@@ -61,6 +61,7 @@ def get_research_capabilities() -> dict[str, Any]:
         "name": "Scaled Interview Data Assistant",
         "type": "DETERMINISTIC_RESEARCH_TOOLS",
         "supported": [
+            "research-question routing with explicit evidence gates",
             "source-linked evidence and registry validation",
             "read-only checkpoint checks",
             "unapproved mechanism study drafting",
@@ -72,6 +73,7 @@ def get_research_capabilities() -> dict[str, Any]:
         "not_supported": [
             "audio transcription", "automatic human interview review",
             "autonomous LLM calls", "persistent cloud research storage",
+            "execution of external Lead User and Behavioral Simulation skills",
             "population causal estimates", "automatic SSR predictions",
             "automatic accepted requirements or selected design",
         ],
@@ -148,6 +150,20 @@ def make_counterfactual_brief(
     """
     return operations.reviewed_counterfactual_brief(
         checkpoint_json, reviewed_scenario
+    )
+
+
+@mcp.tool(annotations=READ_ONLY)
+def route_research_request(
+    research_request: dict[str, Any], checkpoint_json: str = ""
+) -> dict[str, Any]:
+    """Route questions without parsing transcripts or executing methods.
+
+    Checkpoints verify structural references, not analyst declarations,
+    reviewer identity, installation, or substantive findings.
+    """
+    return operations.propose_transcript_research_route(
+        research_request, checkpoint_json=checkpoint_json
     )
 
 
