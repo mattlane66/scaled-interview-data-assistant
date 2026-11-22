@@ -62,7 +62,8 @@ def route_research(
     available = set(request.get("available_skills") or [])
 
     episodes = evidence.get("decision_episodes", 0)
-    people = evidence.get("distinct_people", 0)
+    people_declared = evidence.get("distinct_people", 0)
+    people = people_declared
     coverage = evidence.get("transcript_coverage", "UNKNOWN")
     has_locators = evidence.get("source_locators_available", False)
     source_basis = "AGENT_DECLARATION_NOT_INDEPENDENTLY_CHECKED"
@@ -72,6 +73,9 @@ def route_research(
         # The checkpoint is schema-checked upstream. Override only quantities
         # that can be determined; do not authenticate participants or reviews.
         episodes = len(checkpoint["episode_index"])
+        # Independent people cannot be established from an episode count.
+        # Never permit more independent people than the number of interviews.
+        people = min(people, len(checkpoint["interview_index"]))
         evidence_rows = len(checkpoint["evidence_bank"])
         has_locators = evidence_rows > 0
         source_basis = "CHECKPOINT_REFERENCES_STRUCTURALLY_VALIDATED"
@@ -106,15 +110,18 @@ def route_research(
                 readiness = "NEED_CONTRASTING_EPISODES"
                 needed = ["at least two real bounded decision episodes"]
                 step = "Analyze current episode and seek contrasting real decisions."
-            elif people < 2:
+            elif people < 2 and goal.get("comparison_scope") != "WITHIN_PERSON":
                 readiness = "NEED_DISTINCT_PERSON_COVERAGE"
-                needed = ["independently situated people or explicit within-person scope"]
-                step = "Preserve within-person evidence and recruit/locate contrastive cases."
+                needed = ["distinct people or explicit WITHIN_PERSON scope"]
+                step = "Limit claims to one person or gather independent cases."
             elif not (evidence.get("human_review_completed", False)
                       and evidence.get("reviewed_links_present", False)):
                 readiness = "PROVISIONAL_MECHANISMS_ONLY"
                 needed = ["human-reviewed source evidence and A/B links"]
                 step = "Draft rivals and falsifiers, then obtain required reviews."
+            elif people < 2:
+                readiness = "ELIGIBLE_FOR_WITHIN_PERSON_MAP"
+                step = "Compare this person\u0027s episodes; no cross-person inference."
             else:
                 readiness = "ELIGIBLE_FOR_REVIEW_GATED_MAP"
                 step = "Compare cases with ALIGNS/COUNTEREXAMPLE/AMBIGUOUS/UNASSESSED."
@@ -175,7 +182,8 @@ def route_research(
         "source_summary": {
             "source_coverage": coverage,
             "decision_episodes": episodes,
-            "distinct_people_agent_declared": people,
+            "distinct_people_agent_declared": people_declared,
+            "effective_distinct_people_upper_bound": people,
             "evidence_rows": evidence_rows,
             "checkpoint_sha256": checkpoint_sha256,
             "human_review_agent_declared": evidence.get("human_review_completed", False),
