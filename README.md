@@ -152,6 +152,22 @@ actual purchasing, switching, or a causal effect.
 See the [full end-to-end guide](docs/operations/simulation.md) for commands, schemas,
 human review, and limits. The existing deterministic interview pipeline is unchanged.
 
+## Counterfactual product decisions
+
+The optional [counterfactual decision workflow](docs/operations/counterfactual-decisions.md)
+turns the human interview evidence into a **testable product design assumption** before
+any synthetic simulation is needed. It joins reviewed A→B links, the current Path Y,
+one proposed change, an expected behavioral difference, a disconfirming observation,
+and what to design differently if the assumption fails.
+
+Use `scripts/simulation_cli.py init --counterfactual` to draft an unapproved scenario,
+then `counterfactual` for an evidence-backed decision brief. The `compare` command
+places multiple design interventions side by side **only when they use the same human
+evidence and baseline**. An external model run is optional; no causal ranking is inferred.
+
+This prioritizes making existing human research more useful for product shaping.
+The synthetic extension remains useful for generating rival hypotheses to test.
+
 ## Evidence contract
 
 - `VERIFIED` claims cite supporting `E###` IDs on the claim.
