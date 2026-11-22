@@ -215,7 +215,7 @@ def build(folder: Path) -> dict:
     links = [{
         "link": ident, "episode": "D01", "a_code": a,
         "b_code": b, "basis": "INFERRED",
-        "evidence": refs, "rationale": explanation,
+        "evidence": ", ".join(refs), "rationale": explanation,
         "contradictions": (
             "New purchase did not establish problem resolution; old mattress retained."
             if ident == "L002" else ""
