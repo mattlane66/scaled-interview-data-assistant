@@ -72,6 +72,9 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "data(canonical): snapshot complete published mattress interview"
             git fetch origin feat/canonical-real-mattress-ssr
-            git rebase origin/feat/canonical-real-mattress-ssr
+            # Generated snapshots are authoritative for this importer run.
+            # Keep unrelated remote code/docs; resolve generated-file conflicts
+            # toward the newly recorded, internally consistent snapshot.
+            git rebase -X theirs origin/feat/canonical-real-mattress-ssr
             git push origin HEAD:feat/canonical-real-mattress-ssr
           fi
