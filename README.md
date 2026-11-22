@@ -89,7 +89,7 @@ duplicate the Lead User method or automatically run its research.
 ## ChatGPT plugin — private preview
 
 This repository now includes a [portable plugin package](plugins/scaled-interview-data-assistant/plugin.json)
-with four skills and a [stateless MCP adapter](plugin_runtime/server.py) over the existing
+with five skills and a [stateless MCP adapter](plugin_runtime/server.py) over the existing
 deterministic research tools. The skills-only archive can be privately imported without
 pretending an undeployed MCP server is available.
 
