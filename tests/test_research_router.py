@@ -91,6 +91,21 @@ def test_reviewed_same_person_mechanisms_require_explicit_scope():
     assert result["source_summary"]["effective_distinct_people_upper_bound"] == 1
 
 
+def test_canonical_four_method_request_has_honest_evidence_gates():
+    request = json.loads((CASE / "empirical-extension" / "research-request.json")
+                         .read_text(encoding="utf-8"))
+    checkpoint = (CASE / "results" / "CHECKPOINT.json").read_text(encoding="utf-8")
+    result = propose_transcript_research_route(request, checkpoint)
+    assert [route["readiness"] for route in result["routes"]] == [
+        "PROVISIONAL_REVIEW_REQUIRED",
+        "NEED_CONTRASTING_EPISODES",
+        "L0_EXPLORATION_NOT_PREDICTION",
+        "DISCOVER_TRENDS_AND_CANDIDATES",
+    ]
+    assert all(route["execution"] == "NOT_EXECUTED_BY_ROUTER"
+               for route in result["routes"])
+
+
 def test_malicious_or_unexpected_router_fields_fail_without_leaking():
     request = _request()
     request["raw_transcript"] = "SENSITIVE_CANARY"
