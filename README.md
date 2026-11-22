@@ -283,6 +283,10 @@ leaves `f()` unspecified, and cannot accept `y`, requirements, or a selected sha
 
 See the full [data contracts](docs/operations/data-contracts.md).
 
+## Canonical worked evidence — four complementary methods
+
+The [mattress casebook](examples/canonical-mattress/empirical-extension/findings.md) applies core A→B reconstruction, an unreviewed cross-case Behavioral Mechanism Map, source-grounded Behavioral Simulation/SSR interpretation, and a Lead User desk SCOUT to **real, linked human accounts**. It separates what each method actually found from independent human review, fieldwork, causal proof and predictive validation that have **not** been done. Its [source ledger](examples/canonical-mattress/empirical-extension/source-ledger.json) and [audit command](scripts/audit_canonical_empirical.py) make the evidence and limits inspectable. No real-person research method is declared complete merely because its code runs.
+
 ## Canonical analytical quality reference
 
 The [full-transcript audit](examples/canonical-mattress/reference/independent-audit.md)
