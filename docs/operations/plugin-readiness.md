@@ -13,7 +13,7 @@ Do not publish a public MCP plugin or claim a successful ChatGPT MCP connection 
 - Claude Code manifest: `plugins/scaled-interview-data-assistant/.claude-plugin/plugin.json`
 - GitHub marketplace entries: `.agents/plugins/marketplace.json` (Codex) and `.claude-plugin/marketplace.json` (Claude Code)
 - Install instructions: `docs/operations/cross-client-plugins.md`
-- Five skills: `skills/get-started`, `analyze-interview`, `compare-mechanisms`, `research-to-planning`, `extend-context`
+- Six skills: `skills/get-started`, `research-router`, `analyze-interview`, `compare-mechanisms`, `research-to-planning`, `extend-context`
 - Optional runtime: `plugin_runtime/operations.py` and `server.py`
 - Package builder: `scripts/build_plugin.py`
 - Canonical real-world test: `examples/canonical-mattress/` (includes the licensed full published transcript, not independent outcome validation)
@@ -54,6 +54,7 @@ Default `SIDA_MCP_MODE=stdio` is a local standard-input MCP server for developme
 | Tool | Behavior |
 |---|---|
 | `get_research_capabilities` | Accurate limits and data flow, with no private data |
+| `route_research_request` | Advisory method eligibility and missing-evidence gates; not completed research |
 | `check_study` | Validate source-located registries, verify supplied transcript excerpts, run the original deterministic CLI and return summary/counts; optionally return checkpoint JSON |
 | `check_checkpoint` | Validate exact supplied checkpoint JSON, return digest and counts |
 | `draft_mechanism_map` | Create unreviewed, SHA-bound study (no approval) |

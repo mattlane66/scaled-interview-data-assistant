@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.9.0 — 2026-11-25
+
+- First public GitHub repository release, including complete source, methodology, documentation, examples, tests and separately packaged skills and Python runtime.
+- Added the sixth shared skill, research-router, with evidence-gated method selection, a local CLI, advisory MCP routing and deterministic evaluation fixtures.
+- Added the four-method canonical mattress casebook and provisional real-source pilot on two distinct switching interviews; require explicit job comparability before cross-case mechanism mapping.
+- Added shared Codex and Claude Code marketplace entries and documented private ChatGPT skills import.
+- Preserved human review, source rights, independent predictive validation and production remote MCP deployment as separate gates.
+- Added a gated release workflow to build and checksum downloadable distributions.
+
 ## 1.8.0 — 2026-11-22
 
 - Added an optional, conservative route for consequential current-situation x gaps:
