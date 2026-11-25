@@ -1,0 +1,84 @@
+name: Publish v1.9.0 repository release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/release-v1.9.0.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: repository-release-v1.9.0
+  cancel-in-progress: false
+
+jobs:
+  privacy:
+    if: github.ref == 'refs/heads/main'
+    uses: mattlane66/mattlane66.github.io/.github/workflows/reusable-privacy-guard.yml@d8d2903d6e5f0f2f9fdcd76513fdde4431026
+    permissions:
+      contents: read
+
+  build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m pip install -e ".[dev,plugin]"
+      - run: python -m ruff check .
+      - run: python -m pytest -q
+      - run: python scripts/evaluate_research_router.py
+      - run: python scripts/evaluate_real_source_pilot.py
+      - run: python scripts/audit_canonical_empirical.py
+      - name: Package versioned distributions
+        if: matrix.python-version == '3.12'
+        run: |
+          python -c 'import importlib.metadata as m; assert m.version("scaled-interview-data-assistant") == "1.9.0"'
+          python scripts/build_plugin.py
+          python -m pip wheel --no-deps --wheel-dir dist .
+          (cd dist && sha256sum *.zip *.whl > SHA256SUMS.txt)
+      - uses: actions/upload-artifact@v4
+        if: matrix.python-version == '3.12'
+        with:
+          name: v1.9.0-distributions
+          path: dist/
+          if-no-files-found: error
+
+  publish:
+    if: github.ref == 'refs/heads/main'
+    needs: [privacy, build]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: v1.9.0-distributions
+          path: dist
+      - name: Publish complete repository snapshot and distributions
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if gh release view v1.9.0 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Release already exists; refusing to overwrite."
+            exit 0
+          fi
+          (cd dist && sha256sum -c SHA256SUMS.txt)
+          gh release create v1.9.0 dist/*.zip dist/*.whl dist/SHA256SUMS.txt \
+            --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
+            --title "Scaled Interview Data Assistant v1.9.0 — First public repository release" \
+            --notes-file docs/operations/release-v1.9.0.md --latest
