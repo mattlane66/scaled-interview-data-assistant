@@ -165,6 +165,15 @@ an explicitly supplied transform. Existing files with no transform retain the
 uniform-epsilon calculation and their original output format. At zero epsilon
 both transforms give the same PMF for nondegenerate anchors. Compare tuned
 parameters on development data before scoring a held-out construct.
+The paper-mode quality check refuses equal similarities across all anchors,
+including when positive epsilon would make the literal formula one-hot.
+Version and freeze the exact anchors, embedding model, transform, epsilon and
+temperature before seeing holdout outputs. The scenario binds the construct and
+anchor version. The vectors supply the transform and settings, so their prior
+selection and the anchor content remain external attestations. The evaluation
+binds the measurement artifact after scoring. Keep separate per-set outputs if
+needed. The standard output summarizes sensitivity as the maximum per-set TVD
+from the mean PMF per response.
 
 ~~~bash
 python scripts/simulation_cli.py ssr \
