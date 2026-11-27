@@ -155,7 +155,16 @@ Provide one vector per generated response, its SHA-256 text hash, the embedding 
 and 2+ unique reference sets of five anchor texts and their vectors (six recommended).
 Embeddings must be generated consistently, using the same model and preprocessing;
 the CLI cannot verify external embeddings were produced honestly or consistently.
-The SSR defaults `epsilon=0` and `temperature=1` follow Maier et al.
+The SSR defaults `epsilon=0` and `temperature=1` follow the primary analysis in
+[Maier et al., Appendix A.4.3](https://arxiv.org/abs/2510.08338v3).
+Set `"transform": "MAIER_V3_SINGLE_MINIMUM"` in the vectors file for Eq. 8–9.
+This adds positive epsilon only to the first minimum in rating order and
+expresses epsilon in raw cosine units. To match the authors' library, which
+rescales cosine to [0,1], supply twice the library's epsilon. The output records
+an explicitly supplied transform. Existing files with no transform retain the
+uniform-epsilon calculation and their original output format. At zero epsilon
+both transforms give the same PMF for nondegenerate anchors. Compare tuned
+parameters on development data before scoring a held-out construct.
 
 ~~~bash
 python scripts/simulation_cli.py ssr \

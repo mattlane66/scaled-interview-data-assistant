@@ -26,7 +26,7 @@ from simulation.counterfactual import build_brief, compare_briefs, render_brief
 from simulation.evaluation import assess, ks_similarity, tvd
 from simulation.handoff import protocol_input, protocol_runs
 from simulation.report import render
-from simulation.ssr import distribution, measure
+from simulation.ssr import PAPER_TRANSFORM, distribution, measure
 
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURES = ROOT / "tests" / "fixtures"
@@ -254,6 +254,28 @@ def test_ssr_validates_vectors_and_rating_mass(source):
         measure(run, broken)
     with pytest.raises(SimulationError, match="degenerate"):
         distribution([1.0, 0.0], [[1.0, 0.0]] * 5)
+
+
+def test_ssr_paper_equations_and_optional_provenance(source):
+    vector = [1, 0]
+    anchors = [[-1, 0], [-1, 0], [0, 1], [0, -1], [1, 0]]
+    legacy = distribution(vector, anchors, epsilon=1)
+    assert legacy == pytest.approx([1 / 9, 1 / 9, 2 / 9, 2 / 9, 3 / 9])
+    paper = distribution(vector, anchors, epsilon=1, temperature=0.5,
+                         transform=PAPER_TRANSFORM)
+    assert paper == pytest.approx([1 / 7, 0, 1 / 7, 1 / 7, 4 / 7])
+    assert distribution(vector, anchors, temperature=0.5, transform=PAPER_TRANSFORM) == (
+        pytest.approx(distribution(vector, anchors, temperature=0.5))
+    )
+    with pytest.raises(SimulationError, match="degenerate"):
+        distribution(vector, [vector] * 5, epsilon=1, transform=PAPER_TRANSFORM)
+
+    run = generated(source)
+    vectors = vectors_for(run)
+    assert "transform" not in measure(run, vectors)
+    vectors["transform"] = PAPER_TRANSFORM
+    vectors["epsilon"] = 0.1
+    assert measure(run, vectors)["transform"] == PAPER_TRANSFORM
 
 
 def test_holdout_checks_leakage_and_never_promotes_grade(source):

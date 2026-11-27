@@ -11,6 +11,9 @@ from typing import Any
 
 from simulation.core import SimulationError, schema_check, sha256_text
 
+PAPER_TRANSFORM = "MAIER_V3_SINGLE_MINIMUM"
+LEGACY_TRANSFORM = "LEGACY_UNIFORM_EPSILON"
+
 
 def _vector(value: object) -> list[float]:
     if not isinstance(value, list) or not value:
@@ -35,15 +38,28 @@ def cosine(a: object, b: object) -> float:
 
 
 def distribution(vector: list[float], anchor_vectors: list[list[float]],
-                 epsilon: float = 0.0, temperature: float = 1.0) -> list[float]:
+                 epsilon: float = 0.0, temperature: float = 1.0, *,
+                 transform: str = LEGACY_TRANSFORM) -> list[float]:
     if len(anchor_vectors) != 5 or epsilon < 0 or temperature <= 0:
         raise SimulationError("SSR needs five anchors, epsilon >= 0, and temperature > 0")
     if not math.isfinite(epsilon) or not math.isfinite(temperature):
         raise SimulationError("SSR parameters must be finite")
     similarities = [cosine(vector, anchor) for anchor in anchor_vectors]
     minimum = min(similarities)
-    weights = [max(0.0, s - minimum + epsilon) ** (1.0 / temperature)
-               for s in similarities]
+    weights = [similarity - minimum for similarity in similarities]
+    if transform == PAPER_TRANSFORM:
+        if not any(weights):
+            raise SimulationError("Anchor set is degenerate; cannot create an SSR distribution")
+        weights[similarities.index(minimum)] += epsilon
+        # Scaling before exponentiation is algebraically neutral and keeps one
+        # weight at one even at small positive temperatures.
+        largest = max(weights)
+        weights = [(weight / largest) ** (1.0 / temperature) if weight < largest else 1.0
+                   for weight in weights]
+    elif transform == LEGACY_TRANSFORM:
+        weights = [(weight + epsilon) ** (1.0 / temperature) for weight in weights]
+    else:
+        raise SimulationError("Unknown SSR transform")
     total = math.fsum(weights)
     if total <= 0 or not math.isfinite(total):
         raise SimulationError("Anchor set is degenerate; cannot create an SSR distribution")
@@ -80,6 +96,7 @@ def measure(run: dict[str, Any], vectors: dict[str, Any]) -> dict[str, Any]:
     if len({row["id"] for row in anchors}) != len(anchors):
         raise SimulationError("Anchor-set IDs must be unique")
     epsilon, temperature = vectors["epsilon"], vectors["temperature"]
+    transform = vectors.get("transform", LEGACY_TRANSFORM)
     by_index = {entry["index"]: entry for entry in supplied}
     individual = []
     for index, response in enumerate(responses):
@@ -92,7 +109,7 @@ def measure(run: dict[str, Any], vectors: dict[str, Any]) -> dict[str, Any]:
             if [item["rating"] for item in ordered] != [1, 2, 3, 4, 5]:
                 raise SimulationError("Each anchor set must cover ratings 1 through 5 once")
             pmf = distribution(entry["vector"], [a["vector"] for a in ordered],
-                               epsilon=epsilon, temperature=temperature)
+                               epsilon=epsilon, temperature=temperature, transform=transform)
             per_set.append(pmf)
         mean = _mean(per_set)
         sensitivity = max(
@@ -108,6 +125,7 @@ def measure(run: dict[str, Any], vectors: dict[str, Any]) -> dict[str, Any]:
         "construct": vectors["construct"], "embedding_model": vectors["embedding_model"],
         "anchor_version": vectors["anchor_version"],
         "anchor_set_count": len(anchors), "epsilon": epsilon, "temperature": temperature,
+        **({"transform": transform} if "transform" in vectors else {}),
         "per_response": individual,
         "aggregate": _mean([row["rating_probabilities"] for row in individual]),
         "note": ("SSR measures generated textual attitudes, not actual switching "
