@@ -38,6 +38,10 @@
       "type": "number",
       "minimum": 0
     },
+    "transform": {
+      "enum": ["MAIER_V3_SINGLE_MINIMUM", "LEGACY_UNIFORM_EPSILON"],
+      "description": "Omission preserves existing v1 behavior. Paper mode expresses epsilon in raw cosine units."
+    },
     "temperature": {
       "type": "number",
       "exclusiveMinimum": 0

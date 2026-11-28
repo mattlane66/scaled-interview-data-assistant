@@ -155,7 +155,29 @@ Provide one vector per generated response, its SHA-256 text hash, the embedding 
 and 2+ unique reference sets of five anchor texts and their vectors (six recommended).
 Embeddings must be generated consistently, using the same model and preprocessing;
 the CLI cannot verify external embeddings were produced honestly or consistently.
-The SSR defaults `epsilon=0` and `temperature=1` follow Maier et al.
+The SSR defaults `epsilon=0` and `temperature=1` follow the primary analysis in
+[Maier et al., Appendix A.4.3](https://arxiv.org/abs/2510.08338v3).
+Set `"transform": "MAIER_V3_SINGLE_MINIMUM"` in the vectors file for Eq. 8–9.
+This adds positive epsilon only to the first minimum in rating order and
+expresses epsilon in raw cosine units. To match the authors' library, which
+rescales cosine to [0,1], supply twice the library's epsilon. The output records
+an explicitly supplied transform. Existing files with no transform retain the
+uniform-epsilon calculation and their original output format. At zero epsilon
+both transforms give the same PMF for nondegenerate anchors. Compare tuned
+parameters on development data before scoring a held-out construct.
+The paper-mode quality check refuses equal similarities across all anchors,
+including when positive epsilon would make the literal formula one-hot.
+For multiple anchor sets, this adapter applies temperature within each set and
+then averages their probability distributions. The authors' reference library
+applies temperature after averaging in its public mean mode. These operations
+agree at the published benchmark setting of unit rating temperature.
+Version and freeze the exact anchors, embedding model, transform, epsilon and
+temperature before seeing holdout outputs. The scenario binds the construct and
+anchor version. The vectors supply the transform and settings, so their prior
+selection and the anchor content remain external attestations. The evaluation
+binds the measurement artifact after scoring. Keep separate per-set outputs if
+needed. The standard output summarizes sensitivity as the maximum per-set TVD
+from the mean PMF per response.
 
 ~~~bash
 python scripts/simulation_cli.py ssr \
