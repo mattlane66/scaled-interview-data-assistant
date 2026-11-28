@@ -278,6 +278,22 @@ def test_ssr_paper_equations_and_optional_provenance(source):
     assert measure(run, vectors)["transform"] == PAPER_TRANSFORM
 
 
+def test_ssr_temperature_applies_to_each_anchor_set_before_averaging(source):
+    run = generated(source)
+    vectors = vectors_for(run)
+    vectors.update(temperature=0.5, transform=PAPER_TRANSFORM)
+    for response in vectors["response_embeddings"]:
+        response["vector"] = [1, 0]
+    for anchor_set, similarities in zip(
+        vectors["anchor_sets"], ([0, 1, 1, 0, 0], [0, 0, 1, 1, 1]), strict=True,
+    ):
+        for anchor, similarity in zip(anchor_set["anchors"], similarities, strict=True):
+            anchor["vector"] = [1, 0] if similarity else [0, 1]
+    aggregate = measure(run, vectors)["aggregate"]
+    assert aggregate == pytest.approx([0, 1 / 4, 5 / 12, 1 / 6, 1 / 6])
+    assert aggregate != pytest.approx([0, 9 / 42, 25 / 42, 4 / 42, 4 / 42])
+
+
 def test_holdout_checks_leakage_and_never_promotes_grade(source):
     _, data, _, scenario = source
     run = generated(source)

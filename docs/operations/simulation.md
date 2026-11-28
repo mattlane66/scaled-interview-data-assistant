@@ -167,6 +167,10 @@ both transforms give the same PMF for nondegenerate anchors. Compare tuned
 parameters on development data before scoring a held-out construct.
 The paper-mode quality check refuses equal similarities across all anchors,
 including when positive epsilon would make the literal formula one-hot.
+For multiple anchor sets, this adapter applies temperature within each set and
+then averages their probability distributions. The authors' reference library
+applies temperature after averaging in its public mean mode. These operations
+agree at the published benchmark setting of unit rating temperature.
 Version and freeze the exact anchors, embedding model, transform, epsilon and
 temperature before seeing holdout outputs. The scenario binds the construct and
 anchor version. The vectors supply the transform and settings, so their prior
